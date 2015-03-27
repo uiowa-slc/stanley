@@ -41,9 +41,10 @@ Subnavigation
 .subnavigation .block {
 	margin-top: 30px;
 	margin-bottom: 30px;
-	/*padding: 30px;*/
+	padding: 0;
 	@media (max-width: $break-large) {
 		margin-top: 0;
+		padding: 30px;
 	}
 }
 .subnavigation .first-level {
