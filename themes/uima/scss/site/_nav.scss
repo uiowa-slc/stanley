@@ -5,16 +5,38 @@ Navigation
 .nav-wrapper {
 	background-color: #fff;
 	border-bottom: 1px solid rgba(0,0,0,.05);
+	@media (max-width: $break-medium) {
+  		display: none;
+	}
 }
 .main-nav {
 	list-style: none;
 	margin: 0;
-	padding: 10px 0 0 0;
+	padding: 0;
+	text-align: center;
 }
 .main-nav li {
 	display: block;
 	float: left;
 	position: relative;
+}
+.main-nav > li:after {
+	content:"";
+	position: absolute;
+	background-color: #777;
+	height: 14px;
+	width: 1px;
+	right: 0;
+	top: 15px;
+}
+.main-nav li.last:after {
+	display: none;
+}
+.main-nav li:first-of-type a {
+	padding-left: 0;
+}
+.main-nav li:last-of-type a {
+	padding-right: 0;
 }
 .main-nav li a {
 	color: #333;
@@ -22,14 +44,17 @@ Navigation
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: 1px;
-	padding: 10px 34px;
+	padding: 10px 29px;
 	text-transform: uppercase;
-}
-.main-nav li:first-of-type a {
-	padding-left: 0;
-}
-.main-nav li:last-of-type a {
-	padding-right: 0;
+	@media (min-width: $break-medium) {
+		padding: 10px 16px;
+	}
+	@media (min-width: $break-large) {
+		padding: 10px 34px;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 10px 50px;
+	}
 }
 /* hover */
 .main-nav li a:hover, .main-nav li a:focus {
@@ -70,22 +95,21 @@ Dropdown
 	left: auto;
 	right: 0;
 }
-.dropdown:before {
+
+/* arrow */
+.main-nav li.parent:hover:after {
 	content: "";
 	display: block;
 	height: 10px;
-	left: 50px;
+	left: 50%;
+	margin-left: -10px;
 	position: absolute;
-	top: -10px;
+	bottom: 0;
 	width: 10px;
-	z-index: -1;
+	z-index: 1;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid #4f4b48;
-}
-.main-nav > li.last .dropdown:before {
-	left: auto;
-	right: 50px;
 }
 .main-nav .dropdown li {
 	border-top: 1px solid #817d7a;

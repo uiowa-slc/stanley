@@ -1,4 +1,98 @@
 .header {
 	background: #fff;
 	padding-top: 30px;
+	padding-bottom: 30px;
+	@media (min-width: $break-medium) {
+		padding-bottom: 0;
+	}
+}
+/* logo */
+.logo {
+	float: left;
+}
+/* Search */
+.searchcontainer {
+	-webkit-transition: width 0.2s ease, background-color 0.2s ease;
+	-moz-transition: width 0.2s ease, background-color 0.2s ease;
+	transition: width 0.2s ease, background-color 0.2s ease;
+	position: relative;
+	float: right;
+}
+.searchlabel {
+  font-size: 13px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  z-index: 1;
+}
+.searchinput {
+	background: #fff;
+	border: none;
+	color: #fff;
+	display: inline-block;
+	font-size: 13px;
+	font-family: arial, verdana, sans-serif;
+	height: auto;
+	line-height: normal;
+	padding: 10px 40px 10px 10px;
+	position: relative;
+	vertical-align: middle;
+	width: 50px;
+	margin-bottom: 0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-transition: width 0.2s ease, background-color 0.2s ease;
+	-moz-transition: width 0.2s ease, background-color 0.2s ease;
+	transition: width 0.2s ease, background-color 0.2s ease;
+	cursor: pointer;
+}
+.searchinput:focus {
+	background-color: #999;
+	width: 160px;
+	outline: none;
+	cursor: inherit;
+}
+/* Placeholder text */
+::-webkit-input-placeholder {color: #666;}
+:-moz-placeholder {color: #666;}
+::-moz-placeholder {color: #666;}
+:-ms-input-placeholder {color: #666;}
+
+.searchinput:focus::-webkit-input-placeholder {color: #fff;}
+.searchinput:focus:-moz-placeholder {color: #666;}
+.searchinput:focus::-moz-placeholder {color: #666;}
+.searchinput:focus:-ms-input-placeholder {color: #666;}
+
+.searchbtn {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+	height: 20px;
+	width: 20px;
+	border: 0;
+	cursor: pointer;
+	zoom: 1;
+	filter: alpha(opacity=65);
+	opacity: 0.65;
+	background: url('../images/magnifier-icon.png') top right no-repeat;
+	text-indent: -9999em;
+}
+.searchinput:focus + .searchbtn {
+	background-position: bottom right;
+}
+
+.shifter-open .searchcontainer {
+	float: none;
+}
+.shifter-open .searchinput {
+	width: auto;
+	border-radius: 0;
+	border: 1px solid #ddd;
+	cursor: inherit;
+}
+.shifter-open .searchinput:focus {
+	width: auto;
+
 }

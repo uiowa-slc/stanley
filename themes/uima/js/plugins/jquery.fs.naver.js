@@ -24,7 +24,7 @@
 			closed: "Page Navigation",
 			open: "Close"
 		},
-		maxWidth: "980px"
+		maxWidth: "767px"
 	};
 
 	/**

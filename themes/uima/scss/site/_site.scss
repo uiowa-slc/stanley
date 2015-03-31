@@ -45,9 +45,9 @@ Layout
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	position: relative;
-	/*@media (min-width: $break-small) {
+	@media (min-width: $break-small) {
 		width: $break-small - 20;
-	}*/
+	}
 	@media (min-width: $break-medium) {
 		width: $break-medium - 20;
 	}
@@ -58,17 +58,33 @@ Layout
 		width: $break-xlarge - 40;
 	}
 }
-.article {
-	margin: 30px 0;
+
+
+.page-photo {
+	max-height: 400px;
+	overflow: hidden;
 }
-.main-container {
-	min-height: 500px;
+.page-photo img {
+	display: block;
+	width: 100%;
 }
-.sidebar {
-	@media (min-width: $break-medium) {
-		margin-bottom: 30px;
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
