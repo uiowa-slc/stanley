@@ -11,4 +11,13 @@ $(document).ready(function() {
 	// Naver
 	$(".naver").naver();
 
+	// Home Carousel
+	$('.homecarousel').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
+	});
+
 });

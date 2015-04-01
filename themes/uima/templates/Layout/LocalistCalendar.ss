@@ -1,14 +1,22 @@
-<article class="container">
+<% if $Photo %>
+	<div class="page-photo">
+		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
+	</div>
+<% end_if %>
+
+<div class="container">
 	<div class="row">
 
 		<!-- Side Bar -->
-		<div class="col-lg-4 sidebar">
-			<% include SideNav %>
-		</div>
+		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
+			<div class="col-lg-4 sidebar">
+				<% include SideNav %>
+			</div>
+		<% end_if %>
 
 		<!-- Main Content -->
-		<div class="col-lg-8">
-			<div class="article">
+		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+			<article class="article">
 				<!-- $Breadcrumbs -->
 				<h1>$Title</h1>
 				$Content
@@ -52,9 +60,10 @@
 									<p>$Venue.Title</p>
 								</div>
 							</div>
+							<hr />
 						<% end_loop %>
 					</div>
-			</div>
+			</article>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
-</article><!-- end .container -->
+</div><!-- end .container -->

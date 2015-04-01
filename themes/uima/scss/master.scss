@@ -25,10 +25,11 @@
 @import "plugins/_shifter";
 @import "plugins/_naver";
 /*@import "plugins/_boxer";*/
-/*@import "plugins/_slick";*/
+@import "plugins/_slick";
 
 /* Layout
 -------------------------------------------*/
+@import "site/_childpages";
 @import "site/_searchresults";
 @import "site/_staff";
 @import "site/_sidebaritem";

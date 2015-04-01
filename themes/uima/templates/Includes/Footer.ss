@@ -3,39 +3,41 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-12 col-md-6">
 					<h3>University of Iowa Museum of Art</h3>
-					<p>View Museum Locations</p>
+					<p><a href="{$BaseHref}/visit/locations/">View Museum Locations</a></p>
 					<p>(319) 335-1727<br>
 					uima@uiowa.edu</p>
 					<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
 				</div>
-				<div class="col-sm-2">
-					<ul class="footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Visit</a></li>
-						<li><a href="#">Exhibitions</a></li>
-						<li><a href="#">Collections</a></li>
-					</ul>
+				<div class="col-sm-12 col-md-6">
+					<div class="col-sm-4">
+						<ul class="footer-links">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Visit</a></li>
+							<li><a href="#">Exhibitions</a></li>
+							<li><a href="#">Collections</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="footer-links">
+							<li><a href="#">Education</a></li>
+							<li><a href="#">Event</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<ul class="footer-links last">
+							<li><a href="{$BaseHref}/contact/">Contact</a></li>
+							<li><a href="{$BaseHref}/membership/">Membership</a></li>
+							<li><a href="#">Store</a></li>
+							<li><a href="{$BaseHref}/news/">Press / News</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="col-sm-2">
-					<ul class="footer-links">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Event</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Support</a></li>
-					</ul>
-				</div>
-				<div class="col-sm-2">
-					<ul class="footer-links last">
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Membership</a></li>
-						<li><a href="#">Store</a></li>
-						<li><a href="#">Press / News</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+			</div><!-- end .row -->
+		</div><!-- end .container -->
 	</div>
 	<div class="footer-bottom">
 		<div class="container">
