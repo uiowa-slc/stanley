@@ -6,13 +6,14 @@
 		"silverstripe/cms": "3.1.12",
 		"silverstripe/framework": "3.1.12",
 		"silverstripe-themes/simple": "*",
-		"silverstripe/blog" : "1.0.*",
+		"silverstripe/blog" : "1.0",
 		"md/ac-json-events" : "dev-master",
 		"silverstripe/mathspamprotection" : "*",
 		"jonom/focuspoint" : "*",
 		"silverstripe/userforms": "*",
 		"silverstripe/googlesitemaps" : "*",
-		"colymba/gridfield-bulk-editing-tools" : "*"
+		"colymba/gridfield-bulk-editing-tools" : "*",
+		"undefinedoffset/sortablegridfield": "dev-master"
 
 	},
 	"require-dev": {
@@ -28,6 +29,6 @@
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
 
         }
-        
+
     ]
 }
