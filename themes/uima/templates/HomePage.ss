@@ -52,9 +52,14 @@
 </head>
 <body class="$ClassName">
 
-	<% include Header %>
-	$Layout
-	<% include Footer %>
+	<div class="shifter-page">
+		<% include Header %>
+		$Layout
+		<% include Footer %>
+	</div>
+
+	<!-- Mobile Navigation Slideout -->
+	<% include ShifterNavigation %>
 
 	<!-- JS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

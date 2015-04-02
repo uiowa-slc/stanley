@@ -1,7 +1,6 @@
 .footer {
 	background-color: #4f4b48;
 	color: #fff;
-	font-size: 15px;
 }
 .footer a {
 	color: #fff;
@@ -42,19 +41,56 @@
 	color: #eee;
 	font-size: 12px;
 }
+/* ---------------------------------------------------------------
+Newsletter Signup Form
+--------------------------------------------------------------- */
+#newsletter {
+	font-size: 14px;
+	margin-bottom: 2em;
+	@media (min-width: $break-small) {
+		float: left;
+	}
+}
+#newsletter label {
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+}
+#newsletter .text {
+	border: 1px solid #716e6a;
+	padding: 5px;
+	width: 80%;
+}
+#newsletter .submit {
+	background: #4f4b48;
+	border: 1px solid #716e6a;
+	color: #fff;
+	padding: 5px;
+}
 
-/* Social Icons */
+/* ---------------------------------------------------------------
+Social Icons
+--------------------------------------------------------------- */
 .social-icons {
-	float: left;
 	list-style: none;
-	margin: 0;
+	margin: 0 0 2em 0;
 	padding: 0;
+	text-align: center;
+	@media (min-width: $break-small) {
+		float: left;
+	}
 }
 .social-icons li {
-	float: left;
+	display: inline-block;
 	margin: 0 5px;
 }
-
+.social-icons li a {
+	display: block;
+	opacity: .8;
+	&:hover {
+		opacity: 1;
+	}
+}
 .footer-logos {
 	float: right;
 }

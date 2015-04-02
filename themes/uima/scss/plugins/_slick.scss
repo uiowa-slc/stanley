@@ -7,7 +7,7 @@ $slick-font-family: "slick" !default;
 $slick-loader-path: "../images/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: #999999 !default;
-$slick-dot-color-active: $link !default;
+$slick-dot-color-active: #fff !default;
 $slick-prev-character: '\2190' !default;
 $slick-next-character: '\2192' !default;
 $slick-dot-character: '\2022' !default;
@@ -155,15 +155,15 @@ $slick-opacity-not-active: .50 !default;
 .slick-next {
 	 position: absolute;
 	 display: block;
-	 height: 91px;
-	 width: 38px;
+	 height: 50px;
+	 width: 50px;
 	 line-height: 0;
 	 font-size: 0;
 	 cursor: pointer;
-	 background: url(../images/slick-prevnext.png) left top no-repeat;
+	 background: url(../images/home-prev-next.png) left top no-repeat;
 	 color: transparent;
 	 top: 50%;
-	 margin-top: -45px;
+	 margin-top: -25px;
 	 padding: 0;
 	 border: none;
 	 outline: none;
@@ -181,7 +181,7 @@ $slick-opacity-not-active: .50 !default;
 }
 .slick-next {
 	right: 0;
-	background-position: right top;
+	background-position: right bottom;
 	[dir="rtl"] & {
 		left:  -25px;
 		right: auto;

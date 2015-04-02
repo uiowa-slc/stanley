@@ -42,8 +42,8 @@ Layout
 	max-width: $break-xlarge;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
+	padding-left: 25px;
+	padding-right: 25px;
 	position: relative;
 	@media (min-width: $break-small) {
 		width: $break-small - 20;
@@ -59,7 +59,7 @@ Layout
 	}
 }
 .article {
-	margin: 7em 0 3em 0;
+	margin: 3em 0 3em 0;
 }
 
 .page-photo {
@@ -72,7 +72,21 @@ Layout
 }
 
 
-
+/* News Entry */
+.newsentry .entryphoto {
+	@media (min-width: $break-medium) {
+		margin-top: -70px;
+	}
+}
+.newsentry .entry-date {
+  font-size: 14px !important;
+}
+.newsentry .entry-title {
+	margin: 0.5em 0;
+	@media screen and (min-width: 768px){
+		font-size: 50px;
+	}
+}
 
 
 

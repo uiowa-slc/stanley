@@ -13,7 +13,8 @@
 		"silverstripe/userforms": "*",
 		"silverstripe/googlesitemaps" : "*",
 		"colymba/gridfield-bulk-editing-tools" : "*",
-		"undefinedoffset/sortablegridfield": "dev-master"
+		"undefinedoffset/sortablegridfield": "dev-master",
+		"silverstripe/widgets": "*"
 
 	},
 	"require-dev": {

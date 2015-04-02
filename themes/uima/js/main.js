@@ -15,9 +15,12 @@ $(document).ready(function() {
 	$('.homecarousel').slick({
 		dots: true,
 		infinite: true,
-		speed: 500,
+		speed: 1000,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+		pauseOnHover: false,
+		autoplay: true,
+		autoplaySpeed: 5500
 	});
 
 });
