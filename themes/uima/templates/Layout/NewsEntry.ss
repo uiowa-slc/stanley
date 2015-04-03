@@ -3,7 +3,7 @@
 
 		<!-- Main Content -->
 		<div class="col-md-12">
-			<article class="article newsentry">
+			<article class="clearfix article newsentry">
 				<h1 class="entry-title">$Title</h1>
 				<p class="entry-date">
 					Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>

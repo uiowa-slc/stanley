@@ -19,28 +19,79 @@
 	background-color: #84817c;
 	padding: 15px 0;
 }
+/* ---------------------------------------------------------------
+LINK LISTS
+--------------------------------------------------------------- */
+.footer-links ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer-links .main-links {
+	font-weight: bold;
+	overflow: hidden;
+	@media (min-width: $break-small) {
+		overflow: inherit;
+	}
+}
+.footer-links .main-links ul {
+	float: left;
+	width: 50%;
+	@media (min-width: $break-small) {
+		width: 33.3%;
+	}
+}
+.footer-links li a {
+	border-left: 1px solid rgba(255,255,255,.75);
+	color: #fff;
+	display: block;
+	padding: 6px 0 6px 10px;
+	text-transform: uppercase;
+	@media (min-width: $break-small) {
+		font-size: 15px;
+	}
+}
+.footer-links li a:hover, .footer-links li a:focus {
+	xcolor: $link;
+	border-left-color: $link;
+	padding-left: 12px;
+}
+.footer-links .secondary {
+	margin-top: 1em;
+	@media (min-width: $break-small) {
+		margin-top: 0;
+		float: left;
+		width: 33.3%
+	}
+}
+.footer-links .secondary a {
+	font-size: 13px;
+	padding: 4px 0 4px 10px;
+}
 
-.footer-links {
+
+
+
+.footer-linkss {
 	list-style: none;
 	margin: 20px 0 0 0;
 	padding: 0;
 }
-.footer-links li a {
+.footer-linkss li a {
 	display: block;
 	text-transform: uppercase;
 	border-left: 1px solid rgba(255,255,255,.75);
 	padding: 1px 12px;
-	transition: all .12s linear;
-
 }
-.footer-links li a:hover {
+.footer-linkss li a:hover {
 	text-decoration: none;
 	padding-left: 15px;
 }
-.footer .footer-links.last li a {
+.footer .footer-linkss.last li a {
 	color: #eee;
 	font-size: 12px;
 }
+
 /* ---------------------------------------------------------------
 Newsletter Signup Form
 --------------------------------------------------------------- */
@@ -49,6 +100,12 @@ Newsletter Signup Form
 	margin-bottom: 2em;
 	@media (min-width: $break-small) {
 		float: left;
+		width: 50%;
+	}
+	@media (min-width: $break-medium) {
+		margin-right: 1em;
+		margin-bottom: 0;
+		width: 260px;
 	}
 }
 #newsletter label {
@@ -58,14 +115,20 @@ Newsletter Signup Form
 }
 #newsletter .text {
 	border: 1px solid #716e6a;
-	padding: 5px;
+	padding: 2px 5px;
 	width: 80%;
+	@media (min-width: $break-small) {
+		width: 70%;
+	}
+	@media (min-width: $break-medium) {
+		width: 192px;
+	}
 }
 #newsletter .submit {
 	background: #4f4b48;
 	border: 1px solid #716e6a;
 	color: #fff;
-	padding: 5px;
+	padding: 2px 5px;
 }
 
 /* ---------------------------------------------------------------
@@ -78,10 +141,17 @@ Social Icons
 	text-align: center;
 	@media (min-width: $break-small) {
 		float: left;
+		width: 50%;
+	}
+	@media (min-width: $break-medium) {
+		margin-bottom: 0;
+		text-align: left;
+		width: auto;
 	}
 }
 .social-icons li {
 	display: inline-block;
+	line-height: 46px;
 	margin: 0 5px;
 }
 .social-icons li a {
@@ -91,6 +161,45 @@ Social Icons
 		opacity: 1;
 	}
 }
-.footer-logos {
-	float: right;
+.social-icons img {
+	vertical-align: middle;
 }
+
+/* ---------------------------------------------------------------
+LOGOS
+--------------------------------------------------------------- */
+.footer-logos {
+	clear: both;
+	@media (min-width: $break-medium) {
+		clear: none;
+		float: right;
+	}
+}
+.footer-logos a, .footer-logos img {
+	display: block;
+	margin: 0 auto;
+	vertical-align: middle;
+	line-height: 46px;
+	@media (min-width: $break-medium) {
+		display: inline-block;
+	}
+}
+.footer-logos a {
+	float: left;
+	width: 50%;
+	@media (min-width: $break-medium) {
+		padding: 0 5px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

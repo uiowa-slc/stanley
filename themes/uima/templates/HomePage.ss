@@ -8,7 +8,10 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>$Title | UIMA</title>
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
+	
 	<!-- CSS -->
 	<script>
 		function loadCSS( href, before, media, callback ){
@@ -50,7 +53,7 @@
 		<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
 	</noscript>
 </head>
-<body class="$ClassName">
+<body class="$ClassName shifter">
 
 	<div class="shifter-page">
 		<% include Header %>
@@ -68,6 +71,3 @@
 
 </body>
 </html>
-
-
-

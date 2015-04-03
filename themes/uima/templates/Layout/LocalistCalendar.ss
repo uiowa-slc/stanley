@@ -60,7 +60,6 @@
 									<p>$Venue.Title</p>
 								</div>
 							</div>
-							<hr />
 						<% end_loop %>
 					</div>
 			</article>

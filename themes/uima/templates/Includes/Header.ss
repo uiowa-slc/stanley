@@ -2,7 +2,7 @@
 <header class="header" role="banner">
 	<div class="container">
 		<a href="{$BaseHref}" class="logo">
-			<img src="{$ThemeDir}/images/uima_logo.gif" alt="University of Iowa Museum of Art">
+			<img src="{$ThemeDir}/images/uima_logo.png" alt="University of Iowa Museum of Art">
 		</a>
 
 		<!-- Search -->

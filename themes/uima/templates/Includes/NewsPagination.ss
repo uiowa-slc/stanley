@@ -1,19 +1,15 @@
 <% if PaginatedNewsEntries.MoreThanOnePage %>
-<div class="pagination">
-	<ul class="PageNumbers">
+<div id="PageNumbers">
+	<ul class="pagination">
 		<% if PaginatedNewsEntries.NotFirstPage %>
-			<li class="prev">
-				<a class="paginate-left" href="$PaginatedNewsEntries.PrevLink" title="View the previous page">&lt;</a>
-			</li>
-		<% else %>	
-			<li class="prev disabled">
-				<a class="paginate-left disabled">&lt;</a>
+			<li class="arrow">
+				<a href="$PaginatedNewsEntries.PrevLink" title="View the previous page">&laquo; Previous</a>
 			</li>
 		<% end_if %>
 	
     	<% loop PaginatedNewsEntries.PaginationSummary(4) %>
 			<% if CurrentBool %>
-				<li class="active"><a class="disabled">$PageNum</a></li>
+				<li class="current"><a class="disabled">$PageNum</a></li>
 			<% else %>
 				<% if Link %>
 					<li>
@@ -28,14 +24,11 @@
 		<% end_loop %>
 	
 		<% if PaginatedNewsEntries.NotLastPage %>
-			<li class="next">
-				<a class="next paginate-right" href="$PaginatedNewsEntries.NextLink" title="View the next page">&gt;</a>
-			</li>
-		<% else %>
-			<li class="next disabled">
-				<a class="next paginate-right disabled">&gt;</a>
+			<li class="arrow">
+				<a href="$PaginatedNewsEntries.NextLink" title="View the next page">Next &raquo;</a>
 			</li>
 		<% end_if %>
 	</ul>
+	<p>Page $PaginatedNewsEntries.CurrentPage of $PaginatedNewsEntries.TotalPages</p>
 </div>
 <% end_if %>
