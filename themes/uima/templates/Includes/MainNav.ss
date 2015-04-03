@@ -3,7 +3,7 @@
 		<ul class="main-nav clearfix">
 			<% loop Menu(1) %>
 				<li class="$FirstLast first-level<% if $LinkOrSection = "section" %> active<% end_if %><% if Children %> parent<% end_if %>"><a href="$Link">$MenuTitle</a>
-					<!-- Dropdown Menu -->
+					<!-- begin dropdown menu -->
 					<% if Children %>
 						<ul class="dropdown">
 						<% loop Children %>

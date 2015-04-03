@@ -20,8 +20,33 @@
 	padding: 15px 0;
 }
 /* ---------------------------------------------------------------
+CONTACT INFO
+--------------------------------------------------------------- */
+.footer-contact {
+	@media (min-width: $break-medium) {
+		float: left;
+		width: 50%;
+	}
+}
+.footer-contact h3 {
+	font-weight: bold;
+}
+.footer-contact p {
+	@media (min-width: $break-medium) {
+		font-size: 14px;
+		margin: 3px 0;
+	}
+}
+
+/* ---------------------------------------------------------------
 LINK LISTS
 --------------------------------------------------------------- */
+.footer-links {
+	@media (min-width: $break-medium) {
+		float: left;
+		width: 50%;
+	}
+}
 .footer-links ul {
 	list-style: none;
 	margin: 0;
@@ -32,6 +57,9 @@ LINK LISTS
 	overflow: hidden;
 	@media (min-width: $break-small) {
 		overflow: inherit;
+	}
+	@media (min-width: $break-medium) {
+		display: inline;
 	}
 }
 .footer-links .main-links ul {
@@ -48,7 +76,10 @@ LINK LISTS
 	padding: 6px 0 6px 10px;
 	text-transform: uppercase;
 	@media (min-width: $break-small) {
-		font-size: 15px;
+		font-size: 14px;
+	}
+	@media (min-width: $break-medium) {
+		padding: 3px 0 3px 10px;
 	}
 }
 .footer-links li a:hover, .footer-links li a:focus {
@@ -67,29 +98,6 @@ LINK LISTS
 .footer-links .secondary a {
 	font-size: 13px;
 	padding: 4px 0 4px 10px;
-}
-
-
-
-
-.footer-linkss {
-	list-style: none;
-	margin: 20px 0 0 0;
-	padding: 0;
-}
-.footer-linkss li a {
-	display: block;
-	text-transform: uppercase;
-	border-left: 1px solid rgba(255,255,255,.75);
-	padding: 1px 12px;
-}
-.footer-linkss li a:hover {
-	text-decoration: none;
-	padding-left: 15px;
-}
-.footer .footer-linkss.last li a {
-	color: #eee;
-	font-size: 12px;
 }
 
 /* ---------------------------------------------------------------

@@ -2,13 +2,14 @@
 <footer class="footer" role="contentinfo">
 	<div class="footer-top">
 		<div class="container">
-			<h3>University of Iowa Museum of Art</h3>
-			<p><a href="{$BaseHref}/visit/locations/">View Museum Locations</a></p>
-			<p>(319) 335-1727<br>
-			uima@uiowa.edu</p>
-			<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
-
-			<div class="footer-links">
+			<div class="footer-contact">
+				<h3>University of Iowa Museum of Art</h3>
+				<p><strong><a href="{$BaseHref}/visit/locations/">View Museum Locations</a></strong></p>
+				<p>(319) 335-1727<br>
+				<a href="mailto:uima@uiowa.edu">uima@uiowa.edu</a></p>
+				<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
+			</div>
+			<div class="clearfix footer-links">
 				<div class="main-links">
 					<ul class="">
 						<li><a href="{$BaseHref}">Home</a></li>
@@ -33,7 +34,6 @@
 	</div>
 	<div class="footer-bottom">
 		<div class="container">
-
 			<div id="newsletter" class="clearfix">
 				<form name="ccoptin" action="http://ui.constantcontact.com/d.jsp" target="_blank" method="post" >
 					<label>Sign up for our Newsletter:</label>
@@ -43,7 +43,6 @@
 					<input type="hidden" name="p" value="oi" />
 				</form>
 			</div>
-
 			<ul class="clearfix social-icons">
 				<% if $SiteConfig.FacebookLink %>
 					<li>

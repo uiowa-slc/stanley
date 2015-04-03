@@ -1,7 +1,7 @@
 .header {
 	background: #fff;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	@media (min-width: $break-medium) {
 		padding-bottom: 0;
 	}
@@ -9,6 +9,9 @@
 /* logo */
 .logo {
 	float: left;
+	& img {
+		display: block;
+	}
 }
 /* ---------------------------------------------------------------
 Search Form new

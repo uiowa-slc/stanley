@@ -7,7 +7,7 @@
 
 		<!-- Search -->
 		<% if $SearchForm %>
-			<div class="search-bar">
+			<div class="search-bar mobile-hide">
 			  $SearchForm
 			</div>
 		<% end_if %>
