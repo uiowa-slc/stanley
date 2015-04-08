@@ -2,7 +2,7 @@
 	<div class="row">
 
 		<!-- Main Content -->
-		<div class="col-sm-12">
+		<div class="col-md-10 col-md-offset-1">
 			<div class="article">
 				<!-- $Breadcrumbs -->
 				<h1>$Title</h1>

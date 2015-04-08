@@ -25,10 +25,9 @@ h1,h2,h3,h4,h5,h6 {
 	line-height: 1.3;
 	font-weight: normal;
 	text-rendering: optimizelegibility;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 h1 {
-	color: $link;
 	font-size: 30px;
 	line-height: 1.1;
 	margin: .75em 0 .5em;
