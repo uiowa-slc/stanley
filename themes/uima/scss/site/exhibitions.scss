@@ -1,0 +1,82 @@
+
+/* ---------------------------------------------------------------
+Exhibition Container
+--------------------------------------------------------------- */
+.exhibitlist {
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0,0,0,.3);
+	margin-bottom: 20px;
+}
+.exhibit-img {
+	height: 230px;
+	background-position: center top;
+	background-size: cover;
+	position: relative;
+	& a {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}
+.exhibit-content {
+	padding: 1em;
+	@media (min-width: $break-small) {
+		padding: 30px;
+	}
+}
+.exhibit-title {
+	font-weight: bold;
+	line-height: 1.3;
+	margin: 0 0 .75em 0;
+}
+.exhibit-date {
+	font-weight: bold;
+	line-height: 1.3;
+	margin: 0;
+}
+.exhibit-link {
+	display: block;
+	color: #333;
+	font-size: 13px;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	@media (min-width: $break-small) {
+		float: right;
+		margin: 0 0 0 1em;
+	}
+}
+
+/* ---------------------------------------------------------------
+Exhibition Page
+--------------------------------------------------------------- */
+
+.exhibit-largeimg {
+	background-position: center top;
+	background-size: cover;
+	height: 570px;
+	position: relative;
+}
+.exhibit-largeimg .inner {
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 4em 0 2em;
+	width: 100%;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
+}
+.exhibitinner-date {
+	color: #fff;
+	font-weight: bold;
+	margin: 0;
+}
+
+
+
+

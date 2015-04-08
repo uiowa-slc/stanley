@@ -11,47 +11,10 @@
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
-	
+
 	<!-- CSS -->
-	<script>
-		function loadCSS( href, before, media, callback ){
-			"use strict";
-			var ss = window.document.createElement( "link" );
-			var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
-			var sheets = window.document.styleSheets;
-			ss.rel = "stylesheet";
-			ss.href = href;
-			ss.media = "only x";
-			if( callback ) {
-				ss.onload = callback;
-			}
-			ref.parentNode.insertBefore( ss, ref );
-			ss.onloadcssdefined = function( cb ){
-				var defined;
-				for( var i = 0; i < sheets.length; i++ ){
-					if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
-						defined = true;
-					}
-				}
-				if( defined ){
-					cb();
-				}
-				else {
-					setTimeout(function() {
-						ss.onloadcssdefined( cb );
-					});
-				}
-			};
-			ss.onloadcssdefined(function() {
-				ss.media = media || "all";
-			});
-			return ss;
-		}
-		loadCSS( "{$ThemeDir}/css/master.css" );
-	</script>
-	<noscript>
-		<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
-	</noscript>
+	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
+
 </head>
 <body class="$ClassName shifter">
 

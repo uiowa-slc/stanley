@@ -69,16 +69,16 @@ Dropdown
 .dropdown {
 	background: #4f4b48;
 	/*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);*/
-	left: 0;
+	left: 50%;
 	display: none; /* fix for fucking ie bug, fuck you ie */
 	list-style: none;
-	margin: -4px 0 0;
+	margin: -4px 0 0 -75px;
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
 	padding: 0;
 	top: 48px;
-	width: 100%;
+	width: 150px;
 	z-index: 1000;
 }
 .main-nav > li:hover .dropdown {
@@ -122,12 +122,12 @@ Dropdown
 .main-nav .dropdown li a {
 	color: #fff;
 	display: block;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: normal;
 	letter-spacing: 0;
 	line-height: 1.3;
-	padding: 6px 20px;
-	text-align: left;
+	padding: 10px 15px;
+	text-align: center;
 	text-transform: none;
 }
 .dropdown li a:hover, .dropdown li a:focus {
