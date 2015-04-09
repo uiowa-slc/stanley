@@ -18,6 +18,7 @@
 </head>
 <body class="$ClassName shifter">
 
+
 	<div class="shifter-page">
 		<% include Header %>
 		$Layout

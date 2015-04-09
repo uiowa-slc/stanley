@@ -7,12 +7,12 @@
 
 		<!-- Search -->
 		<% if $SearchForm %>
-			<div class="search-bar mobile-hide">
+			<div class="search-bar mobile-hide" role="search">
 			  $SearchForm
 			</div>
 		<% end_if %>
 
 		<span class="shifter-handle">Menu</span>
+		<% include MainNav %>
 	</div>
 </header>
-<% include MainNav %>

@@ -1,3 +1,12 @@
+.cover {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  xbackground: #343230 url(../images/wave.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
 .HomePage {
 	background-color: #84817c;
 }

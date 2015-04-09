@@ -1,14 +1,14 @@
 <div class="naver">
 
 	<div class="side-navigation">
-		<% if Menu(2) %>
+		<!--<% if Menu(2) %>
 			<% with Level(1) %>
 				<h3 class="section-title"><% if $LinkOrCurrent = "current" %>$MenuTitle<% else %><a href="$Link">$MenuTitle</a><% end_if %></h3>
 			<% end_with %>
-		<% end_if %>
+		<% end_if %>-->
 
 		<% if Menu(2) %>
-		<nav class="sec-nav">
+		<nav class="sec-nav" aria-label="Secondary">
 			<ul class="first-level">
 				<% with Level(1) %>
 					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>

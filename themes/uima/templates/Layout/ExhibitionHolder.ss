@@ -4,8 +4,16 @@
 	</div>
 <% end_if %>
 
-<div class="container">
+<main class="container main" role="main">
 	<div class="row">
+		<!-- Section Heading -->
+		<% if Menu(2) %>
+			<% with Level(1) %>
+				<div class="col-sm-12">
+				<h3 class="section-title"><% if $LinkOrCurrent = "current" %>$MenuTitle<% else %><a href="$Link">$MenuTitle</a><% end_if %></h3>
+				</div>
+			<% end_with %>
+		<% end_if %>
 
 		<!-- Side Bar -->
 		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
@@ -20,24 +28,24 @@
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
-				<% loop Children %>
-					<article class="exhibitlist">
+				<% loop AllChildren %>
+					<div class="exhibitlist">
 						<!-- Image -->
 						<div class="exhibit-img" style="background-image: url($EventPageImage.URL);">
 							<a href="$link"></a>
 						</div>
-						<div class="exhibit-content clearfix">
+						<div class="exhibit-content clearfix <% if $StartDate || $EventLocation %>withdate<% end_if %>">
 							<!-- Title -->
 							<h2 class="exhibit-title"><a href="$link">$Title</a></h2>
 							<!-- Link -->
 							<a href="$Link" class="exhibit-link">Learn More &raquo;</a>
 							<!-- Date | Location -->
-							<% if $StartDate || $EventLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $EventLocation %> | $EventLocation<% end_if %></h4><% end_if %>
+							<% if $StartDate || $EventLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $EventLocation %> | <% end_if %><% if $EventLocation %>$EventLocation<% end_if %></h4><% end_if %>
 						</div>
-					</article>
+					</div>
 				<% end_loop %>
 			</div>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
-</div><!-- end .container -->
+</main><!-- end .container -->
 

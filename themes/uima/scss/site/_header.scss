@@ -1,9 +1,8 @@
 .header {
 	background: #fff;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	@media (min-width: $break-medium) {
-		padding-bottom: 0;
+	padding-top: 23px;
+	@media (max-width: $break-medium) {
+		padding-bottom: 20px;
 	}
 }
 /* logo */
