@@ -2673,7 +2673,19 @@ $(document).ready(function() {
 		cssEase: 'linear',
 		pauseOnHover: false,
 		autoplay: true,
-		autoplaySpeed: 5500
+		autoplaySpeed: 5500,
+		responsive: [
+	    {
+	      breakpoint: 480,
+	      settings: {
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				fade: false
+	      }
+	    }
+	   ]
 	});
 
 	// POPUP WINDOW FOR SOCIAL MEDIA

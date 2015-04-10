@@ -45,11 +45,13 @@ Layout
 	max-width: $break-xlarge;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
 	position: relative;
 	@media (min-width: $break-small) {
 		width: $break-small - 20;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	@media (min-width: $break-medium) {
 		width: $break-medium - 20;
