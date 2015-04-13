@@ -68,15 +68,18 @@ Exhibition Page
 .exhibit-largeimg {
 	background-position: center top;
 	background-size: cover;
-	height: 570px;
+	height: 370px;
 	position: relative;
+	@media (min-width: $break-medium) {
+		height: 570px;
+	}
 }
 .exhibit-largeimg .inner {
 	color: #fff;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding: 4em 0 2em;
+	padding: 5em 0 2em;
 	width: 100%;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8)));
@@ -88,13 +91,20 @@ Exhibition Page
 }
 .exhibitinner-date {
 	color: #fff;
-	float: left;
 	font-size: 26px;
 	font-weight: bold;
 	margin: 0;
+	@media (min-width: $break-medium) {
+		float: left;
+		width: 85%;
+	}
 }
 .exhibition-sociallinks {
-	float: right;
+	margin-top: 1em;
+	@media (min-width: $break-medium) {
+		float: right;
+		margin-top: 0;
+	}
 }
 
 

@@ -1,22 +1,15 @@
 <% if CarouselItems %>
-	<div class="homecarousel">
-		<% loop CarouselItems %>
-			<div class="hero-img">
-				<img srcset="$Image.URL" alt="$Title">
-				<div class="inner">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<a href="$link">
-									<h3>$Title</h3>
-									<p>$SubTitle</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<% end_loop %>
+	<div class="slipprycarousel">
+		<ul id="demo1">
+			<% loop CarouselItems %>
+			<li>
+				<img src="$Image.URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+				<p class="captionsrc">Lorem ipsum dolor sit amet</p>
+			</li>
+			<% end_loop %>
+		</ul>
+		<div class="sy-caption-wrap"><div class="container sy-caption"></div></div>
+
 	</div>
 <% end_if %>
 
