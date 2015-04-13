@@ -39,7 +39,7 @@
 			var demo1 = $("#demo1").slippry({
 				transition: 'kenburns',
 				kenZoom: 140,
-				speed: 7000,
+				speed: 8000,
 				autoHover: false,
 				controls: false,
   				captions: 'custom', // Position: overlay, below, custom, false
