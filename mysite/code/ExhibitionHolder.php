@@ -23,13 +23,19 @@ class ExhibitionHolder extends Page {
 }
 
 class ExhibitionHolder_Controller extends Page_Controller {
-	private static $allowed_actions = array('exhibition');
+	private static $allowed_actions = array(
+		'upcoming',
+		'past'
+	);
 
 	private static $url_handlers = array(
-        'exhibition/$StartDate/$EndDate' => 'payroll',
+        'index' => 'current',
+        'upcoming' => 'upcoming',
+        'past' => 'past'
+       
         
     );
-    $exhibitions = ExhibitionPage::get();
+ 
 
 	public function init() {
 		parent::init();
@@ -37,25 +43,49 @@ class ExhibitionHolder_Controller extends Page_Controller {
 	}
 
 	public function upcoming(){
+		 $exhibitions = $this->Children();
+		 $upcomingExhibitions = new ArrayList();
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->StartDate > TODAY) {
-					$upcomingExhibitions = $upcomingExhibitions->push($exhibition);
+				if ($exhibition->obj("StartDate")->InFuture()) {
+					$upcomingExhibitions->push($exhibition);
 				}
 			}
-			return $upcomingExhibitions;
-		}
+			$Data = array(
+				'ExhibitionList' => $upcomingExhibitions,
+			);
+
+			return $this->customise($Data)->renderWith(array('ExhibitionHolder_upcoming', 'Page'));
 	}
+
 	public function past(){
+		 $exhibitions = $this->Children();
+		 $pastExhibitions = new ArrayList();
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->EndDate < TODAY) {
-					$pastExhibitions = $pastExhibitions->push($exhibition);
+				if ($exhibition->obj("EndDate")->InPast()) {
+					$pastExhibitions->push($exhibition);
 				}
 			}
-			return $pastExhibitions;
-		}
+			$Data = array(
+				'ExhibitionList' => $pastExhibitions,
+			);
+
+			return $this->customise($Data)->renderWith(array('ExhibitionHolder_past', 'Page'));
 	}
-	public function current(){
-		
+	public function index(){
+		 $exhibitions = $this->Children();
+		 $currentExhibitions = new ArrayList();
+		foreach ($exhibitions as $exhibition) {
+
+				if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
+					print_r($exhibition->Title.' added to list <br />');
+					$currentExhibitions->push($exhibition);
+				}
+			}
+			$Data = array(
+				'ExhibitionList' => $currentExhibitions,
+			);
+
+			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
 }
