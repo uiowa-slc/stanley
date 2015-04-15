@@ -11,7 +11,7 @@
 		<nav class="sec-nav" aria-label="Secondary">
 			<ul class="first-level">
 				
-					<li <% if $Action = "current" %>class="active"<% end_if %>><a href="$Link">Current Events</a></li>
+					<li <% if $Action = "index" %>class="active"<% end_if %>><a href="$Link">Current Events</a></li>
 					<li <% if $Action = "upcoming" %>class="active"<% end_if %>><a href="$Link("upcoming")">Upcoming Events</a></li>
 					<li <% if $Action = "past" %>class="active"<% end_if %>><a href="$Link("past")">Past Events</a></li>
 				
