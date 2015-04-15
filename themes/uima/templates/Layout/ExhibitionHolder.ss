@@ -16,11 +16,11 @@
 		<% end_if %>
 
 		<!-- Side Bar -->
-		<% if $ExhibitionList || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
+	
 			<div class="col-md-4 col-lg-3 sidebar">
-				<% include SideNav %>
+				<% include ExhibitionHolderSideNav %>
 			</div>
-		<% end_if %>
+		
 
 		<!-- Main Content -->
 		<div class="<% if $ExhibitionList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">

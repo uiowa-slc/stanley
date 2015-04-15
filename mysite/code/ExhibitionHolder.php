@@ -54,7 +54,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 				'ExhibitionList' => $upcomingExhibitions,
 			);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder_upcoming', 'Page'));
+			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
 	public function past(){
@@ -69,7 +69,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 				'ExhibitionList' => $pastExhibitions,
 			);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder_past', 'Page'));
+			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 	public function index(){
 		 $exhibitions = $this->Children();
@@ -77,8 +77,9 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		foreach ($exhibitions as $exhibition) {
 
 				if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
-					print_r($exhibition->Title.' added to list <br />');
+					
 					$currentExhibitions->push($exhibition);
+
 				}
 			}
 			$Data = array(
