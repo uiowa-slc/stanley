@@ -1,0 +1,36 @@
+.collectionsholder {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li {
+		position: relative;
+	}
+}
+.collectionsholder .justify-item {
+	@media screen and (min-width: $break-medium) {
+		width: 48%;
+	}
+	@media screen and (min-width: $break-large) {
+		width: 32%;
+	}
+}
+.collection-box {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 80%;
+}
+.collectionsholder .title {
+	color: #fff;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	line-height: 1.2;
+	padding: 2em 1.5em 1em;
+	width: 100%;
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 90%);
+	& a {
+		color: #fff;
+	}
+}

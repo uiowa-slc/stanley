@@ -2,7 +2,7 @@
 class ArtworkPage extends Page {
 	static $db = array(
 
-		'ArtworkArtist' => 'Text',
+
 		'ArtworkArtistLifespan' => 'Text',
 		'ArtworkTitle' => 'Text',
 		'ArtworkYear' => 'Text',
@@ -27,7 +27,6 @@ class ArtworkPage extends Page {
 		$fields->removeByName("Photo");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('ArtworkImage', 'Artwork Image'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtworkArtist','Artwork Artist'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkArtistLifespan','Artist Lifespan Information'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkTitle','Artwork Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkYear','Artwork Year'));
