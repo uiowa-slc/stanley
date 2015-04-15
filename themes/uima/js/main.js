@@ -19,7 +19,7 @@ $(document).ready(function() {
 		fade: true,
 		cssEase: 'linear',
 		pauseOnHover: false,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 5500,
 		responsive: [
 	    {

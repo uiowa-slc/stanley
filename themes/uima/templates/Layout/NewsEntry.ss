@@ -1,9 +1,9 @@
-<div class="container">
+<main class="container main" role="main">
 	<div class="row">
 
 		<!-- Main Content -->
-		<div class="col-md-12">
-			<article class="clearfix article newsentry">
+		<div class="col-lg-10 col-lg-offset-1">
+			<article class="clearfix newsentry">
 				<h1 class="entry-title">$Title</h1>
 				<p class="entry-date">
 					Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
@@ -28,4 +28,4 @@
 			</article>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
-</div><!-- end .container -->
+</main><!-- end .container -->

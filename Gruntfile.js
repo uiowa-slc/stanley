@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed'
+					style: 'compressed',
+					compass: true
 				},
 				files: {
 					'<%= project.src %>/css/master.css': '<%= project.src %>/scss/master.scss',

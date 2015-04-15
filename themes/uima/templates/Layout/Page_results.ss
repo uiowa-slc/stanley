@@ -1,9 +1,9 @@
-<article class="container">
+<main class="container main" role="main">
 	<div class="row">
 
 		<!-- Main Content -->
 		<div class="col-md-10 col-md-offset-1">
-			<div class="article">
+			<section>
 				<h1>$Title</h1>
 
 				<% if $Query %>
@@ -62,7 +62,7 @@
 					<p>Page $Results.CurrentPage of $Results.TotalPages</p>
 				</div>
 				<% end_if %>
-			</div>
+			</section>
 		</div>
 	</div>
-</article>
+</main>

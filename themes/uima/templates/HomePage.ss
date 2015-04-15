@@ -32,6 +32,26 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
-
+	<!-- Slippry Carousel -->
+	<script src="{$ThemeDir}/js/slippry.min.js"></script>
+	<script>
+		$(function() {
+			var demo1 = $("#demo1").slippry({
+				transition: 'kenburns',
+				kenZoom: 140,
+				speed: 8000,
+				autoHover: false,
+				controls: false,
+  				captions: 'custom', // Position: overlay, below, custom, false
+  				captionsEl: '.sy-caption'
+				// useCSS: true,
+				// speed: 1000,
+				// pause: 3000,
+				// auto: true,
+				// preload: 'visible',
+				// autoHover: false
+			});
+		});
+	</script>
 </body>
 </html>

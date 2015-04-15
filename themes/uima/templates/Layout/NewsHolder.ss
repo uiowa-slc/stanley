@@ -7,7 +7,7 @@
 
 <% if SelectedTag %>
 	<!-- ========= BEGIN SELECTED TAG CONTENT ========= -->
-	<div class="container">
+	<main class="container main" role="main">
 		<div class="row">
 			<!-- Side Bar -->
 			<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
@@ -18,7 +18,7 @@
 
 			<!-- Main Content -->
 			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<article class="article">
+				<section>
 					<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
 					<!-- Loop News -->
 					<div class="newsholder-entries">
@@ -32,16 +32,16 @@
 						<% end_loop %>
 					</div>
 					<% include NewsPagination %>
-				</div>
-			</div>
+				</section>
+			</div><!-- end .col -->
 		</div><!-- end .row -->
-	</div><!-- END .container -->
+	</main><!-- END .container -->
 <% else %>
 
 	<!-- ========= BEGIN FEATURED CONTENT ========= -->
-	<div class="container">
+	<main class="container main" role="main">
 		<div class="row">
-		
+
 			<!-- Side Bar -->
 			<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
 				<div class="col-md-4 col-lg-3 sidebar">
@@ -51,7 +51,7 @@
 
 			<!-- Main Content -->
 			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<article class="article">
+				<section>
 					<h1>$Title</h1>
 					$Content
 					$Form
@@ -75,8 +75,8 @@
 						<% end_loop %>
 					</div>
 					<% include NewsPagination %>
-				</div>
-			</div>
-		</div>
+				</section>
+			</div><!-- end .col -->
+		</div><!-- end .row -->
 	</div><!-- end .container -->
 <% end_if %>
