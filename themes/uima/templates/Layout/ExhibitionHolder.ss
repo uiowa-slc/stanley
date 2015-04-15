@@ -16,19 +16,19 @@
 		<% end_if %>
 
 		<!-- Side Bar -->
-		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
+	
 			<div class="col-md-4 col-lg-3 sidebar">
-				<% include SideNav %>
+				<% include ExhibitionHolderSideNav %>
 			</div>
-		<% end_if %>
+		
 
 		<!-- Main Content -->
-		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+		<div class="<% if $ExhibitionList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
 			<div class="article">
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
-				<% loop AllChildren %>
+				<% loop ExhibitionList %>
 					<div class="exhibitlist">
 						<!-- Image -->
 						<div class="exhibit-img" style="background-image: url($EventPageImage.URL);">
