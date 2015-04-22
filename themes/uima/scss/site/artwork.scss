@@ -1,0 +1,30 @@
+.artwork-image {
+	padding: 20px;
+	text-align: center;
+}
+.artwork-image img {
+	display: inline-block;
+	margin: 0 auto;
+}
+.artwork-details {
+	@media (min-width: $break-medium) {
+		float: left;
+		margin-right: 10%;
+		width: 30%;
+	}
+}
+.artwork-content {
+	@media (min-width: $break-medium) {
+		float: left;
+		width: 60%;
+	}
+}
+.artwork-details .title {
+	font-weight: bold;
+}
+.artwork-content {
+
+	@media (min-width: $break-medium) {
+		font-size: 19px;
+	}
+}

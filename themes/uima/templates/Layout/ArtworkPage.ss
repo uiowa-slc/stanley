@@ -1,21 +1,19 @@
 <% if ArtworkImage %>
-	<img src="$ArtworkImage.SetWidth(500).URL" alt="$ArtworkArtist" />
+	<section class="artwork-image">
+		<a href="$ArtworkImage.URL" class="lightbox tooltip" title="$Title, $ArtworkTitle, $ArtworkYear" data-title="Click on the image to see a larger version" data-tooltip-options='{"direction":"top","follow":"true"}'>
+			<img src="$ArtworkImage.SetHeight(600).URL" alt="$ArtworkTitle" />
+		</a>
+	</section>
 <% end_if %>
-
-<h2>$ArtworkArtist</h2><br />
-<h3>$ArtworkArtistLifespan</h3> <br />
-<h4>$ArtworkTitle  $ArtworkYear</h4>
-<h5>$ArtworkDimensions </h5>
-<p>$ArtworkCollectionInfo</p>
-<p>$ArtworkText</p>
-
-<% loop Parent %>
-	<p>Other pages in the <a href="$Link">$Title</a> Collection</p>
-	<ul>
-		<% loop Children %>
-		<li>
-			<h3><a href="$Link">$Title</a></h3>
-		</li>
-		<% end_loop %>
-	</ul>
-<% end_loop %>
+<main class="container main clearfix" role="main" id="main-content">
+	<section class="artwork-details">
+		<h1 class="title">$Title</h1>
+		<h4>$ArtworkArtistLifespan</h4>
+		<h4>$ArtworkTitle, $ArtworkYear</h4>
+		<h4>$ArtworkDimensions</h4>
+		<p>$ArtworkCollectionInfo</p>
+	</section>
+	<section class="artwork-content">
+		$ArtworkText
+	</section>
+</main><!-- end .container -->

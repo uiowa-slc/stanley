@@ -13,7 +13,7 @@
 	</div>
 <% end_if %>
 
-<div class="container">
+<section id="main-content" class="container" tabindex="-1">
 	$Content
 	$Form
-</div><!-- end .container -->
+</section><!-- end .container -->

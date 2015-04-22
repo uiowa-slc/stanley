@@ -18,7 +18,7 @@
 
 			<!-- Main Content -->
 			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<section>
+				<section id="main-content" tabindex="-1">
 					<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
 					<!-- Loop News -->
 					<div class="newsholder-entries">
@@ -51,7 +51,7 @@
 
 			<!-- Main Content -->
 			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<section>
+				<section id="main-content" tabindex="-1">
 					<h1>$Title</h1>
 					$Content
 					$Form

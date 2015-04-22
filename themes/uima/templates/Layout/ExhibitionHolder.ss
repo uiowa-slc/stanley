@@ -16,15 +16,15 @@
 		<% end_if %>
 
 		<!-- Side Bar -->
-	
+
 			<div class="col-md-4 col-lg-3 sidebar">
 				<% include ExhibitionHolderSideNav %>
 			</div>
-		
+
 
 		<!-- Main Content -->
 		<div class="<% if $ExhibitionList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-			<div class="article">
+			<section id="main-content" tabindex="-1">
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
@@ -44,7 +44,7 @@
 						</div>
 					</div>
 				<% end_loop %>
-			</div>
+			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </main><!-- end .container -->

@@ -3,7 +3,7 @@
 
 		<!-- Main Content -->
 		<div class="col-md-10 col-md-offset-1">
-			<section>
+			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 
 				<% if $Query %>

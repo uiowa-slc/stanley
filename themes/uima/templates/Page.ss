@@ -17,6 +17,7 @@
 </head>
 <body class="$ClassName shifter">
 	<div class="shifter-page">
+		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include Header %>
 		$Layout
 		<% include Footer %>

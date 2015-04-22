@@ -15,7 +15,9 @@ Section Title
 Side Navigation
 --------------------------------------------------------------- */
 .side-navigation {
-	margin-bottom: 3em;
+	@media (min-width: $break-medium) {
+		margin-bottom: 3em;
+	}
 }
 .sec-nav ul {
 	list-style: none;
@@ -27,17 +29,33 @@ Side Navigation
 	display: block;
 }
 .sec-nav .first-level > li {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #ccc;
+	@media (min-width: $break-medium) {
+		border-bottom: 1px solid #333;
+	}
 }
-.first-level > li  > a {
-	font-size: 21px;
+.sec-nav .first-level > li:last-of-type {
+	@media (max-width: $break-medium) {
+		border-bottom: none;
+	}
+}
+.sec-nav .first-level > li  > a {
+	font-size: 14px;
 	line-height: 1.3;
-	padding: 12px 0;
+	padding: 12px;
+	@media (min-width: $break-medium) {
+		font-size: 21px;
+		padding: 12px 0;
+	}
 }
-.first-level li.active > a {
+.sec-nav .first-level li.active > a {
 	color: $link;
+	font-weight: bold;
+	@media (min-width: $break-medium) {
+		font-weight: normal;
+	}
 }
-.first-level li a:hover, .first-level li a:focus {
+.sec-nav .first-level li a:hover, .sec-nav .first-level li a:focus {
 	color: $link;
 }
 
@@ -45,10 +63,14 @@ Side Navigation
 .sec-nav .second-level {
 	margin-bottom: 1em;
 }
-.second-level > li > a {
-	font-size: 16px;
+.sec-nav .second-level > li > a {
+	font-size: 14px;
 	line-height: 1.3;
-	padding: 5px 0;
+	padding: 12px;
+	@media (min-width: $break-medium) {
+		font-size: 16px;
+		padding: 5px 0;
+	}
 }
 
 /* ---------------------------------------------------------------

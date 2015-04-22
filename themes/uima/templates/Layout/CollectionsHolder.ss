@@ -1,8 +1,7 @@
 <main class="container main" role="main">
 	<div class="row">
 		<div class="col-sm-12">
-			<section>
-				<!-- $Breadcrumbs -->
+			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
 				$Form

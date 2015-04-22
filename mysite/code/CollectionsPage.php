@@ -5,7 +5,7 @@ class CollectionsPage extends Page {
 
 	);
 	static $has_one = array(
-
+		'ArtCreditLink' => 'SiteTree',
 		'CollectionsImage' => 'Image',
 		'CollectionsCover' => 'Image',
 
@@ -20,6 +20,7 @@ class CollectionsPage extends Page {
 
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsCover', 'Collections Cover Image'));
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image'));
+		$fields->addFieldToTab('Root.Main', new TreeDropdownField('ArtCreditLinkID', 'Image Credit Link', 'SiteTree'));
 
 
 	return $fields;

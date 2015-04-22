@@ -7,19 +7,16 @@
 				<% end_loop %>
 			</ul>
 		</div>
-		<div class="consistent">
+		<!-- <div class="consistent">
 			<a href="{$BaseHref}contact" class="link highlight">Contact</a>
 			<a href="{$BaseHref}membership" class="link highlight">Membership</a>
-		</div>
-		<hr />
-		<form id="SearchForm" action="" method="get" enctype="application/x-www-form-urlencoded">
-			<div class="searchcontainer">
-				<!-- <label for="searchinput" class="searchlabel">Search</label> -->
-				<input type="search" id="searchinput" placeholder="Search" name="Search" class="searchinput" autocomplete="off">
-				<input type="submit" class="searchbtn" value="search">
+		</div> -->
+		<!-- Search -->
+		<% if $SearchForm %>
+			<div class="search-bar" role="search">
+			  $SearchForm
 			</div>
-		</form>
-		<hr />
+		<% end_if %>
 		<div class="shifter-address">
 			<div class="contain">
 				<h3>$SiteConfig.Title</h3>

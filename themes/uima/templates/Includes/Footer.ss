@@ -24,10 +24,10 @@
 					</ul>
 				</div>
 				<ul class="secondary">
-					<li><a href="{$BaseHref}contact/">Contact</a></li>
-					<li><a href="{$BaseHref}membership/">Membership</a></li>
+					<li><a href="{$BaseHref}about/contact/">Contact</a></li>
+					<li><a href="{$BaseHref}support/membership/">Membership</a></li>
 					<li><a href="#">Store</a></li>
-					<li><a href="{$BaseHref}news/">Press / News</a></li>
+					<li><a href="{$BaseHref}about/news/">Press / News</a></li>
 				</ul>
 			</div>
 		</div><!-- end .container -->

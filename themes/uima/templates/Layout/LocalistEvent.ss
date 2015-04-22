@@ -48,7 +48,7 @@
 
 		<!-- Main Content -->
 		<div class="col-lg-8">
-			<section>
+			<section id="main-content" tabindex="-1">
 
 				<!-- Content -->
 				<% if $Content %>

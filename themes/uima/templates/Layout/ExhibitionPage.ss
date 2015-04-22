@@ -18,8 +18,7 @@
 
 		<!-- Main Content -->
 		<div class="col-md-8 col-lg-8">
-			<section>
-				<!-- $Breadcrumbs -->
+			<section id="main-content" tabindex="-1">
 				<!-- <h1>$Title</h1> -->
 				$EventDescription
 				$Form

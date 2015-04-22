@@ -1,57 +1,60 @@
 
 /* Configuration
 -------------------------------------------*/
-@import "_config";
+@import "config";
 
 
 /* Global Settings
 -------------------------------------------*/
-@import "global/_mixins";
-@import "global/_normalize";
-@import "global/_typography";
-@import "global/_global";
+@import "global/mixins";
+@import "global/normalize";
+@import "global/typography";
+@import "global/global";
 
 
 /* Element Imports
 -------------------------------------------*/
-/*@import "elements/_button-bootstrap";*/
-/*@import "elements/_form-bootstrap";*/
-@import "elements/_grid-bootstrap";
-@import "elements/_tables";
+/*@import "elements/button-bootstrap";*/
+/*@import "elements/form-bootstrap";*/
+@import "elements/grid-bootstrap";
+@import "elements/tables";
 
 
 /* Plugins
 -------------------------------------------*/
-@import "plugins/_shifter";
-@import "plugins/_naver";
-/*@import "plugins/_boxer";*/
-@import "plugins/_slick";
+@import "plugins/shifter";
+@import "plugins/naver";
+/*@import "plugins/boxer";*/
+/*@import "plugins/slick";*/
 @import "plugins/slippry";
+@import "plugins/lightbox";
+@import "plugins/tooltip";
 
 /* Layout
 -------------------------------------------*/
-@import "site/_childpages";
-@import "site/_searchresults";
-@import "site/_events";
-@import "site/_staff";
-@import "site/_sidebaritem";
-@import "site/_newsentry";
-@import "site/_newsholder";
-@import "site/_homepage";
-@import "site/_header";
+@import "site/childpages";
+@import "site/searchresults";
+@import "site/events";
+@import "site/staff";
+@import "site/sidebaritem";
+@import "site/newsentry";
+@import "site/newsholder";
+@import "site/homepage";
+@import "site/header";
+@import "site/artwork";
 @import "site/exhibitions";
 @import "site/collections";
-@import "site/_footer";
-@import "site/_sidenav";
-@import "site/_mainnav";
-@import "site/_breadcrumbs";
-@import "site/_pagination";
+@import "site/footer";
+@import "site/sidenav";
+@import "site/mainnav";
+@import "site/breadcrumbs";
+@import "site/pagination";
 
 /* Site specific styles
 -------------------------------------------*/
-@import "site/_site";
+@import "site/site";
 
 
 /* Print
 -------------------------------------------*/
-@import "site/_print";
+@import "site/print";
