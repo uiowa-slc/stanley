@@ -165,7 +165,7 @@ Social Icons
 .social-icons li a {
 	display: block;
 	opacity: .8;
-	&:hover {
+	&:hover, &:focus {
 		opacity: 1;
 	}
 }

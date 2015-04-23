@@ -3,11 +3,8 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="footer-contact">
-				<h3>University of Iowa Museum of Art</h3>
-				<p><strong><a href="{$BaseHref}/visit/locations/">View Museum Locations</a></strong></p>
-				<p>(319) 335-1727<br>
-				<a href="mailto:uima@uiowa.edu">uima@uiowa.edu</a></p>
-				<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
+				<h3>$SiteConfig.Title</h3>
+				$SiteConfig.Address
 			</div>
 			<div class="clearfix footer-links">
 				<div class="main-links">
