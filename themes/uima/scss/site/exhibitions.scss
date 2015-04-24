@@ -107,6 +107,27 @@ Exhibition Page
 	}
 }
 
-
+/* ---------------------------------------------------------------
+Related Events
+--------------------------------------------------------------- */
+.related-events {
+	font-size: 15px;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+.related-events .title {
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+.related-events .time {
+	display: block;
+}
+.related-events-link {
+	display: block;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
 
 

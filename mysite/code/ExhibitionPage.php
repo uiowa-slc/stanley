@@ -8,6 +8,7 @@ class ExhibitionPage extends Page {
 		'ExhibitionAddress' => 'Text',
 		'LocationLink' => 'Text',
 		'EventDescription' => 'HTMLText',
+		"EventTag" => "Text"
 
 	);
 	static $has_one = array(
@@ -29,6 +30,7 @@ class ExhibitionPage extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionAddress','Exhibition Address'));
 		$fields->addFieldToTab('Root.Main', new TextField('LocationLink','Location Link'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('EventDescription','Exhibition Description'));
+		$fields->addFieldToTab("Root.Main", new TextField("EventTag", "Tag used to show related events"));
 
 
 		 return $fields;
@@ -36,6 +38,30 @@ class ExhibitionPage extends Page {
 }
 
 class ExhibitionPage_Controller extends Page_Controller {
+	public function EventListByTag() {
+		$calendar = LocalistCalendar::get()->First();
 
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListByTag($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
+
+	public function EventListBySearch() {
+		$calendar = LocalistCalendar::get()->First();
+
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListBySearchTerm($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
 }
 ?>
