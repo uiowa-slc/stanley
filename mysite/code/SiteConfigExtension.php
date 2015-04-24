@@ -12,7 +12,8 @@ class SiteConfigExtension extends DataExtension {
 		'State' => 'Text',
 		'Zip' => 'Text',
 		'Phone' =>'Text',
-		'Email' =>'Text'
+		'Email' =>'Text',
+		'Analytics' =>'Text'
 
 	);
 
@@ -22,6 +23,7 @@ class SiteConfigExtension extends DataExtension {
 
 	public function updateCMSFields(FieldList $fields){
 
+		$fields->addFieldToTab('Root.Main', new TextField('Analytics', 'Google Analytics Tracking ID'));
 		$fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('YoutubeLink', 'Youtube Account URL'));
