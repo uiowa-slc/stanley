@@ -6,7 +6,14 @@ class SiteConfigExtension extends DataExtension {
 		'TwitterLink' => 'Text',
 		'FacebookLink' =>'Text',
 		'YoutubeLink' =>'Text',
-		'Address' =>'HTMLText'
+		'Address1' =>'Text',
+		'Address2' =>'Text',
+		'City' => 'Text',
+		'State' => 'Text',
+		'Zip' => 'Text',
+		'Phone' =>'Text',
+		'Email' =>'Text'
+
 	);
 
 	static $has_one = array(
@@ -18,8 +25,13 @@ class SiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('YoutubeLink', 'Youtube Account URL'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Address', 'Address'));
-
+		$fields->addFieldToTab('Root.Main', new TextField('Address1', 'Address Line 1'));
+		$fields->addFieldToTab('Root.Main', new TextField('Address2', 'Address Line 2'));
+		$fields->addFieldToTab('Root.Main', new TextField('City', 'City'));
+		$fields->addFieldToTab('Root.Main', new TextField('State', 'State'));
+		$fields->addFieldToTab('Root.Main', new TextField('Zip', 'Zip Code'));
+		$fields->addFieldToTab('Root.Main', new TextField('Phone', 'Phone Number'));
+		$fields->addFieldToTab('Root.Main', new TextField('Email', 'Email'));
 		return $fields;
 
 	}

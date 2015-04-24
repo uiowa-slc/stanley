@@ -19,17 +19,20 @@
 		<% end_if %>
 		<div class="shifter-address">
 			<div class="contain">
-				<h3>$SiteConfig.Title</h3>
-				<p>1375 Highway One West<br />1840 Studio Arts Building<br />Iowa City, Iowa 52242</p>
+				<div itemscope itemtype="http://schema.org/Organization">
+					<h3 itemprop="name">$SiteConfig.Title</h3>
+					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<p><span itemprop="streetAddress">$SiteConfig.Address1<br />$SiteConfig.Address2</span><br /><span itemprop="addressLocality">$SiteConfig.City, $SiteConfig.State</span> <span itemprop="postalCode">$SiteConfig.Zip</span></p>
+				</div>
 			</div>
 		</div>
 		<hr />
 		<div class="contact">
 			<div>
-				<a href="mailgo:sustainability@uiowa.edu">uima@uiowa.edu</a>
+				<a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 			</div>
 			<div>
-				<span>(319) 335-1727</span>
+				<span><a href="tel:$SiteConfig.Phone">$SiteConfig.Phone</a></span>
 			</div>
 		</div>
 	</div>

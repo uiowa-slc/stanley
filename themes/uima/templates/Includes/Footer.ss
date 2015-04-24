@@ -3,8 +3,15 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="footer-contact">
-				<h3>$SiteConfig.Title</h3>
-				$SiteConfig.Address
+				<div itemscope itemtype="http://schema.org/Organization">
+					<h3 itemprop="name">$SiteConfig.Title</h3>
+					<p><strong><a href="../visit/locations/">View Museum Locations</a></strong></p>
+					<p itemprop="telephone">$SiteConfig.Phone<br />
+					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
+					</p>
+					<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
+					$SiteConfig.Address
+				</div>
 			</div>
 			<div class="clearfix footer-links">
 				<div class="main-links">
