@@ -43,18 +43,17 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<section class="highlights">
-				<h2>Collection Highlights</h2>
+				<% if Children %><h2>Collection Highlights</h2><% end_if %>
 				<ul class="collection-highlights clearfix">
 					<% loop Children %>
-						<li class="highlight-item" style="background-image: url($ArtworkImage.CroppedImage(400,300).URL);">
+						<li class="highlight-item clearfix">
 							<a class="highlight-link" href="$Link">
-
+								<span class="highlight-img" style="background-image: url($ArtworkImage.CroppedImage(400,300).URL);"></span>
 								<div class="highlight-content">
 									<h4 class="highlight-artist">$Title</h4>
 									<h4 class="highlight-lifespan">$ArtworkArtistLifespan</h4>
 									<h5 class="highlight-title">$ArtworkTitle, <span>$ArtworkYear</span></h5>
 								</div>
-
 							</a>
 						</li>
 					<% end_loop %>

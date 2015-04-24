@@ -29,7 +29,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
 	font-size: 26px;
-	line-height: 1.1;
 	margin: .75em 0 .5em;
 	text-transform: none;
 	@media (min-width: $break-small) {
@@ -38,7 +37,6 @@ h1 {
 }
 h2 {
 	font-size: 20px;
-	line-height: 1.1;
 	@media (min-width: $break-small) {
 		font-size: 24px;
 	}
