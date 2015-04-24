@@ -197,12 +197,12 @@ Collection Highlights
 	}
 }
 .highight-link:hover .highlight-lifespan,
-.highlight-link:hover .highlight-title
+.highlight-link:hover .highlight-title,
 .highight-link:focus .highlight-lifespan,
 .highlight-link:focus .highlight-title {
-	@media (min-width: $break-medium) {
+
 		display: block;
-	}
+
 }
 
 
