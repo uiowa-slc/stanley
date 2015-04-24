@@ -1,5 +1,5 @@
-.eventcontainer {
-
+.event-content p {
+	font-size: 18px !important;
 }
 .eventlist {
 	background-color: #fff;
@@ -88,6 +88,25 @@ Event Page
 	margin-top: 1em;
 	@media (min-width: $break-medium) {
 		float: right;
+		margin-top: 0;
+	}
+}
+.event-dates {
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+		-webkit-column-rule: 1px solid #ddd; /* Chrome, Safari, Opera */
+		-moz-column-rule: 1px solid #ddd; /* Firefox */
+		column-rule: 1px solid #ddd;
+		-webkit-column-gap: 2em; /* Chrome, Safari, Opera */
+		-moz-column-gap: 2em; /* Firefox */
+		column-gap: 2em;
+	@media (min-width: $break-medium) {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+		-moz-column-count: 3; /* Firefox */
+		column-count: 3;
+	}
+	& p {
 		margin-top: 0;
 	}
 }
