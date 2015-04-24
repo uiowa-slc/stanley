@@ -1,8 +1,4 @@
-<% if $Photo %>
-	<div class="page-photo">
-		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
-	</div>
-<% end_if %>
+<% include HeaderPhoto %>
 
 <main class="container main" role="main">
 	<div class="row">

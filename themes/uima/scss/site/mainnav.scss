@@ -102,6 +102,9 @@ ul.show-menu {
 	float: none;
 	position: static;
 }
+.main-nav ul li:before, .main-nav ul li.last:after {
+	display: none;
+}
 .main-nav ul li:first-of-type {
 	border-top: none;
 }

@@ -10,10 +10,12 @@
 	<title>$Title | $SiteConfig.Title</title>
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
-
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
+	<!-- Picturefill -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.0/picturefill.min.js" async></script>
 </head>
 <body class="$ClassName shifter">
 	<div class="shifter-page">
