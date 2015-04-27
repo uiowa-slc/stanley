@@ -9,7 +9,7 @@
 					<p itemprop="telephone">$SiteConfig.Phone<br />
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>
-					<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
+					<p><small>&copy; 2015 University of Iowa Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
 					$SiteConfig.Address
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 					<li><a href="{$BaseHref}about/contact/">Contact</a></li>
 					<li><a href="{$BaseHref}support/membership/">Membership</a></li>
 					<li><a href="#">Store</a></li>
-					<li><a href="{$BaseHref}about/news/">Press / News</a></li>
+					<li><a href="{$BaseHref}about/news/">News / Press</a></li>
 				</ul>
 			</div>
 		</div><!-- end .container -->
