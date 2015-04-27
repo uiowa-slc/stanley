@@ -12,11 +12,10 @@ class ExhibitionHolder extends Page {
 
 	static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
 
-
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-	   return $fields;
+		return $fields;
 
 	}
 
@@ -25,68 +24,65 @@ class ExhibitionHolder extends Page {
 class ExhibitionHolder_Controller extends Page_Controller {
 	private static $allowed_actions = array(
 		'upcoming',
-		'past'
+		'past',
 	);
 
 	private static $url_handlers = array(
-        'index' => 'current',
-        'upcoming' => 'upcoming',
-        'past' => 'past'
-       
-        
-    );
- 
+		'index' => 'current',
+		'upcoming' => 'upcoming',
+		'past' => 'past',
+
+	);
 
 	public function init() {
 		parent::init();
 
 	}
 
-	public function upcoming(){
-		 $exhibitions = $this->Children();
-		 $upcomingExhibitions = new ArrayList();
+	public function upcoming() {
+		$exhibitions = $this->Children();
+		$upcomingExhibitions = new ArrayList();
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->obj("StartDate")->InFuture()) {
-					$upcomingExhibitions->push($exhibition);
-				}
+			if ($exhibition->obj("StartDate")->InFuture()) {
+				$upcomingExhibitions->push($exhibition);
 			}
-			$Data = array(
-				'ExhibitionList' => $upcomingExhibitions,
-			);
+		}
+		$Data = array(
+			'ExhibitionList' => $upcomingExhibitions,
+		);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
-	public function past(){
-		 $exhibitions = $this->Children();
-		 $pastExhibitions = new ArrayList();
+	public function past() {
+		$exhibitions = $this->Children();
+		$pastExhibitions = new ArrayList();
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->obj("EndDate")->InPast()) {
-					$pastExhibitions->push($exhibition);
-				}
+			if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
+				$pastExhibitions->push($exhibition);
 			}
-			$Data = array(
-				'ExhibitionList' => $pastExhibitions,
-			);
+		}
+		$Data = array(
+			'ExhibitionList' => $pastExhibitions,
+		);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
-	public function index(){
-		 $exhibitions = $this->Children();
-		 $currentExhibitions = new ArrayList();
+	public function index() {
+		$exhibitions = $this->Children();
+		$currentExhibitions = new ArrayList();
 		foreach ($exhibitions as $exhibition) {
-
-				if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
-					
-					$currentExhibitions->push($exhibition);
-
-				}
+			if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
+				$currentExhibitions->push($exhibition);
+			} else if ((!$exhibition->StartDate) && (!$exhibition->EndDate)) {
+				$currentExhibitions->push($exhibition);
 			}
-			$Data = array(
-				'ExhibitionList' => $currentExhibitions,
-			);
+		}
+		$Data = array(
+			'ExhibitionList' => $currentExhibitions,
+		);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
 }
