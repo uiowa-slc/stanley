@@ -1,6 +1,3 @@
-.event-content p {
-	font-size: 18px !important;
-}
 .eventlist {
 	background-color: #fff;
 	box-shadow: 0 2px 6px rgba(0,0,0,.3);
@@ -9,27 +6,41 @@
 }
 .eventlist-img {
 	display: block;
-	float: right;
-	margin-left: 1em;
-	max-height: 180px;
+	margin-bottom: 10px;
 	overflow: hidden;
+	@media (min-width: $break-medium) {
+		float: right;
+		margin-left: 1em;
+		margin-bottom: 0;
+		width: 240px;
+		max-height: 180px;
+	}
 	& img {
 		display: block;
 	}
 }
 .eventlist-date {
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 1.3;
 	margin-top: 0;
+	@media (min-width: $break-medium) {
+		font-size: 24px;
+	}
 }
 .eventlist-time {
-	display: block;
+	@media (min-width: $break-medium) {
+		display: block;
+	}
+
 }
 .eventlist-title {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	line-height: 1.3;
 	margin-bottom: 1em;
+	@media (min-width: $break-medium) {
+		font-size: 24px;
+	}
 }
 .eventlist .more-info {
 	display: block;
@@ -42,12 +53,20 @@ Event Page
 --------------------------------------------------------------- */
 
 .event-largeimg {
+	background-color: #4f4b48;
 	background-position: center top;
+	background-repeat: no-repeat;
 	background-size: cover;
 	height: 370px;
 	position: relative;
 	@media (min-width: $break-medium) {
-		height: 570px;
+		padding-top: 50%;
+		height: auto;
+	}
+	@media (min-width: $break-xlarge) {
+		background-size: inherit;
+		padding-top: 0;
+		height: 600px;
 	}
 
 }
@@ -65,6 +84,9 @@ Event Page
 	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
+}
+.event-content p, .event-content p span {
+	font-size: 18px !important;
 }
 .title-date {
 	font-weight: bold;
@@ -110,3 +132,29 @@ Event Page
 		margin-top: 0;
 	}
 }
+/* Add to Calendar */
+.addtocalendar {
+	background-color: #f4f4f4;
+	border: 1px solid #ddd;
+	border-radius: 1px;
+	padding: 10px;
+	& h3 {
+		margin-bottom: 1em;
+		margin-top: 0;
+	}
+	& p {
+		font-size: 16px;
+		margin: 0;
+	}
+	& img {
+		vertical-align: middle;
+		margin-right: 8px;
+	}
+}
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@
 			<div class="footer-contact">
 				<div itemscope itemtype="http://schema.org/Organization">
 					<h3 itemprop="name">$SiteConfig.Title</h3>
-					<p><strong><a href="../visit/locations/">View Museum Locations</a></strong></p>
+					<p><strong><a href="{$BaseHref}visit/locations/">View Museum Locations</a></strong></p>
 					<p itemprop="telephone">$SiteConfig.Phone<br />
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>

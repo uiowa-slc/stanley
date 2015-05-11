@@ -26,7 +26,7 @@
 
 			$fields->push( new TextField( 'Title', 'Heading' ));
 			$fields->push( new TextField( 'SubTitle', 'Subheading' ));
-			$fields->push( new UploadField( 'Image', 'Image' ));
+			$fields->push( new UploadField( 'Image', 'Image (1400px width, 700px height)' ));
 
 
 			return $fields;

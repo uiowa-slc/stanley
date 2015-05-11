@@ -8,10 +8,10 @@
 <main class="container main clearfix" role="main" id="main-content">
 	<section class="artwork-details">
 		<h1 class="title">$Title</h1>
-		<h4>$ArtworkArtistLifespan</h4>
-		<h4>$ArtworkTitle, $ArtworkYear</h4>
-		<h4>$ArtworkDimensions</h4>
-		<p>$ArtworkCollectionInfo</p>
+		<% if $ArtworkArtistLifespan %><h4>$ArtworkArtistLifespan</h4><% end_if %>
+		<h4>$ArtworkTitle<% if $ArtworkYear %>, $ArtworkYear<% end_if %></h4>
+		<h4><% if $ArtworkMedium %>$ArtworkMedium,<% end_if %> <% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %></h4>
+		<% if $ArtworkCollectionInfo %><p>$ArtworkCollectionInfo</p><% end_if %>
 	</section>
 	<section class="artwork-content">
 		$ArtworkText

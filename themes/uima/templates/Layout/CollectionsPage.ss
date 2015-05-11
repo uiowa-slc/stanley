@@ -5,11 +5,11 @@
 	<div class="page-photo">
 		<picture>
 			<!--[if IE 9]><video style="display: none;"><![endif]-->
-			<source srcset="$CollectionsImage.CroppedImage(1200,400).URL" media="(min-width: 980px)">
-			<source srcset="$CollectionsImage.CroppedImage(980,330).URL" media="(min-width: 768px)">
-			<source srcset="$CollectionsImage.CroppedImage(768,300).URL" media="(min-width: 480px)">
+			<source srcset="$CollectionsImage.CroppedFocusedImage(1200,400).URL" media="(min-width: 980px)">
+			<source srcset="$CollectionsImage.CroppedFocusedImage(980,330).URL" media="(min-width: 768px)">
+			<source srcset="$CollectionsImage.CroppedFocusedImage(768,300).URL" media="(min-width: 480px)">
 			<!--[if IE 9]></video><![endif]-->
-			<img srcset="$CollectionsImage.CroppedImage(480,300).URL" alt="$Title">
+			<img srcset="$CollectionsImage.CroppedFocusedImage(480,300).URL" alt="$Title">
 		</picture>
 		<% if $ArtCreditLinkID %><a href="$ArtCreditLink.Link" class="creditlink" title="More Information"><img src="{$ThemeDir}/images/info.png" alt="More Information"></a><% end_if %>
 	</div>
@@ -48,7 +48,7 @@
 					<% loop Children %>
 						<li class="highlight-item clearfix">
 							<a class="highlight-link" href="$Link">
-								<span class="highlight-img" style="background-image: url($ArtworkImage.CroppedImage(400,300).URL);"></span>
+								<span class="highlight-img" style="background-image: url($ArtworkImage.CroppedFocusedImage(400,300).URL);"></span>
 								<div class="highlight-content">
 									<h4 class="highlight-artist">$Title</h4>
 									<h4 class="highlight-lifespan">$ArtworkArtistLifespan</h4>
