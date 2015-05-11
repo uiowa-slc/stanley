@@ -55,25 +55,6 @@ $(document).ready(function() {
 
 	//Range
 
-	/*$('#slider-range').noUiSlider({
-		start: [ 0 ],
-		range: {
-			'min': [  0 ],
-			'max': [ 10000 ]
-		},
-		//step: []
-	});*/
-
-	var range_all_sliders = {
-		'min': [     0 ],
-		'15%': [   100,  250 ],
-		'30%': [250, 500],
-		'45%': [  500, 1000 ],
-		'60%': [  1000, 2500 ],
-		'75%': [  2500, 5000 ],
-		'100%': [5000, 10000],
-		'max': [ 10000 ]
-	};
 
 	var range_test = {
 		'min': [     0 ],
@@ -102,23 +83,33 @@ $(document).ready(function() {
 		mode: 'values',
 		density: 8,
 		values: [0, 100, 250, 500, 1000, 2500, 5000, 10000],
-		range: range_all_sliders,
+		range: range_test,
 		format: wNumb({
 			decimals: 0,
 			prefix: '$'
 		})
 	});
-
-	/*$("#slider-range").noUiSlider_pips({
-		mode: 'range',
-		values: [0, 100, 250, 500, 1000, 2500, 5000, 10000],
-	});*/
-
-	$('#slider-show a').click(function (e) {
+	$('#myTab a').click(function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
 	})
+	$("#slider-range").on('set', function(){
+			// The slider is the scope, so:
+			// $(this) == $('#slider')
+			val = $(this).val();
+			tab = $('#myTab a[href="#messages"]');
 
-	$("#slider-range").Link('lower').to($("#field"));
+			//alert('wake up');
+			$(tab).tab('show');
+		}
+	);
+	/*$('.noUi-origin').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	});*/
+
+
+
+	//$("#slider-range").Link('lower').to($("#field"));
 
 });
