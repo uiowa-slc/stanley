@@ -29,7 +29,8 @@
 @import "plugins/slippry";
 @import "plugins/lightbox";
 @import "plugins/tooltip";
-
+@import "plugins/nouislider";
+@import "plugins/nouislider-pips";
 /* Layout
 -------------------------------------------*/
 @import "site/childpages";
@@ -49,6 +50,7 @@
 @import "site/mainnav";
 @import "site/breadcrumbs";
 @import "site/pagination";
+@import "site/member";
 
 /* Site specific styles
 -------------------------------------------*/
