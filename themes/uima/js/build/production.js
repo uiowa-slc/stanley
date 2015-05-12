@@ -1010,8 +1010,6 @@ $(document).ready(function() {
 		format: wNumb({
 			decimals: 0
 		})
-
-		//snap: true
 	})
 
 	$('#slider-range').noUiSlider_pips({
@@ -1023,7 +1021,6 @@ $(document).ready(function() {
 			decimals: 0,
 			prefix: '$',
 			thousand: ','
-			//postfix: '</a>'
 		})
 	});
 	$('#myTab a').click(function (e) {
@@ -1053,13 +1050,8 @@ $(document).ready(function() {
 	  $("#slider-range").val(value);
 	});
 
-	/*$('.noUi-origin').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	});*/
-
-
-
-	//$("#slider-range").Link('lower').to($("#field"));
+	$(".noUi-value").filter(function(index, element){
+	    return index % 2 == 1;
+	}).addClass("odd");
 
 });

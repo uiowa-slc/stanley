@@ -2,4 +2,8 @@
 
 .member-levels{
 	padding: 60px 0;
+	padding-right: 20px;
+	@media (min-width: $break-medium) {
+		padding-right: 0;
+	}
 }
