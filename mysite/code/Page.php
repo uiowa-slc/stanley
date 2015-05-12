@@ -5,10 +5,12 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image"
+		"Photo" => "Image",
 	);
 
-	public function getCMSFields(){
+	private static $singular_name = 'Normal Page';
+
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo"));
@@ -35,13 +37,17 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
+	}
+
+	public function DollarSign() {
+		return "$";
 	}
 
 }

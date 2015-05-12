@@ -17,6 +17,7 @@
 /*@import "elements/button-bootstrap";*/
 /*@import "elements/form-bootstrap";*/
 @import "elements/grid-bootstrap";
+@import "elements/nav-bootstrap";
 @import "elements/tables";
 
 
@@ -29,7 +30,8 @@
 @import "plugins/slippry";
 @import "plugins/lightbox";
 @import "plugins/tooltip";
-
+@import "plugins/nouislider";
+@import "plugins/nouislider-pips";
 /* Layout
 -------------------------------------------*/
 @import "site/childpages";
@@ -48,6 +50,7 @@
 @import "site/mainnav";
 @import "site/breadcrumbs";
 @import "site/pagination";
+@import "site/member";
 
 /* Site specific styles
 -------------------------------------------*/

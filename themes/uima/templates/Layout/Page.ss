@@ -24,7 +24,9 @@
 				<h1>$Title</h1>
 				$Content
 				$Form
-
+				<% if $URLSegment = "levels-benefits" %>
+					<% include MemberLevels %>
+				<% end_if %>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
