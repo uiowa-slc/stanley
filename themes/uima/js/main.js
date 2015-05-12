@@ -57,8 +57,9 @@ $(document).ready(function() {
 
 
 	var range_test = {
-		'min': [     0 ],
-		'10%': [   100,  150 ],
+		'min': [     1 ],
+		'2%': [   1,  99 ],
+		'15%' : [100, 150],
 		'25%': [  250, 250 ],
 		'40%' : [ 500, 500],
 		'55%' : [1000, 1500],
@@ -68,7 +69,7 @@ $(document).ready(function() {
 	};
 
 	var range_max = {
-		'min': [     0 ],
+		'min': [     1 ],
 		'max': [ 10000 ]
 	};
 
@@ -76,13 +77,17 @@ $(document).ready(function() {
 		range: range_test,
 		connect: "lower",
 		start: 1,
+		format: wNumb({
+			decimals: 0
+		})
+
 		//snap: true
 	})
 
 	$('#slider-range').noUiSlider_pips({
 		mode: 'values',
 		density: 8,
-		values: [0, 100, 250, 500, 1000, 2500, 5000, 10000],
+		values: [1, 100, 250, 500, 1000, 2500, 5000, 10000],
 		range: range_test,
 		format: wNumb({
 			decimals: 0,
@@ -97,8 +102,8 @@ $(document).ready(function() {
 			// The slider is the scope, so:
 			// $(this) == $('#slider')
 			val = $(this).val();
-			tab = $('#myTab a[href="#messages"]');
-
+			tab = $("#myTab a[data-donate='"+val+"']");
+			console.log(tab);
 			//alert('wake up');
 			$(tab).tab('show');
 		}

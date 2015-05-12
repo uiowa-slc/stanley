@@ -6,19 +6,81 @@
 
   <!-- Nav tabs -->
 
-<ul class="nav nav-tabs" role="tablist" id="myTab">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab">Home</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab">Settings</a></li>
+<ul class="nav nav-tabs visuallyhidden" role="tablist" id="myTab">
+
+    <li role="presentation" class="active"><a href="#donate-1" data-donate="1" aria-controls="home" role="tab" data-toggle="tab">Under 100 dollars</a></li>
+    <li role="presentation"><a href="#donate-100" data-donate="100" aria-controls="home" role="tab" data-toggle="tab">100 dollars</a></li>
+    <li role="presentation"><a href="#donate-250" data-donate="250" aria-controls="profile" role="tab" data-toggle="tab">250 dollars</a></li>
+    <li role="presentation"><a href="#donate-500" data-donate="500" aria-controls="messages" role="tab" data-toggle="tab">500 dollars</a></li>
+    <li role="presentation"><a href="#donate-1000" data-donate="1000" aria-controls="settings" role="tab" data-toggle="tab">1000 dollars</a></li>
+    <li role="presentation"><a href="#donate-2500" data-donate="2500" aria-controls="settings" role="tab" data-toggle="tab">2500 dollars</a></li>
+    <li role="presentation"><a href="#donate-5000" data-donate="5000" aria-controls="settings" role="tab" data-toggle="tab">5000 dollars</a></li>
+    <li role="presentation"><a href="#donate-10000" data-donate="10000" aria-controls="settings" role="tab" data-toggle="tab">10000 dollars</a></li>   
 </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="100"><h2>100 dollars</h2></div>
-    <div role="tabpanel" class="tab-pane" id="200">200 dollars</div>
-    <div role="tabpanel" class="tab-pane" id="messages">500 dollars</div>
-    <div role="tabpanel" class="tab-pane" id="1000">1000 dollars</div>
+    <div role="tabpanel" class="tab-pane active" id="donate-1">
+ 		<h2>FRIEND - under 100 dollars</h2>
+		<p>All members receive the following benefits, in addition to those listed for each category:<br />
+
+			<ul><li>Always free and unlimited admission to the UIMA@IMU in Iowa City</li>
+			<li>Unlimited, free admission to the Figge Art Museum in Davenport </li>
+			<li>10% gift shop discount on all UIMA merchandise*</li>
+			<li>All electronic UIMA communications</li>
+			<li>Previews of new UIMA exhibitions</li>
+			<li>Personalized UIMA membership card</li>
+			<li>Easy renewals through the UIMA ongoing membership program (the best way to keep your benefits fresh)</li>
+			</ul>
+		</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-100">
+    	<h2> CONTRIBUTOR - 100 dollars </h2>
+    	<p>All previously listed benefits plus:</p>
+		<ul><li>Extended benefits to 43 museums participating in the College and University Art Museums Reciprocal Program, including free admission and discounts at museum stores</li>
+		<li>Home delivery of <em>UIMA Magazine</em></li>
+		</ul>
+    </div>
+    <div role="tabpanel" class="tab-pane"  id="donate-250">
+    	<h2>CURATOR’S CIRCLE - 250 dollars</h2>
+    	<p>All previously listed benefits plus:</p>
+		<ul><li>Extended benefits to 625 museums participating in the North American Reciprocal Museum Program (NARM), including free admission and member discounts for gift shops, cafes, parking, special events and more (some limitations apply**)</li>
+		<li>Home delivery of <em>UIMA Annual Report</em></li>
+		<li>Recognition in UIMA Honor Roll</li>
+		</ul>    	
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-500">
+    <h2>SPONSOR - 500 Dollars</h2>
+    <p>All previously listed benefits plus:</p>
+    <ul><li>Free admission to UIMA First Fridays (must present member card for free admission)</li>
+<li>Support a UIMA program of your choice and receive recognition as its sponsor</li>
+</ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-1000">
+	    <h2> DIRECTOR’S CIRCLE - 1,000 Dollars</h2>
+	    <p>All previously listed benefits plus:</p>
+		<ul><li>One free<strong> </strong>UIMA exhibition catalogue (when available)</li>
+		<li>Invitation for member plus one for the annual event hosted by the UIMA Director</li>
+		</ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-2500">
+    	<h2>ADVOCATE - 2,500 Dollars</h2>
+    	<p>All previously listed benefits plus:</p>
+		 <ul><li>Complimentary one-year CONTRIBUTOR membership for a recipient of your choice</li>
+		</ul>   	
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-5000">
+    	<h2>PATRON - 5,000 Dollars</h2>
+    	<p>All previously listed benefits plus:</p>
+ 		<ul><li>Complimentary invitation for two personal guests for the annual event hosted by the UIMA Director</li>
+</ul>   	
+    </div>
+    <div role="tabpanel" class="tab-pane" id="donate-10000">
+     	<h2> WILKE SOCIETY - 10,000 Dollars</h2>
+    	<p>All previously listed benefits plus:</p>
+		 <ul><li>Free use of the UIMA@IMU visual classroom for your own private event with the UIMA Director and up to ten personal guests</li>
+		</ul>   	 	
+    </div>
   </div>
 
 </div>
