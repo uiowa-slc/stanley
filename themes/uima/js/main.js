@@ -92,6 +92,7 @@ $(document).ready(function() {
 		format: wNumb({
 			decimals: 0,
 			prefix: '$',
+			thousand: ','
 			//postfix: '</a>'
 		})
 	});
