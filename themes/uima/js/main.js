@@ -91,7 +91,8 @@ $(document).ready(function() {
 		range: range_test,
 		format: wNumb({
 			decimals: 0,
-			prefix: '$'
+			prefix: '$',
+			//postfix: '</a>'
 		})
 	});
 	$('#myTab a').click(function (e) {
@@ -108,6 +109,19 @@ $(document).ready(function() {
 			$(tab).tab('show');
 		}
 	);
+
+	$('.noUi-value').click(function (e) {
+	  e.preventDefault();
+	  var value = $(this).text();
+
+	  value = value.replace('$','');
+	  tab = $("#myTab a[data-donate='"+value+"']");
+
+
+	  $(tab).tab('show');
+	  $("#slider-range").val(value);
+	});
+
 	/*$('.noUi-origin').click(function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
