@@ -27,16 +27,16 @@
 				<% loop ExhibitionList %>
 					<div class="exhibitlist">
 						<!-- Image -->
-						<div class="exhibit-img" style="background-image: url($EventPageImage.URL);">
+						<div class="exhibit-img" style="background-image: url($ExhibitionImage.CroppedFocusedImage(600,300).URL);">
 							<a href="$link"></a>
 						</div>
-						<div class="exhibit-content clearfix <% if $StartDate || $EventLocation %>withdate<% end_if %>">
+						<div class="exhibit-content clearfix <% if $StartDate || $ExhibitionLocation %>withdate<% end_if %>">
 							<!-- Title -->
 							<h2 class="exhibit-title"><a href="$link">$Title</a></h2>
 							<!-- Link -->
 							<a href="$Link" class="exhibit-link">Learn More &raquo;</a>
 							<!-- Date | Location -->
-							<% if $StartDate || $EventLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $EventLocation %> | <% end_if %><% if $EventLocation %>$EventLocation<% end_if %></h4><% end_if %>
+							<% if $StartDate || $ExhibitionLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h4><% end_if %>
 						</div>
 					</div>
 				<% end_loop %>

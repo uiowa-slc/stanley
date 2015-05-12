@@ -1,9 +1,9 @@
 
-<div class="exhibit-largeimg" style="background-image: url($EventPageImage.URL);">
+<div class="exhibit-largeimg" style="background-image: url($ExhibitionImage.CroppedFocusedImage(1200,600).URL);">
 	<!-- Date | Location -->
 	<div class="inner">
 		<div class="container">
-			<% if $StartDate || $EventLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $EventLocation %> | <% end_if %><% if $EventLocation %>$EventLocation<% end_if %></h3><% end_if %>
+			<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
 			<div class="exhibition-sociallinks">
 				<a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink" target="_blank"><img src="{$ThemeDir}/images/facebook_circle_gray-32.png" alt="Facebook"></a>
 				<a class="js-social-share" href="https://twitter.com/intent/tweet/?text=$Title&url=$AbsoluteLink&via=UIMuseumofArt" target="_blank"><img src="{$ThemeDir}/images/twitter_circle_gray-32.png" alt="Twitter"></a>
@@ -20,8 +20,26 @@
 		<div class="col-md-8 col-lg-8">
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
-				$EventDescription
+				$ExhibitionDescription
 				$Form
+				<% if ExhibitionThumb %>
+					<hr />
+					<div class="exhibition-credit clearfix">
+						<img src="$ExhibitionThumb.SetHeight(150).URL" alt="$Exhibition">
+						<div class="credit-content">
+							<p>
+							<% if $ArtName %>$ArtName<% end_if %>
+							<% if $ArtArtistLifespan %>$ArtArtistLifespan<% end_if %>
+							<br />
+							<% if $ArtTitle %>$ArtTitle<% end_if %><% if $ArtYear %>, $ArtYear<% end_if %>
+							<br />
+							<% if $ArtMedium %>$ArtMedium,<% end_if %> <% if $ArtDimensions %>$ArtDimensions<% end_if %>
+							<br />
+							<% if $ArtCollectionInfo %>$ArtCollectionInfo<% end_if %>
+							</p>
+						</div>
+					</div>
+				<% end_if %>
 
 			</section>
 		</div><!-- end .col -->

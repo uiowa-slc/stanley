@@ -23,7 +23,7 @@
 						<div class="eventlist clearfix">
 							<% if $Image %>
 								<a href="$Link" class="eventlist-img">
-									<img src="$Image.URL" alt="$Title" style="width: 240px;">
+									<img src="$Image.URL" alt="$Title">
 								</a>
 							<% end_if %>
 							<!-- Date -->

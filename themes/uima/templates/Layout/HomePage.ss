@@ -3,7 +3,7 @@
 		<ul id="demo1">
 			<% loop CarouselItems %>
 			<li>
-				<img src="$Image.URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+				<img src="$Image.CroppedFocusedImage(1400,700).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
 				<p class="captionsrc">Lorem ipsum dolor sit amet</p>
 			</li>
 			<% end_loop %>
