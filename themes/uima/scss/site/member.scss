@@ -1,9 +1,8 @@
 /* Range slider styles are in scss/plugins/nouislider.scss and nouislider-pips.scss */
 
 .member-levels{
-	padding: 60px 0;
-	padding-right: 20px;
+	padding: 40px 20px;
 	@media (min-width: $break-medium) {
-		padding-right: 0;
+		padding: 60px 0;
 	}
 }

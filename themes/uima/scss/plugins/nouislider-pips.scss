@@ -29,9 +29,9 @@
 
     &.odd {
     	top: -60px;
-    	/*@media (min-width: $break-medium) {
+    	@media (min-width: $break-medium) {
     		top: auto;
-    	}*/
+    	}
     }
 }
 
