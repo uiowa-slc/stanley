@@ -57,28 +57,24 @@ $(document).ready(function() {
 
 
 	var range_test = {
-		'min': [     1 ],
-		'2%': [   1,  99 ],
+		'min': [   1 ],
+		'2%': [1,  99 ],
 		'15%' : [100, 150],
-		'25%': [  250, 250 ],
+		'25%': [250, 250 ],
 		'40%' : [ 500, 500],
 		'55%' : [1000, 1500],
 		'65%' : [2500, 2500],
 		'75%' : [5000, 5000],
 		'85%' : [10000, 10000],
-		'95%' : [20000, 10000],
 		'max': [ 30000 ]
 	};
 
-	var range_max = {
-		'min': [     1 ],
-		'max': [ 30000 ]
-	};
 
 	$("#slider-range").noUiSlider({
-		range: range_test,
+		
 		connect: "lower",
 		start: 1,
+		range: range_test,
 		format: wNumb({
 			decimals: 0
 		})
@@ -86,9 +82,8 @@ $(document).ready(function() {
 
 	$('#slider-range').noUiSlider_pips({
 		mode: 'values',
-		density: 8,
+		density: 10,
 		values: [1, 100, 250, 500, 1000, 2500, 5000, 10000, 20000, 30000],
-		range: range_test,
 		format: wNumb({
 			decimals: 0,
 			prefix: '$',
