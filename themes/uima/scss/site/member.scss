@@ -6,3 +6,15 @@
 		padding: 60px 10px;
 	}
 }
+.tab-content {
+	margin-top: 110px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	& h2 {
+		color: $aqua;
+		font-weight: bold;
+		margin-top: 5px;
+		text-transform: uppercase;
+	}
+}
