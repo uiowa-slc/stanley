@@ -12,11 +12,12 @@
 }
 
 .noUi-value {
-    width: 50px;
+    width: 54px;
     position: absolute;
     text-align: center;
-    color: #666;
+    color: #888;
     font-size: 12px;
+    font-weight: bold;
     &:hover{
     	cursor: pointer;
     }
@@ -24,11 +25,11 @@
     	font-size: 13px;
     }
     @media (min-width: $break-large) {
-    	font-size: 16px;
+    	font-size: 15px;
     }
 
     &.odd {
-    	top: -60px;
+    	top: -90px;
     	@media (min-width: $break-medium) {
     		top: auto;
     	}
@@ -63,7 +64,10 @@
 
 .noUi-value-horizontal {
     margin-left: -20px;
-    padding-top: 45px;
+    margin-top: 41px;
+    @media(min-width: $break-medium) {
+       margin-top: 37px;
+    }
 }
 
 .noUi-value-horizontal.noUi-value-sub {

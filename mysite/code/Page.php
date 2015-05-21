@@ -8,7 +8,7 @@ class Page extends SiteTree {
 		"Photo" => "Image",
 	);
 
-	private static $singular_name = 'Normal Page';
+
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();

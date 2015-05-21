@@ -77,8 +77,11 @@
     left: -44px;
     bottom: -170px;
     height: 114px;
-    width: 116px;
+    width: 238px;
     background: url(../images/givethisgetthis.png) no-repeat;
+    @media (min-width: $break-medium) {
+        bottom: -170px;
+    }
 }
 .noUi-vertical {
     width: 18px;
