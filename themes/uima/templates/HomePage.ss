@@ -10,14 +10,26 @@
 	<title>$SiteConfig.Title</title>
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
-
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
-
+	<!-- IE Fixes -->
+	<!--[if IE 8]>
+	  	<script>var IE8 = true;</script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+		<script>var IE9 = true;</script>
+		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body class="$ClassName shifter">
-
 
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>

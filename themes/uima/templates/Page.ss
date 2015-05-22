@@ -16,6 +16,20 @@
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 	<!-- Picturefill -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
+	<!-- IE Fixes -->
+	<!--[if IE 8]>
+	  	<script>var IE8 = true;</script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+		<script>var IE9 = true;</script>
+		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body class="$ClassName shifter">
 	<div class="shifter-page">
