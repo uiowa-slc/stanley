@@ -208,7 +208,7 @@ if (typeof jQuery === 'undefined') {
 		customClass: "",
 		label: true,
 		labels: {
-			closed: "Page Navigation",
+			closed: "In this section",
 			open: "Close"
 		},
 		maxWidth: "767px"

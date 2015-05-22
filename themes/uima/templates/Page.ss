@@ -15,7 +15,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 	<!-- Picturefill -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.0/picturefill.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
 </head>
 <body class="$ClassName shifter">
 	<div class="shifter-page">

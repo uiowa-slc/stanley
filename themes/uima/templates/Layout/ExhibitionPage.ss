@@ -1,6 +1,13 @@
 
-<div class="exhibit-largeimg" style="background-image: url($ExhibitionImage.CroppedFocusedImage(1200,600).URL);">
-	<!-- Date | Location -->
+<div class="exhibit-largeimg">
+	<picture>
+		<!--[if IE 9]><video style="display: none;"><![endif]-->
+		<source srcset="$ExhibitionImage.CroppedFocusedImage(1200,600).URL" media="(min-width: 980px)">
+		<source srcset="$ExhibitionImage.CroppedFocusedImage(1000,500).URL" media="(min-width: 768px)">
+		<source srcset="$ExhibitionImage.CroppedFocusedImage(700,350).URL" media="(min-width: 480px)">
+		<!--[if IE 9]></video><![endif]-->
+		<img srcset="$ExhibitionImage.CroppedFocusedImage(400,300).URL" alt="$Title" class="exhibitpage-img">
+	</picture>
 	<div class="inner">
 		<div class="container">
 			<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>

@@ -27,8 +27,10 @@
 				<% loop ExhibitionList %>
 					<div class="exhibitlist">
 						<!-- Image -->
-						<div class="exhibit-img" style="background-image: url($ExhibitionImage.CroppedFocusedImage(600,300).URL);">
-							<a href="$link"></a>
+						<div class="exhibit-img">
+							<a href="$link">
+								<img src="$ExhibitionImage.CroppedFocusedImage(700,350).URL" alt="$Title">
+							</a>
 						</div>
 						<div class="exhibit-content clearfix <% if $StartDate || $ExhibitionLocation %>withdate<% end_if %>">
 							<!-- Title -->

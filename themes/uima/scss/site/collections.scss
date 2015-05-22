@@ -9,6 +9,9 @@
 	& li {
 		position: relative;
 	}
+	& a {
+		display: block;
+	}
 }
 .collectionsholder .justify-item {
 	@media screen and (min-width: $break-medium) {
