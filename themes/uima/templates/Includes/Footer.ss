@@ -40,8 +40,8 @@
 		<div class="container">
 			<div id="newsletter" class="clearfix">
 				<form name="ccoptin" action="http://ui.constantcontact.com/d.jsp" target="_blank" method="post" >
-					<label>Sign up for our Newsletter:</label>
-					<input type="text" name="ea" size="20" class="text" value="E-mail Address"  />
+					<label for="cc_email">Sign up for our Newsletter:</label>
+					<input type="text" name="ea" size="20" class="text" value="E-mail Address" id="cc_email" />
 					<input type="submit" name="go" value="Sign Up" class="submit" />
 					<input type="hidden" name="m" value="1101515594689" />
 					<input type="hidden" name="p" value="oi" />

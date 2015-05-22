@@ -177,7 +177,7 @@ Admin Login form fields
 	border: none;
 }
 .UserDefinedForm fieldset .field {
-	margin-bottom: 8px;
+	margin-bottom: 1em;
 	overflow: hidden;
 }
 #MemberLoginForm_LoginForm .field .text,
@@ -213,13 +213,10 @@ Admin Login form fields
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.UserDefinedForm fieldset label {
-	font-weight: bold;
-}
 #MemberLoginForm_LoginForm #Remember label.right,
 .UserDefinedForm fieldset label.right {
-	float: left;
-	padding-right: 5px;
+	float: none;
+	padding-left: 5px;
 }
 .UserDefinedForm fieldset .field .optionset {
 	list-style: none;
@@ -263,5 +260,5 @@ Admin Login form fields
 }
  .UserDefinedForm .FormHeading {
  	border-top: 1px solid #ccc;
- 	padding-top: .5em;
+ 	padding: 1em 0;
  }
