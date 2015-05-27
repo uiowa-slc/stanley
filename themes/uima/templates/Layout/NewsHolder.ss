@@ -76,5 +76,5 @@
 					$SideBarView
 			</div>
 		</div><!-- end .row -->
-	</div><!-- end .container -->
+	</main><!-- end .container -->
 <% end_if %>
