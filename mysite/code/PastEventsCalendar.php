@@ -15,6 +15,10 @@ class PastEventsCalendar extends Calendar {
 		return $fields;
 	}
 
+
+
+
+
 }
 
 class PastEventsCalendar_Controller extends Calendar_Controller {
@@ -41,5 +45,36 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
+	public function PastEvents($limit = null, $filter = null){
+
+		// Get past EventDateTime objects see Calendar.php
+		// $this->getEventList()
+  		//$start_date = sfDate::getInstance();
+  		$start_date = new sfDate('0000-01-01 0:0:00');
+
+		$end_date = sfDate::getInstance();
+
+		$l = ($limit === null) ? "9999" : $limit;
+		$events = $this->getEventList(
+			$start_date->date(),
+			$end_date->date(), 
+			$filter,
+			$l
+		);
+		$events->sort('StartDate','DESC');
+
+		$paginatedList = new PaginatedList($events, $this->getRequest());
+		$paginatedList->setPageLength(1);
+
+		//return $events;
+		return $paginatedList;
+
+
+	}
+	//public function PastEvents() {
+    	//$list = $this->PastEvents();
+
+    	//return new PaginatedList($list, $this->getRequest());
+	//}
 
 }
