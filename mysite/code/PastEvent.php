@@ -8,6 +8,9 @@ class PastEvent extends CalendarEvent {
 	private static $has_one = array (
 		'Image' => 'Image'
 	);
+	private static $defaults = array (
+		'ShowInMenus' => false
+	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -43,8 +46,8 @@ class CommunityEvent_Controller extends Page_Controller {
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
-	
-	
+
+
 
 
 }

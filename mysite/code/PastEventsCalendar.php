@@ -11,7 +11,6 @@ class PastEventsCalendar extends Calendar {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeByName("Photo");
 		return $fields;
 	}
 
@@ -57,14 +56,14 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 		$l = ($limit === null) ? "9999" : $limit;
 		$events = $this->getEventList(
 			$start_date->date(),
-			$end_date->date(), 
+			$end_date->date(),
 			$filter,
 			$l
 		);
 		$events->sort('StartDate','DESC');
 
 		$paginatedList = new PaginatedList($events, $this->getRequest());
-		$paginatedList->setPageLength(1);
+		$paginatedList->setPageLength(10);
 
 		//return $events;
 		return $paginatedList;
