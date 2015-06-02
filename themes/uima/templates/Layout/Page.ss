@@ -24,6 +24,7 @@
 				<h1>$Title</h1>
 				$Content
 				$Form
+				<% include Credit %>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

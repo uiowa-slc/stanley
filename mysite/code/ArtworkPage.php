@@ -10,7 +10,6 @@ class ArtworkPage extends Page {
 		'ArtworkDimensions' => 'Text',
 		'ArtworkCollectionInfo' => 'Text',
 		'ArtworkText' => 'HTMLText',
-		'VideoLink' => 'Text',
 
 	);
 	static $has_one = array(
@@ -25,6 +24,7 @@ class ArtworkPage extends Page {
 		$fields->removeByName("Metadata");
 		$fields->removeByName("Content");
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('ArtworkImage', 'Artwork Image'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkArtistLifespan','Artist Lifespan Information'));
@@ -34,7 +34,6 @@ class ArtworkPage extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkDimensions','Artwork Dimensions'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCollectionInfo','Collections Information'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ArtworkText','Artwork HTML Text'));
-		$fields->addFieldToTab('Root.Main', new TextField('VideoLink', 'Enter full youtube video url here'));
 
 		return $fields;
 	}

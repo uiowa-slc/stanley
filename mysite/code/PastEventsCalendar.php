@@ -11,6 +11,7 @@ class PastEventsCalendar extends Calendar {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+		$fields->removeByName("Credit");
 		return $fields;
 	}
 

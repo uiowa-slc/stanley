@@ -2,10 +2,19 @@
 class Page extends SiteTree {
 
 	private static $db = array(
+		'CreditName' => 'Text',
+		'CreditArtistLifespan' => 'Text',
+		'CreditTitle' => 'Text',
+		'CreditYear' => 'Text',
+		'CreditMedium' => 'Text',
+		'CreditDimensions' => 'Text',
+		'CreditCollectionInfo' => 'Text',
 	);
 
 	private static $has_one = array(
 		"Photo" => "Image",
+		'CreditThumb' => 'Image',
+		"AssociatedPage" => "SiteTree",
 	);
 
 
@@ -13,8 +22,17 @@ class Page extends SiteTree {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo (1200px x 400px"));
 
+		$fields->addFieldToTab('Root.Credit', new UploadField('CreditThumb', 'Credit: Artwork Thumbnail'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditName','Credit: Artist Name'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditArtistLifespan','Credit: Artist Lifespan Information'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditTitle','Credit: Artwork Title'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditYear','Credit: Artwork Year'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditMedium','Credit: Artwork Medium'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditDimensions','Credit: Artwork Dimensions'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditCollectionInfo','Credit: Collections Information'));
+		$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree"));
 		return $fields;
 
 	}
@@ -49,6 +67,6 @@ class Page_Controller extends ContentController {
 	public function DollarSign() {
 		return "$";
 	}
-	
-	
+
+
 }

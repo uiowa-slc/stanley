@@ -16,6 +16,7 @@ class CollectionsHolder extends Page {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 
 		return $fields;
 
