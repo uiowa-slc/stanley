@@ -26,6 +26,7 @@ class NewsHolder extends BlogHolder {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
+		$fields->removeByName("Credit");
 
 		return $fields;
 	}

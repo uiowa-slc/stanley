@@ -25,6 +25,7 @@ class NewsEntry extends BlogEntry {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
+		$fields->removeByName("Widgets");
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo for News Article"));
 

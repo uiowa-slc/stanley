@@ -9,19 +9,11 @@ class ExhibitionPage extends Page {
 		'LocationLink' => 'Text',
 		'ExhibitionDescription' => 'HTMLText',
 		'EventTag' => 'Text',
-		'ArtName' => 'Text',
-		'ArtArtistLifespan' => 'Text',
-		'ArtTitle' => 'Text',
-		'ArtYear' => 'Text',
-		'ArtMedium' => 'Text',
-		'ArtDimensions' => 'Text',
-		'ArtCollectionInfo' => 'Text',
 
 	);
 	private static $has_one = array(
 
 		'ExhibitionImage' => 'Image',
-		'ExhibitionThumb' => 'Image'
 
 	);
 
@@ -41,14 +33,6 @@ class ExhibitionPage extends Page {
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ExhibitionDescription','Exhibition Description'));
 		$fields->addFieldToTab("Root.Main", new TextField("EventTag", "Tag used to show related events"));
 		$fields->addFieldToTab('Root.Main', new UploadField('ExhibitionImage', 'Large Exhibition Image (1200px width, 600px height'));
-		$fields->addFieldToTab('Root.Main', new UploadField('ExhibitionThumb', 'Credit: Artwork Thumbnail'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtName','Credit: Artist Name'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtArtistLifespan','Credit: Artist Lifespan Information'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtTitle','Credit: Artwork Title'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtYear','Credit: Artwork Year'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtMedium','Credit: Artwork Medium'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtDimensions','Credit: Artwork Dimensions'));
-		$fields->addFieldToTab('Root.Main', new TextField('ArtCollectionInfo','Credit: Collections Information'));
 
 		 return $fields;
 	}

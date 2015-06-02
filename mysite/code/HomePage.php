@@ -14,6 +14,7 @@ class HomePage extends Page {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));

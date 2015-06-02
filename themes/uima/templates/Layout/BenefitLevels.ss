@@ -25,6 +25,7 @@
 				$Content
 				$Form
 				<% include MemberLevels %>
+				<% include Credit %>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

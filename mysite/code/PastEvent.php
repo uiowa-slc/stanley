@@ -15,6 +15,7 @@ class PastEvent extends CalendarEvent {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
 		return $fields;
 	}

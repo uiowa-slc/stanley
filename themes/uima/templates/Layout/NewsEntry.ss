@@ -25,6 +25,8 @@
 						<% end_loop %>
 					</div>
 				<% end_if %>
+
+				<% include Credit %>
 			</article>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

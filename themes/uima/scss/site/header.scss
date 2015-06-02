@@ -9,7 +9,11 @@
 }
 /* logo */
 .logo {
+	margin-right: 1em;
 	float: left;
+	@media (min-width: $break-small) {
+		margin-right: 0;
+	}
 	& img {
 		display: block;
 	}

@@ -29,24 +29,8 @@
 				<h1>$Title</h1>
 				$ExhibitionDescription
 				$Form
-				<% if ExhibitionThumb %>
-					<hr />
-					<div class="exhibition-credit clearfix">
-						<img src="$ExhibitionThumb.SetHeight(150).URL" alt="$Exhibition">
-						<div class="credit-content">
-							<p>
-							<% if $ArtName %>$ArtName<% end_if %>
-							<% if $ArtArtistLifespan %>$ArtArtistLifespan<% end_if %>
-							<br />
-							<% if $ArtTitle %>$ArtTitle<% end_if %><% if $ArtYear %>, $ArtYear<% end_if %>
-							<br />
-							<% if $ArtMedium %>$ArtMedium,<% end_if %> <% if $ArtDimensions %>$ArtDimensions<% end_if %>
-							<br />
-							<% if $ArtCollectionInfo %>$ArtCollectionInfo<% end_if %>
-							</p>
-						</div>
-					</div>
-				<% end_if %>
+
+				<% include Credit %>
 
 			</section>
 		</div><!-- end .col -->

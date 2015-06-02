@@ -10,7 +10,9 @@ class CollectionsPage extends Page {
 		'CollectionsCover' => 'Image',
 
 	);
-	
+
+	private static $allowed_children = array('ArtworkPage');
+
 
 	function getCMSFields() {
 
@@ -18,9 +20,10 @@ class CollectionsPage extends Page {
 
 		$fields->removeByName("Metadata");
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsCover', 'Collections Cover Image'));
-		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image'));
+		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image (1200px x 400px'));
 		$fields->addFieldToTab('Root.Main', new TreeDropdownField('ArtCreditLinkID', 'Image Credit Link', 'SiteTree'));
 
 

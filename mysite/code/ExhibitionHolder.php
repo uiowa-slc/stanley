@@ -16,7 +16,7 @@ class ExhibitionHolder extends Page {
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-
+		$fields->removeByName("Credit");
 		return $fields;
 
 	}
