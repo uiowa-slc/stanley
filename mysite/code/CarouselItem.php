@@ -10,6 +10,7 @@
 		);
 
 		private static $has_one = array (
+			"AssociatedPage" => "SiteTree",
 			'Image' => 'Image'
 		);
 
@@ -27,6 +28,7 @@
 			$fields->push( new TextField( 'Title', 'Heading' ));
 			$fields->push( new TextField( 'SubTitle', 'Subheading' ));
 			$fields->push( new UploadField( 'Image', 'Image (1400px width, 700px height)' ));
+			$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree"));
 
 
 			return $fields;
