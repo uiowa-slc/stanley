@@ -14,12 +14,13 @@
 		);
 
 		// Summary fields
-		public static $summary_fields = array(
+		private static $summary_fields = array(
 			'Title' => 'Title',
 			'SubTitle' => 'SubTitle'
 		);
 
 		private static $default_sort = "SortOrder";
+		
 
 		function getCMSFields() {
 			$fields = new FieldList();

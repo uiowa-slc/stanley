@@ -17,6 +17,8 @@ class NewsHolder extends BlogHolder {
 		'NewsEntry'
 	);
 
+	
+
 	private static $singular_name = 'News Holder';
 
 	private static $plural_name = 'News Holders';

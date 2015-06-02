@@ -1,15 +1,16 @@
 <?php
 class CollectionsPage extends Page {
-	static $db = array(
+	private static $db = array(
 
 
 	);
-	static $has_one = array(
+	private static $has_one = array(
 		'ArtCreditLink' => 'SiteTree',
 		'CollectionsImage' => 'Image',
 		'CollectionsCover' => 'Image',
 
 	);
+	
 
 	function getCMSFields() {
 

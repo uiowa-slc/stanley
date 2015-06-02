@@ -1,6 +1,6 @@
 <?php
 class ExhibitionPage extends Page {
-	static $db = array(
+	private static $db = array(
 
 		'StartDate' => 'SS_Datetime',
 		'EndDate' => 'SS_Datetime',
@@ -18,12 +18,14 @@ class ExhibitionPage extends Page {
 		'ArtCollectionInfo' => 'Text',
 
 	);
-	static $has_one = array(
+	private static $has_one = array(
 
 		'ExhibitionImage' => 'Image',
 		'ExhibitionThumb' => 'Image'
 
 	);
+
+	
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

@@ -1,6 +1,6 @@
 <?php
 class ArtworkPage extends Page {
-	static $db = array(
+	private static $db = array(
 
 
 		'ArtworkArtistLifespan' => 'Text',
@@ -13,11 +13,13 @@ class ArtworkPage extends Page {
 		'VideoLink' => 'Text',
 
 	);
-	static $has_one = array(
+	private static $has_one = array(
 
 		'ArtworkImage' => 'Image',
 
 	);
+
+	
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

@@ -11,7 +11,7 @@ class PastEvent extends CalendarEvent {
 	private static $defaults = array (
 		'ShowInMenus' => false
 	);
-
+	
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");

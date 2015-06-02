@@ -1,6 +1,6 @@
 <?php
 class BenefitLevels extends Page {
-	static $db = array(
+	private static $db = array(
 		"Level1Title" => "Text",
 		"Level1" => "HTMLText",
 		"Level2Title" => "Text",
@@ -23,8 +23,9 @@ class BenefitLevels extends Page {
 		"Level10" => "HTMLText",
 
 	);
-	static $has_one = array(
+	private static $has_one = array(
 	);
+	
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

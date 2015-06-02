@@ -8,8 +8,6 @@ class Page extends SiteTree {
 		"Photo" => "Image",
 	);
 
-
-
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
@@ -19,7 +17,43 @@ class Page extends SiteTree {
 
 	}
 
+	public function NiceName(){
+
+		$niceNames = array(
+
+			'Page' => null,
+			'CollectionsPage' => 'Collection',
+			'CollectionsHolder' => 'Collection List',
+			'ArtworkPage' => 'Artwork Item',
+			'BenefitLevels' => 'Benefit Levels',
+			'CarouselItem' => null,
+			'ExhibitionHolder' => 'Exhibition List',
+			'ExhibitionPage' => 'Exhibition Item',
+			'HomePage' => null,
+			'NewsEntry' => 'News Item',
+			'NewsHolder' => 'News List',
+			'PastEvent' => 'Event',
+			'PastEventsCalendar' => null,
+			'SiteConfigExtension' => null
+		);
+
+		$niceClassName = $niceNames[$this->ClassName];
+		return $niceClassName;
+
+
+		print_r('nice name: '.$this->nice_name);
+		if ($this->nice_name){
+	   		return $this->nice_name;
+		}
+		else{
+			return "not found";
+		}
+
+
+	}
 }
+
+
 class Page_Controller extends ContentController {
 
 	/**
