@@ -6,25 +6,11 @@
 	display: inline-block;
 	margin: 0 auto;
 }
-.artwork-details {
-	@media (min-width: $break-medium) {
-		float: left;
-		margin-right: 10%;
-		width: 30%;
-	}
-}
-.artwork-content {
-	@media (min-width: $break-medium) {
-		float: left;
-		width: 60%;
-	}
-}
-.artwork-details .title {
-	font-weight: bold;
-}
-.artwork-content {
-
-	@media (min-width: $break-medium) {
-		font-size: 19px;
+.artworktitle {
+	color: #333;
+	font-size: 18px;
+	& p {
+		margin: 0;
+		display: inline;
 	}
 }

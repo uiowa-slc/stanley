@@ -5,9 +5,9 @@
 
 				<% if $MenuTitle = "Exhibitions"%>
 					<ul>
-						<li><a href="$Link">Current Exhibitions</a></li>
-						<li><a href="$Link("upcoming")">Upcoming Exhibitions</a></li>
-						<li><a href="$Link("past")">Past Exhibitions</a></li>
+						<li><a href="$Link">Current</a></li>
+						<li><a href="$Link("upcoming")">Upcoming</a></li>
+						<li><a href="$Link("past")">Past</a></li>
 					</ul>
 
 				<% else_if Children %>
