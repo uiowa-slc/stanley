@@ -71,7 +71,7 @@
     position: relative;
     box-shadow: 0 0 0 0.389em white, 0 0 0 0.445em rgba(0, 0, 0, 0.04), 0 0.111em 0.222em 0.445em rgba(0, 0, 0, 0.18), inset 0 0.111em 0.556em 0 rgba(0, 0, 0, 0.15);
 }
-.noUi-horizontal .noUi-handle:after {
+.noUi-horizontal .noUi-handle a {
     content:'';
     position: absolute;
     left: -44px;

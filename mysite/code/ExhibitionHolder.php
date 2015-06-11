@@ -2,15 +2,17 @@
 
 class ExhibitionHolder extends Page {
 
-	public static $db = array(
+	private static $db = array(
 
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 
 	);
 
-	static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
+	
+
+	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

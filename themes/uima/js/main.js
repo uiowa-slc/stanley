@@ -53,7 +53,7 @@ $(document).ready(function() {
 	}
 	// END POPUP WINDOW FOR SOCIAL MEDIA
 
-	//Range
+	//START RANGE SLIDER
 
 
 	var range_test = {
@@ -120,5 +120,8 @@ $(document).ready(function() {
 	$(".noUi-value").filter(function(index, element){
 	    return index % 2 == 1;
 	}).addClass("odd");
+
+	$(".noUi-handle").append("<a href='join'></a>");
+	//END RANGE SLIDER
 
 });

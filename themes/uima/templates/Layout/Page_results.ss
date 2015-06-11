@@ -26,7 +26,9 @@
 						<% if $Content %>
 							<p>$Content.LimitWordCountXML</p>
 						<% end_if %>
+						<p>$NiceName</p>
 						<a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
+
 					</li>
 					<% end_loop %>
 				</ul>
