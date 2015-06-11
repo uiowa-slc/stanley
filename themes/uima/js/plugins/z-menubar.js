@@ -1,6 +1,3 @@
-$(document).ready(function() {
-	$('.main-nav').setup_navigation();
-});
 /*
 $(function(){
 	$('.nav').setup_navigation();
