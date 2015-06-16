@@ -6,6 +6,8 @@
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow:none !important;
         text-shadow: none !important;
+        font-family: arial, verdana, sans-serif !important;
+        font-size: 13px;
     }
     a, a:visited {text-decoration: underline;}
     abbr[title]:after { content: " (" attr(title) ")";}
@@ -17,5 +19,10 @@
     @page {margin: 0.5cm;}
     p,h2,h3 {orphans: 3; widows: 3;}
     h2,h3 {page-break-after: avoid;}
-    .no-print, .no-print * {display: none !important;}
+    .no-print, .no-print *, .naver, .search-bar, .newsletter, .footer-links, .footer-bottom, .shifter-handle{
+        display: none !important;
+    }
+    .container {
+        width: auto;
+    }
 }
