@@ -18,8 +18,9 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'<%= project.src %>/js/plugins/*.js',
 					'<%= project.src %>/bower_components/nouislider/distribute/jquery.nouislider.all.js',
+					'<%= project.src %>/js/plugins/*.js',
+
 					'<%= project.src %>/js/main.js'
 				],
 				dest: '<%= project.src %>/js/build/production.js'
