@@ -41,15 +41,11 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 	}
 
-
-	public function upcoming(){
-
+	public function upcoming() {
 		 $exhibitions = $this->Children()->sort('StartDate', 'ASC');
 		 $paginatedList = new ArrayList();
 		 $upcomingExhibitions = new PaginatedList($paginatedList, $this->request);
 		 $upcomingExhibitions->setPageLength(10);
-
-
 		foreach ($exhibitions as $exhibition) {
 			if ($exhibition->obj("StartDate")->InFuture()) {
 				$upcomingExhibitions->push($exhibition);
@@ -62,40 +58,32 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
-
-	public function past(){
+	public function past() {
 		 $exhibitions = $this->Children()->sort('StartDate', 'DESC');		 
 		 $paginatedList = new ArrayList();
 		 $pastExhibitions = new PaginatedList($paginatedList, $this->request);
 		 $pastExhibitions->setPageLength(10);
-
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->obj("EndDate")->InPast()) {
-					$pastExhibitions->push($exhibition);
-				}
-			}			
-			$Data = array(
-				'ExhibitionList' => $pastExhibitions,
-			);			
-
+			if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
+				$pastExhibitions->push($exhibition);
+			}
+		}
+		$Data = array(
+			'ExhibitionList' => $pastExhibitions,
+		);
 
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
-
-
-
-	public function index(){
+	public function index() {
 		 $exhibitions = $this->Children()->sort('StartDate', 'ASC');
 		 $paginatedList = new ArrayList();
 		 $currentExhibitions = new PaginatedList($paginatedList, $this->request);
 		 $currentExhibitions->setPageLength(10);
-
 		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {					
-					$currentExhibitions->push($exhibition);
-
-				}
-
+			if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
+				$currentExhibitions->push($exhibition);
+			} else if ((!$exhibition->StartDate) && (!$exhibition->EndDate)) {
+				$currentExhibitions->push($exhibition);
 			}
 		}
 		$Data = array(
