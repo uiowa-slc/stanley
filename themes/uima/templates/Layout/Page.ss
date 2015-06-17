@@ -1,8 +1,4 @@
-<% if $Photo %>
-	<div class="page-photo">
-		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
-	</div>
-<% end_if %>
+<% include HeaderPhoto %>
 
 <main class="container main" role="main">
 	<div class="row">
@@ -24,12 +20,11 @@
 
 		<!-- Main Content -->
 		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
-			<section>
-				<!-- $Breadcrumbs -->
+			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
 				$Form
-
+				<% include Credit %>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

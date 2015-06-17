@@ -2,21 +2,22 @@
 
 class ExhibitionHolder extends Page {
 
-	public static $db = array(
+	private static $db = array(
 
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 
 	);
 
-	static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
+	
 
+	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-
-	   return $fields;
+		$fields->removeByName("Credit");
+		return $fields;
 
 	}
 
@@ -25,22 +26,21 @@ class ExhibitionHolder extends Page {
 class ExhibitionHolder_Controller extends Page_Controller {
 	private static $allowed_actions = array(
 		'upcoming',
-		'past'
+		'past',
 	);
 
 	private static $url_handlers = array(
-        'index' => 'current',
-        'upcoming' => 'upcoming',
-        'past' => 'past'
-       
-        
-    );
- 
+		'index' => 'current',
+		'upcoming' => 'upcoming',
+		'past' => 'past',
+
+	);
 
 	public function init() {
 		parent::init();
 
 	}
+
 
 	public function upcoming(){
 
@@ -49,17 +49,19 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		 $upcomingExhibitions = new PaginatedList($paginatedList, $this->request);
 		 $upcomingExhibitions->setPageLength(10);
 
-		foreach ($exhibitions as $exhibition) {
-				if ($exhibition->obj("StartDate")->InFuture()) {
-					$upcomingExhibitions->push($exhibition);
-				}
-			}
-			$Data = array(
-				'ExhibitionList' => $upcomingExhibitions,
-			);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+		foreach ($exhibitions as $exhibition) {
+			if ($exhibition->obj("StartDate")->InFuture()) {
+				$upcomingExhibitions->push($exhibition);
+			}
+		}
+		$Data = array(
+			'ExhibitionList' => $upcomingExhibitions,
+		);
+
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
+
 
 	public function past(){
 		 $exhibitions = $this->Children()->sort('StartDate', 'DESC');		 
@@ -76,8 +78,10 @@ class ExhibitionHolder_Controller extends Page_Controller {
 				'ExhibitionList' => $pastExhibitions,
 			);			
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
+
 
 
 	public function index(){
@@ -91,12 +95,14 @@ class ExhibitionHolder_Controller extends Page_Controller {
 					$currentExhibitions->push($exhibition);
 
 				}
-			}
-			$Data = array(
-				'ExhibitionList' => $currentExhibitions,
-			);
 
-			return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
+			}
+		}
+		$Data = array(
+			'ExhibitionList' => $currentExhibitions,
+		);
+
+		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 
 }

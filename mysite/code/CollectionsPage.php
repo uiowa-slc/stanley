@@ -1,30 +1,30 @@
 <?php
 class CollectionsPage extends Page {
-	static $db = array(
+	private static $db = array(
 
-	'CollectionsTitle' => 'Text',
-	'CollectionsText' => 'HTMLText',
-	'CollectionsImageCaption' => 'HTMLText',
 
 	);
-	static $has_one = array(
-
+	private static $has_one = array(
+		'ArtCreditLink' => 'SiteTree',
 		'CollectionsImage' => 'Image',
+		'CollectionsCover' => 'Image',
 
 	);
+
+	private static $allowed_children = array('ArtworkPage');
+
 
 	function getCMSFields() {
 
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
-		$fields->removeByName("Content");
 		$fields->removeByName("Photo");
+		$fields->removeByName("Credit");
 
-		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Image (width must be 348 pixels)'));
-		$fields->addFieldToTab('Root.Main', new TextField('CollectionsTitle','Collections Title'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('CollectionsImageCaption','Collections Image Caption'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('CollectionsText','Collections HTML Text'));
+		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsCover', 'Collections Cover Image'));
+		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image (1200px x 400px'));
+		$fields->addFieldToTab('Root.Main', new TreeDropdownField('ArtCreditLinkID', 'Image Credit Link', 'SiteTree'));
 
 
 	return $fields;

@@ -3,8 +3,16 @@
 		<ul id="demo1">
 			<% loop CarouselItems %>
 			<li>
-				<img src="$Image.URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
-				<p class="captionsrc">Lorem ipsum dolor sit amet</p>
+				<% if $AssociatedPageID %>
+					<a href="$AssociatedPage.Link">
+						<img src="$Image.CroppedFocusedImage(1400,700).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+					</a>
+					<div class="hero-caption">
+						$Title
+					</div>
+				<% else %>
+					<img src="$Image.CroppedFocusedImage(1400,700).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+				<% end_if %>
 			</li>
 			<% end_loop %>
 		</ul>
@@ -13,7 +21,7 @@
 	</div>
 <% end_if %>
 
-<div class="container">
+<section id="main-content" class="container" tabindex="-1">
 	$Content
 	$Form
-</div><!-- end .container -->
+</section><!-- end .container -->

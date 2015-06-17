@@ -17,6 +17,8 @@ class NewsHolder extends BlogHolder {
 		'NewsEntry'
 	);
 
+	
+
 	private static $singular_name = 'News Holder';
 
 	private static $plural_name = 'News Holders';
@@ -24,6 +26,7 @@ class NewsHolder extends BlogHolder {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
+		$fields->removeByName("Credit");
 
 		return $fields;
 	}
@@ -55,7 +58,7 @@ class NewsHolder_Controller extends BlogHolder_Controller {
 
 	}
 
-	public function PaginatedNewsEntries($pageLength = 5){
+	public function PaginatedNewsEntries($pageLength = 10){
 		$entries = $this->BlogEntries();
 		return $entries->setPageLength($pageLength);
 	}

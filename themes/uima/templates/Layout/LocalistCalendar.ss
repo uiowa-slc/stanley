@@ -1,23 +1,18 @@
-<% if $Photo %>
-	<div class="page-photo">
-		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
-	</div>
-<% end_if %>
+<% include HeaderPhoto %>
 
 <main class="container main" role="main">
 	<div class="row">
 
 		<!-- Side Bar -->
 		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
-			<div class="col-lg-4 sidebar">
+			<div class="col-md-4 col-lg-3 sidebar">
 				<% include SideNav %>
 			</div>
 		<% end_if %>
 
 		<!-- Main Content -->
-		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-			<section>
-				<!-- $Breadcrumbs -->
+		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
+			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
 				$Form
@@ -28,7 +23,7 @@
 						<div class="eventlist clearfix">
 							<% if $Image %>
 								<a href="$Link" class="eventlist-img">
-									<img src="$Image.URL" alt="$Title" style="width: 240px;">
+									<img src="$Image.URL" alt="$Title">
 								</a>
 							<% end_if %>
 							<!-- Date -->

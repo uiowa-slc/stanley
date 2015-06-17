@@ -6,16 +6,16 @@
 				<h3 class="section-title"><% if $LinkOrCurrent = "current" %>$MenuTitle<% else %><a href="$Link">$MenuTitle</a><% end_if %></h3>
 			<% end_with %>
 		<% end_if %>-->
-		
+
 		<% if Menu(2) %>
 		<nav class="sec-nav" aria-label="Secondary">
 			<ul class="first-level">
-				
-					<li <% if $Action = "index" %>class="active"<% end_if %>><a href="$Link">Current Events</a></li>
-					<li <% if $Action = "upcoming" %>class="active"<% end_if %>><a href="$Link("upcoming")">Upcoming Events</a></li>
-					<li <% if $Action = "past" %>class="active"<% end_if %>><a href="$Link("past")">Past Events</a></li>
-				
-				
+
+					<li <% if $Action = "index" %>class="active"<% end_if %>><a href="$Link">Current</a></li>
+					<li <% if $Action = "upcoming" %>class="active"<% end_if %>><a href="$Link("upcoming")">Upcoming</a></li>
+					<li <% if $Action = "past" %>class="active"<% end_if %>><a href="$Link("past")">Past</a></li>
+
+
 
 			</ul>
 		</nav>

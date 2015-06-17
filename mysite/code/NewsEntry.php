@@ -20,10 +20,12 @@ class NewsEntry extends BlogEntry {
 	private static $singular_name = 'News Entry';
 
 	private static $plural_name = 'News Entries';
+	
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
+		$fields->removeByName("Widgets");
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo for News Article"));
 

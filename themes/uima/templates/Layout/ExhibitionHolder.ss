@@ -1,8 +1,4 @@
-<% if $Photo %>
-	<div class="page-photo">
-		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
-	</div>
-<% end_if %>
+<% include HeaderPhoto %>
 
 <main class="container main" role="main">
 	<div class="row">
@@ -16,37 +12,43 @@
 		<% end_if %>
 
 		<!-- Side Bar -->
-	
+
 			<div class="col-md-4 col-lg-3 sidebar">
 				<% include ExhibitionHolderSideNav %>
 			</div>
-		
+
 
 		<!-- Main Content -->
 		<div class="<% if $ExhibitionList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-			<div class="article">
+			<section id="main-content" tabindex="-1">
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
 				<% loop ExhibitionList %>
 					<div class="exhibitlist">
 						<!-- Image -->
-						<div class="exhibit-img" style="background-image: url($EventPageImage.URL);">
-							<a href="$link"></a>
+						<div class="exhibit-img">
+							<a href="$link">
+								<img src="$ExhibitionImage.CroppedFocusedImage(700,350).URL" alt="$Title">
+							</a>
 						</div>
-						<div class="exhibit-content clearfix <% if $StartDate || $EventLocation %>withdate<% end_if %>">
+						<div class="exhibit-content clearfix <% if $StartDate || $ExhibitionLocation %>withdate<% end_if %>">
 							<!-- Title -->
 							<h2 class="exhibit-title"><a href="$link">$Title</a></h2>
 							<!-- Link -->
 							<a href="$Link" class="exhibit-link">Learn More &raquo;</a>
 							<!-- Date | Location -->
-							<% if $StartDate || $EventLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $EventLocation %> | <% end_if %><% if $EventLocation %>$EventLocation<% end_if %></h4><% end_if %>
+							<% if $StartDate || $ExhibitionLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h4><% end_if %>
 						</div>
 					</div>
 				<% end_loop %>
 
+
 				<% include ExhibitionPagination %>
 			</div>
+
+		</section>
+
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </main><!-- end .container -->

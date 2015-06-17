@@ -8,14 +8,12 @@ Exhibition Container
 	margin-bottom: 2em;
 }
 .exhibit-img {
-	height: 230px;
-	background-position: center top;
-	background-size: cover;
-	position: relative;
 	& a {
-		position: absolute;
+		display: block;
+	}
+	& img {
+		display: block;
 		width: 100%;
-		height: 100%;
 	}
 }
 .exhibit-content {
@@ -39,6 +37,9 @@ Exhibition Container
 	font-weight: bold;
 	line-height: 1.3;
 	margin: 0;
+	@media (min-width: $break-small) {
+		padding-right: 100px;
+	}
 }
 .exhibit-link {
 	display: block;
@@ -64,14 +65,21 @@ Exhibition Container
 /* ---------------------------------------------------------------
 Exhibition Page
 --------------------------------------------------------------- */
-
 .exhibit-largeimg {
-	background-position: center top;
-	background-size: cover;
-	height: 370px;
+	background-color: #4f4b48;
+	overflow: hidden;
 	position: relative;
-	@media (min-width: $break-medium) {
-		height: 570px;
+	overflow: hidden;
+	@media (min-width: $break-xlarge) {
+		height: 600px;
+	}
+}
+.exhibit-largeimg .exhibitpage-img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	@media (min-width: $break-xlarge) {
+		width: auto;
 	}
 }
 .exhibit-largeimg .inner {
@@ -81,12 +89,12 @@ Exhibition Page
 	left: 0;
 	padding: 5em 0 2em;
 	width: 100%;
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8)));
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
-	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 70%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(70%,rgba(0,0,0,0.8)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 70%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
 }
 .exhibitinner-date {
@@ -107,6 +115,46 @@ Exhibition Page
 	}
 }
 
+/* ---------------------------------------------------------------
+Related Events
+--------------------------------------------------------------- */
+.related-events {
+	font-size: 15px;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
+.related-events .title {
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+.related-events .time {
+	display: block;
+}
+.related-events-link {
+	display: block;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+}
 
+/* ---------------------------------------------------------------
+Exhibition Credit area
+--------------------------------------------------------------- */
+.exhibition-credit {
+	margin-top: 2em;
+}
+.exhibition-credit img {
+	float: left;
+	width: 20%;
 
-
+}
+.exhibition-credit .credit-content {
+	font-size: 14px;
+	float: left;
+	width: 75%;
+	margin-left: 5%;
+	& p {
+		margin: 0;
+	}
+}

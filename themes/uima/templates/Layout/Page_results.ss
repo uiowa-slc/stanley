@@ -3,7 +3,7 @@
 
 		<!-- Main Content -->
 		<div class="col-md-10 col-md-offset-1">
-			<section>
+			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 
 				<% if $Query %>
@@ -26,7 +26,9 @@
 						<% if $Content %>
 							<p>$Content.LimitWordCountXML</p>
 						<% end_if %>
+						<p>$NiceName</p>
 						<a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
+
 					</li>
 					<% end_loop %>
 				</ul>

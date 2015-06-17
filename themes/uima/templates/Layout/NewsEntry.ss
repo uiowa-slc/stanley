@@ -3,7 +3,7 @@
 
 		<!-- Main Content -->
 		<div class="col-lg-10 col-lg-offset-1">
-			<article class="clearfix newsentry">
+			<article id="main-content" class="clearfix newsentry" tabindex="-1">
 				<h1 class="entry-title">$Title</h1>
 				<p class="entry-date">
 					Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
@@ -25,6 +25,8 @@
 						<% end_loop %>
 					</div>
 				<% end_if %>
+
+				<% include Credit %>
 			</article>
 		</div><!-- end .col -->
 	</div><!-- end .row -->

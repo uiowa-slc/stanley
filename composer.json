@@ -3,11 +3,11 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.3.2",
-		"silverstripe/cms": "3.1.12",
-		"silverstripe/framework": "3.1.12",
+		"silverstripe/cms": "3.1.13",
+		"silverstripe/framework": "3.1.13",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/event-calendar": "*",
-		"silverstripe/blog" : "1.0",
+		"silverstripe/blog" : "1.x",
 		"md/ac-json-events" : "dev-master",
 		"silverstripe/mathspamprotection" : "*",
 		"jonom/focuspoint" : "*",
@@ -15,7 +15,7 @@
 		"silverstripe/googlesitemaps" : "*",
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",
-		"silverstripe/widgets": "*"
+		"silverstripe/widgets": "1.1"
 
 	},
 	"require-dev": {

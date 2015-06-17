@@ -3,11 +3,15 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="footer-contact">
-				<h3>University of Iowa Museum of Art</h3>
-				<p><strong><a href="{$BaseHref}/visit/locations/">View Museum Locations</a></strong></p>
-				<p>(319) 335-1727<br>
-				<a href="mailto:uima@uiowa.edu">uima@uiowa.edu</a></p>
-				<p><small>&copy; 2015 University of Iowa Museum of Art</small></p>
+				<div itemscope itemtype="http://schema.org/Organization">
+					<h3 itemprop="name">$SiteConfig.Title</h3>
+					<p><strong><a href="{$BaseHref}visit/locations/">View Museum Locations</a></strong></p>
+					<p itemprop="telephone">$SiteConfig.Phone<br />
+					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
+					</p>
+					<p><small>&copy; 2015 University of Iowa Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
+					$SiteConfig.Address
+				</div>
 			</div>
 			<div class="clearfix footer-links">
 				<div class="main-links">
@@ -24,10 +28,10 @@
 					</ul>
 				</div>
 				<ul class="secondary">
-					<li><a href="{$BaseHref}contact/">Contact</a></li>
-					<li><a href="{$BaseHref}membership/">Membership</a></li>
+					<li><a href="{$BaseHref}about/contact/">Contact</a></li>
+					<li><a href="{$BaseHref}support/membership/">Membership</a></li>
 					<li><a href="#">Store</a></li>
-					<li><a href="{$BaseHref}news/">Press / News</a></li>
+					<li><a href="{$BaseHref}about/news/">News / Press</a></li>
 				</ul>
 			</div>
 		</div><!-- end .container -->
@@ -36,8 +40,8 @@
 		<div class="container">
 			<div id="newsletter" class="clearfix">
 				<form name="ccoptin" action="http://ui.constantcontact.com/d.jsp" target="_blank" method="post" >
-					<label>Sign up for our Newsletter:</label>
-					<input type="text" name="ea" size="20" class="text" value="E-mail Address"  />
+					<label for="cc_email">Sign up for our Newsletter:</label>
+					<input type="text" name="ea" size="20" class="text" value="E-mail Address" id="cc_email" />
 					<input type="submit" name="go" value="Sign Up" class="submit" />
 					<input type="hidden" name="m" value="1101515594689" />
 					<input type="hidden" name="p" value="oi" />

@@ -1,24 +1,14 @@
-<% if $Photo %>
-	<div class="page-photo">
-		<img src="$Photo.CroppedImage(1200,400).URL" alt="">
-	</div>
-<% end_if %>
+<% include HeaderPhoto %>
 
 
 <% if SelectedTag %>
 	<!-- ========= BEGIN SELECTED TAG CONTENT ========= -->
 	<main class="container main" role="main">
 		<div class="row">
-			<!-- Side Bar -->
-			<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
-				<div class="col-md-4 col-lg-3 sidebar">
-					<% include SideNav %>
-				</div>
-			<% end_if %>
 
 			<!-- Main Content -->
-			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<section>
+			<div class="col-md-8 col-lg-8">
+				<section id="main-content" tabindex="-1">
 					<h2 class="cat-heading-title"><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h2>
 					<!-- Loop News -->
 					<div class="newsholder-entries">
@@ -34,6 +24,16 @@
 					<% include NewsPagination %>
 				</section>
 			</div><!-- end .col -->
+
+			<!-- Side Bar -->
+			<div class="col-md-4 col-lg-3 col-lg-offset-1 sidebar">
+				<% if SideBarView %>
+					<div id="Sidebar" class="browsebydate tablet-show">
+						$SideBarView
+					</div>
+				<% end_if %>
+			</div>
+
 		</div><!-- end .row -->
 	</main><!-- END .container -->
 <% else %>
@@ -42,16 +42,9 @@
 	<main class="container main" role="main">
 		<div class="row">
 
-			<!-- Side Bar -->
-			<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
-				<div class="col-md-4 col-lg-3 sidebar">
-					<% include SideNav %>
-				</div>
-			<% end_if %>
-
 			<!-- Main Content -->
-			<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-				<section>
+			<div class="col-md-8 col-lg-8">
+				<section id="main-content" tabindex="-1">
 					<h1>$Title</h1>
 					$Content
 					$Form
@@ -65,7 +58,7 @@
 											<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
 										</a>
 									<% end_if %>
-									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
+									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>
 									<p class="entry-date">
 										Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
 									</p>
@@ -77,6 +70,11 @@
 					<% include NewsPagination %>
 				</section>
 			</div><!-- end .col -->
+
+			<!-- Side Bar -->
+			<div class="col-md-4 col-lg-3 col-lg-offset-1 sidebar">
+					$SideBarView
+			</div>
 		</div><!-- end .row -->
-	</div><!-- end .container -->
+	</main><!-- end .container -->
 <% end_if %>

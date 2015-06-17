@@ -7,19 +7,32 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>$Title | UIMA</title>
+	<title>$SiteConfig.Title</title>
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
-
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
-
+	<!-- IE Fixes -->
+	<!--[if IE 8]>
+	  	<script>var IE8 = true;</script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
+	  	<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+		<script>var IE9 = true;</script>
+		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body class="$ClassName shifter">
 
-
 	<div class="shifter-page">
+		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include Header %>
 		$Layout
 		<% include Footer %>
@@ -42,16 +55,21 @@
 				speed: 8000,
 				autoHover: false,
 				controls: false,
-  				captions: 'custom', // Position: overlay, below, custom, false
+  				captions: 'custom',
   				captionsEl: '.sy-caption'
-				// useCSS: true,
-				// speed: 1000,
-				// pause: 3000,
-				// auto: true,
-				// preload: 'visible',
-				// autoHover: false
 			});
 		});
 	</script>
+	<!-- Google Analytics -->
+	<% if $SiteConfig.Analytics %>
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', '$SiteConfig.Analytics', 'auto');
+		ga('send', 'pageview');
+		</script>
+	<% end_if %>
 </body>
 </html>
