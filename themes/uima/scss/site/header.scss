@@ -9,14 +9,17 @@
 }
 /* logo */
 .logo {
-	margin-right: 1em;
+	width: 80%;
 	float: left;
-	@media (min-width: $break-small) {
-		margin-right: 0;
+	@media (min-width: $break-medium) {
+		width: auto;
 	}
 	& img {
 		display: block;
 	}
+}
+.shifter .shifter-handle {
+	width: 20%;
 }
 /* ---------------------------------------------------------------
 Search Form new

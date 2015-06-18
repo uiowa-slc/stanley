@@ -1,3 +1,9 @@
+<!-- <h4 id="handle">Navigation</h4>
+<nav class="naver" data-navigation-handle="#handle">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav> -->
 <div class="naver">
 
 	<div class="side-navigation">
@@ -8,7 +14,8 @@
 		<% end_if %>-->
 
 		<% if Menu(2) %>
-		<nav class="sec-nav" aria-label="Secondary">
+		<h4 id="handle2">Navigation</h4>
+		<nav class="sec-nav" data-navigation-handle="#handle2">
 			<ul class="first-level">
 				<% with Level(1) %>
 					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>

@@ -9,8 +9,6 @@ class CollectionsHolder extends Page {
 
 	);
 
-	private static $allowed_children = array('CollectionsPage');
-	
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

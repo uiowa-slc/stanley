@@ -11,11 +11,13 @@ class PastEvent extends CalendarEvent {
 	private static $defaults = array (
 		'ShowInMenus' => false
 	);
-	
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
 		$fields->removeByName("Credit");
+		$fields->removeByName("AssociatedPageID");
+
 		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
 		return $fields;
 	}

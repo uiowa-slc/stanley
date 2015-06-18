@@ -167,6 +167,10 @@ Collection Highlights
 	font-size: 14px;
 	font-style: italic;
 	font-weight: normal;
+	& p {
+		display: inline;
+		margin: 0;
+	}
 	@media (min-width: $break-medium) {
 		color: #fff;
 		font-size: 16px;

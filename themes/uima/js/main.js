@@ -11,7 +11,10 @@ $(document).ready(function() {
 	});
 
 	// Naver
-	$(".naver").naver();
+	// $(".naver").naver();
+	$(".sec-nav").navigation({
+		maxWidth: "767px"
+	});
 
 	// POPUP WINDOW FOR SOCIAL MEDIA
 	function windowPopup(url, width, height) {
@@ -125,5 +128,10 @@ $(document).ready(function() {
 
 	$(".noUi-handle").append("<a href='join'></a>");
 	//END RANGE SLIDER
+
+	// disable right click on images
+	$('img').bind('contextmenu', function(e) {
+		return false;
+	});
 
 });

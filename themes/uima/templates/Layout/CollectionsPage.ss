@@ -52,7 +52,7 @@
 								<div class="highlight-content">
 									<h4 class="highlight-artist">$Title</h4>
 									<h4 class="highlight-lifespan">$ArtworkArtistLifespan</h4>
-									<h5 class="highlight-title">$ArtworkTitle, <span>$ArtworkYear</span></h5>
+									<h5 class="highlight-title">$ArtworkTitle<% if $ArtworkYear %>, <span>$ArtworkYear</span><% end_if %></h5>
 								</div>
 							</a>
 						</li>

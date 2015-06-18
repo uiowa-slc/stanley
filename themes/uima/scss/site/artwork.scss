@@ -14,3 +14,24 @@
 		display: inline;
 	}
 }
+.cutline {
+	& p {
+		display: inline;
+		margin: 0;
+	}
+}
+.artcredit {
+	display: block;
+	text-align: right;
+	font-size: 14px;
+	margin: 5px 0;
+}
+.fs-lightbox-caption {
+	color: #eeeeee;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+.fs-lightbox-caption p {
+	display: inline;
+}

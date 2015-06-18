@@ -30,7 +30,7 @@ class Page extends SiteTree {
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditMedium','Credit: Artwork Medium'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditDimensions','Credit: Artwork Dimensions'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditCollectionInfo','Credit: Collections Information'));
-		$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree"));
+		$fields->push( new TreeDropdownField("AssociatedPageID", "Header image link credit", "SiteTree"));
 		return $fields;
 
 	}

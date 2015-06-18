@@ -8,5 +8,6 @@
 			<!--[if IE 9]></video><![endif]-->
 			<img srcset="$Photo.CroppedFocusedImage(480,300).URL" alt="$Title">
 		</picture>
+		<% if $AssociatedPageID %><a href="$AssociatedPage.Link" class="creditlink" title="More Information"><img src="{$ThemeDir}/images/info.png" alt="More Information"></a><% end_if %>
 	</div>
 <% end_if %>

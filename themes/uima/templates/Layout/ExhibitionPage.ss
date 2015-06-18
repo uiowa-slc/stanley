@@ -10,7 +10,7 @@
 	</picture>
 	<div class="inner">
 		<div class="container">
-			<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
+			<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d, Y')<% end_if %><% if $EndDate %> - $EndDate.Format('F d, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
 			<div class="exhibition-sociallinks">
 				<a class="js-social-share" href="https://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink" target="_blank"><img src="{$ThemeDir}/images/facebook_circle_gray-32.png" alt="Facebook"></a>
 				<a class="js-social-share" href="https://twitter.com/intent/tweet/?text=$Title&url=$AbsoluteLink&via=UIMuseumofArt" target="_blank"><img src="{$ThemeDir}/images/twitter_circle_gray-32.png" alt="Twitter"></a>
