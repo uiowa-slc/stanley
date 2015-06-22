@@ -44,7 +44,13 @@
 						</div>
 					</div>
 				<% end_loop %>
-			</section>
+
+
+				<% include ExhibitionPagination %>
+			</div>
+
+		</section>
+
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </main><!-- end .container -->

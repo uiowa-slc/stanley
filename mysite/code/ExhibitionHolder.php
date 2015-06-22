@@ -42,8 +42,10 @@ class ExhibitionHolder_Controller extends Page_Controller {
 	}
 
 	public function upcoming() {
-		$exhibitions = $this->Children();
-		$upcomingExhibitions = new ArrayList();
+		 $exhibitions = $this->Children()->sort('StartDate', 'ASC');
+		 $paginatedList = new ArrayList();
+		 $upcomingExhibitions = new PaginatedList($paginatedList, $this->request);
+		 $upcomingExhibitions->setPageLength(10);
 		foreach ($exhibitions as $exhibition) {
 			if ($exhibition->obj("StartDate")->InFuture()) {
 				$upcomingExhibitions->push($exhibition);
@@ -57,8 +59,10 @@ class ExhibitionHolder_Controller extends Page_Controller {
 	}
 
 	public function past() {
-		$exhibitions = $this->Children();
-		$pastExhibitions = new ArrayList();
+		 $exhibitions = $this->Children()->sort('StartDate', 'DESC');		 
+		 $paginatedList = new ArrayList();
+		 $pastExhibitions = new PaginatedList($paginatedList, $this->request);
+		 $pastExhibitions->setPageLength(10);
 		foreach ($exhibitions as $exhibition) {
 			if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
 				$pastExhibitions->push($exhibition);
@@ -71,8 +75,10 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
 	public function index() {
-		$exhibitions = $this->Children();
-		$currentExhibitions = new ArrayList();
+		 $exhibitions = $this->Children()->sort('StartDate', 'ASC');
+		 $paginatedList = new ArrayList();
+		 $currentExhibitions = new PaginatedList($paginatedList, $this->request);
+		 $currentExhibitions->setPageLength(10);
 		foreach ($exhibitions as $exhibition) {
 			if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
 				$currentExhibitions->push($exhibition);
