@@ -96,9 +96,11 @@
 				<% if $MoreInfoLink || $LocalistLink %>
 					<h3>More Information</h3>
 					<p>
+					<!--
 						<% if $MoreInfoLink %>
 							<a href="$MoreInfoLink" class="button" target="_blank">Event Website</a><br />
 						<% end_if %>
+					-->
 						<% if $LocalistLink %>
 							<a href="$LocalistLink" class="button" target="_blank">View this event on events.uiowa.edu</a>
 						<% end_if %>

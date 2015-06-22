@@ -10,6 +10,7 @@ class ArtworkPage extends Page {
 		'ArtworkDimensions' => 'Text',
 		'ArtworkCollectionInfo' => 'Text',
 		'ArtworkText' => 'HTMLText',
+		'ArtCredit' => 'Text',
 
 	);
 	private static $has_one = array(
@@ -18,7 +19,7 @@ class ArtworkPage extends Page {
 
 	);
 
-	
+
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -29,6 +30,7 @@ class ArtworkPage extends Page {
 		$fields->removeByName("Credit");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('ArtworkImage', 'Artwork Image'));
+		$fields->addFieldToTab('Root.Main', new TextField('ArtCredit','Image Credit'));
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkArtistLifespan','Artist Lifespan Information'));
 
 		$artworkTitleField =  new HTMLEditorField('ArtworkTitle','Artwork Title');
