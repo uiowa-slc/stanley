@@ -25,7 +25,7 @@
 		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
 	<![endif]-->
 	<!--[if lt IE 9]>
-		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
+		 <script src="{$ThemeDir}/js/ie/html5enabler.js"></script>
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>

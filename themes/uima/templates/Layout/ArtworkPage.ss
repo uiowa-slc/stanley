@@ -5,7 +5,13 @@
 			<a href="$ArtworkImage.URL" class="lightbox tooltip" title="$Title, $ArtworkTitle, $ArtworkYear" data-title="Click on the image to see a larger version" data-tooltip-options='{"direction":"top","follow":"true"}'>
 				<img src="$ArtworkImage.SetHeight(600).URL" alt="$ArtworkTitle" />
 			</a>
-			<span class="artcredit"><% if $ArtCredit %>ArtCredit<% end_if %></span>
+			<% if $ArtCredit %>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<span class="artcredit">$ArtCredit</span>
+					</div>
+				</div>
+			<% end_if %>
 		</div>
 	</section>
 <% end_if %>

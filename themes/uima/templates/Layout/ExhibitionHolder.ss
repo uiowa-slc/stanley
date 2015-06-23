@@ -40,7 +40,7 @@
 							<!-- Link -->
 							<a href="$Link" class="exhibit-link">Learn More &raquo;</a>
 							<!-- Date | Location -->
-							<% if $StartDate || $ExhibitionLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d, Y')<% end_if %><% if $EndDate %> - $EndDate.Format('F d, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h4><% end_if %>
+							<% if $StartDate || $ExhibitionLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h4><% end_if %>
 						</div>
 					</div>
 				<% end_loop %>

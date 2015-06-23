@@ -1,5 +1,6 @@
-
+<% if $ExhibitionImage %>
 <div class="exhibit-largeimg">
+
 	<picture>
 		<!--[if IE 9]><video style="display: none;"><![endif]-->
 		<source srcset="$ExhibitionImage.CroppedFocusedImage(1200,600).URL" media="(min-width: 980px)">
@@ -8,6 +9,7 @@
 		<!--[if IE 9]></video><![endif]-->
 		<img srcset="$ExhibitionImage.CroppedFocusedImage(400,300).URL" alt="$Title" class="exhibitpage-img">
 	</picture>
+
 	<div class="inner">
 		<div class="container">
 			<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d, Y')<% end_if %><% if $EndDate %> - $EndDate.Format('F d, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
@@ -18,7 +20,7 @@
 		</div>
 	</div>
 </div>
-
+<% end_if %>
 
 <main class="container main" role="main">
 	<div class="row">
@@ -27,6 +29,11 @@
 		<div class="col-md-8 col-lg-8">
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
+				<% if not $ExhibitionImage %>
+					<div class="inner-datelocation">
+					<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F d')<% end_if %><% if $EndDate %> - $EndDate.Format('F d, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
+					</div>
+				<% end_if %>
 				$ExhibitionDescription
 				$Form
 
