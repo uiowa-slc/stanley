@@ -13,7 +13,18 @@
 				<% if $Results %>
 				<ul id="SearchResults">
 					<% loop $Results %>
-					<li>
+					<li class="clearfix">
+						<% if $ArtworkImage %>
+							<a href="$Link">
+								<img src="$ArtworkImage.CroppedImage(160,120).URL" alt="$MenuTitle">
+							</a>
+						<% end_if %>
+						<% if $ExhibitionImage %>
+							<a href="$link">
+								<img src="$ExhibitionImage.CroppedFocusedImage(160,120).URL" alt="$MenuTitle">
+							</a>
+						<% end_if %>
+						<p class="search-type">$NiceName</p>
 						<h4>
 							<a href="$Link">
 								<% if $MenuTitle %>
@@ -26,8 +37,15 @@
 						<% if $Content %>
 							<p>$Content.LimitWordCountXML</p>
 						<% end_if %>
-						<p>$NiceName</p>
-						<a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
+						<% if $ArtworkText %>
+							<p>$ArtworkText.LimitWordCountXML</p>
+						<% end_if %>
+						<% if $ExhibitionDescription %>
+							<p>$ExhibitionDescription.LimitWordCountXML</p>
+						<% end_if %>
+
+
+						<!-- <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a> -->
 
 					</li>
 					<% end_loop %>
