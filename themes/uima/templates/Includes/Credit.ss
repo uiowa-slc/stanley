@@ -16,7 +16,7 @@
 			<br />
 			<% if $CreditTitle %>$CreditTitle<% end_if %><% if $CreditYear %>, $CreditYear<% end_if %>
 			<br />
-			<% if $ArtworkMedium %><span class="artworkmedium">$ArtworkMedium</span><% end_if %><% if $ArtworkDimensions && $ArtworkMedium %>, <% end_if %><% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %><br />
+			<% if $CreditMedium %><span class="artworkmedium">$CreditMedium</span><% end_if %><% if $CreditMedium && $CreditDimensions %>, <% end_if %><% if $CreditDimensions %>$CreditDimensions<% end_if %><br />
 			<% if $CreditCollectionInfo %>$CreditCollectionInfo<% end_if %>
 			</p>
 		</div>
