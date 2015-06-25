@@ -2935,13 +2935,13 @@ $(document).ready(function() {
 
 	// Shifter
 	$.shifter({
-		maxWidth: "767px"
+		maxWidth: "768px"
 	});
 
 	// Naver
 	// $(".naver").naver();
 	$(".sec-nav").navigation({
-		maxWidth: "767px"
+		maxWidth: "768px"
 	});
 
 	// POPUP WINDOW FOR SOCIAL MEDIA
