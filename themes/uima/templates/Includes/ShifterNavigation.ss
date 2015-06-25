@@ -7,10 +7,6 @@
 				<% end_loop %>
 			</ul>
 		</div>
-		<!-- <div class="consistent">
-			<a href="{$BaseHref}contact" class="link highlight">Contact</a>
-			<a href="{$BaseHref}membership" class="link highlight">Membership</a>
-		</div> -->
 		<!-- Search -->
 		<% if $SearchForm %>
 			<div class="search-bar" role="search">
