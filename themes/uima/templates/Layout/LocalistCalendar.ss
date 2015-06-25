@@ -33,11 +33,7 @@
 										<time itemprop="startDate" datetime="$Format(c)">
 											$Format(l), $Format(F) $Format(j)
 										</time>
-										 <span class="eventlist-time">$Format("g:i A")
-									<% end_with %>
-									<% if $EndTime %>
-										<% with $EndTime %>
-											- $Format("g:i A")
+										 <span class="eventlist-time">$Format("g:i A")<% end_with %><% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i A")
 										<% end_with %>
 									<% end_if %>
 									</span>
