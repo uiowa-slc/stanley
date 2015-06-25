@@ -53,6 +53,9 @@
 		padding: 10px 43px;
 	}
 }
+.lt-ie10 .main-nav li a {
+	padding: 10px 25px;
+}
 /* Top level hover state, preserve hover state when hovering dropdown  */
 .main-nav li > a:hover,
 .main-nav li > a:focus,

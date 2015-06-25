@@ -117,9 +117,9 @@ Collection Highlights
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: block;
-	width: 40%;
+	width: 30%;
 	float: left;
-	padding-bottom: 40%;
+	padding-bottom: 30%;
 	@media (min-width: $break-medium) {
 		position: absolute;
 		height: 100%;
@@ -129,7 +129,7 @@ Collection Highlights
 .highlight-content {
 	float: left;
 	width: 50%;
-	padding: 5px 10px;
+	padding: 0 10px;
 	z-index: 20;
 	transition: transform .3s ease;
 	@media (min-width: $break-medium) {
@@ -139,9 +139,6 @@ Collection Highlights
 		width: 100%;
 		padding: 50px 1em 15px 1em;
 	}
-}
-.lt-ie10 .highlight-content {
-
 }
 .highlight-link:hover .highlight-content,
 .highlight-link:focus .highlight-content {
@@ -166,16 +163,17 @@ Collection Highlights
 	}
 }
 .highlight-lifespan {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: normal;
 	margin-top: 0;
+	margin-bottom: 0;
 	@media (min-width: $break-medium) {
 		color: #fff;
 		font-size: 16px;
 	}
 }
 .highlight-title {
-	font-size: 14px;
+	font-size: 13px;
 	font-style: italic;
 	font-weight: normal;
 	& p {

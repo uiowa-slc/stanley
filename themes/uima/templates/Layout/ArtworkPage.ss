@@ -72,7 +72,8 @@
 			<div class="cutline">
 				<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>
 				$ArtworkTitle<% if $ArtworkYear %>, $ArtworkYear<% end_if %><br />
-				<% if $ArtworkMedium %><span class="artworkmedium">$ArtworkMedium</span>,<% end_if %> <% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %><br />
+				<% if $ArtworkMedium %><span class="artworkmedium">$ArtworkMedium</span><% end_if %><% if $ArtworkDimensions && $ArtworkMedium %>, <% end_if %>
+				<% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %><br />
 				<% if $ArtworkCollectionInfo %>$ArtworkCollectionInfo<% end_if %>
 			</div>
 			$ArtworkText

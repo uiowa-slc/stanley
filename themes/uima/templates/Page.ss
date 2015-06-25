@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--[if lt IE 10]><html lang="en" class="lt-ie10 no-js"> <![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
 	<% base_tag %>
@@ -28,6 +29,7 @@
 	<![endif]-->
 	<!--[if lt IE 9]>
 		 <script src="{$ThemeDir}/js/ie/html5enabler.js"></script>
+		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
