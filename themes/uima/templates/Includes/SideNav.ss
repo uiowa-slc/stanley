@@ -1,17 +1,6 @@
-<!-- <h4 id="handle">Navigation</h4>
-<nav class="naver" data-navigation-handle="#handle">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav> -->
 <div class="naver">
 
 	<div class="side-navigation">
-		<!--<% if Menu(2) %>
-			<% with Level(1) %>
-				<h3 class="section-title"><% if $LinkOrCurrent = "current" %>$MenuTitle<% else %><a href="$Link">$MenuTitle</a><% end_if %></h3>
-			<% end_with %>
-		<% end_if %>-->
 
 		<% if Menu(2) %>
 		<h4 id="handle2">Navigation</h4>

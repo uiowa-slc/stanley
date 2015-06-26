@@ -19,8 +19,17 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'<%= project.src %>/bower_components/nouislider/distribute/jquery.nouislider.all.js',
-					'<%= project.src %>/js/plugins/*.js',
-
+					'<%= project.src %>/js/plugins/05_core.js',
+					'<%= project.src %>/js/plugins/10_transition.js',
+					'<%= project.src %>/js/plugins/15_lightbox.js',
+					'<%= project.src %>/js/plugins/20_tooltip.js',
+					'<%= project.src %>/js/plugins/bootstrap-tabs.js',
+					'<%= project.src %>/js/plugins/jquery.fs.shifter.js',
+					'<%= project.src %>/js/plugins/mediaquery.js',
+					'<%= project.src %>/js/plugins/navigation.js',
+					'<%= project.src %>/js/plugins/swap.js',
+					'<%= project.src %>/js/plugins/touch.js',
+					'<%= project.src %>/js/plugins/z-menubar.js',
 					'<%= project.src %>/js/main.js'
 				],
 				dest: '<%= project.src %>/js/build/production.js'
