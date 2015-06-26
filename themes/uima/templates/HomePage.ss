@@ -48,7 +48,7 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<!-- Slippry Carousel -->
-	<script src="{$ThemeDir}/js/slippry.js"></script>
+	<script src="{$ThemeDir}/js/slippry.min.js"></script>
 	<script>
 		$(function() {
 			var demo1 = $("#demo1").slippry({
