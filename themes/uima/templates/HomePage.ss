@@ -9,24 +9,24 @@
 	<meta name="description" content="$Content.LimitCharacters(150)">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>$SiteConfig.Title</title>
+	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
-	<!-- IE Fixes -->
 	<!--[if IE 8]>
+		<meta http-equiv="x-ua-compatible" content="IE=8">
 	  	<script>var IE8 = true;</script>
 	  	<script src="{$ThemeDir}/js/ie/site.ie8.js"></script>
-	  	<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
+		<link rel="stylesheet" href="{$ThemeDir}/css/site.ie8.css">
 	<![endif]-->
 	<!--[if IE 9]>
 		<script>var IE9 = true;</script>
 		<script src="{$ThemeDir}/js/ie/site.ie9.js"></script>
 	<![endif]-->
 	<!--[if lt IE 9]>
-		 <script src="{$ThemeDir}/js/ie/html5enabler.js"></script>
 		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
@@ -48,7 +48,7 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<!-- Slippry Carousel -->
-	<script src="{$ThemeDir}/js/slippry.min.js"></script>
+	<script src="{$ThemeDir}/js/slippry.js"></script>
 	<script>
 		$(function() {
 			var demo1 = $("#demo1").slippry({

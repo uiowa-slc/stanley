@@ -34,6 +34,15 @@
 					<% if $StartDate || $ExhibitionLocation %><h3 class="exhibitinner-date"><% if $StartDate %>$StartDate.Format('F j')<% end_if %><% if $EndDate %>&ndash;$EndDate.Format('F j, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h3><% end_if %>
 					</div>
 				<% end_if %>
+				<% if $ExhibitionLocation || $ExhibitionAddress %>
+					<p><% if $LocationLink %>
+						<a href="$LocationLink">$ExhibitionLocation</a>
+						<% if $ExhibitionAddress %><span class="exhibition-address">$ExhibitionAddress</span><% end_if %></p>
+					<% else %>
+						<p>$ExhibitionLocation<% if $ExhibitionAddress %><br />$ExhibitionAddress<% end_if %></p>
+					<% end_if %>
+				<% end_if %>
+
 				$ExhibitionDescription
 				$Form
 
