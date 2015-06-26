@@ -123,6 +123,10 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 	public function year() {
 
+		if(!$this->getRequest()->param('Year')){
+			return $this->redirect($this->Link());
+		}
+
 		$year = $this->getRequest()->param('Year');
 		$yearFormatted = intval($year).'-01-01';
 
