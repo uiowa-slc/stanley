@@ -133,9 +133,12 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		$nextYear = $year + 1;
 		$nextYearFormatted = $nextYear.'-01-01';
 
+		$now = date('Y-m-d');
+
 		 $exhibitions = ExhibitionPage::get()->filter(array(
 		 	'StartDate:GreaterThanOrEqual' => $yearFormatted,
-		 	'StartDate:LessThan' => $nextYearFormatted
+		 	'StartDate:LessThan' => $nextYearFormatted,
+		 	'EndDate:LessThan' => $now
 		 ))->sort('StartDate');
 
 		 $paginatedList = new PaginatedList($exhibitions, $this->request);
