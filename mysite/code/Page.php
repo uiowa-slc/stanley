@@ -4,7 +4,7 @@ class Page extends SiteTree {
 	private static $db = array(
 		'CreditName' => 'Text',
 		'CreditArtistLifespan' => 'Text',
-		'CreditTitle' => 'Text',
+		'CreditTitle' => 'HTMLText',
 		'CreditYear' => 'Text',
 		'CreditMedium' => 'Text',
 		'CreditDimensions' => 'Text',
@@ -25,7 +25,11 @@ class Page extends SiteTree {
 		$fields->addFieldToTab('Root.Credit', new UploadField('CreditThumb', 'Credit: Artwork Thumbnail'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditName','Credit: Artist Name'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditArtistLifespan','Credit: Artist Lifespan Information'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditTitle','Credit: Artwork Title'));
+		$creditTitleField =  new HTMLEditorField('CreditTitle','Credit Artwork Title');
+		$creditTitleField->setRows(3);
+
+		$fields->addFieldToTab('Root.Credit', $creditTitleField);
+		// $fields->addFieldToTab('Root.Credit', new HTMLEditorField('CreditTitle','Credit: Artwork Title'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditYear','Credit: Artwork Year'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditMedium','Credit: Artwork Medium'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditDimensions','Credit: Artwork Dimensions'));
