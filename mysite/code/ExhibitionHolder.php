@@ -107,7 +107,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 	public function past() {
 
 		$now = date('Y-m-d');
-		// $exhibitions = $this->Children()->sort('StartDate', 'DESC');	
+
  		$exhibitions = ExhibitionPage::get()->filter(array(
 		 	'EndDate:LessThan' => $now
 		 ))->sort('StartDate DESC');
@@ -117,11 +117,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 
 
-		// foreach ($exhibitions as $exhibition) {
-		// 	if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
-		// 		$pastExhibitions->push($exhibition);
-		// 	}
-		// }
+
 
 		$Data = array(
 			'ExhibitionList' => $pastExhibitions,

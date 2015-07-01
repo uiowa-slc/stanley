@@ -24,6 +24,7 @@
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
+
 				<% loop ExhibitionList %>
 					<div class="exhibitlist">
 						<!-- Image -->
@@ -40,7 +41,23 @@
 							<!-- Link -->
 							<a href="$Link" class="exhibit-link">Learn More &raquo;</a>
 							<!-- Date | Location -->
-							<% if $StartDate || $ExhibitionLocation %><h4 class="exhibit-date"><% if $StartDate %>$StartDate.Format('F j')<% end_if %><% if $EndDate %>&ndash;$EndDate.Format('F j, Y') <% end_if %><% if $StartDate && $ExhibitionLocation %> | <% end_if %><% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %></h4><% end_if %>
+							<% if $StartDate || $ExhibitionLocation %>
+								<h4 class="exhibit-date">
+								<% if $StartDate %>
+									<% if $EndDate.Format('Y') == $StartDate.Format('Y') %>
+										$StartDate.Format('F j')
+									<% else %>
+										$StartDate.Format('F j, Y')
+									<% end_if %>
+								<% end_if %>
+
+								<% if $EndDate %>&ndash;$EndDate.Format('F j, Y') <% end_if %>
+								<% if $StartDate && $ExhibitionLocation %> | <% end_if %>
+								<% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %>
+								</h4>
+							<% end_if %>
+
+
 						</div>
 					</div>
 				<% end_loop %>
