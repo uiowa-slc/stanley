@@ -59,7 +59,7 @@
 				controls: false,
   				captions: 'custom',
   				captionsEl: '.sy-caption',
-  				pause: 11000
+  				pause: 10000
 			});
 		});
 	</script>
