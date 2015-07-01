@@ -105,15 +105,24 @@ class ExhibitionHolder_Controller extends Page_Controller {
 	}
 
 	public function past() {
-		 $exhibitions = $this->Children()->sort('StartDate', 'DESC');		 
-		 $paginatedList = new ArrayList();
-		 $pastExhibitions = new PaginatedList($paginatedList, $this->request);
+
+		$now = date('Y-m-d');
+		// $exhibitions = $this->Children()->sort('StartDate', 'DESC');	
+ 		$exhibitions = ExhibitionPage::get()->filter(array(
+		 	'EndDate:LessThan' => $now
+		 ))->sort('StartDate DESC');
+
+		 $pastExhibitions = new PaginatedList($exhibitions, $this->request);
 		 $pastExhibitions->setPageLength(10);
-		foreach ($exhibitions as $exhibition) {
-			if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
-				$pastExhibitions->push($exhibition);
-			}
-		}
+
+
+
+		// foreach ($exhibitions as $exhibition) {
+		// 	if (($exhibition->EndDate && $exhibition->StartDate) && $exhibition->obj("EndDate")->InPast()) {
+		// 		$pastExhibitions->push($exhibition);
+		// 	}
+		// }
+
 		$Data = array(
 			'ExhibitionList' => $pastExhibitions,
 		);
