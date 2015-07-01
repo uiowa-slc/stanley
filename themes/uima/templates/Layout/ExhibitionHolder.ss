@@ -43,15 +43,7 @@
 							<!-- Date | Location -->
 							<% if $StartDate || $ExhibitionLocation %>
 								<h4 class="exhibit-date">
-								<% if $StartDate %>
-									<% if $EndDate.Format('Y') == $StartDate.Format('Y') %>
-										$StartDate.Format('F j')
-									<% else %>
-										$StartDate.Format('F j, Y')
-									<% end_if %>
-								<% end_if %>
-
-								<% if $EndDate %>&ndash;$EndDate.Format('F j, Y') <% end_if %>
+								<% if $StartDate %><% if $EndDate.Format('Y') == $StartDate.Format('Y') %>$StartDate.Format('F j')<% else %>$StartDate.Format('F j, Y')<% end_if %><% end_if %><% if $EndDate %>&ndash;$EndDate.Format('F j, Y') <% end_if %>
 								<% if $StartDate && $ExhibitionLocation %> | <% end_if %>
 								<% if $ExhibitionLocation %>$ExhibitionLocation<% end_if %>
 								</h4>
