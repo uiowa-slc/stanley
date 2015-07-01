@@ -54,11 +54,12 @@
 			var demo1 = $("#demo1").slippry({
 				transition: 'kenburns',
 				kenZoom: 140,
-				speed: 8000,
+				speed: 1000,
 				autoHover: false,
 				controls: false,
   				captions: 'custom',
-  				captionsEl: '.sy-caption'
+  				captionsEl: '.sy-caption',
+  				pause: 11000
 			});
 		});
 	</script>
