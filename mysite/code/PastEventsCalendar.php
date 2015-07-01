@@ -61,20 +61,15 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 			$filter,
 			$l
 		);
-		$events->sort('StartDate','DESC');
+
+		$events = $events->sort('StartDate','DESC');
 
 		$paginatedList = new PaginatedList($events, $this->getRequest());
 		$paginatedList->setPageLength(10);
 
-		//return $events;
 		return $paginatedList;
 
-
 	}
-	//public function PastEvents() {
-    	//$list = $this->PastEvents();
 
-    	//return new PaginatedList($list, $this->getRequest());
-	//}
 
 }
