@@ -110,7 +110,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
  		$exhibitions = ExhibitionPage::get()->filter(array(
 		 	'EndDate:LessThan' => $now
-		 ))->sort('StartDate DESC');
+		 ))->sort('EndDate DESC');
 
 		 $pastExhibitions = new PaginatedList($exhibitions, $this->request);
 		 $pastExhibitions->setPageLength(10);
@@ -141,7 +141,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		 	'StartDate:GreaterThanOrEqual' => $yearFormatted,
 		 	'StartDate:LessThan' => $nextYearFormatted,
 		 	'EndDate:LessThan' => $now
-		 ))->sort('StartDate DESC');
+		 ))->sort('EndDate DESC');
 
 		 $paginatedList = new PaginatedList($exhibitions, $this->request);
 		 $paginatedList->setPageLength(10);
