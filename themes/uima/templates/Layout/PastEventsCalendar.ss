@@ -25,6 +25,7 @@
 										<img src="{$Event.Image.SetWidth(100).URL}" alt="$Title" class="right">
 									<% end_if %>
 									<h3 class="newsblock-title">$Title</h3>
+									<p class="entry-location">$Event.Location</p>
 									<p class="entry-date">$DateRange</p>
 									<% with Event %>
 										<div class="entry-content">$Content</div>
