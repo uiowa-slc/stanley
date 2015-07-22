@@ -33,7 +33,7 @@
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="$ClassName shifter">
+<body class="$ClassName $Action">
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include Header %>
