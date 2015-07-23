@@ -5,7 +5,7 @@ Check to see if Jackson Pollock page
 	<% if $ArtworkImage %>
 		<section class="artwork-image">
 			<div class="container">
-				<img src="$ArtworkImage.SetRatioSize(700,700).URL" alt="$ArtworkTitle" />
+				<img src="$ArtworkImage.SetRatioSize(700,700).URL" alt="$Title" />
 				<% if $ArtCredit %>
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2">
@@ -69,7 +69,7 @@ Check to see if Jackson Pollock page
 			<% end_if %>
 
 			<div class="<% if $Children %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-lg-8 col-lg-offset-2<% end_if %>">
-				<h1 class="title">$Title</h1>
+				<h1 class="art-title">$Title</h1>
 				<div class="cutline">
 					<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>
 					$ArtworkTitle<% if $ArtworkYear %>, $ArtworkYear<% end_if %><br />
@@ -85,38 +85,28 @@ Check to see if Jackson Pollock page
 	<!-- ==========================================================
 	All other pages start here
 	=========================================================== -->
-	<main class="container main clearfix" role="main" id="main-content">
-		<div class="row">
-			<div class=" col-lg-7 col-lg-push-5">
-				<% if $ArtworkImage %>
-					<div class="artwork-image">
-						<img src="$ArtworkImage.SetRatioSize(500,500).URL" alt="$ArtworkTitle" class="artwork-image" />
-					</div>
-					<% if $ArtCredit %>
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<span class="artcredit">$ArtCredit</span>
-							</div>
+	<% if $ArtworkImage %>
+		<section class="artwork-image">
+			<div class="container">
+				<img src="$ArtworkImage.SetRatioSize(500,500).URL" alt="$Title" />
+				<% if $ArtCredit %>
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<span class="artcredit">$ArtCredit</span>
 						</div>
-					<% end_if %>
+					</div>
 				<% end_if %>
 			</div>
-
-			<div class="col-lg-5 col-lg-pull-7">
-				<h1 class="title">$Title</h1>
-				<div class="cutline">
-					<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>
-					$ArtworkTitle<% if $ArtworkYear %>, $ArtworkYear<% end_if %><br />
-					<% if $ArtworkMedium %><span class="artworkmedium">$ArtworkMedium</span><% end_if %><% if $ArtworkDimensions && $ArtworkMedium %>, <% end_if %>
-					<% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %><br />
-					<% if $ArtworkCollectionInfo %>$ArtworkCollectionInfo<% end_if %>
-				</div>
-				$ArtworkText
-
-				<% if $Children %><%--Determine if Side Nav should be rendered, you can change this logic --%>
-					<!-- Subnavigation -->
+		</section>
+	<% end_if %>
+	<main class="container main clearfix" role="main" id="main-content">
+		<div class="row">
+			<% if $Children %><%--Determine if Side Nav should be rendered, you can change this logic --%>
+				<div class="col-md-4 col-lg-3 sidebar">
 					<div class="naver">
+
 						<div class="side-navigation">
+
 							<% if Menu(2) %>
 							<h4 id="handle">Navigation</h4>
 							<nav class="sec-nav" aria-label="Secondary" data-navigation-handle="#handle">
@@ -126,6 +116,7 @@ Check to see if Jackson Pollock page
 									<% end_with %>
 									<% loop Menu(4) %>
 										<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
+
 										<%-- third level nav option 1 --%>
 											<% if $LinkOrSection = "section" && Children %>
 												<ul class="second-level">
@@ -145,17 +136,34 @@ Check to see if Jackson Pollock page
 													<% end_loop %>
 												</ul>
 											<% end_if %>
+
+										<%-- end third level nav option 1 --%>
+
 										</li>
 									<% end_loop %>
+
 								</ul>
 							</nav>
 							<% end_if %>
 						</div><!-- end .subnavigation -->
 					</div><!-- end Naver -->
-				<% end_if %>
+
+				</div>
+			<% end_if %>
+
+			<div class="<% if $Children %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-lg-8 col-lg-offset-2<% end_if %>">
+				<h1 class="art-title">$Title</h1>
+				<div class="cutline">
+					<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>
+					$ArtworkTitle<% if $ArtworkYear %>, $ArtworkYear<% end_if %><br />
+					<% if $ArtworkMedium %><span class="artworkmedium">$ArtworkMedium</span><% end_if %><% if $ArtworkDimensions && $ArtworkMedium %>, <% end_if %>
+					<% if $ArtworkDimensions %>$ArtworkDimensions<% end_if %><br />
+					<% if $ArtworkCollectionInfo %>$ArtworkCollectionInfo<% end_if %>
+				</div>
+				$ArtworkText
 			</div>
-		</div><!-- end .row -->
-	</main><!-- end .container -->
+		</div>
+	</main>
 <% end_if %>
 
 

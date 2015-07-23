@@ -6,15 +6,14 @@
 	display: block;
 	margin: 0 auto;
 }
-.artworktitle {
-	color: #333;
-	font-size: 18px;
-	& p {
-		margin: 0;
-		display: inline;
+.art-title {
+	font-size: 22px;
+	@media (min-width: $break-small) {
+		font-size: 26px;
 	}
 }
 .cutline {
+	font-size: 14px;
 	line-height: 1.5;
 	& p {
 		display: inline;
