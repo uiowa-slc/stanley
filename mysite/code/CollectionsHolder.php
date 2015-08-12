@@ -24,6 +24,10 @@ class CollectionsHolder extends Page {
 
 class CollectionsHolder_Controller extends Page_Controller {
 
+	public function CollectionChildren() {
+		return $this->Children()->filter(array('ClassName' => 'CollectionsPage'));
+	}
+
 	public function init() {
 		parent::init();
 

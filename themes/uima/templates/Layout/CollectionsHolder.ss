@@ -6,7 +6,7 @@
 				$Content
 				$Form
 				<ul class="collectionsholder justify">
-					<% loop Children %>
+					<% loop CollectionChildren %>
 
 						<li class="justify-item">
 							<a href="$Link">
