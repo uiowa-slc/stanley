@@ -38,12 +38,59 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 	 *
 	 * @var array
 	 */
+		//must render past events to a template called PastEventCalnder_past.ss
+
+	private static $allowed_actions = array('past');
+	private static $url_handlers = array (
+		'past' => 'past'
+		);
+
 
 	public function init() {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
+
+	function AllEventsWithoutDuplicates() {
+ 		$events = $this->AllEvents();
+		$events->removeDuplicates('ID');
+		return $events;
+	}
+	function AllEvents(){
+		$start_date = date( "d/m/Y", time() );
+		$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
+		$eventDateTimes = $this->getEventList(
+			sfDate::getInstance()->date(),
+			sfDate::getInstance()->addYear(10)->date(),
+			null,
+			null
+		);
+
+		$events = new ArrayList();
+		foreach($eventDateTimes as $eventDateTime){
+			$events->push($eventDateTime->Event());
+		}
+		return $events;
+	}
+
+
+
+
+
+
+
+
+	public function past() {
+
+		$pastEvents = $this->PastEvents();
+		$Data = array(
+			'PastEvents' => $pastEvents,
+		);
+		return $this->customise($Data)->renderWith(array('PastEventsCalendar_past', 'Page'));
+	}
+	
+
 
 	public function PastEvents($limit = null, $filter = null){
 
