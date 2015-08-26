@@ -50,7 +50,7 @@
 					$Form
 					<!-- Loop News -->
 					<div class="newsholder-entries">
-						<% loop PaginatedNewsEntries %>
+						<% loop PaginatedList %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<% if $Photo %>
@@ -67,7 +67,7 @@
 							</div>
 						<% end_loop %>
 					</div>
-					<% include NewsPagination %>
+					<% include Pagination %>
 				</section>
 			</div><!-- end .col -->
 

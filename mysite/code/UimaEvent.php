@@ -1,6 +1,6 @@
 <?php
 
-class PastEvent extends CalendarEvent {
+class UimaEvent extends CalendarEvent {
 	private static $db = array(
 
 	);
@@ -21,17 +21,12 @@ class PastEvent extends CalendarEvent {
 		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
 		return $fields;
 	}
-	public function validURLSegment() {
-		return true;
-	}
-	public function syncLinkTracking() {
-		return null;
-	}
+
 
 
 }
 
-class CommunityEvent_Controller extends Page_Controller {
+class UimaEvent_Controller extends CalendarEvent_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

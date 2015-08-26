@@ -81,7 +81,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 			}
 		}
 		$Data = array(
-			'ExhibitionList' => $currentExhibitions,
+			'PaginatedList' => $currentExhibitions,
 		);
 
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
@@ -98,7 +98,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 			}
 		}
 		$Data = array(
-			'ExhibitionList' => $upcomingExhibitions,
+			'PaginatedList' => $upcomingExhibitions,
 		);
 
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
@@ -117,7 +117,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 
 		$Data = array(
-			'ExhibitionList' => $pastExhibitions,
+			'PaginatedList' => $pastExhibitions,
 		);
 
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
@@ -147,7 +147,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		 $paginatedList->setPageLength(10);
 
 		$Data = array(
-			'ExhibitionList' => $paginatedList,
+			'PaginatedList' => $paginatedList,
 			'ActiveYear' => $year
 		);
 
