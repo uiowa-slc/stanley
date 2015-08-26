@@ -1,30 +1,21 @@
 <?php
 
-class PastEventsCalendar extends Calendar {
+class UimaCalendar extends Calendar {
 	private static $db = array(
 
 	);
 
-	private static $allowed_children = array(
-		'PastEvent',
-	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Credit");
 		return $fields;
 	}
-	//Overload these to stop the Uncaught Exception: Object->__call(): the method 'parent' does not exist on 'BlogHolder' error.
-	public function validURLSegment() {
-		return true;
-	}
-	public function syncLinkTracking() {
-		return null;
-	}
+
 
 }
 
-class PastEventsCalendar_Controller extends Calendar_Controller {
+class UimaCalendar_Controller extends Calendar_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -55,12 +46,7 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
-	function AllEventsWithoutDuplicates() {
- 		$events = $this->AllEvents();
-		$events->removeDuplicates('ID');
-		return $events;
-	}
-	function AllEvents(){
+	function PaginatedList(){
 		$start_date = date( "d/m/Y", time() );
 		$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
 		$eventDateTimes = $this->getEventList(
@@ -74,47 +60,46 @@ class PastEventsCalendar_Controller extends Calendar_Controller {
 		foreach($eventDateTimes as $eventDateTime){
 			$events->push($eventDateTime->Event());
 		}
-		return $events;
+		$events->removeDuplicates('ID');
+		$paginatedList = new PaginatedList($events, $this->getRequest());
+		$paginatedList->setPageLength(10);
+
+		return $paginatedList;
 	}
-
-
-
-
-
-
-
 
 	public function past() {
 
 		$pastEvents = $this->PastEvents();
 		$Data = array(
-			'PastEvents' => $pastEvents,
+			'Title' => 'Past Events',
+			'PaginatedList' => $pastEvents,
 		);
-		return $this->customise($Data)->renderWith(array('PastEventsCalendar_past', 'Page'));
+		return $this->customise($Data)->renderWith(array('UimaCalendar', 'Page'));
 	}
 	
 
 
 	public function PastEvents($limit = null, $filter = null){
 
-		// Get past EventDateTime objects see Calendar.php
-		// $this->getEventList()
-  		//$start_date = sfDate::getInstance();
   		$start_date = new sfDate('0000-01-01 0:0:00');
-
 		$end_date = sfDate::getInstance();
 
 		$l = ($limit === null) ? "9999" : $limit;
-		$events = $this->getEventList(
+		$eventDateTimes = $this->getEventList(
 			$start_date->date(),
 			$end_date->date(),
 			$filter,
 			$l
 		);
 
-		$events = $events->sort('StartDate','DESC');
+		$events = new ArrayList();
+		foreach($eventDateTimes as $eventDateTime){
+			$events->push($eventDateTime->Event());
+		}
 
-		$paginatedList = new PaginatedList($events, $this->getRequest());
+		$eventsReversed = $events->reverse();
+
+		$paginatedList = new PaginatedList($eventsReversed, $this->getRequest());
 		$paginatedList->setPageLength(10);
 
 		return $paginatedList;
