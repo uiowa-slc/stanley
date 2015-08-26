@@ -18,6 +18,7 @@
 			
 
 				<% if AllEventsWithoutDuplicates %>
+<<<<<<< HEAD
 					<%-- <div class="event-list"> --%>
 						<% loop AllEventsWithoutDuplicates %>
 						<!-- Main Content -->
@@ -76,6 +77,29 @@
 						<% end_loop %>
 					
 				<% end_if %>
+
+
+<%-- 				<% if PastEvents %>
+=======
+>>>>>>> origin/2.0-events-reconfigure
+					<div class="event-list">
+						<% loop AllEventsWithoutDuplicates %>
+							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+								<div class="newsblock-info">
+									<% if $Event.Image %>
+										<img src="{$Event.Image.SetWidth(100).URL}" alt="$Title" class="right">
+									<% end_if %>
+									<h3 class="newsblock-title">$Title</h3>
+									<p class="entry-location">$Event.Location</p>
+									<p class="entry-date">$DateRange</p>
+									<% with Event %>
+										<div class="entry-content">$Content</div>
+									<% end_with %>
+								</div>
+							</div><!-- end .list-item -->
+						<% end_loop %>
+					</div>
+				<% end_if %> --%>
 
 
 <%-- 				<% if PastEvents %>

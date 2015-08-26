@@ -19,6 +19,7 @@
 
 
 		<% if PastEvents %>
+<<<<<<< HEAD
 			<%-- <div class="event-list"> --%>
 				<% loop PastEvents %>
 					<!-- Main Content -->
@@ -86,6 +87,8 @@
 
 <%-- 	
 		<% if PastEvents %>
+=======
+>>>>>>> origin/2.0-events-reconfigure
 			<div class="event-list">
 				<% loop PastEvents %>
 					<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
@@ -103,4 +106,14 @@
 					</div>
 				<% end_loop %>
 			</div>
+<<<<<<< HEAD
 		<% end_if %> --%>
+=======
+		<% end_if %>
+
+	</section>
+</div>
+</div>
+</main>
+	
+>>>>>>> origin/2.0-events-reconfigure
