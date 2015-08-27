@@ -1,9 +1,8 @@
-<div class="event-largeimg" <% if $Image %>style="background-image: url($Image.URL);"<% end_if %><% if not $Image %><% if $Venue.ImageURL %>style="background-image: url($Venue.ImageURL);"<% end_if %><% end_if %>>
+<%-- <div class="event-largeimg" <% if $Image %>style="background-image: url($Image.URL);"<% end_if %><% if not $Image %><% if $Venue.ImageURL %>style="background-image: url($Venue.ImageURL);"<% end_if %><% end_if %>>
 	<!-- Date | Location -->
 	<div class="inner">
 		<div class="container">
 			<div class="title-date">
-				<h3>$Title</h3>
 				<h4>
 				<% if $DateTimes.Count > 1 %><strong>Next Date:</strong><% end_if %>
 				<% if $DateTimes %>
@@ -37,7 +36,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --%>
 
 <main class="container main" role="main">
 	<div class="row">
@@ -46,85 +45,39 @@
 		<div class="col-lg-8">
 			<section id="main-content" tabindex="-1">
 
+				<h1>$Title</h1>
+
 				<!-- Content -->
+				<% if $Image %><img src="$Image.SetWidth(200).URL" alt="$Title" class="right"><% end_if %>
 				<% if $Content %>
 					<div class="event-content">
-						<h3>Description</h3>
 						$Content
 					</div>
 				<% end_if %>
 
+				<% if $Location %>
+					<h3 style="clear:both;">Location:</h3>
+					$Location
+				<% end_if %>
 
 				<!-- Dates -->
 				<h3>Dates</h3>
 				<div class="event-dates">
 					<% loop $DateTimes %>
-
-						<p class="date-time">
+						<p class="">
 							<% with $StartDate %>
 								<time itemprop="startDate" datetime="$Format(c)">
-									$Format(l), $Format(F) $Format(j)
+									$Format(l) $Format(F) $Format(j)
 								</time>
-								 <br />$Format("g:i A")<% end_with %><% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i A")<% end_with %>
-							<% end_if %>
-							<% if $EndDate %>
-								until
-								<% with $EndDate %>
-									<time itemprop="endDate" datetime="$Format(c)">
-										$Format(l), $Format(F) $Format(j)
-									</time>
-									<br />$Format("g:i A")
-								<% end_with %>
-							<% end_if %>
+							<% end_with %>
+							<% if StartTime %><span class="eventlist-time">$TimeRange</span><% end_if %>
 						</p>
 					<% end_loop %>
 				</div>
-
-				<!-- Sponsor & Link to events.uiowa.edu -->
-				<% if $Sponsor %>
-					<p><strong>Sponsor:</strong><br> $Sponsor </p>
-				<% end_if %>
-				<% if $MoreInfoLink || $LocalistLink %>
-					<h3>More Information</h3>
-					<p>
-					<!--
-						<% if $MoreInfoLink %>
-							<a href="$MoreInfoLink" class="button" target="_blank">Event Website</a><br />
-						<% end_if %>
-					-->
-						<% if $LocalistLink %>
-							<a href="$LocalistLink" class="button" target="_blank">View this event on events.uiowa.edu</a>
-						<% end_if %>
-					</p>
-				<% end_if %>
-
-
 			</section>
 		</div><!-- end .col -->
+
 		<div class="col-md-3 col-lg-offset-1">
-			<!-- Venue -->
-			<% if $Venue %>
-				<h3>Venue</h3>
-				<p>$Venue.Title<% if $Venue.Address %><br>$Venue.Address<% end_if %></p>
-			<% end_if %>
-
-			<!-- Cost -->
-			<% if $Cost %>
-				<h3>Cost:</h3>
-				<p>$Cost</p>
-			<% end_if %>
-
-			<!-- Contact Information -->
-			<% if $ContactName %>
-				<h3>Contact Information:</h3>
-				<p>
-					<% if $ContactEmail %>
-						<a href="mailto:$ContactEmail">$ContactName</a>
-					<% else %>
-						$ContactName
-					<% end_if %>
-				</p>
-			<% end_if %>
 
 			<!-- Get Notified -->
 			<div class="addtocalendar">
