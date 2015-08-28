@@ -5,6 +5,10 @@ class UimaCalendar extends Calendar {
 
 	);
 
+	private static $allowed_children = array(
+		'UimaEvent'
+	);
+
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -76,7 +80,7 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		);
 		return $this->customise($Data)->renderWith(array('UimaCalendar', 'Page'));
 	}
-	
+
 
 
 	public function PastEvents($limit = null, $filter = null){
