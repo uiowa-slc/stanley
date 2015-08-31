@@ -1,13 +1,14 @@
 <% if $Image %>
 <div class="event-largeimg">
-	<picture>
+	<%-- <picture>
 		<!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source srcset="$Image.URL" media="(min-width: 980px)">
-		<source srcset="$Image.URL" media="(min-width: 768px)">
-		<source srcset="$Image.URL" media="(min-width: 480px)">
+		<source srcset="$Image.CroppedFocusedImage(1200,600).URL" media="(min-width: 980px)">
+		<source srcset="$Image.CroppedFocusedImage(1000,500).URL" media="(min-width: 768px)">
+		<source srcset="$Image.CroppedFocusedImage(700,350).URL" media="(min-width: 480px)">
 		<!--[if IE 9]></video><![endif]-->
-		<img srcset="$Image.URL" alt="$Title" class="eventpage-img">
-	</picture>
+		<img srcset="$Image.CroppedFocusedImage(400,300).URL" alt="$Title" class="exhibitpage-img">
+	</picture> --%>
+	<img src="$Image.URL" alt="Title" class="eventpage-img">
 </div>
 <% end_if %>
 
@@ -38,7 +39,11 @@
 							</time>
 						<% end_with %>
 					<% end_if %>
-					<if StartTime %><span class="eventlist-time">$StartTime.Format("g:i a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i a")<% end_with %></span><% end_if %>
+					<if StartTime %>
+						<span class="eventlist-time">
+							<% if $EndTime %>$StartTime.Format("g:i")<% else %>$StartTime.Format("g:i a")<% end_if %><% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i a")<% end_with %>
+						</span>
+					<% end_if %>
 					<% if AllDay %>This event lasts all day<% end_if %>
 				<% end_loop %>
 				</ul>
