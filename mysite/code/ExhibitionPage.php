@@ -8,7 +8,6 @@ class ExhibitionPage extends Page {
 		'ExhibitionAddress' => 'Text',
 		'LocationLink' => 'Text',
 		'ExhibitionDescription' => 'HTMLText',
-		'EventTag' => 'Text',
 
 	);
 	private static $has_one = array(
@@ -17,7 +16,7 @@ class ExhibitionPage extends Page {
 
 	);
 
-	
+
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -31,7 +30,6 @@ class ExhibitionPage extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionAddress','Exhibition Address'));
 		$fields->addFieldToTab('Root.Main', new TextField('LocationLink','Location Link'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ExhibitionDescription','Exhibition Description'));
-		$fields->addFieldToTab("Root.Main", new TextField("EventTag", "Tag used to show related events"));
 		$fields->addFieldToTab('Root.Main', new UploadField('ExhibitionImage', 'Large Exhibition Image (1200px width, 600px height'));
 
 		 return $fields;
