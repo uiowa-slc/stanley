@@ -3054,7 +3054,7 @@ $(document).ready(function() {
 	    return index % 2 == 1;
 	}).addClass("odd");
 
-	$(".noUi-handle").append("<a href='join'></a>");
+	$(".noUi-handle").append("<a href='support/membership'></a>");
 	//END RANGE SLIDER
 
 	// disable right click on images
