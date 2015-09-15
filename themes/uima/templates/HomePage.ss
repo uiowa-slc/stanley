@@ -52,12 +52,13 @@
 	<script>
 		$(function() {
 			var demo1 = $("#demo1").slippry({
-				transition: 'kenburns',
+				transition: 'horizontal', // fade, horizontal, kenburns, false
 				kenZoom: 140,
 				speed: 1000,
 				autoHover: false,
 				controls: false,
   				captions: 'custom',
+  				useCSS: true,
   				captionsEl: '.sy-caption',
   				pause: 10000
 			});
