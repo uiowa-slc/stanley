@@ -72,10 +72,10 @@
 			</ul>
 
 			<div class="clearfix footer-logos">
-				<a href="http://www.uiowa.edu">
+				<a href="http://www.uiowa.edu" target="_blank">
 					<img src="{$ThemeDir}/images/uiowalogo.gif" alt="University of Iowa">
 				</a>
-				<a href="http://www.uima.uiowa.edu">
+				<a href="http://uima.uiowa.edu">
 					<img src="{$ThemeDir}/images/iowamuseum_logo.gif" alt="University of Iowa Museum of Art">
 				</a>
 			</div>
