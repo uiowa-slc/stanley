@@ -19,13 +19,13 @@
 
 
 		<!-- Main Content -->
-		<div class="<% if $ExhibitionList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+		<div class="<% if $PaginatedList || $Parent %>col-md-8 col-lg-8 col-lg-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
 			<section id="main-content" tabindex="-1">
 				<!-- <h1>$Title</h1> -->
 				$Content
 				$Form
 
-				<% loop ExhibitionList %>
+				<% loop PaginatedList %>
 					<div class="exhibitlist">
 						<!-- Image -->
 						<% if $ExhibitionImage %>
@@ -55,7 +55,7 @@
 				<% end_loop %>
 
 
-				<% include ExhibitionPagination %>
+				<% include Pagination %>
 			</div>
 
 		</section>
