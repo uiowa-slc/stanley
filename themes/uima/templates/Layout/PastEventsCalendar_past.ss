@@ -19,7 +19,7 @@
 
 
 		<% if PastEvents %>
-<<<<<<< HEAD
+
 			<%-- <div class="event-list"> --%>
 				<% loop PastEvents %>
 					<!-- Main Content -->
@@ -108,12 +108,12 @@
 			</div>
 <<<<<<< HEAD
 		<% end_if %> --%>
-=======
-		<% end_if %>
+
+		
 
 	</section>
 </div>
 </div>
 </main>
 	
->>>>>>> origin/2.0-events-reconfigure
+

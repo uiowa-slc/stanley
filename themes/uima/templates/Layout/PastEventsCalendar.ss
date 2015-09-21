@@ -18,7 +18,7 @@
 			
 
 				<% if AllEventsWithoutDuplicates %>
-<<<<<<< HEAD
+
 					<%-- <div class="event-list"> --%>
 						<% loop AllEventsWithoutDuplicates %>
 						<!-- Main Content -->
