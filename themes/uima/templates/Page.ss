@@ -11,7 +11,7 @@
 	<title>$Title | $SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->

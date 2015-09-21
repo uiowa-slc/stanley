@@ -39,7 +39,7 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<div id="newsletter" class="clearfix">
-				<form name="ccoptin" action="http://ui.constantcontact.com/d.jsp" target="_blank" method="post" >
+				<form name="ccoptin" action="https://ui.constantcontact.com/d.jsp" target="_blank" method="post" >
 					<label for="cc_email">Sign up for our Newsletter:</label>
 					<input type="text" name="ea" size="20" class="text" value="E-mail Address" id="cc_email" />
 					<input type="submit" name="go" value="Sign Up" class="submit" />
@@ -72,10 +72,10 @@
 			</ul>
 
 			<div class="clearfix footer-logos">
-				<a href="http://www.uiowa.edu">
+				<a href="http://www.uiowa.edu" target="_blank">
 					<img src="{$ThemeDir}/images/uiowalogo.gif" alt="University of Iowa">
 				</a>
-				<a href="http://www.uima.uiowa.edu">
+				<a href="http://uima.uiowa.edu">
 					<img src="{$ThemeDir}/images/iowamuseum_logo.gif" alt="University of Iowa Museum of Art">
 				</a>
 			</div>
