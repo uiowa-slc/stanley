@@ -10,7 +10,7 @@
 				</p>
 				<hr />
 				<% if $Photo %>
-					<img src="$Photo.SetWidth(400).URL" alt="" class="right entryphoto">
+					<img src="$Photo.ScaleWidth(400).URL" alt="" class="right entryphoto">
 				<% end_if %>
 
 				$Content

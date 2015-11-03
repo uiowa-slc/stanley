@@ -2,7 +2,7 @@
 	<div class="eventlist clearfix">
 		<% if $Image %>
 			<a href="$Link" class="eventlist-img">
-				<img src="$Image.SetWidth(240).URL" alt="$Title">
+				<img src="$Image.ScaleWidth(240).URL" alt="$Title">
 			</a>
 		<% end_if %>
 

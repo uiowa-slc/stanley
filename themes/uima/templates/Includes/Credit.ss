@@ -3,10 +3,10 @@
 	<div class="exhibition-credit clearfix">
 		<% if $AssociatedPageID %>
 			<a href="$AssociatedPage.Link">
-				<img src="$CreditThumb.SetWidth(185).URL" alt="$CreditTitle">
+				<img src="$CreditThumb.ScaleWidth(185).URL" alt="$CreditTitle">
 			</a>
 		<% else %>
-			<img src="$CreditThumb.SetWidth(185).URL" alt="$CreditTitle">
+			<img src="$CreditThumb.ScaleWidth(185).URL" alt="$CreditTitle">
 		<% end_if %>
 
 		<div class="credit-content">
