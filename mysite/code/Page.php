@@ -2,18 +2,18 @@
 class Page extends SiteTree {
 
 	private static $db = array(
-		'CreditName' => 'Text',
+		'CreditName'           => 'Text',
 		'CreditArtistLifespan' => 'Text',
-		'CreditTitle' => 'HTMLText',
-		'CreditYear' => 'Text',
-		'CreditMedium' => 'Text',
-		'CreditDimensions' => 'Text',
+		'CreditTitle'          => 'HTMLText',
+		'CreditYear'           => 'Text',
+		'CreditMedium'         => 'Text',
+		'CreditDimensions'     => 'Text',
 		'CreditCollectionInfo' => 'Text',
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
-		'CreditThumb' => 'Image',
+		"Photo"          => "Image",
+		'CreditThumb'    => 'Image',
 		"AssociatedPage" => "SiteTree",
 	);
 
@@ -23,58 +23,54 @@ class Page extends SiteTree {
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo (1200px x 400px"));
 
 		$fields->addFieldToTab('Root.Credit', new UploadField('CreditThumb', 'Credit: Artwork Thumbnail'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditName','Credit: Artist Name'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditArtistLifespan','Credit: Artist Lifespan Information'));
-		$creditTitleField =  new HTMLEditorField('CreditTitle','Credit Artwork Title');
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditName', 'Credit: Artist Name'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditArtistLifespan', 'Credit: Artist Lifespan Information'));
+		$creditTitleField = new HTMLEditorField('CreditTitle', 'Credit Artwork Title');
 		$creditTitleField->setRows(3);
 
 		$fields->addFieldToTab('Root.Credit', $creditTitleField);
 		// $fields->addFieldToTab('Root.Credit', new HTMLEditorField('CreditTitle','Credit: Artwork Title'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditYear','Credit: Artwork Year'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditMedium','Credit: Artwork Medium'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditDimensions','Credit: Artwork Dimensions'));
-		$fields->addFieldToTab('Root.Credit', new TextField('CreditCollectionInfo','Credit: Collections Information'));
-		$fields->push( new TreeDropdownField("AssociatedPageID", "Header image link credit", "SiteTree"));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditYear', 'Credit: Artwork Year'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditMedium', 'Credit: Artwork Medium'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditDimensions', 'Credit: Artwork Dimensions'));
+		$fields->addFieldToTab('Root.Credit', new TextField('CreditCollectionInfo', 'Credit: Collections Information'));
+		//$fields->push( new TreeDropdownField("AssociatedPageID", "Header image link credit", "SiteTree"));
 		return $fields;
 
 	}
 
-	public function NiceName(){
+	public function NiceName() {
 
 		$niceNames = array(
 
-			'Page' => null,
-			'CollectionsPage' => 'Collection',
-			'CollectionsHolder' => 'Collection List',
-			'ArtworkPage' => 'Artwork Item',
-			'BenefitLevels' => 'Benefit Levels',
-			'CarouselItem' => null,
-			'ExhibitionHolder' => 'Exhibition List',
-			'ExhibitionPage' => 'Exhibition Item',
-			'HomePage' => null,
-			'NewsEntry' => 'News Item',
-			'NewsHolder' => 'News List',
-			'PastEvent' => 'Event',
-			'PastEventsCalendar' => null,
+			'Page'                => null,
+			'CollectionsPage'     => 'Collection',
+			'CollectionsHolder'   => 'Collection List',
+			'ArtworkPage'         => 'Artwork Item',
+			'BenefitLevels'       => 'Benefit Levels',
+			'CarouselItem'        => null,
+			'ExhibitionHolder'    => 'Exhibition List',
+			'ExhibitionPage'      => 'Exhibition Item',
+			'HomePage'            => null,
+			'NewsEntry'           => 'News Item',
+			'NewsHolder'          => 'News List',
+			'PastEvent'           => 'Event',
+			'PastEventsCalendar'  => null,
 			'SiteConfigExtension' => null
 		);
 
 		$niceClassName = $niceNames[$this->ClassName];
 		return $niceClassName;
 
-
-		print_r('nice name: '.$this->nice_name);
-		if ($this->nice_name){
-	   		return $this->nice_name;
-		}
-		else{
+		//print_r('nice name: '.$this->nice_name);
+		if ($this->nice_name) {
+			return $this->nice_name;
+		} else {
 			return "not found";
 		}
 
-
 	}
 }
-
 
 class Page_Controller extends ContentController {
 
@@ -106,8 +102,5 @@ class Page_Controller extends ContentController {
 	public function DollarSign() {
 		return "$";
 	}
-
-
-
 
 }
