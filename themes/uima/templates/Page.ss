@@ -6,7 +6,7 @@
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="$Content.LimitCharacters(150)">
+	<meta name="description" content="<% if MetaDescription %>$MetaDescription<% else %>$Content.LimitCharacters(150)<% end_if %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>$Title | $SiteConfig.Title</title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>

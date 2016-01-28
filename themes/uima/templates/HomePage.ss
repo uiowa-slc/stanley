@@ -6,9 +6,9 @@
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="$Content.LimitCharacters(150)">
+	<meta name="description" content="<% if MetaDescription %>$MetaDescription<% else %>$Content.LimitCharacters(150)<% end_if %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>$SiteConfig.Title</title>
+	<title><% if MetaTitle %>$MetaTitle<% else %>$SiteConfig.Title<% end_if %></title>
 	<script src="{$ThemeDir}/js/modernizr.js"></script>
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
@@ -52,7 +52,7 @@
 	<script>
 		$(function() {
 			var demo1 = $("#demo1").slippry({
-				transition: 'horizontal', // fade, horizontal, kenburns, false
+				transition: 'kenburns', // fade, horizontal, kenburns, false
 				kenZoom: 140,
 				speed: 1000,
 				autoHover: false,
