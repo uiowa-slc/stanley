@@ -16,7 +16,7 @@
 					<li class="clearfix">
 						<% if $ArtworkImage %>
 							<a href="$Link">
-								<img src="$ArtworkImage.CroppedImage(160,120).URL" alt="$MenuTitle">
+								<img src="$ArtworkImage.Fill(160,120).URL" alt="$MenuTitle">
 							</a>
 						<% end_if %>
 						<% if $ExhibitionImage %>

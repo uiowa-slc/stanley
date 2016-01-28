@@ -39,7 +39,7 @@ class ExhibitionHolder extends Page {
 
 		$exhibitionYears->removeDuplicates("Year");
 
-		return $exhibitionYears;
+		return $exhibitionYears->sort('Year', 'DESC');
 
 	}
 

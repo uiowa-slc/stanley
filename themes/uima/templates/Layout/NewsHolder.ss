@@ -55,7 +55,7 @@
 								<div class="newsblock-info">
 									<% if $Photo %>
 										<a href="$Link">
-											<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
+											<img src="$Photo.Fill(120,120).URL" alt="$Title" class="right">
 										</a>
 									<% end_if %>
 									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>

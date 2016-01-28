@@ -87,7 +87,7 @@
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<% if $Event.Image %>
-										<img src="{$Event.Image.SetWidth(100).URL}" alt="$Title" class="right">
+										<img src="{$Event.Image.ScaleWidth(100).URL}" alt="$Title" class="right">
 									<% end_if %>
 									<h3 class="newsblock-title">$Title</h3>
 									<p class="entry-location">$Event.Location</p>
@@ -108,7 +108,7 @@
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<% if $Event.Image %>
-										<img src="{$Event.Image.SetWidth(100).URL}" alt="$Title" class="right">
+										<img src="{$Event.Image.ScaleWidth(100).URL}" alt="$Title" class="right">
 									<% end_if %>
 									<h3 class="newsblock-title">$Title</h3>
 									<p class="entry-location">$Event.Location</p>
