@@ -12,23 +12,23 @@ class ExhibitionHolder extends Page {
 
 	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
 
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Credit");
 		return $fields;
 
 	}
 	public function ArchiveYears() {
-		$exhibitions     = ExhibitionPage::get();
+		$exhibitions     = $this->getPastExhibitions();
 		$exhibitionYears = new ArrayList();
 
 		foreach ($exhibitions as $exhibition) {
-			$exhibitionYear     = new DataObject;
-			$exhibitionDateTime = $exhibition->obj("StartDate");
+			$exhibitionYear          = new DataObject;
+			$exhibitionStartDateTime = $exhibition->obj("StartDate");
 
-			if ($exhibitionDateTime->Year()) {
+			if ($exhibitionStartDateTime->Year()) {
 
-				$exhibitionYear->Year = $exhibitionDateTime->Year();
+				$exhibitionYear->Year = $exhibitionStartDateTime->Year();
 				$exhibitionYear->Link = $this->Link("year/".$exhibitionYear->Year);
 
 				$exhibitionYears->push($exhibitionYear);
@@ -40,6 +40,14 @@ class ExhibitionHolder extends Page {
 		$exhibitionYears->removeDuplicates("Year");
 
 		return $exhibitionYears->sort('Year', 'DESC');
+
+	}
+
+	public function getPastExhibitions() {
+		$now = date('Y-m-d');
+		return ExhibitionPage::get()->filter(array(
+				'EndDate:LessThan' => $now,
+			))->sort('EndDate DESC');
 
 	}
 
@@ -71,7 +79,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		$currentExhibitions = new PaginatedList($paginatedList, $this->request);
 		$currentExhibitions->setPageLength(10);
 		foreach ($exhibitions as $exhibition) {
-			if ($exhibition->obj("StartDate")->InPast() && $exhibition->obj("EndDate")->InFuture()) {
+			if ($exhibition->IsCurrent()) {
 				$currentExhibitions->push($exhibition);
 			} else if ((!$exhibition->StartDate) && (!$exhibition->EndDate)) {
 				$currentExhibitions->push($exhibition);
@@ -105,10 +113,7 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 		$now = date('Y-m-d');
 
-		$exhibitions = ExhibitionPage::get()->filter(array(
-				'EndDate:LessThan' => $now,
-			))->sort('EndDate DESC');
-
+		$exhibitions     = $this->getPastExhibitions();
 		$pastExhibitions = new PaginatedList($exhibitions, $this->request);
 		$pastExhibitions->setPageLength(10);
 

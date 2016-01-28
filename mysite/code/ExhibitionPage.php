@@ -2,11 +2,11 @@
 class ExhibitionPage extends Page {
 	private static $db = array(
 
-		'StartDate' => 'SS_Datetime',
-		'EndDate' => 'SS_Datetime',
-		'ExhibitionLocation' => 'Text',
-		'ExhibitionAddress' => 'Text',
-		'LocationLink' => 'Text',
+		'StartDate'             => 'SS_Datetime',
+		'EndDate'               => 'SS_Datetime',
+		'ExhibitionLocation'    => 'Text',
+		'ExhibitionAddress'     => 'Text',
+		'LocationLink'          => 'Text',
 		'ExhibitionDescription' => 'HTMLText',
 
 	);
@@ -16,9 +16,10 @@ class ExhibitionPage extends Page {
 
 	);
 
-
-
-	function getCMSFields() {
+	public function IsCurrent() {
+		return $this->obj("StartDate")->InPast() && $this->obj("EndDate")->InFuture();
+	}
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
 		$fields->removeByName("Content");
@@ -26,13 +27,13 @@ class ExhibitionPage extends Page {
 		$dateField->getDateField()->setConfig('showcalendar', true);
 		$fields->addFieldToTab("Root.Main", $dateField = new DatetimeField('EndDate', 'End Date'));
 		$dateField->getDateField()->setConfig('showcalendar', true);
-		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionLocation','Exhibition Location'));
-		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionAddress','Exhibition Address'));
-		$fields->addFieldToTab('Root.Main', new TextField('LocationLink','Location Link'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ExhibitionDescription','Exhibition Description'));
+		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionLocation', 'Exhibition Location'));
+		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionAddress', 'Exhibition Address'));
+		$fields->addFieldToTab('Root.Main', new TextField('LocationLink', 'Location Link'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ExhibitionDescription', 'Exhibition Description'));
 		$fields->addFieldToTab('Root.Main', new UploadField('ExhibitionImage', 'Large Exhibition Image (1200px width, 600px height'));
 
-		 return $fields;
+		return $fields;
 	}
 }
 
