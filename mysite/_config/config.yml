@@ -15,3 +15,6 @@ BlogEntry:
 BlogHolder:
   extensions:
     - WidgetPageExtension
+Calendar:
+    timezone: America/Chicago
+    language: EN
