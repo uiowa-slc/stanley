@@ -20,7 +20,6 @@ class CollectionsPage extends Page {
 
 		$fields->removeByName("Metadata");
 		$fields->removeByName("Photo");
-		$fields->removeByName("Credit");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsCover', 'Collections Cover Image'));
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image (1200px x 400px'));

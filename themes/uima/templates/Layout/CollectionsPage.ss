@@ -59,6 +59,7 @@
 					<% end_loop %>
 				</ul>
 			</section>
+			<% include Credit %>
 		</div>
 	</div>
 </main><!-- end .container -->
