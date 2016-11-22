@@ -1,5 +1,10 @@
 <?php
 class ExhibitionPage extends Page {
+
+	private static $show_in_sitetree = false;
+
+    private static $allowed_children = array();
+
 	private static $db = array(
 
 		'StartDate'             => 'SS_Datetime',
@@ -10,11 +15,18 @@ class ExhibitionPage extends Page {
 		'ExhibitionDescription' => 'HTMLText',
 
 	);
+
+	private static $summary_fields = array(
+        'ExhibitionAddress' => 'Address'
+    );
+
 	private static $has_one = array(
 
 		'ExhibitionImage' => 'Image',
 
 	);
+
+	
 
 	public function IsCurrent() {
 		return $this->obj("StartDate")->InPast() && $this->obj("EndDate")->InFuture();
@@ -35,6 +47,8 @@ class ExhibitionPage extends Page {
 
 		return $fields;
 	}
+
+	
 }
 
 class ExhibitionPage_Controller extends Page_Controller {

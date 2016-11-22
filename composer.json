@@ -15,7 +15,8 @@
 		"silverstripe/googlesitemaps" : "*",
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",
-		"silverstripe/widgets": "*"
+		"silverstripe/widgets": "*",
+		"silverstripe/lumberjack": "^1.2"
 
 	},
 	"require-dev": {

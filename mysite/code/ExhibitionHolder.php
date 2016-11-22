@@ -2,6 +2,10 @@
 
 class ExhibitionHolder extends Page {
 
+	private static $extensions = array(
+        'LumberjackExhibition',
+    );
+
 	private static $db = array(
 
 	);
@@ -10,14 +14,27 @@ class ExhibitionHolder extends Page {
 
 	);
 
+
 	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
 
+
 	public function getCMSFields() {
+
+
 		$fields = parent::getCMSFields();
+
+		$pages = SiteTree::get()->filter(array(
+			'ParentID' => $this->owner->ID,
+		));
+
+
 		$fields->removeByName("Credit");
+		$fields->removeByName("Content");
 		return $fields;
 
 	}
+
+	
 	public function ArchiveYears() {
 		$exhibitions     = $this->getPastExhibitions();
 		$exhibitionYears = new ArrayList();
