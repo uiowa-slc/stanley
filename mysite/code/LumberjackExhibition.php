@@ -46,12 +46,12 @@ class LumberjackExhibition extends SiteTreeExtension {
 			$columns = $config->getComponentByType('GridFieldDataColumns');
 			$columns->setDisplayFields(array(
 				'Title' => 'Title',
-				'StartDate.NiceUS' => 'Start Date',
-				'EndDate.NiceUS' => 'End Date'
+				'StartDate' => 'Start Date',
+				'EndDate' => 'End Date'
 			));	
 
 			$config->getComponentByType('GridFieldPaginator')->setItemsPerPage(50);
-					
+
 			$gridField = new GridField(
 				"ChildPages",
 				$this->getLumberjackTitle(),
