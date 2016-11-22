@@ -37,12 +37,10 @@ class LumberjackExhibition extends SiteTreeExtension {
 
 
 	public function updateCMSFields(FieldList $fields) {
-		$excluded = $this->owner->getExcludedSiteTreeClassNames();
-		if(!empty($excluded)) {
-			$pages = SiteTree::get()->filter(array(
-				'ParentID' => $this->owner->ID,
-				'ClassName' => $excluded
-			));
+
+			$pages = ExhibitionPage::get()->filter(array(
+				'ParentID' => $this->owner->ID
+			))->sort('EndDate DESC');
 
 			$config = $this->getLumberjackGridFieldConfig();
 			$columns = $config->getComponentByType('GridFieldDataColumns');
@@ -50,7 +48,10 @@ class LumberjackExhibition extends SiteTreeExtension {
 				'Title' => 'Title',
 				'StartDate.NiceUS' => 'Start Date',
 				'EndDate.NiceUS' => 'End Date'
-			));			
+			));	
+
+			$config->getComponentByType('GridFieldPaginator')->setItemsPerPage(50);
+					
 			$gridField = new GridField(
 				"ChildPages",
 				$this->getLumberjackTitle(),
@@ -61,7 +62,7 @@ class LumberjackExhibition extends SiteTreeExtension {
 
 		$tab = new Tab('ChildPages', $this->getLumberjackTitle(), $gridField);
 		$fields->insertBefore($tab, 'Main');
-		}
+
 	}
 
 	/**
