@@ -18,3 +18,5 @@ BlogHolder:
 Calendar:
     timezone: America/Chicago
     language: EN
+BlogMigrationTask:
+    run_during_dev_build: false

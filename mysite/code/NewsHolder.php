@@ -1,5 +1,5 @@
 <?php
-class NewsHolder extends BlogHolder {
+class NewsHolder extends BlogHolder implements MigratableObject {
 
 	private static $db = array(
 
@@ -14,7 +14,7 @@ class NewsHolder extends BlogHolder {
 	);
 
 	private static $allowed_children = array(
-		'NewsEntry'
+		'NewsEntry', 'BlogPost'
 	);
 
 	
@@ -30,6 +30,40 @@ class NewsHolder extends BlogHolder {
 
 		return $fields;
 	}
+
+ //Overload these to stop the Uncaught Exception: Object->__call(): the method 'parent' does not exist on 'BlogHolder' error.
+    public function validURLSegment()
+    {
+        return true;
+    }
+    public function syncLinkTracking()
+    {
+        return null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function up()
+    {
+        $published = $this->IsPublished();
+
+       
+            $this->ClassName = 'Blog';
+            $this->RecordClassName = 'Blog';
+            $this->PostsPerPage = 10;
+            $this->write();
+
+
+        if ($published) {
+           $this->publish('Stage', 'Live');
+            $message = "PUBLISHED: ";
+        } else {
+            $message = "DRAFT: ";
+        }
+        
+        return $message . $this->Title;
+    }
 
 
 }

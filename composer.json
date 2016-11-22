@@ -7,7 +7,7 @@
 		"silverstripe/framework": "3.4.*@stable",
 		"silverstripe-themes/simple": "*",
 		"silverstripe/event-calendar": "*",
-		"silverstripe/blog" : "1.x",
+		"silverstripe/blog" : "2.*@stable",
 		"md/ac-json-events" : "dev-master",
 		"silverstripe/mathspamprotection" : "*",
 		"jonom/focuspoint" : "*",
