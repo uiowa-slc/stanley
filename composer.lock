@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fd7d49c06e43311ccd0f7206b22311a7",
-    "content-hash": "339370388b0582c0d30ecfff90664d47",
+    "hash": "e1d8cdd641b47e31847f469c97b5b8e1",
+    "content-hash": "2b614f9133de3d92e0624d48e7930e5a",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -163,12 +163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/u01jmg3/ics-parser.git",
-                "reference": "1a3bd7cd5aadc83a809de64cc1df69292adfe091"
+                "reference": "cf0d9eb89794e993527bdd53961d02497e78aab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/u01jmg3/ics-parser/zipball/1a3bd7cd5aadc83a809de64cc1df69292adfe091",
-                "reference": "1a3bd7cd5aadc83a809de64cc1df69292adfe091",
+                "url": "https://api.github.com/repos/u01jmg3/ics-parser/zipball/cf0d9eb89794e993527bdd53961d02497e78aab7",
+                "reference": "cf0d9eb89794e993527bdd53961d02497e78aab7",
                 "shasum": ""
             },
             "require": {
@@ -209,7 +209,7 @@
                 "ical",
                 "ics"
             ],
-            "time": "2016-11-19 15:26:00"
+            "time": "2016-11-22 18:15:36"
         },
         {
             "name": "jonom/focuspoint",
@@ -1012,12 +1012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "29e8996b4a333a52376c1fb797c4a75e008f4ee8"
+                "reference": "9acc93b3616609ede9bbadd6209af8bac3307f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/29e8996b4a333a52376c1fb797c4a75e008f4ee8",
-                "reference": "29e8996b4a333a52376c1fb797c4a75e008f4ee8",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/9acc93b3616609ede9bbadd6209af8bac3307f4b",
+                "reference": "9acc93b3616609ede9bbadd6209af8bac3307f4b",
                 "shasum": ""
             },
             "require": {
@@ -1044,7 +1044,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2016-11-18 18:16:06"
+            "time": "2016-11-22 13:36:49"
         }
     ],
     "packages-dev": [
