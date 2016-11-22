@@ -87,7 +87,9 @@ class NewsEntry extends BlogEntry implements MigratableObject{
             $message = "DRAFT: ";
         }
 
-        return $message . $this->Title;
+       // return $message . $this->Title;
+
+        return $message . $this->Title . '$this->PublishDate will equal '.$this->PublishDate;
     }
 
     /**

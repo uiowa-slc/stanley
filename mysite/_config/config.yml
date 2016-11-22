@@ -9,10 +9,10 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'simple'
-BlogEntry:
+Blog:
   extensions:
     - WidgetPageExtension
-BlogHolder:
+BlogPost:
   extensions:
     - WidgetPageExtension
 Calendar:
