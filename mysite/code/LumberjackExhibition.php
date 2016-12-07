@@ -50,7 +50,7 @@ class LumberjackExhibition extends SiteTreeExtension {
 				'EndDate' => 'End Date'
 			));	
 
-			$config->getComponentByType('GridFieldPaginator')->setItemsPerPage(50);
+			$config->getComponentByType('GridFieldPaginator')->setItemsPerPage(25);
 
 			$gridField = new GridField(
 				"ChildPages",
