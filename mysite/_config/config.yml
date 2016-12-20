@@ -20,3 +20,5 @@ Calendar:
     language: EN
 BlogMigrationTask:
     run_during_dev_build: false
+CalendarEvent:
+  show_in_sitetree: false

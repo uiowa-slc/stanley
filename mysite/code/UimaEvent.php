@@ -24,6 +24,9 @@ class UimaEvent extends CalendarEvent {
 		'ShowInMenus' => false
 	);
 
+
+
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Photo");
@@ -52,8 +55,14 @@ class UimaEvent extends CalendarEvent {
 		return $fields;
 	}
 
-
-
+	public function getFirstStartDate(){
+		$dateTime = $this->DateTimes()->sort('StartDate')->First();
+		return $dateTime->StartDate;
+	}
+	public function getFirstEndDate(){
+		$dateTime = $this->DateTimes()->sort('StartDate')->First();
+		return $dateTime->EndDate;
+	}
 }
 
 class UimaEvent_Controller extends CalendarEvent_Controller {

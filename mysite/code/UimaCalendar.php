@@ -9,6 +9,10 @@ class UimaCalendar extends Calendar {
 		'UimaEvent'
 	);
 
+	private static $extensions = array(
+        'LumberjackEvents',
+    );
+
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
