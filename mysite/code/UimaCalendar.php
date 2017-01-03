@@ -85,8 +85,6 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		return $this->customise($Data)->renderWith(array('UimaCalendar', 'Page'));
 	}
 
-
-
 	public function PastEvents($limit = null, $filter = null){
 
   		$start_date = new sfDate('0000-01-01 0:0:00');
@@ -114,5 +112,32 @@ class UimaCalendar_Controller extends Calendar_Controller {
 
 	}
 
+	public function ArchiveYears() {
+	
+		$eventDates = CalendarDateTime::get();
+
+		$eventYears = new ArrayList();
+
+		foreach ($eventDates as $eventDate) {
+
+			$eventYear = new DataObject;
+			$eventStartDateandTime = $eventDate->obj("StartDate");
+
+			if ($eventStartDateandTime->Year()) {
+
+				// print_r($eventStartDateandTime->Year());
+				$eventYear->Year = $eventStartDateandTime->Year();
+				$eventYear->Link = $this->Link("year/".$eventYear->Year);
+				$eventYears->push($eventYear);
+			}
+
+		}
+
+		$eventYears->removeDuplicates("Year");
+		// print_r($eventYears);
+
+		return $eventYears->sort('Year','DESC');		
+
+	}
 
 }
