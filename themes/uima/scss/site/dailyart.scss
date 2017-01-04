@@ -1,0 +1,103 @@
+.dailyart h1 {
+	font-size: 45px;
+	text-align: center;
+}
+.dailyart-date {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 14px;
+}
+.dailyart__meta {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1em;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+
+}
+.dailyart__social {
+	list-style: none;
+	margin: 0;
+	line-height: 1;
+	text-align: center;
+	&:before {
+		content: 'Share This:';
+		color: #666;
+		font-size: 13px;
+		font-style: italic;
+	}
+}
+.dailyart__social li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 8px;
+}
+.dailyart__social a {
+	display: block;
+}
+.dailyart__social li img {
+	display: block;
+}
+
+/* Prev/Next Links */
+.dailyart-prevnext {
+	background: #f4f4f4;
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+	padding: 2em 0 2.5em;
+}
+.dailyart-prevnext img {
+	border: 3px solid #fafafa;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin: 0 10px;
+	transition: border .3s ease-in-out;
+}
+.dailyart-prevnext .link:hover img {
+	border-color: $link;
+}
+.dailyart-prevnext-name {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
+.dailyart-prevnext .prev {
+	float: left;
+}
+.dailyart-prevnext .next {
+	float: right;
+}
+.dailyart-prevnext .arrows {
+	font-size: 30px;
+	vertical-align: middle;
+	position: relative;
+	transition: .2s;
+}
+
+.dailyart-prevnext .prev .arrows {
+	left: 0;
+}
+.dailyart-prevnext .prev:hover .arrows {
+	left: -5px;
+}
+
+.dailyart-prevnext .next .arrows {
+	right: 0;
+}
+.dailyart-prevnext .next:hover .arrows {
+	right: -5px;
+}
+
+.dailyart-prevnext .link:hover .title {
+	text-decoration: underline;
+}
+.dailyart-prevnext-name .position {
+	display: block;
+	font-size: 14px;
+	color: #666;
+	font-style: italic;
+}
+.next .dailyart-prevnext-name .position {
+	text-align: right;
+}
