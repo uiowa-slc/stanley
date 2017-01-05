@@ -2,31 +2,52 @@
 
 <main class="container main" role="main">
 	<div class="row">
-		<!-- Section Heading -->
-		<% if Menu(2) %>
-			<% with Level(1) %>
-				<div class="col-sm-12">
-				<h3 class="section-title"><% if $LinkOrCurrent = "current" %>$MenuTitle<% else %><a href="$Link">$MenuTitle</a><% end_if %></h3>
-				</div>
-			<% end_with %>
-		<% end_if %>
-
-		<!-- Side Bar -->
-		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic --%>
-			<div class="col-md-4 col-lg-3 sidebar">
-				<% include SideNav %>
-			</div>
-		<% end_if %>
-
-		<!-- Main Content -->
-		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
+		<div class="col-md-8 col-md-offset-2">
 			<section id="main-content" tabindex="-1">
-				<h1>$Title</h1>
-				$Content
-				$Form
-				<% include Credit %>
+				<div class="dailyart">
+					<h1>Art Of The Day</h1>
+					<p class="dailyart-date">
+						<% if $ArchiveYear %>
+							<%t Blog.Archive 'Archive' %>:
+							<% if $ArchiveDay %>
+								$ArchiveDate.format(F jS)
+							<% else_if $ArchiveMonth %>
+								$ArchiveDate.format(F jS)
+							<% else %>
+								$ArchiveDate.format('Y')
+							<% end_if %>
+						<% else_if $CurrentTag %>
+							<%t Blog.Tag 'Tag' %>: $CurrentTag.Title
+						<% else_if $CurrentCategory %>
+							<%t Blog.Category 'Category' %>: $CurrentCategory.Title
+						<% end_if %>
+					</p>
+					<br>
+
+					$Content
+					$Form
+
+					<!-- Loop Daily Art Entries -->
+					<% loop PaginatedList %>
+						<div class="dailyart-entry">
+							<p class="dailyart-date">
+								<time datetime="$Date.format(c)" itemprop="datePublished">$Date.Format(F jS)</time>
+							</p>
+							<% if $DailyArtImage %>
+								<div class="dailyart-image">
+									<img src="$DailyArtImage.SetRatioSize(500,500).URL" alt="$Title" />
+								</div>
+							<% end_if %>
+							<% include SocialShare %>
+							<h2>$Title</h2>
+							$Content
+							<% include TagsCategories %>
+							<% include Credit %>
+						</div>
+					<% end_loop %>
+					<% include Pagination %>
+				</div>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </main><!-- end .container -->
-
