@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e1d8cdd641b47e31847f469c97b5b8e1",
-    "content-hash": "2b614f9133de3d92e0624d48e7930e5a",
+    "hash": "df03f47892c3167008265edfe88355e9",
+    "content-hash": "a1bb12d5a4a43fe17a9d09e81fb921dc",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -887,16 +887,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "3.x-dev",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3"
+                "reference": "2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/bda22e9df6688e3de8c15b38816a646ea39b7cc3",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86",
+                "reference": "2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86",
                 "shasum": ""
             },
             "require": {
@@ -910,11 +910,6 @@
                 "silverstripe/secureassets": "Enables files uploaded via userforms to be secured from public access"
             },
             "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -946,7 +941,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2016-10-11 03:20:08"
+            "time": "2016-12-21 02:56:13"
         },
         {
             "name": "silverstripe/widgets",
@@ -1465,6 +1460,7 @@
         "silverstripe/framework": 0,
         "silverstripe/blog": 0,
         "md/ac-json-events": 20,
+        "silverstripe/userforms": 0,
         "undefinedoffset/sortablegridfield": 20,
         "phpunit/phpunit": 0
     },
