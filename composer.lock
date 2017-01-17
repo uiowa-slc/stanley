@@ -461,12 +461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
-                "reference": "524383e240ceeb9a20dc99dea17de2327059baf7"
+                "reference": "e1dd3f4699f1e0943089634df4c14343afa4266b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/524383e240ceeb9a20dc99dea17de2327059baf7",
-                "reference": "524383e240ceeb9a20dc99dea17de2327059baf7",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/e1dd3f4699f1e0943089634df4c14343afa4266b",
+                "reference": "e1dd3f4699f1e0943089634df4c14343afa4266b",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
                 "events",
                 "silverstripe"
             ],
-            "time": "2017-01-12 02:35:24"
+            "time": "2017-01-12 22:49:58"
         },
         {
             "name": "silverstripe/framework",
