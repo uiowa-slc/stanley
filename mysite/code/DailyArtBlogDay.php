@@ -2,26 +2,30 @@
 
 class DailyArtBlogDay extends DataObject {
 		
-	private static $casting = array(
+	private static $db= array(
 		'Date' => 'Date',
 		'Link' => 'Text'
 	);
 
-	public function getLatestDailyArtBlogPost(){
-		return $this->getDailyArtBlogPosts()->First();
-	}
+	private static $has_many = array(
+		'DailyArtBlogPost' => 'Posts'
+	);
 
-	public function getDailyArtBlogPosts(){
-		$blog = DailyArtBlog::get()->First();
-		$years = range(date("Y"), 2016);
-		$posts = new ArrayList();
-		//print_r($this->obj('Date'));
-    	foreach($years as $year){
-    		$yearPosts = $blog->getArchivedBlogPosts($year, $month = $this->obj('Date')->Format('n'), $this->obj('Date')->Format('j'));
-    		$posts->merge($yearPosts);
-    	}
+	// public function getLatestDailyArtBlogPost(){
+	// 	return $this->getDailyArtBlogPosts()->First();
+	// }
 
-    	return $posts;
+	// public function getDailyArtBlogPosts(){
+	// 	$blog = DailyArtBlog::get()->First();
+	// 	$years = range(date("Y"), 2016);
+	// 	$posts = new ArrayList();
+	// 	//print_r($this->obj('Date'));
+ //    	foreach($years as $year){
+ //    		$yearPosts = $blog->getArchivedBlogPosts($year, $month = $this->obj('Date')->Format('n'), $this->obj('Date')->Format('j'));
+ //    		$posts->merge($yearPosts);
+ //    	}
+
+ //    	return $posts;
 
 	}
 	public function getLink(){
