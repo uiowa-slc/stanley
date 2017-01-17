@@ -32,7 +32,60 @@ class DailyArtBlogPost extends BlogPost {
 		return $fields;
 	}
 
+	public function getPublishDateOnly(){
+		$date = Date::create();
+		$date->setValue($this->obj('PublishDate')->format('Y-m-d'));
+		return $date;
+	}
 
+	public function getOtherPosts(){
+
+		$postDate = $this->obj('PublishDate');
+
+		$dateObj = Date::create();
+	    $dateObj->setValue($postDate->Format('Y-m-d'));
+
+	    $day = DailyArtBlogDay::create();
+	    $day->Date = $dateObj;
+
+	    $posts = $day->getDailyArtBlogPosts()->exclude(array('ID' => $this->ID));
+
+	    return $posts;
+
+	}
+
+	public function NextPage() {
+		$postDate = $this->obj('PublishDate');
+		$currentDate = $currentDate = SS_Datetime::now();
+
+		$nextDay = $postDate->next_day($currentDate->Format('Y'),$postDate->Format('m'),$postDate->Format('d'));
+
+		$dateObj = Date::create();
+		$dateObj->setValue($nextDay);
+
+		$day = DailyArtBlogDay::create();
+		$day->Date = $dateObj;
+
+		return $day->getLatestDailyArtBlogPost();
+
+		
+	}
+	public function PreviousPage() {
+		$postDate = $this->obj('PublishDate');
+		$currentDate = $currentDate = SS_Datetime::now();
+
+		$nextDay = $postDate->day_before($currentDate->Format('Y'),$postDate->Format('m'),$postDate->Format('d'));
+
+		$dateObj = Date::create();
+		$dateObj->setValue($nextDay);
+
+		$day = DailyArtBlogDay::create();
+		$day->Date = $dateObj;
+
+		return $day->getLatestDailyArtBlogPost();
+
+		
+	}
 }
 
 class DailyArtBlogPost_Controller extends BlogPost_Controller {
@@ -40,20 +93,7 @@ class DailyArtBlogPost_Controller extends BlogPost_Controller {
 	private static $allowed_actions = array (
 	);
 
-	public function NextPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->owner->ParentID,
-			'Sort:GreaterThan' => $this->owner->Sort,
-		))->First();
-		return $page;
-	}
-	public function PreviousPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->owner->ParentID,
-			'Sort:LessThan' => $this->owner->Sort,
-		))->Last();
-		return $page;
-	}
+
 
 	public function init() {
 		parent::init();

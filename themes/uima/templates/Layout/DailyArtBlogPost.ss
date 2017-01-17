@@ -19,6 +19,10 @@
 					$Form
 					<% include TagsCategories %>
 					<% include Credit %>
+
+					<% loop $OtherPosts %>
+						<% include DailyArtBlogPostSummary %>
+					<% end_loop %>
 				</div>
 			</section>
 		</div>
