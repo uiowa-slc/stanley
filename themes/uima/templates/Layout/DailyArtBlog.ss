@@ -24,6 +24,23 @@
 					</p>
 					<br>
 
+					<div class="owl-carousel owl-theme">
+  						<div> DEC 10 </div>
+  						<div> DEC 11 </div>
+  						<div> DEC 12 </div>
+  						<div> DEC 13 </div>
+  						<div> DEC 14 </div>
+  						<div> DEC 15 </div>
+  						<div> DEC 16 </div>
+						<div> DEC 17 </div>
+  						<div> DEC 18 </div>
+  						<div> DEC 19 </div>
+  						<div> DEC 20 </div>
+  						<div> DEC 21 </div>
+  						<div> DEC 22 </div>
+  						<div> DEC 23 </div>
+  					</div>
+
 					$Content
 					$Form
 
