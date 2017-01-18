@@ -58,10 +58,11 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		$now = date('Y-m-d');
 		// $this->getRequest()->param('Action'))
 		if($this->getRequest()->param('Action') == "year"){
-			print_r("yes");
-			$start_date = $this->getRequest()->param('Year');
+			//print_r("yes");
+			// print_r($this->getRequest());
+			$start_date = $this->getRequest()->param('ID');
 			print_r($start_date);
-			$end_date = $now;
+			$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
 			print_r($end_date);
 
 			$eventDateTimes = $this->getEventList(
