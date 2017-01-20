@@ -11,7 +11,7 @@
 		"md/ac-json-events" : "dev-master",
 		"silverstripe/mathspamprotection" : "*",
 		"jonom/focuspoint" : "*",
-		"silverstripe/userforms": "3.*",
+		"silverstripe/userforms": "4.*@stable",
 		"silverstripe/googlesitemaps" : "*",
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",

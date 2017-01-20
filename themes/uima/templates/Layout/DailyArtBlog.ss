@@ -1,6 +1,7 @@
 <% include HeaderPhoto %>
-
+<% include DailyArtBlogDaySlider %>
 <main class="container main" role="main">
+
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<section id="main-content" tabindex="-1">
@@ -26,7 +27,6 @@
 
 					$Content
 					$Form
-
 					<!-- Loop Daily Art Entries -->
 					<% loop $CurrentDayPosts %>
 						<% include DailyArtBlogPostSummary %>
@@ -38,15 +38,14 @@
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </main><!-- end .container -->
-
-<% with $CurrentDayPosts.First %>
+ <% with $DailyArtBlogDay %>
 	<!-- Previous Article Link -->
-	<% if PreviousPage || NextPage %>
+	<% if $PreviousPage || $NextPage %>
 		<div class="prevnext">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<% if PreviousPage %>
+						<% if $PreviousPage %>
 							<a href="$PreviousPage.Link" class="prevnext__link prev">
 								<span class="prevnext__arrows">&larr;</span>
 								<% if $PreviousPage.DailyArtImage %>
@@ -57,7 +56,7 @@
 								</p>
 							</a>
 						<% end_if %>
-						<% if NextPage %>
+						<% if $NextPage %>
 							<a href="$NextPage.Link" class="prevnext__link next ">
 								<p class="prevnext__name">
 									<span class="title">Next</span>
@@ -73,4 +72,4 @@
 			</div>
 		</div>
 	<% end_if %>
-<% end_with %>
+<% end_with %> 

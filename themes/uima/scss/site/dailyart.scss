@@ -48,6 +48,120 @@ Social Media Links
 	}
 }
 
+/* ---------------------------------------------------------------
+Day Slider
+--------------------------------------------------------------- */
+.dailyart__slider-holder{
+	background: #f4f4f4;
+	height: 173px;
+	opacity: 0;
+	transition: opacity .3s linear;
+	border-top: 1px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
+	
+	&--slick-active{
+		opacity: 1;
+	}
+}
+.dailyart__slider-container{
+	max-width: 80%;
+	margin: auto;
+}
+.dailyart__day-slider{
+
+}
+
+.dailyart__day{
+	margin: 45px 15px;
+	background-color: white;
+	display: block;
+	color: black;
+	background-size: cover;
+	position: relative;
+	text-shadow: 0.278px 1.981px 2px rgba(0, 0, 0, 0.39);
+	width: 94px;
+	&--has-post{
+		color: white;
+	
+	}
+
+	&--no-post{
+		opacity: 0.2;
+	}
+	&--inactive{
+
+	}
+	&--active{
+		// background-color: #c65223;
+		// color: white;
+		width: 168px;
+		 margin: 0 15px;
+		// padding: 33px 0;
+display: inline-block;
+	position: relative;
+	background: #c65223;
+	height: 200px;
+	padding: 15px 0;
+	// width: 200px;
+	text-align: center;
+	 clip-path: circle(100px at center);
+		&:after{
+			content: '';
+			display: block;  
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 0;
+			height: 0;
+			border-top: 20px solid #c65223;
+			border-right: 84px solid transparent;
+			border-bottom: 0 solid transparent;
+			border-left: 84px solid transparent;
+		}
+
+		.dailyart__month{
+			background: #c65223;
+			font-size: 33px;
+			line-height: 1;
+		}
+		.dailyart__date{
+			font-size: 74px;
+			line-height: 1;
+		}
+		.dailyart__screen{
+			display: none;
+		}
+	}
+
+}
+
+.dailyart__month{
+	display: block;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 13px;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 99;
+}
+
+.dailyart__date{
+	display: block;
+	font-size: 45px;
+	text-align: center;
+	line-height: 1.4;
+	position: relative;
+	z-index: 99;
+
+}
+
+.dailyart__screen{
+	position: absolute;
+	background: rgba(0,0,0,0.45);
+	width: 100%;
+	height: 100%;
+}
 
 /* ---------------------------------------------------------------
 Prev/Next Links

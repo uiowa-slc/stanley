@@ -2,7 +2,7 @@
 	<div class="row">
 
 		<!-- Main Content -->
-		<div class="col-lg-10 col-lg-offset-1">
+		<div class="col-md-8 col-lg-8">
 			<article id="main-content" class="clearfix newsentry" tabindex="-1">
 				<h1 class="entry-title">$Title</h1>
 				<p class="entry-date">
@@ -29,5 +29,13 @@
 				<% include Credit %>
 			</article>
 		</div><!-- end .col -->
+			<!-- Side Bar -->
+			<div class="col-md-4 col-lg-3 col-lg-offset-1 sidebar">
+				<% if SideBarView %>
+					<div id="Sidebar" class="browsebydate">
+						$SideBarView
+					</div>
+				<% end_if %>
+			</div>
 	</div><!-- end .row -->
 </main><!-- end .container -->

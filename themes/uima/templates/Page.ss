@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
 	<!-- Picturefill -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
+
 	<!--[if IE 8]>
 		<meta http-equiv="x-ua-compatible" content="IE=8">
 	  	<script>var IE8 = true;</script>

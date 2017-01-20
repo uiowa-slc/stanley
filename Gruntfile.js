@@ -19,6 +19,7 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'<%= project.src %>/bower_components/nouislider/distribute/jquery.nouislider.all.js',
+					'<%= project.src %>/bower_components/slick-carousel/slick/slick.js',
 					'<%= project.src %>/js/plugins/05_core.js',
 					'<%= project.src %>/js/plugins/10_transition.js',
 					'<%= project.src %>/js/plugins/15_lightbox.js',
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed',
+					style: 'development',
 					compass: true
 				},
 				files: {

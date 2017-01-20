@@ -15,6 +15,21 @@ class DailyArtBlog extends Blog {
 		return $fields;
 	}
 
+	// public function PreviousDays(){
+
+	// }
+
+	// public function Today(){
+
+	// }
+
+	// public function FutureDays(){
+	// 	$now = Date::create();
+
+	// 	return DailyArtBlogDay::get()->filter(array('Month' => $now->format('m'), 'Day'));
+	// }
+
+
 
 }
 
@@ -28,22 +43,29 @@ class DailyArtBlog_Controller extends Blog_Controller {
     public function index(){
 
     	$currentDate = SS_Datetime::now();
-    	$mostRecentPost = $this->getBlogPosts()->First();
-    	//$oldestPost = DailyArtBlogPost::get()->sort('"PublishDate" ASC')->First();
-    	//print_r($oldestPost->obj('PublishDate')->Format('Y'));
-    	//$years = range(date("Y"), $oldestPost->obj('PublishDate')->Format('Y'));
-    	$years = range(date("Y"), 2016);
-    	$posts = new ArrayList();
-
-    	$mostRecentPostDate = $mostRecentPost->obj('PublishDate');
+    	$dayObj = DailyArtBlogDay::get()->filter(array('Month' => $currentDate->Format('n'), 'Date' => $currentDate->Format('j')))->First();
     	
-    	foreach($years as $year){
-    		$yearPosts = $this->getArchivedBlogPosts($year, $month = $currentDate->Format('n'), $currentDate->Format('j'));
-    		$posts->merge($yearPosts);
+
+    	if($dayObj){
+    		$posts = $dayObj->getPosts();
     	}
+
+
+    	// $currentDate = SS_Datetime::now();
+    	// $mostRecentPost = $this->getBlogPosts()->First();
+    	// $years = range(date("Y"), 2016);
+    	// $posts = new ArrayList();
+
+    	// $mostRecentPostDate = $mostRecentPost->obj('PublishDate');
+    	
+    	// foreach($years as $year){
+    	// 	$yearPosts = $this->getArchivedBlogPosts($year, $month = $currentDate->Format('n'), $currentDate->Format('j'));
+    	// 	$posts->merge($yearPosts);
+    	// }
 
     	$data = new ArrayData(
     		array(
+    			'DailyArtBlogDay' => $dayObj,
     			'CurrentDayPosts' => $posts
     		)
 
