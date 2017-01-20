@@ -20,7 +20,6 @@ module.exports = function(grunt) {
 				src: [
 					'<%= project.src %>/bower_components/nouislider/distribute/jquery.nouislider.all.js',
 					'<%= project.src %>/bower_components/flickity/dist/flickity.pkgd.js',
-					//'<%= project.src %>/bower_components/slick-carousel/slick/slick.js',
 					'<%= project.src %>/js/plugins/05_core.js',
 					'<%= project.src %>/js/plugins/10_transition.js',
 					'<%= project.src %>/js/plugins/15_lightbox.js',
