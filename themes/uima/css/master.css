@@ -34,6 +34,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
+@import url(../bower_components/flickity/css/flickity.css);
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -5299,16 +5300,11 @@ Day Slider
 .dailyart__slider-holder {
   background: #f4f4f4;
   height: 173px;
-  opacity: 0;
   transition: opacity .3s linear;
   border-top: 1px solid #dddddd;
   border-bottom: 2px solid #dddddd; }
 .dailyart__slider-holder--slick-active {
   opacity: 1; }
-
-.dailyart__slider-container {
-  max-width: 80%;
-  margin: auto; }
 
 .dailyart__day {
   margin: 45px 15px;

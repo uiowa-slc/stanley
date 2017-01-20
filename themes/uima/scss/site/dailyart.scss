@@ -54,7 +54,7 @@ Day Slider
 .dailyart__slider-holder{
 	background: #f4f4f4;
 	height: 173px;
-	opacity: 0;
+	// opacity: 0;
 	transition: opacity .3s linear;
 	border-top: 1px solid #dddddd;
 	border-bottom: 2px solid #dddddd;
@@ -64,8 +64,7 @@ Day Slider
 	}
 }
 .dailyart__slider-container{
-	max-width: 80%;
-	margin: auto;
+
 }
 .dailyart__day-slider{
 

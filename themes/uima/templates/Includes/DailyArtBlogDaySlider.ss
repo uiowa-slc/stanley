@@ -5,10 +5,10 @@
 					<% cached %>
 						<% loop Days %>
 							<% if $LatestPost %>
-								<a href="$LatestPost.Link" class="dailyart__day dailyart__day--has-post" data-month="{$Month}" data-date="{$Date}" style="background-image: url('$LatestPost.DailyArtImage.Fill(300,300).URL');">
+								<a href="$LatestPost.Link" class="dailyart__day dailyart__day--has-post" data-month="{$Month}" data-date="{$Date}" style="background-image: url('$LatestPost.DailyArtImage.Fill(300,300).URL');" data-pos="{$Pos}">
 								<div class="dailyart__screen"></div>
 							<% else %>
-								<div class="dailyart__day dailyart__day--no-post" data-month="{$Month}" data-date="{$Date}">
+								<div class="dailyart__day dailyart__day--no-post" data-month="{$Month}" data-date="{$Date}" data-pos="{$Pos}">
 							<% end_if %>
 								<span class="dailyart__month">{$FormattedMonth}</span>
 								<span class="dailyart__date">{$Date}</span>

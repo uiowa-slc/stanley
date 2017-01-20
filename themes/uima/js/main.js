@@ -172,64 +172,36 @@ Roots = {
 		var currentDaySlide = $('.dailyart__day[data-month="' + month[monthRaw] + '"][data-date="' + dateRaw + '"]');
 		var daySlider = $('#dailyart__day-slider');
 
+		var currentDayIndex = currentDaySlide.attr('data-pos');
+
 		currentDaySlide.removeAttr('style');
 		currentDaySlide.addClass('dailyart__day--active');
 
-		daySlider.on('init', function(){
-
-		  $('.dailyart__slider-holder').addClass('dailyart__slider-holder--slick-active');
-		});
-
-		daySlider.slick({
-			slidesToShow: 9, 
-			slidesToScroll: 7, 
-			centerMode: true,
-			variableWidth: true
+		daySlider.flickity({
+			initialIndex: currentDayIndex-1,
+			pageDots: false,
 		}); 
-
-		
-		var currentDaySlickIndex = currentDaySlide.attr('data-slick-index');
-
-
-		//console.log(currentDaySlickIndex);
-		//console.log('.day[data-month="' + month[monthRaw] + '"][data-date="' + dateRaw + '"]');
-
-		daySlider.slick('slickGoTo', currentDaySlickIndex, true);
-
-		//console.log('current slick slider index:' + daySlider.slick('slickCurrentSlide'));
-		// $('#days').slickGoTo(11);
-		// %('.day')
-
     }
   },
-  // Home page
+  // Individual post page:
   DailyArtBlogPost: {
     init: function(){
 
-
 		var daySlider = $('#dailyart__day-slider');
-
-		daySlider.slick({
-			slidesToShow: 9, 
-			slidesToScroll: 7, 
-			centerMode: true,
-			variableWidth: true
-		}); 
 
 		var postDate = $('#main-content').attr('data-date');
 		var postMonth = $('#main-content').attr('data-month');
 
 		var currentDaySlide = $('.dailyart__day[data-month="' + postMonth + '"][data-date="' + postDate + '"]');
-		var currentDaySlickIndex = currentDaySlide.attr('data-slick-index');
-		//console.log(currentDaySlickIndex);
-		//console.log('.dailyart__day[data-month="' + month[monthRaw] + '"][data-date="' + dateRaw + '"]');
+		var currentDayIndex = currentDaySlide.attr('data-pos');
+
 		currentDaySlide.removeAttr('style');
 		currentDaySlide.addClass('dailyart__day--active');
-		daySlider.slick('slickGoTo', currentDaySlickIndex, false);
 
-		//console.log('current slick slider index:' + daySlider.slick('slickCurrentSlide'));
-		// $('#days').slickGoTo(11);
-		// %('.day')
+		daySlider.flickity({
+			initialIndex: currentDayIndex-1,
+			pageDots: false,
+		}); 
 
     }
   },

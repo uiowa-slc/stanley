@@ -15,53 +15,18 @@ class DailyArtBlog extends Blog {
 		return $fields;
 	}
 
-	// public function PreviousDays(){
-
-	// }
-
-	// public function Today(){
-
-	// }
-
-	// public function FutureDays(){
-	// 	$now = Date::create();
-
-	// 	return DailyArtBlogDay::get()->filter(array('Month' => $now->format('m'), 'Day'));
-	// }
-
-
-
 }
 
 class DailyArtBlog_Controller extends Blog_Controller {
-    // private static $allowed_actions = array('day');
-
-    // private static $url_handlers = array(
-    //     'day/$Month/$Day' => 'day'
-    // );
-
+  
     public function index(){
 
     	$currentDate = SS_Datetime::now();
     	$dayObj = DailyArtBlogDay::get()->filter(array('Month' => $currentDate->Format('n'), 'Date' => $currentDate->Format('j')))->First();
-    	
 
     	if($dayObj){
     		$posts = $dayObj->getPosts();
     	}
-
-
-    	// $currentDate = SS_Datetime::now();
-    	// $mostRecentPost = $this->getBlogPosts()->First();
-    	// $years = range(date("Y"), 2016);
-    	// $posts = new ArrayList();
-
-    	// $mostRecentPostDate = $mostRecentPost->obj('PublishDate');
-    	
-    	// foreach($years as $year){
-    	// 	$yearPosts = $this->getArchivedBlogPosts($year, $month = $currentDate->Format('n'), $currentDate->Format('j'));
-    	// 	$posts->merge($yearPosts);
-    	// }
 
     	$data = new ArrayData(
     		array(
@@ -70,12 +35,8 @@ class DailyArtBlog_Controller extends Blog_Controller {
     		)
 
     	);
-
     	return $this->customise($data)->renderWith(array('DailyArtBlog', 'Page'));
-    	//redirect to an individual day?
-    	//return $this->redirect($this->Link().'day/'.$mostRecentPostDate->Format('n').'/'.$mostRecentPostDate->Format('j'));
-
-
+    
     }
 
 
@@ -98,32 +59,5 @@ class DailyArtBlog_Controller extends Blog_Controller {
     	// print_r($nextDayObj->obj('Date'));
     	return $nextDayObj->getLatestDailyArtBlogPost();
     }
-
-    //Here be dragons and olde scheme where we do /blog/day/4/3
-    // public function day() {
-
-    // 	$currentDate = SS_Datetime::now();
-
-    // 	$month = $this->getRequest()->param('Month');
-    // 	$day = $this->getRequest()->param('Day');
-    // 	$date = Date::create();
-
-    // 	$date->setValue($currentDate->Format('Y').'-'.$month.'-'.$day);
-
-    // 	$dayObj = DailyArtBlogDay::create();
-    // 	$dayObj->Date = $date;
-
-
-    // 	$data = new ArrayData(
-    // 		array(
-    // 			'Day' => $dayObj,
-    // 			'NextPage' => ''
-
-    // 		)
-    // 	);
-
-    // 	return $this->customise($data)->renderWith(array('DailyArtBlog_day', 'Page'));
-    //     /* more processing goes here */
-    // }
 
 }
