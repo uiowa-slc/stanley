@@ -55,15 +55,10 @@ class UimaCalendar_Controller extends Calendar_Controller {
 	}
 
 	public function PaginatedList(){
-		$now = date('Y-m-d');
-		// $this->getRequest()->param('Action'))
 		if($this->getRequest()->param('Action') == "year"){
-			//print_r("yes");
-			// print_r($this->getRequest());
-			$start_date = $this->getRequest()->param('ID');
-			print_r($start_date);
-			$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
-			print_r($end_date);
+			
+			$start_date = date('Y-m-d',mktime(0, 0, 0, 1, 1, $this->getRequest()->param('ID')));
+			$end_date = date('Y-m-d',mktime(0, 0, 0, 12, 31, $this->getRequest()->param('ID')));
 
 			$eventDateTimes = $this->getEventList(
 				$start_date,
@@ -75,7 +70,7 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		}
 
 		else{
-			$start_date = date( "d/m/Y", time() );
+			$start_date = date( 'Y-m-d', time() );
 			$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
 
 			$eventDateTimes = $this->getEventList(
