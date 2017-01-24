@@ -40,9 +40,7 @@ class Page extends SiteTree {
 	}
 
 	public function NiceName() {
-
 		$niceNames = array(
-
 			'Page'                => null,
 			'CollectionsPage'     => 'Collection',
 			'CollectionsHolder'   => 'Collection List',
@@ -59,16 +57,16 @@ class Page extends SiteTree {
 			'SiteConfigExtension' => null
 		);
 
-		$niceClassName = $niceNames[$this->ClassName];
-		return $niceClassName;
-
-		//print_r('nice name: '.$this->nice_name);
-		if ($this->nice_name) {
-			return $this->nice_name;
-		} else {
-			return "not found";
+		if(isset($niceNames[$this->ClassName])){
+			$niceClassName = $niceNames[$this->ClassName];
+			return $niceClassName;
+		}else{
+			return preg_replace('/([a-z]+)([A-Z])/', '$1 $2', $this->getClassName());
 		}
+	}
 
+	public function Days(){
+		return DailyArtBlogDay::get();
 	}
 }
 
