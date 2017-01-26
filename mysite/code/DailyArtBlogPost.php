@@ -20,7 +20,7 @@ class DailyArtBlogPost extends BlogPost {
     );
 
     protected function onBeforeWrite(){
-    	$blogDay = DataObject::get_one('DailyArtBlogDay', array('Month' => $this->obj('PublishDate')->format('m'), 'Day' => $this->obj('PublishDate')->format('d')));
+    	$blogDay = DataObject::get_one('DailyArtBlogDay', array('Month' => $this->obj('PublishDate')->format('m'), 'Date' => $this->obj('PublishDate')->format('d')));
     	if($blogDay){
     		$blogDay->HasPost = 1;
     		$this->DailyArtBlogDayID = $blogDay->ID;

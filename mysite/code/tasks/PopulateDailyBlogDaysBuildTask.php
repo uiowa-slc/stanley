@@ -14,7 +14,7 @@ class PopulateDailyBlogDaysBuildTask extends BuildTask {
 			$monthDays = cal_days_in_month(CAL_GREGORIAN, $month, date('Y'));
 			for($day = 1; $day <= $monthDays; $day ++){
 
-				$blogDayTest = DailyArtBlogDay::get()->filter(array('Month' => $month, 'Day' => $day))->First();
+				$blogDayTest = DailyArtBlogDay::get()->filter(array('Month' => $month, 'Date' => $day))->First();
 
 				if(!$blogDayTest){
 					echo $month.'/'.$day.' not found in db, creating...<br />';
@@ -33,7 +33,7 @@ class PopulateDailyBlogDaysBuildTask extends BuildTask {
 		}
 
 		echo '<h2>Adding Feb 29, aka leap day</h2>';
-		$blogDayTest = DailyArtBlogDay::get()->filter(array('Month' => 2, 'Day' => 29))->First();
+		$blogDayTest = DailyArtBlogDay::get()->filter(array('Month' => 2, 'Date' => 29))->First();
 		if(!$blogDayTest){
 			echo 'leap day not found in db, creating...<br />';
 			$blogDay = new DailyArtBlogDay();
