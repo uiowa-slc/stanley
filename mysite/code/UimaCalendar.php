@@ -54,15 +54,34 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
-	function PaginatedList(){
-		$start_date = date( "d/m/Y", time() );
-		$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
-		$eventDateTimes = $this->getEventList(
-			sfDate::getInstance()->date(),
-			sfDate::getInstance()->addYear(10)->date(),
-			null,
-			null
-		);
+	public function PaginatedList(){
+		if($this->getRequest()->param('Action') == "year"){
+			
+			$start_date = date('Y-m-d',mktime(0, 0, 0, 1, 1, $this->getRequest()->param('ID')));
+			$end_date = date('Y-m-d',mktime(0, 0, 0, 12, 31, $this->getRequest()->param('ID')));
+
+			$eventDateTimes = $this->getEventList(
+				$start_date,
+				$end_date,
+				null,
+				null
+			);
+
+		}
+
+		else{
+			$start_date = date( 'Y-m-d', time() );
+			$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
+
+			$eventDateTimes = $this->getEventList(
+				sfDate::getInstance()->date(),
+				sfDate::getInstance()->addYear(10)->date(),
+				null,
+				null
+			);
+		}
+
+		
 
 		$events = new ArrayList();
 		foreach($eventDateTimes as $eventDateTime){
