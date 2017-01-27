@@ -9,7 +9,7 @@
 					<a href="$Link("past")">Past</a>
 					<ul class="second-level">
 						<% loop $ArchiveYears %>
-							<li><a href="$Link">$Year</a></li>
+							<li class="$Active"><a href="$Link">$Year</a></li>
 						<% end_loop %>
 					</ul>
 				</li>
