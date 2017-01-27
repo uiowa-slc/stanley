@@ -4,8 +4,13 @@
 			<nav class="sec-nav" aria-label="Secondary" data-navigation-handle="#handle">
 				<ul class="first-level">
 					<li <% if $Action = "index" %>class="active"<% end_if %>><a href="$Link">Upcoming</a></li>
-					<li <% if $Action = "past" %>class="active"<% end_if %>>
+					<li <% if $Action = "past" || $Action = "year" %>class="active"<% end_if %>>
 						<a href="$Link("past")">Past</a>
+						<ul class="second-level">
+						<% loop $ArchiveYears %>
+							<li class="$Active"><a href="$Link">$Year</a></li>
+						<% end_loop %>
+					</ul>
 					</li>
 				</ul>
 			</nav>

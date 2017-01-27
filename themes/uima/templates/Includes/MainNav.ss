@@ -10,7 +10,11 @@
 						<li><a href="$Link("past")">Past</a></li>
 						<li><a href="{$BaseHref}exhibitions/legacies-for-iowa/">Legacies for Iowa</a></li>
 					</ul>
-
+				<% else_if $MenuTitle = "Events"%>
+					<ul>
+						<li><a href="$Link">Upcoming</a></li>
+						<li><a href="$Link("past")">Past</a></li>
+					</ul>
 				<% else_if Children %>
 					<ul>
 						<% loop Children %>

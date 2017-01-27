@@ -35,30 +35,7 @@ class ExhibitionHolder extends Page {
 	}
 
 	
-	public function ArchiveYears() {
-		$exhibitions     = $this->getPastExhibitions();
-		$exhibitionYears = new ArrayList();
 
-		foreach ($exhibitions as $exhibition) {
-			$exhibitionYear          = new DataObject;
-			$exhibitionStartDateTime = $exhibition->obj("StartDate");
-
-			if ($exhibitionStartDateTime->Year()) {
-
-				$exhibitionYear->Year = $exhibitionStartDateTime->Year();
-				$exhibitionYear->Link = $this->Link("year/".$exhibitionYear->Year);
-
-				$exhibitionYears->push($exhibitionYear);
-			}
-		}
-
-		//print_r($exhibitionYears);
-
-		$exhibitionYears->removeDuplicates("Year");
-
-		return $exhibitionYears->sort('Year', 'DESC');
-
-	}
 
 	public function getPastExhibitions() {
 		$now = date('Y-m-d');
@@ -171,7 +148,40 @@ class ExhibitionHolder_Controller extends Page_Controller {
 
 		return $this->customise($Data)->renderWith(array('ExhibitionHolder', 'Page'));
 	}
+	public function ArchiveYears() {
+		$exhibitions     = $this->getPastExhibitions();
+		$exhibitionYears = new ArrayList();
 
+		foreach ($exhibitions as $exhibition) {
+			$exhibitionYear          = new DataObject;
+			$exhibitionStartDateTime = $exhibition->obj("StartDate");
+
+			if ($exhibitionStartDateTime->Year()) {
+
+				$exhibitionYear->Year = $exhibitionStartDateTime->Year();
+				$exhibitionYear->Link = $this->Link("year/".$exhibitionYear->Year);
+
+				if(($this->getRequest()->param('Action') == "year") && (is_numeric($this->getRequest()->param('Year')))){
+
+					//print_r(intval($eventYear->Year).' == '.intval($this->getRequest()->param('ID')).'<br />');
+					if(intval($exhibitionYear->Year) == intval($this->getRequest()->param('Year'))){
+						$exhibitionYear->Active = 'active';
+					}else{
+						$exhibitionYear->Active = 'inactive';
+					}
+					
+				}
+				$exhibitionYears->push($exhibitionYear);
+			}
+		}
+
+		//print_r($exhibitionYears);
+
+		$exhibitionYears->removeDuplicates("Year");
+
+		return $exhibitionYears->sort('Year', 'DESC');
+
+	}
 }
 
 ?>

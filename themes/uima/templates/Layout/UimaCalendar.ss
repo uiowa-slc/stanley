@@ -11,7 +11,11 @@
 		<!-- Main Content -->
 		<div class="col-md-8 col-lg-8 col-lg-offset-1 children">
 			<section id="main-content" tabindex="-1">
-				<h1>$Title</h1>
+				<% if $FilterHeader %>
+					<h1>$FilterHeader</h1>
+				<% else %>
+					<h1>$Title</h1>
+				<% end_if %>
 				$Content
 				$Form
 

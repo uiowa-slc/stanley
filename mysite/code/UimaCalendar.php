@@ -5,6 +5,10 @@ class UimaCalendar extends Calendar {
 
 	);
 
+	private static $casting = array(
+		'FilterHeader' => 'Text'
+	);
+
 	private static $allowed_children = array(
 		'UimaEvent'
 	);
@@ -42,7 +46,7 @@ class UimaCalendar_Controller extends Calendar_Controller {
 	 */
 		//must render past events to a template called PastEventCalnder_past.ss
 
-	private static $allowed_actions = array('past');
+	private static $allowed_actions = array('index','past');
 	private static $url_handlers = array (
 		'past' => 'past'
 		);
@@ -50,19 +54,51 @@ class UimaCalendar_Controller extends Calendar_Controller {
 
 	public function init() {
 		parent::init();
-		// You can include any CSS or JS required by your project here.
-		// See: http://doc.silverstripe.org/framework/en/reference/requirements
-	}
 
-	function PaginatedList(){
-		$start_date = date( "d/m/Y", time() );
-		$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
-		$eventDateTimes = $this->getEventList(
-			sfDate::getInstance()->date(),
-			sfDate::getInstance()->addYear(10)->date(),
-			null,
-			null
-		);
+
+	}
+	public function getFilterHeader(){
+
+		if(($this->getRequest()->param('Action') == "year") && (is_numeric($this->getRequest()->param('ID')))){
+			return 'Event Archive: '.$this->getRequest()->param('ID');
+		}elseif($this->getRequest()->param('Action') == 'past'){
+			return 'Event Archive';
+		}elseif(!$this->getRequest()->param('Action')){
+			return 'Upcoming Events';
+		}else{
+			return null;
+		}
+
+	}
+	public function PaginatedList(){
+		print_r(is_int($this->getRequest()->param('ID')));
+		if(($this->getRequest()->param('Action') == "year") && (is_numeric($this->getRequest()->param('ID')))){
+			
+			$start_date = date('Y-m-d',mktime(0, 0, 0, 1, 1, $this->getRequest()->param('ID')));
+			$end_date = date('Y-m-d',mktime(0, 0, 0, 12, 31, $this->getRequest()->param('ID')));
+
+			$eventDateTimes = $this->getEventList(
+				$start_date,
+				$end_date,
+				null,
+				null
+			);
+
+		}
+
+		else{
+			$start_date = date( 'Y-m-d', time() );
+			$end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
+
+			$eventDateTimes = $this->getEventList(
+				sfDate::getInstance()->date(),
+				sfDate::getInstance()->addYear(10)->date(),
+				null,
+				null
+			);
+		}
+
+		
 
 		$events = new ArrayList();
 		foreach($eventDateTimes as $eventDateTime){
@@ -84,8 +120,6 @@ class UimaCalendar_Controller extends Calendar_Controller {
 		);
 		return $this->customise($Data)->renderWith(array('UimaCalendar', 'Page'));
 	}
-
-
 
 	public function PastEvents($limit = null, $filter = null){
 
@@ -114,5 +148,46 @@ class UimaCalendar_Controller extends Calendar_Controller {
 
 	}
 
+	public function ArchiveYears() {
+	
+		$eventDates = CalendarDateTime::get();
+
+		$eventYears = new ArrayList();
+
+		foreach ($eventDates as $eventDate) {
+
+			$eventYear = new DataObject;
+			$eventStartDateandTime = $eventDate->obj("StartDate");
+
+			if ($eventStartDateandTime->Year()) {
+
+
+
+				$eventYear->Year = $eventStartDateandTime->Year();
+				$eventYear->Link = $this->Link("year/".$eventYear->Year);
+
+				// print_r($eventStartDateandTime->Year());
+				if(($this->getRequest()->param('Action') == "year") && (is_numeric($this->getRequest()->param('ID')))){
+
+					//print_r(intval($eventYear->Year).' == '.intval($this->getRequest()->param('ID')).'<br />');
+					if(intval($eventYear->Year) == intval($this->getRequest()->param('ID'))){
+						$eventYear->Active = 'active';
+					}else{
+						$eventYear->Active = 'inactive';
+					}
+					
+				}
+
+				$eventYears->push($eventYear);
+			}
+
+		}
+
+		$eventYears->removeDuplicates("Year");
+		//print_r($eventYears);
+
+		return $eventYears->sort('Year','DESC');		
+
+	}
 
 }
