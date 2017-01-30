@@ -22,3 +22,19 @@ BlogMigrationTask:
     run_during_dev_build: false
 CalendarEvent:
   show_in_sitetree: false
+---
+Name: mysiteconfig_redirector
+After: 'staticpublishqueue/*'
+---
+RedirectorPage:
+  extensions:
+    - PublishableRedirectorPage
+---
+Name: mysiteconfig_staticpublishqueue
+After: 'staticpublishqueue/*','#mysiteconfig_redirector'
+---
+SiteTree:
+  extensions:
+    - PublishableSiteTree
+    - SiteTreePublishingEngine
+    - FilesystemPublisher('cache', 'html')

@@ -16,7 +16,8 @@
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",
 		"silverstripe/widgets": "*",
-		"silverstripe/lumberjack": "^1.2"
+		"silverstripe/lumberjack": "^1.2",
+		"silverstripe/staticpublishqueue" : "*"
 
 	},
 	"require-dev": {

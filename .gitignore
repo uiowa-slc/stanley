@@ -51,3 +51,7 @@ siteconfig/
 segment-field/
 lumberjack/
 tagfield/
+staticpublishqueue/
+gridfieldajaxrefresh/
+silverstripe-errors-warnings.log
+silverstripe-errors.log

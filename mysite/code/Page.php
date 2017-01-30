@@ -68,9 +68,6 @@ class Page extends SiteTree {
 	public function Days(){
 		return DailyArtBlogDay::get();
 	}
-	public function Days(){
-		return DailyArtBlogDay::get();
-	}
 }
 
 class Page_Controller extends ContentController {
