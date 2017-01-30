@@ -64,10 +64,6 @@ class Page extends SiteTree {
 			return preg_replace('/([a-z]+)([A-Z])/', '$1 $2', $this->getClassName());
 		}
 	}
-
-	public function Days(){
-		return DailyArtBlogDay::get();
-	}
 	public function Days(){
 		return DailyArtBlogDay::get();
 	}
