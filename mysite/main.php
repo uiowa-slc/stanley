@@ -8,8 +8,10 @@
 define('CACHE_ENABLED', true);
 //****************************
 
-define('CACHE_DEBUG', true);
-define('CACHE_BASE_DIR', 'silverstripe-cache'.DIRECTORY_SEPARATOR . 'cache'); // Should point to the same folder as FilesystemPublisher->destFolder
+//define('BASE_URL', '/uima');
+
+define('CACHE_DEBUG', false);
+define('CACHE_BASE_DIR', 'cache'); // Should point to the same folder as FilesystemPublisher->destFolder
 
 define('CACHE_CLIENTSIDE_EXPIRY', 5); // How long the client should be allowed to cache for before re-checking
 //TODO explain unit
@@ -37,6 +39,7 @@ if (CACHE_ENABLED
 			if(substr($_SERVER['SCRIPT_NAME'],-strlen($urlSegmentToRemove)) == $urlSegmentToRemove) {
 				$baseURL = substr($_SERVER['SCRIPT_NAME'], 0, -strlen($urlSegmentToRemove));
 				define('BASE_URL', rtrim($baseURL, DIRECTORY_SEPARATOR));
+				//print_r(rtrim($baseURL, DIRECTORY_SEPARATOR));
 			}
 		}
 	}

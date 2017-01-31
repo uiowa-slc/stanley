@@ -22,6 +22,8 @@ BlogMigrationTask:
     run_during_dev_build: false
 CalendarEvent:
   show_in_sitetree: false
+FilesystemPublisher:
+    static_base_url: http://localhost:8888/uima2
 ---
 Name: mysiteconfig_redirector
 After: 'staticpublishqueue/*'
