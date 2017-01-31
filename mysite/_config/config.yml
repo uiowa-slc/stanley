@@ -44,3 +44,9 @@ SiteTree:
     - PublishableSiteTree
     - SiteTreePublishingEngine
     - FilesystemPublisher('cache', 'html')
+---
+Only:
+  environment: live
+---
+Director:
+  alternate_protocol: 'https'
