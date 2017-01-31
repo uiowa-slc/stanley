@@ -23,7 +23,8 @@ BlogMigrationTask:
 CalendarEvent:
   show_in_sitetree: false
 FilesystemPublisher:
-    static_base_url: http://localhost:8888/uima2
+    static_base_url: http://localhost:8888/uima
+    echo_progress: true
 ---
 Name: mysiteconfig_redirector
 After: 'staticpublishqueue/*'
@@ -31,6 +32,9 @@ After: 'staticpublishqueue/*'
 RedirectorPage:
   extensions:
     - PublishableRedirectorPage
+DailyArtBlogPost:
+  extensions:
+    - PublishableDailyArtBlogPost
 ---
 Name: mysiteconfig_staticpublishqueue
 After: 'staticpublishqueue/*','#mysiteconfig_redirector'
