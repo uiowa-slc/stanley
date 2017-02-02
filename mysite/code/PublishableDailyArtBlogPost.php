@@ -6,7 +6,7 @@
 class PublishableDailyArtBlogPost extends Extension implements StaticallyPublishable {
 
 	public function urlsToCache() {
-		$posts = DailyArtBlogPost::get()->exclude(array('ID' => $this->owner->ID));
+		$posts = DailyArtBlog::get();
 		$urls = array();
 
 		foreach($posts as $post){

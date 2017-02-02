@@ -18,6 +18,10 @@ class DailyArtBlog extends Blog {
 }
 
 class DailyArtBlog_Controller extends Blog_Controller {
+    
+    private static $allowed_actions = array(
+        'slider'
+    );
   
     public function index(){
 
@@ -37,6 +41,10 @@ class DailyArtBlog_Controller extends Blog_Controller {
     	);
     	return $this->customise($data)->renderWith(array('DailyArtBlog', 'Page'));
     
+    }
+
+    public function slider(){
+        return $this->renderWith('DailyArtBlogDaySlider');
     }
 
 

@@ -1,5 +1,5 @@
 <% include HeaderPhoto %>
-<% include DailyArtBlogDaySlider %>
+<%-- <% include DailyArtBlogDaySlider %> --%>
 <main class="container main" role="main">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
