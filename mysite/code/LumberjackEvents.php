@@ -129,7 +129,7 @@ class LumberjackEvents extends SiteTreeExtension {
 		if(method_exists($this->owner, 'getLumberjackTitle')) {
 			return $this->owner->getLumberjackTitle();
 		}
-		return _t('ExhibitionHolder.LumberjackTitle', 'Exhibitions');
+		return _t('EventHolder.LumberjackTitle', 'Events');
 	}
 
 
