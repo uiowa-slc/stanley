@@ -22,8 +22,7 @@ BlogMigrationTask:
     run_during_dev_build: false
 CalendarEvent:
   show_in_sitetree: false
-FilesystemPublisher:
-    static_base_url: http://localhost:8888/uima
+
     echo_progress: true
 ---
 Name: mysiteconfig_redirector
@@ -50,3 +49,13 @@ Only:
 ---
 Director:
   alternate_protocol: 'https'
+FilesystemPublisher:
+    static_base_url: https://uima.uiowa.edu
+---
+Only:
+  environment: dev
+---
+Director:
+  alternate_protocol: 'http'
+FilesystemPublisher:
+    static_base_url: http://localhost:8888/uima
