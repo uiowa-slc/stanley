@@ -1,4 +1,5 @@
 <% include HeaderPhoto %>
+<div id="dailyart__slider-holder" class="dailyart__slider-holder"></div>
 <%-- <% include DailyArtBlogDaySlider %> --%>
 <main class="container main" role="main">
 	<div class="row">

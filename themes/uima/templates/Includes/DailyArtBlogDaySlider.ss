@@ -1,4 +1,4 @@
-<div class="dailyart__slider-holder">
+
 	<div class="dailyart__slider-container">
 		<div id="dailyart__day-slider" class="dailyart__day-slider">
 			<%-- <% cached %> --%>
@@ -20,4 +20,3 @@
 			<%-- <% end_cached %> --%>
 		</div>
 	 </div>
-</div>

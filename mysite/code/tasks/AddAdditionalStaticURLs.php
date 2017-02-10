@@ -19,7 +19,7 @@ class AddAdditionalStaticURLs extends BuildTask {
 	 *
 	 * @var string
 	 */
-	protected $description = 'Add additional';
+	protected $description = 'Add additional URLs that are not SiteTree items as part of a full rebuild to the bottom of the queue';
 
 	/** @var int - chunk size (set via config) */
 	private static $records_per_request = 200;

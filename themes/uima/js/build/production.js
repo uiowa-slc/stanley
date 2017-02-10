@@ -7754,22 +7754,25 @@ Roots = {
   DailyArtBlogPost: {
     init: function(){
 
-		var daySlider = $('#dailyart__day-slider');
+    	var sliderHolder = $('#dailyart__slider-holder');
 
-		var postDate = $('#main-content').attr('data-date');
-		var postMonth = $('#main-content').attr('data-month');
+    	sliderHolder.load('./new-daily-art-blog/slider',function(){
+			var daySlider = $('#dailyart__day-slider');
 
-		var currentDaySlide = $('.dailyart__day[data-month="' + postMonth + '"][data-date="' + postDate + '"]');
-		var currentDayIndex = currentDaySlide.attr('data-pos');
+			var postDate = $('#main-content').attr('data-date');
+			var postMonth = $('#main-content').attr('data-month');
 
-		currentDaySlide.removeAttr('style');
-		currentDaySlide.addClass('dailyart__day--active');
+			var currentDaySlide = $('.dailyart__day[data-month="' + postMonth + '"][data-date="' + postDate + '"]');
+			var currentDayIndex = currentDaySlide.attr('data-pos');
 
-		daySlider.flickity({
-			initialIndex: currentDayIndex-1,
-			pageDots: false,
-		}); 
+			currentDaySlide.removeAttr('style');
+			currentDaySlide.addClass('dailyart__day--active');
 
+			daySlider.flickity({
+				initialIndex: currentDayIndex-1,
+				pageDots: false,
+			}); 
+    	});
     }
   },
 }
