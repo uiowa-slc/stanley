@@ -3,7 +3,6 @@ Name: live
 After:
   - 'framework/*'
   - 'cms/*'
----
 Only:
   environment: live
 ---
@@ -16,7 +15,6 @@ Name: dev
 After:
   - 'framework/*'
   - 'cms/*'
----
 Only:
   environment: dev
 ---
