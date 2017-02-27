@@ -52,12 +52,12 @@ if (Director::isLive()) {
 }
 
 
-    // log errors and warnings
-    SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-warnings.log'), SS_Log::WARN, '<=');
+    // // log errors and warnings
+    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-warnings.log'), SS_Log::WARN, '<=');
 
-    // or just errors
-    SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors.log'), SS_Log::ERR);
+    // // or just errors
+    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors.log'), SS_Log::ERR);
 
-    // or notices (e.g. for Deprecation Notifications)
-    SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-notices.log'), SS_Log::NOTICE);
+    // // or notices (e.g. for Deprecation Notifications)
+    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-notices.log'), SS_Log::NOTICE);
 
