@@ -7604,6 +7604,15 @@ Roots = {
 			);
 		}
 
+		// accordion
+		$(".accordion > .accordion-item").click(function() {
+			// Cancel the siblings
+			$(this).siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
+			// Toggle the item
+			$(this).toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
+		});
+
+
 		// Lightbox
 		$(".lightbox").lightbox({
 			mobile: true
@@ -7747,7 +7756,7 @@ Roots = {
 		daySlider.flickity({
 			initialIndex: currentDayIndex-1,
 			pageDots: false,
-		}); 
+		});
     }
   },
   // Individual post page:
@@ -7756,7 +7765,7 @@ Roots = {
 
     	var sliderHolder = $('#dailyart__slider-holder');
 
-    	sliderHolder.load('./new-daily-art-blog/slider',function(){
+    	sliderHolder.load('./about/art-of-the-day/slider',function(){
 			var daySlider = $('#dailyart__day-slider');
 
 			var postDate = $('#main-content').attr('data-date');
@@ -7771,7 +7780,7 @@ Roots = {
 			daySlider.flickity({
 				initialIndex: currentDayIndex-1,
 				pageDots: false,
-			}); 
+			});
     	});
     }
   },

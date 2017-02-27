@@ -5486,6 +5486,50 @@ Tags & Categories
   margin-bottom: 3px;
   padding: 3px 8px 2px; }
 
+/* ---------------------------------------------------------------
+Accordion
+--------------------------------------------------------------- */
+.accordion {
+  background-color: #f8f8f8;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #e5e5e5; }
+
+.accordion-item {
+  border-bottom: 1px solid #e5e5e5; }
+
+/* Thumb */
+.accordion-thumb {
+  margin: 0;
+  padding: .8rem 0;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 16px; }
+.accordion-thumb::before {
+  content: '';
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  margin-right: 1rem;
+  margin-left: .5rem;
+  vertical-align: middle;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(-45deg);
+  transition: transform .2s ease-out; }
+
+/* Panel */
+.accordion-panel {
+  margin: 0;
+  padding: 0 34px;
+  display: none;
+  font-size: 14px; }
+
+/* Active */
+.accordion-item.is-active .accordion-thumb::before {
+  transform: rotate(45deg); }
+
 .breadcrumb {
   font-size: 12px;
   list-style: none;

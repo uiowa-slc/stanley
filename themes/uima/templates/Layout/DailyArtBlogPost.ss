@@ -20,9 +20,14 @@
 					<h2>$Title</h2>
 					$Content
 					<% if $DailyArtAdditionalText %>
-						<hr>
-						<h4>Additional Information</h4>
-						<div class="dailyart-additionaltext">$DailyArtAdditionalText</div>
+						<ul class="accordion">
+							<li class="accordion-item">
+								<h5 class="accordion-thumb">Additional Information</h5>
+								<div class="accordion-panel">
+									$DailyArtAdditionalText
+								</div>
+							</li>
+						</ul>
 					<% end_if %>
 					$Form
 					<% include TagsCategories %>
