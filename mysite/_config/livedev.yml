@@ -1,0 +1,27 @@
+---
+Name: live
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+Only:
+  environment: live
+---
+Director:
+  alternate_protocol: 'https'
+FilesystemPublisher:
+  - static_base_url: https://uima.uiowa.edu
+---
+Name: dev
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+Only:
+  environment: dev
+---
+Director:
+  alternate_protocol: 'http'
+FilesystemPublisher:
+  - static_base_url: http://localhost:8888/uima
+---

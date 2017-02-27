@@ -18,13 +18,15 @@ class SiteConfigExtension extends DataExtension {
 	);
 
 	private static $has_one = array(
-
+		'DefaultOpenGraphImage' => 'Image',
 	);
-
 	
-
 	public function updateCMSFields(FieldList $fields){
-
+        $fields->addFieldsToTab('Root.Main', array(
+            HeaderField::create('', 'Open Graph'),
+            UploadField::create('DefaultOpenGraphImage', 'Default Facebook Share Image (1200 x 630)')
+        ));
+		return $fields;
 		$fields->addFieldToTab('Root.Main', new TextField('Analytics', 'Google Analytics Tracking ID'));
 		$fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));

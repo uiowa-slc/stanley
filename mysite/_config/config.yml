@@ -7,6 +7,7 @@ After:
 # YAML configuration for SilverStripe
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
+
 SSViewer:
   theme: 'simple'
 Blog:
@@ -22,9 +23,13 @@ BlogMigrationTask:
     run_during_dev_build: false
 CalendarEvent:
   show_in_sitetree: false
-FilesystemPublisher:
-    static_base_url: http://localhost:8888/uima
-    echo_progress: true
+  echo_progress: true
+SiteConfig:
+  extensions:
+    - SiteConfigExtension
+Page:
+  extensions:
+    - OpenGraphExtension
 ---
 Name: mysiteconfig_redirector
 After: 'staticpublishqueue/*'
@@ -44,15 +49,3 @@ SiteTree:
     - PublishableSiteTree
     - SiteTreePublishingEngine
     - FilesystemPublisher('cache', 'html')
-# ---
-# Only:
-#   environment: live
-# ---
-# Director:
-#   alternate_protocol: 'https'
-# ---
-# Only:
-#   environment: dev
-# ---
-# Director:
-#   alternate_protocol: 'http'
