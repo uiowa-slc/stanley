@@ -19,6 +19,11 @@
 					<% include SocialShare %>
 					<h2>$Title</h2>
 					$Content
+					<% if $DailyArtAdditionalText %>
+						<hr>
+						<h4>Additional Information</h4>
+						<div class="dailyart-additionaltext">$DailyArtAdditionalText</div>
+					<% end_if %>
 					$Form
 					<% include TagsCategories %>
 					<% include Credit %>
