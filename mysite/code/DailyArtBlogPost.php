@@ -3,6 +3,7 @@
 class DailyArtBlogPost extends BlogPost {
 
 	private static $db = array(
+		'DailyArtAdditionalText' => 'HTMLText',
 
 	);
 	private static $has_one = array(
@@ -38,6 +39,7 @@ class DailyArtBlogPost extends BlogPost {
 		$fields->removeByName("CustomSummary");
 
 		$fields->addFieldToTab('Root.Main', new UploadField('DailyArtImage', 'Artwork Image'),'Content');
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('DailyArtAdditionalText','Additional Information'));
 
 		return $fields;
 	}
@@ -74,7 +76,7 @@ class DailyArtBlogPost extends BlogPost {
 	// 	$sqlQuery->setSelect('DailyArtBlogPost.ID');
 	// 	$sqlQuery->selectField('BlogPost.ID');
 	// 	$sqlQuery->selectField('BlogPost.PublishDate');
-		
+
 
 	// 	$sqlQuery->setFrom('DailyArtBlogPost');
 	// 	$sqlQuery->addLeftJoin('BlogPost','"DailyArtBlogPost"."ID"="BlogPost"."ID"');
@@ -83,7 +85,7 @@ class DailyArtBlogPost extends BlogPost {
 	// 	//$sqlQuery->setOrderBy("STR_TO_DATE( BlogPost.PublishDate, '%m/%d/%Y' ) ASC");
 	// 	//$sqlQuery->setOrderBy("BlogPost.PublishDate DESC");
 	// 	//$sqlQuery->setOrderBy("STR_TO_DATE( BlogPost.PublishDate, '%m/%d/%Y' ) ASC");
-		
+
 	// 	// $sqlQuery->setOrderBy("MONTH(BlogPost.PublishDate) DESC, DAY(BlogPost.PublishDate) DESC, CASE WHEN BlogPost.ID >= ".$this->ID." THEN 0 ELSE 1 END ASC");
 
 	// 	$sqlQuery->addOrderBy("MONTH(BlogPost.PublishDate) DESC, DAY(BlogPost.PublishDate) DESC");
@@ -112,7 +114,7 @@ class DailyArtBlogPost extends BlogPost {
 				}else{
 					$nextKey = $key + 1;
 				}
-				
+
 				if($key == 0){
 					$prevKey = $postsCount;
 				}else{
@@ -123,7 +125,7 @@ class DailyArtBlogPost extends BlogPost {
 			}else{
 				//echo 'key:'.$key.', post: '.$post->ID.': '.$post->PublishDate.'<br />';
 			}
-			
+
 		}
 	}
 
