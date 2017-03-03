@@ -13,7 +13,7 @@ class ExhibitionHolder extends Page {
 	private static $has_one = array(
 
 	);
-	private static $icon = 'mysite/icons/curtains.png';
+	private static $icon = 'mysite/icons/painting.png';
 
 	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage', 'DailyArtBlog');
 
