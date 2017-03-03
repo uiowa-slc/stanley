@@ -7866,6 +7866,7 @@ Roots = {
 				initialIndex: currentDayIndex-1,
 				bgLazyLoad: 9,
 				pageDots: false,
+				wrapAround: true
 			});
     	});
 
@@ -7894,6 +7895,7 @@ Roots = {
 				initialIndex: currentDayIndex-1,
 				bgLazyLoad: 9,
 				pageDots: false,
+				wrapAround: true
 			});
 
 			currentDaySlide.css('background-image', 'none');

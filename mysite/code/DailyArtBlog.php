@@ -27,6 +27,11 @@ class DailyArtBlog_Controller extends Blog_Controller {
 
     	$currentDate = SS_Datetime::now();
     	$dayObj = DailyArtBlogDay::get()->filter(array('Month' => $currentDate->Format('n'), 'Date' => $currentDate->Format('j')))->First();
+        $totalPosts = DailyArtBlogPost::get()->Count();
+
+        if($totalPosts == 0){
+            return $this->renderWith(array('DailyArtBlog', 'Page'));
+        }
 
     	if($dayObj){
     		$posts = $dayObj->getPosts();
