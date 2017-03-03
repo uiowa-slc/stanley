@@ -15,7 +15,7 @@ class ExhibitionHolder extends Page {
 	);
 	private static $icon = 'mysite/icons/curtains.png';
 
-	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage');
+	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage', 'DailyArtBlog');
 
 
 	public function getCMSFields() {
