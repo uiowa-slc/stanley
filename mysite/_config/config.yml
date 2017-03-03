@@ -30,22 +30,3 @@ SiteConfig:
 Page:
   extensions:
     - OpenGraphExtension
----
-Name: mysiteconfig_redirector
-After: 'staticpublishqueue/*'
----
-RedirectorPage:
-  extensions:
-    - PublishableRedirectorPage
-DailyArtBlogPost:
-  extensions:
-    - PublishableDailyArtBlogPost
----
-Name: mysiteconfig_staticpublishqueue
-After: 'staticpublishqueue/*','#mysiteconfig_redirector'
----
-SiteTree:
-  extensions:
-    - PublishableSiteTree
-    - SiteTreePublishingEngine
-    - FilesystemPublisher('cache', 'html')
