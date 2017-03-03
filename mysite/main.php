@@ -10,7 +10,7 @@ define('CACHE_ENABLED', true);
 
 //define('BASE_URL', '/uima');
 
-define('CACHE_DEBUG', false);
+define('CACHE_DEBUG', true);
 define('CACHE_BASE_DIR', 'cache'); // Should point to the same folder as FilesystemPublisher->destFolder
 
 define('CACHE_CLIENTSIDE_EXPIRY', 5); // How long the client should be allowed to cache for before re-checking

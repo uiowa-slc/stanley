@@ -1,0 +1,26 @@
+{
+  "name": "uima",
+  "homepage": "https://github.com/StudentLifeMarketingAndDesign/uima",
+  "authors": [
+    "Dustin Quam <dustinquam@me.com>"
+  ],
+  "description": "uima",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4",
+    "flickity-bg-lazyload": "^1.0.0",
+    "flickity": "^2.0.5",
+    "nouislider": "~7.0.10",
+    "slick-carousel": "^1.6.0"
+  }
+}

@@ -1,11 +1,11 @@
 <% with $DailyArtBlogDay %>
 	<!-- Previous Article Link -->
-	<% if PreviousPage || NextPage %>
+	<% if $PreviousPage || $NextPage %>
 		<div class="prevnext">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<% if PreviousPage %>
+						<% if $PreviousPage %>
 							<a href="$PreviousPage.Link" class="prevnext__link prev">
 								<span class="prevnext__arrows">&larr;</span>
 								<% if $PreviousPage.DailyArtImage %>
@@ -16,7 +16,7 @@
 								</p>
 							</a>
 						<% end_if %>
-						<% if NextPage %>
+						<% if $NextPage %>
 							<a href="$NextPage.Link" class="prevnext__link next ">
 								<p class="prevnext__name">
 									<span class="title">Next</span>

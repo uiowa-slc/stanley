@@ -1,6 +1,6 @@
 <% include HeaderPhoto %>
-<%-- <% include DailyArtBlogDaySlider %> --%>
-<main class="container main" role="main">
+<div id="dailyart__slider-holder" class="dailyart__slider-holder"><img class="dailyart__loader-img" src="{$ThemeDir}/images/daily-art-loader.gif" alt="" role="presentation" /></div>
+<main class="container main" role="main" id="main" data-blog-url="{$Link}">
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
@@ -29,7 +29,9 @@
 					$Form
 					<!-- Loop Daily Art Entries -->
 					<% loop $CurrentDayPosts %>
+						<% if $First %><div id="most-recent-post" data-month="$PublishDate.Format(n)" data-date="$PublishDate.Format(j)"><% end_if %>
 						<% include DailyArtBlogPostSummary %>
+						<% if $First %></div><% end_if %>
 					<% end_loop %>
 					<% include Pagination %>
 

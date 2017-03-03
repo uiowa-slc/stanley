@@ -120,7 +120,7 @@ Roots = {
 				// $(this) == $('#slider')
 				val = $(this).val();
 				tab = $("#myTab a[data-donate='"+val+"']");
-				console.log(tab);
+				//console.log(tab);
 				//alert('wake up');
 				$(tab).tab('show');
 			}
@@ -160,36 +160,28 @@ Roots = {
   DailyArtBlog: {
     init: function(){
 
-		var date = new Date();
-		var monthRaw = date.getMonth();
-		var dateRaw = date.getDate();
-		var month = new Array();
+		var sliderHolder = $('#dailyart__slider-holder');
+		var blogUrl = $('#main').attr('data-blog-url');
 
-		month[0] = "1";
-		month[1] = "2";
-		month[2] = "3";
-		month[3] = "4";
-		month[4] = "5";
-		month[5] = "6";
-		month[6] = "7";
-		month[7] = "8";
-		month[8] = "9";
-		month[9] = "10";
-		month[10] = "11";
-		month[11] = "12";
-		//console.log('current date = ' +month[monthRaw] + '/' + dateRaw);
-		var currentDaySlide = $('.dailyart__day[data-month="' + month[monthRaw] + '"][data-date="' + dateRaw + '"]');
-		var daySlider = $('#dailyart__day-slider');
+		sliderHolder.load(blogUrl + 'slider',function(){
+			var daySlider = $('#dailyart__day-slider');
 
-		var currentDayIndex = currentDaySlide.attr('data-pos');
+			var postDate = $('#most-recent-post').attr('data-date');
+			var postMonth = $('#most-recent-post').attr('data-month');
 
-		currentDaySlide.removeAttr('style');
-		currentDaySlide.addClass('dailyart__day--active');
+			var currentDaySlide = $('.dailyart__day[data-month="' + postMonth + '"][data-date="' + postDate + '"]');
+			var currentDayIndex = currentDaySlide.attr('data-pos');
 
-		daySlider.flickity({
-			initialIndex: currentDayIndex-1,
-			pageDots: false,
-		});
+			currentDaySlide.removeAttr('style');
+			currentDaySlide.addClass('dailyart__day--active');
+
+			daySlider.flickity({
+				initialIndex: currentDayIndex-1,
+				bgLazyLoad: 9,
+				pageDots: false,
+			});
+    	});
+
     }
   },
   // Individual post page:
@@ -197,8 +189,9 @@ Roots = {
     init: function(){
 
     	var sliderHolder = $('#dailyart__slider-holder');
-
-    	sliderHolder.load('./about/art-of-the-day/slider',function(){
+    	var blogUrl = $('#main').attr('data-blog-url');
+    	//console.log(blogUrl + 'slider');
+    	sliderHolder.load(blogUrl + 'slider',function(){
 			var daySlider = $('#dailyart__day-slider');
 
 			var postDate = $('#main-content').attr('data-date');
@@ -212,8 +205,11 @@ Roots = {
 
 			daySlider.flickity({
 				initialIndex: currentDayIndex-1,
+				bgLazyLoad: 9,
 				pageDots: false,
 			});
+
+			currentDaySlide.css('background-image', 'none');
     	});
     }
   },

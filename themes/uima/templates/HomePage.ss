@@ -65,6 +65,7 @@
 			});
 		});
 	</script>
+	<!-- INSERT JS HERE -->
 	<!-- Google Analytics -->
 	<% if $SiteConfig.Analytics %>
 		<script>

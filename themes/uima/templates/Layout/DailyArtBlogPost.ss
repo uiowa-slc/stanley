@@ -1,7 +1,7 @@
 <% include HeaderPhoto %>
-<div id="dailyart__slider-holder" class="dailyart__slider-holder"></div>
+<div id="dailyart__slider-holder" class="dailyart__slider-holder"><img class="dailyart__loader-img" src="{$ThemeDir}/images/daily-art-loader.gif" alt="" role="presentation" /></div>
 <%-- <% include DailyArtBlogDaySlider %> --%>
-<main class="container main" role="main">
+<main class="container main" role="main" id="main" data-blog-url="{$Parent.Link}">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<section id="main-content" tabindex="-1" data-month="$PublishDate.Format(n)" data-date="$PublishDate.Format(j)">

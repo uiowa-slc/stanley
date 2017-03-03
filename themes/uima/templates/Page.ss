@@ -51,6 +51,7 @@
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
+	<!-- INSERT JS HERE -->
 	<!-- Google Analytics -->
 	<% if $SiteConfig.Analytics %>
 		<script>

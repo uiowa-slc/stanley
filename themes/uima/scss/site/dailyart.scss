@@ -84,7 +84,11 @@ Day Slider
 .dailyart__day-slider{
 
 }
-
+.dailyart__loader-img{
+	display: block;
+	margin: auto;
+	padding: 35px 0;
+}
 .dailyart__day{
 	background-color: white;
 	background-size: cover;
@@ -130,10 +134,10 @@ Day Slider
 		height: 180px;
 		padding-top: 42px;
 		text-align: center;
-		background: #BD4318;
-		background: -moz-linear-gradient(top,  #c3532c 0%, #bd4318 100%);
-		background: -webkit-linear-gradient(top,  #c3532c 0%,#bd4318 100%);
-		background: linear-gradient(to bottom,  #c3532c 0%,#bd4318 100%);
+		background: #BD4318 !important;
+		background: -moz-linear-gradient(top,  #c3532c 0%, #bd4318 100%) !important;
+		background: -webkit-linear-gradient(top,  #c3532c 0%,#bd4318 100%) !important;
+		background: linear-gradient(to bottom,  #c3532c 0%,#bd4318 100%) !important;
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3532c', endColorstr='#bd4318',GradientType=0 );
 		&:after {
 			content: '';

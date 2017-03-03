@@ -30,6 +30,10 @@ class DailyArtBlog_Controller extends Blog_Controller {
 
     	if($dayObj){
     		$posts = $dayObj->getPosts();
+            while($posts->Count() == 0){
+                $dayObj = $dayObj->PreviousDay();
+                $posts = $dayObj->getPosts();
+            }
     	}
 
     	$data = new ArrayData(

@@ -16,6 +16,7 @@ if (class_exists('SiteTree')) {SiteTree::enable_nested_urls();
 }
 
 Requirements::set_force_js_to_bottom(true);
+SS_Cache::set_cache_lifetime('cacheblock', 60 * 60 * 24 * 1);
 
 // add a button to remove formatting
 HtmlEditorConfig::get('cms')->insertButtonsBefore(
@@ -47,9 +48,6 @@ HtmlEditorConfig::get('cms')->setOption('paste_remove_styles', 'true');
 HtmlEditorConfig::get('cms')->setOption('paste_remove_styles_if_webkit', 'true');
 HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes', 'true');
 GD::set_default_quality(80);
-if (Director::isLive()) {
-	//Director::forceSSL();
-}
 
 
     // // log errors and warnings

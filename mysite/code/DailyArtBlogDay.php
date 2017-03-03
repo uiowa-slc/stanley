@@ -38,6 +38,17 @@ class DailyArtBlogDay extends DataObject {
 		return $date;		
 	}
 
+	public function NextDay(){
+		$currentDate = SS_Datetime::now();
+		$nextDate = $currentDate->next_day($currentDate->Format('Y'),$this->Month,$this->Date);
+
+		$dateObj = Date::create();
+		$dateObj->setValue($nextDate);
+
+		$day = DailyArtBlogDay::get()->filter(array('Month' => $dateObj->Format('m'), 'Date' => $dateObj->Format('d')))->First();
+		return $day;		
+	}
+
 	public function NextPage(){
 		$currentDate = SS_Datetime::now();
 		$nextDate = $currentDate->next_day($currentDate->Format('Y'),$this->Month,$this->Date);
@@ -49,7 +60,16 @@ class DailyArtBlogDay extends DataObject {
 		//print_r($day->getLatestPost());
 		return $day->getLatestPost();
 	}
+	public function PreviousDay(){
+		$currentDate = SS_Datetime::now();
+		$nextDate = $currentDate->day_before($currentDate->Format('Y'),$this->Month,$this->Date);
 
+		$dateObj = Date::create();
+		$dateObj->setValue($nextDate);
+
+		$day = DailyArtBlogDay::get()->filter(array('Month' => $dateObj->Format('m'), 'Date' => $dateObj->Format('d')))->First();
+		return $day;
+	}
 	public function PreviousPage(){
 		$currentDate = SS_Datetime::now();
 		$nextDate = $currentDate->day_before($currentDate->Format('Y'),$this->Month,$this->Date);
