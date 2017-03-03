@@ -20,7 +20,7 @@ class DailyArtBlog extends Blog {
 	}
 
     public function getLumberjackTitle() {
-        return 'Daily Art Posts';
+        return 'Art of the Day Posts';
     }
 
 }
