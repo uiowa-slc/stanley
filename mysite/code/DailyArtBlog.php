@@ -19,7 +19,7 @@ class DailyArtBlog extends Blog {
 		return $fields;
 	}
 
-    protected function getLumberjackTitle() {
+    public function getLumberjackTitle() {
         return 'Daily Art Posts';
     }
 
