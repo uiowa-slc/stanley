@@ -13,10 +13,15 @@ class DailyArtBlog extends Blog {
 
     private static $plural_name = 'Daily Art Blogs';
     private static $show_in_sitetree = true;
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		return $fields;
 	}
+
+    protected function getLumberjackTitle() {
+        return 'Daily Art Posts';
+    }
 
 }
 
