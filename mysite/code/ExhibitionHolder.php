@@ -45,6 +45,11 @@ class ExhibitionHolder extends Page {
 
 	}
 
+	public function OtherChildren(){
+		$pages = $this->Children()->exclude(array('ClassName' => 'ExhibitionPage'));
+		return $pages;
+	}
+
 }
 
 class ExhibitionHolder_Controller extends Page_Controller {
