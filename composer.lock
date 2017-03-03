@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26d24a6da73ea904a8ad0aadcdadd30c",
-    "content-hash": "362e8c58d11167d0344a48eb2d31b278",
+    "hash": "df03f47892c3167008265edfe88355e9",
+    "content-hash": "a1bb12d5a4a43fe17a9d09e81fb921dc",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -592,45 +592,6 @@
             "time": "2016-10-10 02:59:32"
         },
         {
-            "name": "silverstripe/gridfieldajaxrefresh",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe-archive/silverstripe-gridfieldajaxrefresh.git",
-                "reference": "f1ae5061089926f4e1ed29eb10fd06cde6a37ce4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-archive/silverstripe-gridfieldajaxrefresh/zipball/f1ae5061089926f4e1ed29eb10fd06cde6a37ce4",
-                "reference": "f1ae5061089926f4e1ed29eb10fd06cde6a37ce4",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": ">=3.0"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Julian Seidenberg",
-                    "email": "julian@silverstripe.com"
-                }
-            ],
-            "description": "Adds the ability to either automatically or manually refresh a SilverStripe GridField",
-            "keywords": [
-                "ajax",
-                "auto-refresh",
-                "automatic",
-                "gridfield",
-                "refresh",
-                "silverstripe"
-            ],
-            "time": "2016-11-24 11:49:43"
-        },
-        {
             "name": "silverstripe/lumberjack",
             "version": "1.x-dev",
             "source": {
@@ -884,44 +845,6 @@
                 "spamprotection"
             ],
             "time": "2017-01-31 12:11:24"
-        },
-        {
-            "name": "silverstripe/staticpublishqueue",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-staticpublishqueue.git",
-                "reference": "ae9fd88003a784c4e5f27dceb79fd14fd6a3f25c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-staticpublishqueue/zipball/ae9fd88003a784c4e5f27dceb79fd14fd6a3f25c",
-                "reference": "ae9fd88003a784c4e5f27dceb79fd14fd6a3f25c",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/cms": ">=3.1.0",
-                "silverstripe/framework": ">=3.1.0",
-                "silverstripe/gridfieldajaxrefresh": "dev-master"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "Static publishing queue to create static versions of pages for enhanced performance and security",
-            "keywords": [
-                "cache",
-                "caching",
-                "html",
-                "performance",
-                "publishing",
-                "queue",
-                "security",
-                "silverstripe",
-                "static",
-                "static-cache",
-                "static-caching",
-                "static-publishing"
-            ],
-            "time": "2016-12-28 11:27:55"
         },
         {
             "name": "silverstripe/tagfield",
