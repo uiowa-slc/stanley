@@ -12,7 +12,7 @@ class DailyArtBlog extends Blog {
     private static $singular_name = 'Daily Art Blog';
 
     private static $plural_name = 'Daily Art Blogs';
-
+    private static $show_in_sitetree = true;
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		return $fields;
