@@ -20,9 +20,9 @@ class DailyArtBlogPost extends BlogPost {
 
     );
 
-    private static $singular_name = 'Daily Art Post';
+    private static $singular_name = 'Art of the Day Post';
 
-    private static $plural_name = 'Daily Art Posts';
+    private static $plural_name = 'Art of the Day Posts';
 
     protected function onBeforeWrite(){
     	$blogDay = DataObject::get_one('DailyArtBlogDay', array('Month' => $this->obj('PublishDate')->format('m'), 'Date' => $this->obj('PublishDate')->format('d')));

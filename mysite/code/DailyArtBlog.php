@@ -9,9 +9,9 @@ class DailyArtBlog extends Blog {
 	private static $allowed_children = array(
 		'DailyArtBlogPost'
 	);
-    private static $singular_name = 'Daily Art Blog';
+    private static $singular_name = 'Art of the Day Blog';
 
-    private static $plural_name = 'Daily Art Blogs';
+    private static $plural_name = 'Art of the Day Blogs';
     private static $show_in_sitetree = true;
 
 	public function getCMSFields() {
