@@ -65,6 +65,7 @@
 			});
 		});
 	</script>
+	<%-- DO NOT REMOVE THE "INSERT JS HERE" COMMENT BELOW, --%>
 	<!-- INSERT JS HERE -->
 	<!-- Google Analytics -->
 	<% if $SiteConfig.Analytics %>
