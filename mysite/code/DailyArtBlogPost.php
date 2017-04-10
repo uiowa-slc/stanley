@@ -37,11 +37,19 @@ class DailyArtBlogPost extends BlogPost {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
+		 // $publishField = $fields->fieldByName("PublishDate");
+		 // Debug::show($publishField);
+		$fields->removeByName("PublishDate");
+        $publishDate = DateField::create('PublishDate', _t('BlogPost.PublishDate', 'Publish Date'));
+        $publishDate->setConfig('showcalendar', true);
+
 		$fields->removeByName("FeaturedImage");
 		$fields->removeByName("Metadata");
 		$fields->removeByName("Photo");
 		$fields->removeByName("CustomSummary");
-
+		
+		$fields->addFieldToTab('Root.Main', $publishDate, 'Content');
+		$fields->renameField("PublishDate", "Publish Date <strong>* Required for Art of the Day to work properly</strong>");
 		$fields->addFieldToTab('Root.Main', new UploadField('DailyArtImage', 'Artwork Image'),'Content');
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('DailyArtAdditionalText','Additional Information'));
 
@@ -56,9 +64,13 @@ class DailyArtBlogPost extends BlogPost {
 
 	public function getOtherPosts(){
 		$postDate = $this->obj('PublishDate');
+
 	    $day = DataObject::get_one('DailyArtBlogDay', array('Date' => $postDate->Format('d'), 'Month' => $postDate->Format('m')));
-	    $posts = $day->getPosts()->exclude(array('ID' => $this->ID));
-	    return $posts;
+	    if($day){
+		    $posts = $day->getPosts()->exclude(array('ID' => $this->ID));
+		    return $posts;	    	
+	    }
+
 	}
 
 
