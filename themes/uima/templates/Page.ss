@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
+	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/uiowa-bar.css" />
 	<!-- Picturefill -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
 
@@ -38,6 +39,7 @@
 <body class="$ClassName $Action">
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
+		<% include UiowaBar %>
 		<% include Header %>
 		$Layout
 		<% include Footer %>
