@@ -13,9 +13,12 @@ class ExhibitionHolder extends Page {
 	private static $has_one = array(
 
 	);
+
+	private static $show_in_site_tree = true;
+
 	private static $icon = 'mysite/icons/painting.png';
 
-	private static $allowed_children = array('ExhibitionPage', 'ExhibitionHolder', 'RedirectorPage', 'DailyArtBlog');
+	private static $allowed_children = array('ExhibitionPage','LegaciesPage', 'ExhibitionHolder', 'RedirectorPage', 'DailyArtBlog');
 
 
 	public function getCMSFields() {

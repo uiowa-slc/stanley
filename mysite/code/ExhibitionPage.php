@@ -3,7 +3,10 @@ class ExhibitionPage extends Page {
 
 	private static $show_in_sitetree = false;
 
-    private static $allowed_children = array();
+    private static $allowed_children = array(
+    	'*ExhibitionPage',
+    	'CollectionsHolder'
+    );
 
 	private static $db = array(
 
