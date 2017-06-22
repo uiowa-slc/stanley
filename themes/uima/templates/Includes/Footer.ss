@@ -69,6 +69,13 @@
 						</a>
 					</li>
 				<% end_if %>
+				<% if $SiteConfig.InstagramLink %>
+					<li>
+						<a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank">
+							<img src="{$ThemeDir}/images/instagram_circle_gray-32.png" alt="Instagram">
+						</a>
+					</li>
+				<% end_if %>
 			</ul>
 
 			<div class="clearfix footer-logos">
