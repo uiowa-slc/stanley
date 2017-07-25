@@ -13,7 +13,7 @@
 			</div>
 		<% end_if %>
 
-		<span class="shifter-handle">Menu</span>
+		<button class="shifter-handle">Menu</button>
 		<% include MainNav %>
 	</div>
 </header>
