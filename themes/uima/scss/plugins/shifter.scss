@@ -82,7 +82,9 @@ $shifter-icon-width:					20px;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 32px;
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 13px;
 	cursor: pointer;
 	display: block;
 	overflow: hidden;
@@ -93,10 +95,10 @@ $shifter-icon-width:					20px;
 	-ms-user-select: none;
 	user-select: none;
 	z-index: 1000;
+	border: none;
+	background: transparent;
 	@media (max-width: $break-small - 1) {
 		text-indent: -999em;
-		padding: 10px 30px 10px 0;
-		height: 32px;
 	}
 }
 .shifter-enabled .shifter-handle:after {
