@@ -16,7 +16,8 @@
 		"colymba/gridfield-bulk-editing-tools" : "*",
 		"undefinedoffset/sortablegridfield": "dev-master",
 		"silverstripe/widgets": "*",
-		"silverstripe/lumberjack": "^1.2"
+		"silverstripe/lumberjack": "^1.2",
+		"silverstripe/activedirectory" : "3.*"
 
 	},
 	"require-dev": {
@@ -31,7 +32,15 @@
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
 
-        }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
 
+        },
+        {
+             "type": "vcs",
+             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
+        }
     ]
 }

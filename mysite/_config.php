@@ -49,13 +49,5 @@ HtmlEditorConfig::get('cms')->setOption('paste_remove_styles_if_webkit', 'true')
 HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes', 'true');
 GD::set_default_quality(80);
 
-
-    // // log errors and warnings
-    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-warnings.log'), SS_Log::WARN, '<=');
-
-    // // or just errors
-    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors.log'), SS_Log::ERR);
-
-    // // or notices (e.g. for Deprecation Notifications)
-    // SS_Log::add_writer(new SS_LogFileWriter('./silverstripe-errors-notices.log'), SS_Log::NOTICE);
+Authenticator::set_default_authenticator('SAMLAuthenticator');
 

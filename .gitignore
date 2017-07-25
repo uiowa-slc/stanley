@@ -46,7 +46,6 @@ quickaddnew/
 gridfieldextensions/
 lilpicard
 reports/
-
 siteconfig/
 segment-field/
 lumberjack/
@@ -55,3 +54,6 @@ staticpublishqueue/
 gridfieldajaxrefresh/
 silverstripe-errors-warnings.log
 silverstripe-errors.log
+activedirectory/
+multivaluefield/
+queuedjobs/
