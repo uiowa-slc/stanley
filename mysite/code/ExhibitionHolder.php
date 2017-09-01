@@ -100,9 +100,12 @@ class ExhibitionHolder_Controller extends Page_Controller {
 		$upcomingExhibitions = new PaginatedList($paginatedList, $this->request);
 		$upcomingExhibitions->setPageLength(10);
 		foreach ($exhibitions as $exhibition) {
-			if ($exhibition->obj("StartDate")->InFuture()) {
-				$upcomingExhibitions->push($exhibition);
+			if($exhibition->StartDate){
+				if ($exhibition->obj("StartDate")->InFuture()) {
+					$upcomingExhibitions->push($exhibition);
+				}			
 			}
+
 		}
 		$Data = array(
 			'PaginatedList' => $upcomingExhibitions,

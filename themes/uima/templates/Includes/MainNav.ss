@@ -8,7 +8,6 @@
 						<li><a href="$Link">Current</a></li>
 						<li><a href="$Link("upcoming")">Upcoming</a></li>
 						<li><a href="$Link("past")">Past</a></li>
-						<li><a href="{$BaseHref}exhibitions/legacies-for-iowa/">Legacies for Iowa</a></li>
 						<% if $OtherChildren %>
 							<% loop $OtherChildren %>
 							<li><a href="$Link">$MenuTitle</a></li>
