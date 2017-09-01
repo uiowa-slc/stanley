@@ -83,7 +83,7 @@
 					<img src="{$ThemeDir}/images/uiowalogo.gif" alt="University of Iowa">
 				</a>
 				<a href="http://uima.uiowa.edu">
-					<img src="{$ThemeDir}/images/iowamuseum_logo.gif" alt="University of Iowa Museum of Art">
+					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Museum of Art">
 				</a>
 			</div>
 
