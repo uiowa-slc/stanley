@@ -236,6 +236,10 @@ Admin Login form fields
 .userform .left {
 	float: none;
 }
+
+.userform .error{
+	color: red;
+}
 #MemberLoginForm_LoginForm .Actions .action,
 .userform  .Actions .action {
 	display: inline-block;

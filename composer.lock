@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccd62df38080128860176d3b657b526d",
+    "content-hash": "a8c8bf798cca0ff8fac17c2f520a8b8e",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -2162,6 +2162,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "silverstripe/cms": 0,
+        "silverstripe/framework": 0,
         "silverstripe/blog": 0,
         "md/ac-json-events": 20,
         "silverstripe/userforms": 0,
