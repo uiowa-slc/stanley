@@ -17,7 +17,8 @@
 		"undefinedoffset/sortablegridfield": "dev-master",
 		"silverstripe/widgets": "*",
 		"silverstripe/lumberjack": "^1.2",
-		"silverstripe/activedirectory" : "3.*"
+		"silverstripe/activedirectory" : "3.*",
+		"md/division-analytics" : "1.*"
 
 	},
 	"require-dev": {
@@ -31,6 +32,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
+
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
 
         },
         {
