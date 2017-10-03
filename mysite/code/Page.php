@@ -92,7 +92,7 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-Requirements::set_backend(new BetterRequirementsBackend());
+// Requirements::set_backend(new BetterRequirementsBackend());
 // if (Director::isLive()) {
 // 	//Director::forceSSL();
 // 	echo "LIVE";
@@ -102,6 +102,7 @@ Requirements::set_backend(new BetterRequirementsBackend());
 // print_r(Config::inst()->get('Director', 'alternate_protocol'));
 		Requirements::block('event_calendar/javascript/calendar_widget.js');
 		Requirements::block('framework/thirdparty/jquery/jquery.js');
+	
 	}
 
 	public function DollarSign() {

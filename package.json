@@ -6,7 +6,7 @@
     "grunt-contrib-jshint": "*",
     "grunt-contrib-nodeunit": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-sass": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
