@@ -4291,7 +4291,8 @@ Event Page
   .logo {
     width: auto; } }
 .logo img {
-  display: block; }
+  display: block;
+  max-width: 250px; }
 
 .shifter .shifter-handle {
   width: 20%; }
