@@ -13,8 +13,7 @@ class SiteConfigExtension extends DataExtension {
 		'State' => 'Text',
 		'Zip' => 'Text',
 		'Phone' =>'Text',
-		'Email' =>'Text',
-		'Analytics' =>'Text'
+		'Email' =>'Text'
 
 	);
 
@@ -27,7 +26,6 @@ class SiteConfigExtension extends DataExtension {
             HeaderField::create('', 'Open Graph'),
             UploadField::create('DefaultOpenGraphImage', 'Default Facebook Share Image (1200 x 630)')
         ));
-		$fields->addFieldToTab('Root.Main', new TextField('Analytics', 'Google Analytics Tracking ID'));
 		$fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('YoutubeLink', 'Youtube Account URL'));
