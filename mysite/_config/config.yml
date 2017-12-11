@@ -30,3 +30,5 @@ SiteConfig:
 Page:
   extensions:
     - OpenGraphExtension
+FormSpamProtectionExtension:
+    default_spam_protector: NocaptchaProtector

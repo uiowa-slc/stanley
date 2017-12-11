@@ -14,11 +14,12 @@
 		"silverstripe/userforms": "4.*@stable",
 		"silverstripe/googlesitemaps" : "*",
 		"colymba/gridfield-bulk-editing-tools" : "*",
-		"undefinedoffset/sortablegridfield": "dev-master",
+		"undefinedoffset/sortablegridfield": "*",
 		"silverstripe/widgets": "*",
 		"silverstripe/lumberjack": "^1.2",
 		"silverstripe/activedirectory" : "3.*",
-		"md/division-analytics" : "1.*"
+		"md/division-analytics" : "1.*",
+		"undefinedoffset/silverstripe-nocaptcha" : "*"
 
 	},
 	"require-dev": {
