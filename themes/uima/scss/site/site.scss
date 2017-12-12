@@ -273,3 +273,34 @@ Admin Login form fields
  	border-top: 1px solid #ccc;
  	padding: 1em 0;
  }
+
+ .userform{
+	.message{
+		color: white;
+		background: #333;
+		padding: 5px;
+		display: block;
+		&.error{
+			background: #bb4014;
+		}
+	}
+	.requiredField label{
+		&:before{
+			content: '* ';
+			color: #bb4014;
+		}
+	}
+	.optionset.requiredField legend{
+		&:before{
+			content: '* ';
+			color: #bb4014;
+		}		
+	}
+	.optionset.requiredField label{
+		&:before{
+			content: '';
+			color: #222;
+		}
+	}
+
+}
