@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8146aea4e8948fc8cec968ddf385483",
+    "content-hash": "8702fce5184e288f3d38d7e638e3c47d",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -1083,6 +1083,47 @@
                 "silverstripe"
             ],
             "time": "2017-07-26 09:45:27"
+        },
+        {
+            "name": "silverstripe/secureassets",
+            "version": "1.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-secureassets.git",
+                "reference": "1e09f22a6e281a736ad1efa16c33a11fe4a613ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-secureassets/zipball/1e09f22a6e281a736ad1efa16c33a11fe4a613ea",
+                "reference": "1e09f22a6e281a736ad1efa16c33a11fe4a613ea",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "suggest": {
+                "silverstripe/cms": "Allows you to easily edit file permissions in the CMS"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sean Harvey",
+                    "email": "sean@silverstripe.com"
+                }
+            ],
+            "description": "Adds access restrictions to folders in assets, similar to the way you secure pages",
+            "homepage": "http://silverstripe.org",
+            "keywords": [
+                "assets",
+                "files",
+                "secure",
+                "silverstripe"
+            ],
+            "time": "2017-11-16 03:52:19"
         },
         {
             "name": "silverstripe/segment-field",
