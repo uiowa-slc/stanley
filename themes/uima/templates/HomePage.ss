@@ -16,7 +16,7 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/master.css" />
+	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/uiowa-bar.css" />
 	<!--[if IE 8]>
 		<meta http-equiv="x-ua-compatible" content="IE=8">

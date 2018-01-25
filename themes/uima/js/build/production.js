@@ -7701,13 +7701,13 @@ Roots = {
 
 		// Shifter
 		$.shifter({
-			maxWidth: "768px"
+			maxWidth: "1024px"
 		});
 
 		// Naver
 		// $(".naver").naver();
 		$(".sec-nav").navigation({
-			maxWidth: "768px"
+			maxWidth: "1024px"
 		});
 
 		// POPUP WINDOW FOR SOCIAL MEDIA

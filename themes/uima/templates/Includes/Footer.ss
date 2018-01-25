@@ -17,12 +17,12 @@
 				<div class="main-links">
 					<ul class="">
 						<li><a href="{$BaseHref}">Home</a></li>
-						<% loop Menu(1).Limit(3) %>
+						<% loop Menu(1).Limit(4) %>
 							<li><a href="$Link">$MenuTitle</a></li>
 						<% end_loop %>
 					</ul>
 					<ul class="">
-						<% loop Menu(1).Limit(0,3) %>
+						<% loop Menu(1).Limit(0,4) %>
 							<li><a href="$Link">$MenuTitle</a></li>
 						<% end_loop %>
 					</ul>
