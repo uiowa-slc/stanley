@@ -9,6 +9,7 @@ class Page extends SiteTree {
 		'CreditMedium'         => 'Text',
 		'CreditDimensions'     => 'Text',
 		'CreditCollectionInfo' => 'Text',
+		'HideSideNav' => 'Boolean'
 	);
 
 	private static $has_one = array(
@@ -20,7 +21,8 @@ class Page extends SiteTree {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		// $fields->removeByName("Metadata");
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo (1200px x 400px"));
+		$fields->addFieldToTab("Root.Main", new CheckboxField("HideSideNav", "Hide Side Navigation"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Main Page Photo (1200px x 400px)"));
 
 		$fields->addFieldToTab('Root.Credit', new UploadField('CreditThumb', 'Credit: Artwork Thumbnail'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditName', 'Credit: Artist Name'));
