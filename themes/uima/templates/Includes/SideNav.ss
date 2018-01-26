@@ -6,10 +6,13 @@
 		<h4 id="handle2">Navigation</h4>
 		<nav class="sec-nav" data-navigation-handle="#handle2">
 			<ul class="first-level">
+
+				<% if $HideSideNav %>
+					<li class="active"><a href="$Link">$MenuTitle</a></li>
+				<% else %>
 				<% with Level(1) %>
 					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
 				<% end_with %>
-				<% if not $HideSideNav %>
 				<% loop Menu(2) %>
 					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
 
