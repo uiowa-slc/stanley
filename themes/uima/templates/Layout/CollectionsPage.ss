@@ -38,9 +38,8 @@
 						<nav class="sec-nav" data-navigation-handle="#handle2">
 							<ul class="first-level">
 
-								<% if $HideSideNav %>
-									<li class="active"><a href="$Link">$MenuTitle</a></li>
-								<% else %>
+								<% if not $HideSideNav %>
+
 								<% with Level(1) %>
 									<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
 								<% end_with %>
