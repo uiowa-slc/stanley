@@ -89,9 +89,6 @@
 			<section id="main-content" tabindex="-1">
 				$Content
 				$Form
-				<% if $Parent.ID == 33 %>
-				<p><a href="education/uima-school-programs/">View our other school programs &rarr;</a></p>
-				<% end_if %>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
