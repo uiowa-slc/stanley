@@ -89,6 +89,16 @@
 		<div class="col-md-8 col-lg-8 col-lg-offset-1 children">
 			<section id="main-content" tabindex="-1">
 				$Content
+				<% if $Parent.ID == 33 %>
+				<div class="hidden-lg">
+					<hr />
+					<p>
+						<a href="education/book-a-uima-school-programs-visit/" class="button">Book a UIMA School Programs Visit &rarr;</a><br />
+						<a href="education/uima-school-programs/">View our other school programs &rarr;</a>
+					</p>
+				</div>
+				<% end_if %>
+				
 				$Form
 			</section>
 		</div><!-- end .col -->
