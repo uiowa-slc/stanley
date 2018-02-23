@@ -29,6 +29,7 @@
 		<!-- Side Bar -->
 		<div class="col-md-4 col-lg-3 sidebar">
 			<h1 class="collection-name">$Title</h1>
+			<% if not $HideSideNav %>
 				<div class="naver">
 
 					<div class="side-navigation">
@@ -38,7 +39,7 @@
 						<nav class="sec-nav" data-navigation-handle="#handle2">
 							<ul class="first-level">
 
-								<% if not $HideSideNav %>
+								
 
 								<% with Level(1) %>
 									<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
@@ -66,10 +67,10 @@
 								<% end_if %>
 							</ul>
 						</nav>
-						<% end_if %>
+						
 					</div><!-- end .subnavigation -->
 				</div><!-- end Naver -->
-
+				<% end_if %>
 
 				<% if SideBarView %>
 					<div id="Sidebar" class="browsebydate tablet-hide">
