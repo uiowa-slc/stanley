@@ -13,7 +13,9 @@ class CollectionsPage extends Page {
 
 	private static $allowed_children = array('ArtworkPage');
 
-
+	private static $defaults = array(
+		'HideSideNav' => 1
+	);
 	function getCMSFields() {
 
 		$fields = parent::getCMSFields();
