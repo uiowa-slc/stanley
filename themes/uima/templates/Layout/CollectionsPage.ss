@@ -45,26 +45,31 @@
 									<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
 								<% end_with %>
 								<% loop Menu(2) %>
-									<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
+									<% if $LinkOrSection == "section" %>
+										<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
 
-									<%-- third level nav option 1 --%>
-										<% if $LinkOrSection = "section" && Children %>
-											<ul class="second-level">
-												<% loop Children %>
-													<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>>
-														<a href="$Link">$MenuTitle</a>
-								
+										<%-- third level nav option 1 --%>
+											<% if $LinkOrSection = "section" && Children %>
+												<ul class="second-level">
+													<% loop Children %>
+														<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>>
+															<a href="$Link">$MenuTitle</a>
+									
 
-													</li>
-												<% end_loop %>
-											</ul>
-										<% end_if %>
+														</li>
+													<% end_loop %>
+												</ul>
+											<% end_if %>
 
-									<%-- end third level nav option 1 --%>
+										<%-- end third level nav option 1 --%>
 
-									</li>
-								<% end_loop %>
+										</li>
+									<% end_if %>
+								<% end_loop %><%-- end if LinkOrCurrent == current --%>
+								<% if $Parent.ID == 33 %>
+									<li><a href="education/book-a-uima-school-programs-visit/">Book a UIMA School Programs Visit</a></li>
 								<% end_if %>
+								<% end_if %><%-- end if not HideSideNav --%>
 							</ul>
 						</nav>
 						
