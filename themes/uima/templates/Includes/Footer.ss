@@ -9,7 +9,7 @@
 					<p itemprop="telephone">$SiteConfig.Phone<br />
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>
-					<p><small>&copy; {$Now.Year} University of Iowa Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
+					<p><small>&copy; {$Now.Year} University of Iowa Stanley Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
 					$SiteConfig.Address
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 					<img src="{$ThemeDir}/images/uiowalogo.gif" alt="University of Iowa">
 				</a>
 				<a href="http://uima.uiowa.edu">
-					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Museum of Art">
+					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
 				</a>
 			</div>
 
