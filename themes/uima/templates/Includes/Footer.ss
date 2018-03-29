@@ -30,7 +30,6 @@
 				<ul class="secondary">
 					<li><a href="{$BaseHref}about/contact/">Contact</a></li>
 					<li><a href="{$BaseHref}support/membership/">Membership</a></li>
-					<li><a href="{$BaseHref}about/shop/">Shop</a></li>
 					<li><a href="{$BaseHref}about/news/">News / Press</a></li>
 				</ul>
 			</div>
