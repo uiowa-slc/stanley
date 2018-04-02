@@ -4,12 +4,12 @@
 		<div class="container">
 			<div class="footer-contact">
 				<div itemscope itemtype="http://schema.org/Organization">
-					<h3 itemprop="name">$SiteConfig.Title</h3>
+					<h3 itemprop="name"><a href="{$BaseHref}">$SiteConfig.Title</a></h3>
 					<p><strong><a href="{$BaseHref}visit/locations/">View Museum Locations</a></strong></p>
 					<p itemprop="telephone">$SiteConfig.Phone<br />
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>
-					<p><small>&copy; {$Now.Year} University of Iowa Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
+					<p><small>&copy; {$Now.Year} University of Iowa Stanley Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
 					$SiteConfig.Address
 				</div>
 			</div>
@@ -30,7 +30,6 @@
 				<ul class="secondary">
 					<li><a href="{$BaseHref}about/contact/">Contact</a></li>
 					<li><a href="{$BaseHref}support/membership/">Membership</a></li>
-					<li><a href="{$BaseHref}about/shop/">Shop</a></li>
 					<li><a href="{$BaseHref}about/news/">News / Press</a></li>
 				</ul>
 			</div>
@@ -79,11 +78,8 @@
 			</ul>
 
 			<div class="clearfix footer-logos">
-				<a href="http://www.uiowa.edu" target="_blank">
-					<img src="{$ThemeDir}/images/uiowalogo.gif" alt="University of Iowa">
-				</a>
 				<a href="http://uima.uiowa.edu">
-					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Museum of Art">
+					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
 				</a>
 			</div>
 

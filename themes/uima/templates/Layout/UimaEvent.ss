@@ -83,7 +83,7 @@
 
 				<% include Credit %>
 
-				<p class="accessibility">Individuals with disabilities are encouraged to attend all University of Iowa-sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in a program, please contact UIMA in advance at 335-1727.</p>
+				<p class="accessibility">Individuals with disabilities are encouraged to attend all University of Iowa-sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in a program, please contact the University of Iowa Stanley Museum of Art in advance at 335-1727.</p>
 			</section>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
