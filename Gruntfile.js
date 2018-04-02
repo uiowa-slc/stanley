@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
-					'<%= project.src %>/css/main.css': '<%= project.src %>/scss/main.scss',
+					'<%= project.src %>/css/main-2018-4.css': '<%= project.src %>/scss/main.scss',
 					'<%= project.src %>/css/editor.css': '<%= project.src %>/scss/editor.scss'
 				}
 			}
