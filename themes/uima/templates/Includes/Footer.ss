@@ -79,7 +79,7 @@
 
 			<div class="clearfix footer-logos">
 				<a href="http://uima.uiowa.edu">
-					<img src="{$ThemeDir}/images/iowamuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
+					<img src="{$ThemeDir}/images/stanleymuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
 				</a>
 			</div>
 
