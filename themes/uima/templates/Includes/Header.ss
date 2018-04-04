@@ -3,7 +3,7 @@
 	<div class="container">
 
 		<a href="{$BaseHref}" class="logo">
-			<img src="{$ThemeDir}/images/uisma.png" alt="$SiteConfig.Title">
+			<img src="{$ThemeDir}/images/uisma-logo-2018-4-4.png" alt="$SiteConfig.Title">
 		</a>
 
 		<!-- Search -->
