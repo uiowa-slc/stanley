@@ -17,9 +17,7 @@
 			<div class="contain">
 				<div itemscope itemtype="http://schema.org/Organization">
 					<h3 itemprop="name">$SiteConfig.Title</h3>
-					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-						<p><span itemprop="streetAddress">$SiteConfig.Address1<br />$SiteConfig.Address2</span><br /><span itemprop="addressLocality">$SiteConfig.City, $SiteConfig.State</span> <span itemprop="postalCode">$SiteConfig.Zip</span></p>
-				</div>
+					<p><strong><a href="{$BaseHref}visit/locations/">View Museum Locations</a></strong></p>
 			</div>
 		</div>
 		<hr />
