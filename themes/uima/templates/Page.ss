@@ -35,8 +35,19 @@
 		 <script src="{$ThemeDir}/js/ie/html5shiv.js"></script>
 		 <script src="{$ThemeDir}/js/ie/respond.min.js"></script>
 	<![endif]-->
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NGJTT86');</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body class="$ClassName $Action">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGJTT86"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<div class="shifter-page">
 		<a id="skiptocontent" class="visuallyhidden focusable" href="#main-content">Skip to main content</a>
 		<% include UiowaBar %>
@@ -55,8 +66,25 @@
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<%-- DO NOT REMOVE THE "INSERT JS HERE" COMMENT BELOW, --%>
 	<!-- INSERT JS HERE -->
-	<!-- Google Analytics -->
-	$Analytics
+	<script type="text/javascript">
+	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+	   p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+	   };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+	   n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//radar-cdn.its.uiowa.edu/sp-static-js/2.7.2/radar-tracker.js","snowplow"));
+
+	window.snowplow('newTracker', 'sp', 'radar-collector.its.uiowa.edu', {
+	   appId: 'uiowa.edu.md-university-of-iowa-stanley-museum-of-art',
+	   cookieDomain: '.uiowa.edu',
+	   respectDoNotTrack: true,
+	   post: true,
+	   contexts: {
+	       webPage: true,
+	       performanceTiming: true
+	   }
+	});
+
+	window.snowplow('trackPageView');
+	</script>
 
 </body>
 </html>
