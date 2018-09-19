@@ -67,7 +67,7 @@
 									<% end_if %>
 								<% end_loop %><%-- end if LinkOrCurrent == current --%>
 								<% if $Parent.ID == 33 %>
-									<li><a href="education/book-a-uima-school-programs-visit/">Book a UIMA School Programs Visit</a></li>
+									<li><a href="education/book-a-stanley-school-programs-visit/">Book a Stanley School Programs Visit</a></li>
 								<% end_if %>
 								<% end_if %><%-- end if not HideSideNav --%>
 							</ul>
@@ -98,7 +98,7 @@
 				<div class="hidden-lg">
 					<hr />
 					<p>
-						<a href="education/book-a-uima-school-programs-visit/" class="button">Book a UIMA School Programs Visit &rarr;</a><br />
+						<a href="education/book-a-stanley-school-programs-visit/" class="button">Book a Stanley School Programs Visit &rarr;</a><br />
 						<a href="education/uima-school-programs/">View our other school programs &rarr;</a>
 					</p>
 				</div>
