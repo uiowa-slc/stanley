@@ -23,6 +23,7 @@
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
+
 				$Form
 
 				<div class="row benefitstable__row">

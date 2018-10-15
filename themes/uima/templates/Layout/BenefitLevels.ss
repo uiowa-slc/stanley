@@ -23,6 +23,8 @@
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
+				<p><em>Slide the button below to discover all of our membership levels or <a href="support/membership/levels-benefits/table">view all membership levels in a table.</a></em></p>
+
 				$Form
 				<% include MemberLevels %>
 				<% include Credit %>
