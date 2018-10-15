@@ -1,0 +1,30 @@
+.benefitstable__headercol{
+	@media (min-width: $break-large) {
+		position: -webkit-sticky; top: 0;
+	}
+}
+
+.benefitstable__leveltitle{
+	color: #3a9998;
+}
+.benefitstable__amt{
+	color: white;
+	background: #595959;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.benefitstable__join{
+	background: #1ca2cc;
+	display: block;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
