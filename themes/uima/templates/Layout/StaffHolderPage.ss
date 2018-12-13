@@ -57,7 +57,7 @@
 
 				<div class="row">
 				  
-				  <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				  <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				  		
 				  		<div class="staff-content"> 
 				  			<h6>Lauren Lessing</h6>
@@ -68,7 +68,7 @@
  							</div>
 				  </div>
 				    
-				  <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				  <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 						
 						<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
@@ -79,7 +79,7 @@
  							</div>
 				  </div>
 				  
-				  <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				  <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 
 				  		<div class="staff-content"> 
 				  			<h6>Alex Brannaman</h6>
@@ -102,7 +102,7 @@
 
 				    <div class="row">
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -112,7 +112,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -122,7 +122,7 @@
  							</div>
 				    </div>
 				  
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -132,7 +132,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -142,7 +142,7 @@
  							</div>
 				    </div>
 				  
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -152,7 +152,7 @@
  							</div>
 				    </div>
 
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -162,7 +162,7 @@
  							</div>
 				    </div>
 				  
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -172,7 +172,7 @@
  							</div>
 				    </div>
 				     
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -193,7 +193,7 @@
 
 				    <div class="row">
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -203,7 +203,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -213,7 +213,7 @@
  							</div>
 				    </div>
 				  
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -223,7 +223,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -243,7 +243,7 @@
 
 				    <div class="row">
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -264,7 +264,7 @@
 
 				    <div class="row">
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -284,7 +284,7 @@
 
 				    <div class="row">
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -294,7 +294,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -304,7 +304,7 @@
  							</div>
 				    </div>
 				  
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
@@ -314,7 +314,7 @@
  							</div>
 				    </div>
 				    
-				    <div class="col-lg-4 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+				    <div class="col-lg-6 staff-tile"><img src="{$ThemeDir}/images/elizabeth2.jpg"/>
 				    		<div class="staff-content"> 
 				  			<h6>Lindsey Webb</h6>
 				  			<p>Administrative Services Coordinator<br>
