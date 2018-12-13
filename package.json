@@ -11,5 +11,8 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
     "grunt-criticalcss": "*"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }
