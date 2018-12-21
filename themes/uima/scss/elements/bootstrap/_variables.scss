@@ -179,7 +179,10 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 
 $paragraph-margin-bottom:   1rem !default;
 
-
+// $break-small: 481px;
+// $break-medium: 1024px;
+// $break-large: 1280px;
+// $break-xlarge: 1440px;
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
@@ -190,10 +193,10 @@ $grid-breakpoints: () !default;
 $grid-breakpoints: map-merge(
   (
     xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
+    sm: 481px,
+    md: 1024px,
+    lg: 1280px,
+    xl: 1440px
   ),
   $grid-breakpoints
 );
