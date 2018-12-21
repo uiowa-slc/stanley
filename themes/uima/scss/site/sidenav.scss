@@ -14,6 +14,13 @@ Section Title
 /* ---------------------------------------------------------------
 Side Navigation
 --------------------------------------------------------------- */
+
+.sidebar--sticky{
+	@media (min-width: $break-medium) {
+		position: -webkit-sticky;
+		top: 0;
+	}
+}
 .side-navigation {
 	@media (min-width: $break-medium) {
 		margin-bottom: 3em;
