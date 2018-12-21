@@ -7832,10 +7832,14 @@ Roots = {
 		$(".noUi-handle").append("<a href='support/membership'></a>");
 		//END RANGE SLIDER
 
-		// disable right click on images
-		$('img').bind('contextmenu', function(e) {
-			return false;
-		});
+
+		if(location.hostname == "uima.uiowa.edu"){
+			// disable right click on images
+			$('img').bind('contextmenu', function(e) {
+				return false;
+			});
+
+		}
 
 
 
