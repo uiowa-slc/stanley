@@ -91,7 +91,7 @@
 		</div>
 
 		<!-- Main Content -->
-		<div class="col-md-8 col-lg-8 col-lg-offset-1 children">
+		<div class="col-md-8 col-lg-8 offset-lg-1 children">
 			<section id="main-content" tabindex="-1">
 				$Content
 				<% if $Parent.ID == 33 %>

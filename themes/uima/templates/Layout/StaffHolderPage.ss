@@ -15,11 +15,11 @@
          <% include SideNav %>
       </div>
       <% end_if %>
-      <div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
+      <div class="<% if $Children || $Parent %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-md-10 offset-md-1<% end_if %>">
          <!-- Main Content -->
          <div class="container-fluid">
             <div class="row">
-               <div class="col-md-4 col-md-offset-4 staff-title">
+               <div class="col-md-4 offset-md-4 staff-title">
                   <h1><strong>Staff</strong><br /> <small>University of Iowa Stanley Museum</small></h1>
                </div>
             </div>
@@ -40,12 +40,12 @@
             </div>
 
             <!-- start admin -->
-            <div class="row is-flex">
-               <div class="col-md-4 col-md-offset-4 staff-title">
+            <div class="row">
+               <div class="col-md-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Administration</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">
@@ -80,12 +80,12 @@
 
             <!-- end admin -->
             <!-- start communications -->
-            <div class="row is-flex">
-               <div class="col-lg-4 col-lg-offset-4 staff-title">
+            <div class="row">
+               <div class="col-lg-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Communications, Marketing &amp; Membership</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">
@@ -100,12 +100,12 @@
 
             <!-- end communications -->
             <!-- start curitorial -->
-            <div class="row is-flex">
-               <div class="col-md-4 col-md-offset-4 staff-title">
+            <div class="row">
+               <div class="col-md-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Curitorial</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/staff-placeholder.jpg"/>
                   <div class="staff-content">
@@ -186,12 +186,12 @@
             </div>
             <!-- end curatorial -->
             <!-- start development -->
-            <div class="row is-flex">
-               <div class="col-lg-4 col-lg-offset-4 staff-title">
+            <div class="row">
+               <div class="col-lg-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Development</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">
@@ -208,12 +208,12 @@
             <!-- end development -->
 
             <!-- start education -->
-            <div class="row is-flex">
-               <div class="col-md-4 col-md-offset-4 staff-title">
+            <div class="row">
+               <div class="col-md-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Education</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">
@@ -260,12 +260,12 @@
 
 
             <!-- start registrarial -->
-            <div class="row is-flex">
-               <div class="col-lg-4 col-lg-offset-4 staff-title">
+            <div class="row">
+               <div class="col-lg-4 offset-md-4 staff-title">
                   <h2 class="staff-category-title">Registrarial</h2>
                </div>
             </div>
-            <div class="row is-flex">
+            <div class="row">
                <div class="col-lg-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">

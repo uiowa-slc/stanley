@@ -30,7 +30,7 @@
 			</article>
 		</div><!-- end .col -->
 			<!-- Side Bar -->
-			<div class="col-md-4 col-lg-3 col-lg-offset-1 sidebar">
+			<div class="col-md-4 col-lg-3 offset-lg-1 sidebar">
 				<% if SideBarView %>
 					<div id="Sidebar" class="browsebydate">
 						$SideBarView

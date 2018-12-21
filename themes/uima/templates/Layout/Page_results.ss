@@ -2,7 +2,7 @@
 	<div class="row">
 
 		<!-- Main Content -->
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-10 offset-md-1">
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 

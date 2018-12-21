@@ -13,6 +13,7 @@
 					$SiteConfig.Address
 				</div>
 			</div>
+
 			<div class="clearfix footer-links">
 				<div class="main-links">
 					<ul class="">
@@ -33,6 +34,7 @@
 					<li><a href="{$BaseHref}about/news/">News / Press</a></li>
 				</ul>
 			</div>
+			<div style="clear: both;"></div>
 		</div><!-- end .container -->
 	</div>
 	<div class="footer-bottom">
@@ -46,6 +48,7 @@
 					<input type="hidden" name="p" value="oi" />
 				</form>
 			</div>
+
 			<ul class="clearfix social-icons">
 				<% if $SiteConfig.FacebookLink %>
 					<li>
@@ -82,7 +85,7 @@
 					<img src="{$ThemeDir}/images/stanleymuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
 				</a>
 			</div>
-
+			<div style="clear: both;"></div>
 		</div>
 	</div>
 </footer>

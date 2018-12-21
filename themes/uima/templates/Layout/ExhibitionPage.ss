@@ -52,7 +52,7 @@
 		</div><!-- end .col -->
 
 		<!-- Side Bar -->
-		<div class="col-md-4 col-lg-3 col-lg-offset-1 sidebar">
+		<div class="col-md-4 col-lg-3 offset-lg-1 sidebar">
 			<a href="{$BaseHref}events" class="related-events-link">See All Museum Events &rarr;</a>
 		</div>
 	</div><!-- end .row -->

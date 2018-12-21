@@ -19,7 +19,7 @@
 		<% end_if %>
 
 		<!-- Main Content -->
-		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-md-10 col-md-offset-1<% end_if %>">
+		<div class="<% if $Children || $Parent %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-md-10 offset-md-1<% end_if %>">
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content

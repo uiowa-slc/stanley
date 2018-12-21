@@ -99,7 +99,7 @@
 
 			</section>
 		</div><!-- end .col -->
-		<div class="col-md-3 col-lg-offset-1">
+		<div class="col-md-3 offset-lg-1">
 			<!-- Venue -->
 			<% if $Venue %>
 				<h3>Venue</h3>

@@ -17,7 +17,7 @@
 	<div class="row">
 
 		<!-- Main Content -->
-		<div class="col-lg-10 col-lg-offset-1">
+		<div class="col-lg-10 offset-lg-1">
 			<section id="main-content" tabindex="-1">
 
 				<h1 class="eventpage-title">$Title <% if $SubTitle %><span>$SubTitle</span><% end_if %></h1>

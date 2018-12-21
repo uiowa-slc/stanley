@@ -8,7 +8,7 @@ Check to see if Jackson Pollock page
 				<img src="$ArtworkImage.SetRatioSize(700,700).URL" alt="$Title" />
 				<% if $ArtCredit %>
 					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2">
+						<div class="col-lg-8 offset-lg-2">
 							<span class="artcredit">$ArtCredit</span>
 						</div>
 					</div>
@@ -68,7 +68,7 @@ Check to see if Jackson Pollock page
 				</div>
 			<% end_if %>
 
-			<div class="<% if $Children %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-lg-8 col-lg-offset-2<% end_if %>">
+			<div class="<% if $Children %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-lg-8 offset-lg-2<% end_if %>">
 				<h1 class="art-title">$Title</h1>
 				<div class="cutline">
 					<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>
@@ -91,7 +91,7 @@ Check to see if Jackson Pollock page
 				<img src="$ArtworkImage.SetRatioSize(500,500).URL" alt="$Title" />
 				<% if $ArtCredit %>
 					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2">
+						<div class="col-lg-8 offset-lg-2">
 							<span class="artcredit">$ArtCredit</span>
 						</div>
 					</div>
@@ -151,7 +151,7 @@ Check to see if Jackson Pollock page
 				</div>
 			<% end_if %>
 
-			<div class="<% if $Children %>col-md-8 col-lg-8 col-lg-offset-1 children<% else %>col-lg-8 col-lg-offset-2<% end_if %>">
+			<div class="<% if $Children %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-lg-8 offset-lg-2<% end_if %>">
 				<h1 class="art-title">$Title</h1>
 				<div class="cutline">
 					<% if $ArtworkArtistLifespan %><span class="artistlifespan">$ArtworkArtistLifespan</span><br /><% end_if %>

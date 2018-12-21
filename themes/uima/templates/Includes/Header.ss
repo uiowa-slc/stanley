@@ -16,4 +16,5 @@
 		<button class="shifter-handle">Menu</button>
 		<% include MainNav %>
 	</div>
+	<div style="clear: both;"></div>
 </header>
