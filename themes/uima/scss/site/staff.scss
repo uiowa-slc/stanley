@@ -23,74 +23,18 @@
 .staff-content{
 	font-size: 15px;
 }
+
+.staff-contact{
+	font-size: 14px;
+	color: #7d7d7d;
+}
 .staff-category-title{
 	text-transform: uppercase;
 }
 
-
-
-.row.is-flex {
-    display: flex;
-    flex-wrap: wrap;
+.staff-position{
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
 }
-.row.is-flex > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
-}
-
-/*
-* And with max cross-browser enabled.
-* Nobody should ever write this by hand.
-* Use a preprocesser with autoprefixing.
-*/
-.row.is-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.row.is-flex > [class*='col-'] {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-//     position: relative;
-//     z-index: 10;
-//     justify-content: center;
-//     -moz-border-radius: 10px;
-//     -webkit-border-radius: 10px;
-//     border-radius: 10px;
-//     & span {
-//         z-index: 20;
-//         position: relative;
-//     }
-//     &:before {
-//         background-color: rgba(#353223, 0.00);
-//         top: 0;
-//         content: '';
-//         bottom: 0;
-//         left: 0;
-//         width: 0;
-//         position: absolute;
-//         transition: all .5s ease-in-out;
-//         z-index: 7;
-//     }
-//     &:hover, &:focus {
-//         color: rgba(black, 0.7);
-//         z-index: 8;
-//         &:before {
-//             width: 100%;
-//         }
-//     }
-// }
