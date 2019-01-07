@@ -78,7 +78,7 @@
 			</ul>
 
 			<div class="clearfix footer-logos">
-				<a href="http://uima.uiowa.edu">
+				<a href="http://stanleymuseum.uiowa.edu">
 					<img src="{$ThemeDir}/images/stanleymuseum_logo.png" alt="University of Iowa Stanley Museum of Art">
 				</a>
 			</div>
