@@ -21,39 +21,39 @@
             $Content
 
              <% if $StaffTeams %>
-                  <% loop $StaffTeams %><!-- start admin -->
-            <div class="row">
-               <div class="col-md-4 offset-md-4 staff-title">
-              
-                     <h2 class="staff-category-title">$Title</h2>
-               </div>
-            </div>
-            <div class="row">
-               <% loop $SortedStaffPages.Sort(LastName, ASC) %>
-              <div class="col-lg-3 col-sm-6 staff-tile">
-               <% if $Photo %>
-                  <img src="$Photo.URL"/>
-
-               <% else %>
-
-                     <img src="$ThemeDir/images/staff-placeholder.jpg"/>
-                  <% end_if %>
-                  <div class="staff-content">
-                     <h6>$FirstName $LastName</h6>
-                     <p class="staff-position">$Position</p>
-                     <p class="staff-contact">
-                        $Phone<br />
-                        $EmailAddress
-                     </p>
-                  </div>
-               </div>
-               <% end_loop %>
-            </div>
-           
+             	<% loop $StaffTeams %><!-- start admin -->
+			            <div class="row">
+							<div class="col-md-4 offset-md-4 staff-title">
+								<h2 class="staff-category-title">$Title</h2>
+							</div>
+			            </div>
+			            <div class="row">
+			              <% loop $SortedStaffPages.Sort(LastName, ASC) %>
+				              <div class="col-lg-3 col-sm-6 staff-tile">
+				               <% if $Photo %>
+				                  <img src="$Photo.URL" alt="" role="presentation" />
+				               <% else %>
+				                     <img src="{$ThemeDir}/images/staff-placeholder.jpg"  alt="" role="presentation" />
+				                <% end_if %>
+				                  <div class="staff-content">
+				                     <h3>$FirstName $LastName</h3>
+				                     <% if $Position %>
+				                     	<p class="staff-position">$Position</p>
+				                     <% end_if %>
+				                     <p class="staff-contact">
+				                     	<% if $Phone %>
+				                        	$Phone<br />
+				                        <% end_if %>
+				                        <% if $EmailAddress %>
+				                        	$EmailAddress
+				                        <% end_if %>
+				                     </p>
+				                  </div>
+				               </div>
+               				<% end_loop %>
+            			</div>
                   <% end_loop %>
                <% end_if %>
-
-              
          </div>
          <!-- end .row -->
       </div>
