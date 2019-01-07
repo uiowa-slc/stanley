@@ -38,7 +38,7 @@ class StaffHolderPage extends Page {
 	}
 
 	public function StaffTeams(){
-		$teams = StaffTeam::get();
+		$teams = StaffTeam::get()->sort('Name DESC');
 		return $teams;
 	}
 }

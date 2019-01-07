@@ -21,14 +21,14 @@
             $Content
 
              <% if $StaffTeams %>
-             	<% loop $StaffTeams %><!-- start admin -->
+             	<% loop $StaffTeams.Sort(Name, ASC) %><!-- start admin -->
 			            <div class="row">
 							<div class="col-md-4 offset-md-4 staff-title">
 								<h2 class="staff-category-title">$Title</h2>
 							</div>
 			            </div>
 			            <div class="row">
-			              <% loop $SortedStaffPages.Sort(LastName, ASC) %>
+			              <% loop $StaffPages.Sort(LastName, ASC) %>
 				              <div class="col-lg-3 col-sm-6 staff-tile">
 				               <% if $Photo %>
 				                  <img src="$Photo.URL" alt="" role="presentation" />
