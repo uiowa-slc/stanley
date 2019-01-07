@@ -50,7 +50,13 @@
             <div class="row">
                <% loop $SortedStaffPages.Sort(LastName, ASC) %>
               <div class="col-lg-3 col-sm-6 staff-tile">
+               <% if $Photo %>
                   <img src="$Photo.URL"/>
+
+               <% else %>
+
+                     <img src="$ThemeDir/images/staff-placeholder.jpg"/>
+                  <% end_if %>
                   <div class="staff-content">
                      <h6>$FirstName $LastName</h6>
                      <p class="staff-position">$Position</p>
