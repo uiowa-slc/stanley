@@ -39,36 +39,34 @@
                </div>
             </div>
 
-            <!-- start admin -->
+             <% if $StaffTeams %>
+                  <% loop $StaffTeams %><!-- start admin -->
             <div class="row">
                <div class="col-md-4 offset-md-4 staff-title">
-                  <h2 class="staff-category-title">Administration</h2>
+              
+                     <h2 class="staff-category-title">$Title</h2>
                </div>
             </div>
             <div class="row">
-               <div class="col-lg-3 col-sm-6 staff-tile">
-                  <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
+               <% loop $SortedStaffPages.Sort(LastName, ASC) %>
+              <div class="col-lg-3 col-sm-6 staff-tile">
+                  <img src="$Photo.URL"/>
                   <div class="staff-content">
-                     <h6>Lauren Lessing</h6>
-                     <p class="staff-position">Director</p>
+                     <h6>$FirstName $LastName</h6>
+                     <p class="staff-position">$Position</p>
                      <p class="staff-contact">
-                        319-335-1725<br />
-                        lauren-lessing@uiowa.edu
+                        $Phone<br />
+                        $EmailAddress
                      </p>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6 staff-tile">
-                  <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
-                  <div class="staff-content">
-                     <h6>Lindsey Webb</h6>
-                     <p class="staff-position">Administrative Services Coordinator</p>
-                     <p class="staff-contact">
-                        319-335-1725<br />
-                        lindsey-webb@uiowa.edu
-                     </p>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6 staff-tile">
+               <% end_loop %>
+            </div>
+           
+                  <% end_loop %>
+               <% end_if %>
+
+               <%-- <div class="col-lg-3 col-sm-6 staff-tile">
                   <img src="{$ThemeDir}/images/elizabeth2.jpg"/>
                   <div class="staff-content">
                      <h6>Alex Brannaman</h6>
@@ -325,7 +323,7 @@
                      </p>
                   </div>
                </div>
-            </div>
+            </div> --%>
             <!-- end registrarial -->
 
 
