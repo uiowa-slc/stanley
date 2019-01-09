@@ -196,7 +196,7 @@
 					                        lindley-warrenmickunas@uiowa.edu
 					                     </p>
 					                  </div>
-					               </div>				               </div>
+					               </div>
 
 					               <div class="col-lg-3 col-sm-6 staff-tile">
 					                  <img src="{$ThemeDir}/images/staff-placeholder.jpg"/>
