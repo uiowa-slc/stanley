@@ -124,7 +124,7 @@
                   <!-- start admin -->
 			            <div class="row">
 							<div class="col-md-4 offset-md-4 staff-title">
-								<h2 class="staff-category-title">Curitorial</h2>
+								<h2 class="staff-category-title">Curatorial</h2>
 							</div>
 			            </div>
 			            <div class="row">
