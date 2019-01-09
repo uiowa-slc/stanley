@@ -187,7 +187,27 @@
 
 				                     </p>
 				                  </div>
-				               </div>
+					               <div class="col-lg-3 col-sm-6 staff-tile">
+					                  <img src="/assets/Uploads/lindley-warren-mickunas.jpg"/>
+					                  <div class="staff-content">
+					                     <h6>Lindley Warren Mickunas</h6>
+					                     <p class="staff-position">Curatorial Assistant and Program Assistant of the Intermedia Research Initiative</p>
+					                     <p class="staff-contact">
+					                        lindley-warrenmickunas@uiowa.edu
+					                     </p>
+					                  </div>
+					               </div>				               </div>
+
+					               <div class="col-lg-3 col-sm-6 staff-tile">
+					                  <img src="{$ThemeDir}/images/staff-placeholder.jpg"/>
+					                  <div class="staff-content">
+					                     <h6>Candida Pagan</h6>
+					                     <p class="staff-position">Program Associate of the Intermedia Research Initiative</p>
+					                     <p class="staff-contact">
+					                        candida-pagan@uiowa.edu
+					                     </p>
+					                  </div>
+					               </div>
 
 				              <div class="col-lg-3 col-sm-6 staff-tile">
 
