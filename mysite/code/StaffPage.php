@@ -7,7 +7,7 @@ class StaffPage extends Page {
 		"Position"       => "Text",
 		"EmailAddress"   => "Text",
 		"Phone"          => "Text",
-		
+
 	);
 
 	private static $has_one = array(
@@ -18,7 +18,9 @@ class StaffPage extends Page {
 		"Teams" => "StaffTeam",
 	);
 	private static $defaults = array(
-		'Content' => ''
+		'Content' => '',
+		'ShowInMenus' => 0,
+		'ShowInSearch' => 0
 	);
 	public function getCMSFields() {
 		SiteTree::disableCMSFieldsExtensions();
@@ -33,7 +35,7 @@ class StaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("Position", "Position"));
 		$fields->addFieldToTab("Root.Main", new TextField("EmailAddress", "Email address"));
 		$fields->addFieldToTab("Root.Main", new TextField("Phone", "Phone (XXX-XXX-XXXX)"));
-	
+
 		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team', StaffTeam::get()->map('ID', 'Name')));
 
 		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
