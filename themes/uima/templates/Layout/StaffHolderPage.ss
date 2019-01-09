@@ -178,18 +178,6 @@
 					                  </div>
 					               </div>
 
-					               <div class="col-lg-3 col-sm-6 staff-tile">
-					                  <img src="{$ThemeDir}/images/staff-placeholder.jpg"/>
-					                  <div class="staff-content">
-					                     <h3>Candida Pagan</h3>
-					                     <p class="staff-position">Program Associate of the Intermedia Research Initiative</p>
-					                     <p class="staff-contact">
-					                        candida-pagan@uiowa.edu
-					                     </p>
-					                  </div>
-					               </div>
-
-
 				              <div class="col-lg-3 col-sm-6 staff-tile">
 
 				                  <img src="/assets/Uploads/corey-gundlach.jpg" alt="" role="presentation">
