@@ -10,9 +10,6 @@
 				<% if $HideSideNav %>
 					<li class="active"><a href="$Link">$MenuTitle</a></li>
 				<% else %>
-				<% with Level(1) %>
-					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
-				<% end_with %>
 				<% loop Menu(2) %>
 					<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
 
