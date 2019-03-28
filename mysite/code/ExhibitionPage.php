@@ -5,7 +5,8 @@ class ExhibitionPage extends Page {
 
     private static $allowed_children = array(
     	'*ExhibitionPage',
-    	'CollectionsHolder'
+    	'CollectionsHolder',
+    	'CollectionsPage'
     );
 
 	private static $db = array(
