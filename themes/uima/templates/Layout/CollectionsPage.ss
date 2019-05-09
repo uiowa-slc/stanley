@@ -111,7 +111,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<section class="highlights">
-				<% if Children %><h2>Collection Highlights</h2><% end_if %>
+				<% if Children && $ChildrenSubheading %><h2>$ChildrenSubheading</h2><% end_if %>
 				<ul class="collection-highlights clearfix">
 					<% loop Children %>
 						<li class="highlight-item clearfix">

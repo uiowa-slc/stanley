@@ -4,7 +4,7 @@ class UpdateEventPageTypesBuildTask extends BuildTask {
 
 	protected $title = 'Change Calendar and event page types from PastEvents*';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 

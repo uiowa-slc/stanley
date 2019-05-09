@@ -4,7 +4,7 @@ class PopulateDailyBlogDaysBuildTask extends BuildTask {
 
 	protected $title = 'Populate the DailyArtBlogDay table with all days in the calendar year';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 

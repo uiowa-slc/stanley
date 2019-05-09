@@ -4,7 +4,7 @@ class PopulateDailyBlogPostsBuildTask extends BuildTask {
 
 	protected $title = 'Populate the DailyArtBlogPost table with dummy posts for performance testing';
 
-	protected $enabled = true;
+	protected $enabled = false;
 
 	function run($request) {
 
