@@ -12,6 +12,7 @@ class PopulateCollectionsPageSubheadingFieldBuildTask extends BuildTask {
 		foreach($collectionPages as $collectionPage){
 
 			$collectionPage->ChildrenSubheading = 'Collection Highlights';
+			$collectionPage->write();
 
 			if ($collectionPage->isPublished()) {
 				$collectionPage->doPublish('Stage', 'Live');
