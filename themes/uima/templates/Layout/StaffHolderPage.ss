@@ -321,7 +321,7 @@
 				                  <div class="staff-content">
 				                     <h3>Brady Plunger</h3>
 
-				                     	<p class="staff-position">Assistant Curator of Education</p>
+				                     	<p class="staff-position">Associate Curator of Education</p>
 
 				                     <p class="staff-contact">
 
