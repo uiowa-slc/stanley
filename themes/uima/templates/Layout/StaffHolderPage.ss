@@ -205,7 +205,7 @@
 				                  <div class="staff-content">
 				                     <h3>Vero Rose Smith</h3>
 
-				                     	<p class="staff-position">Associate Curator, Legacies for Iowa Collections-Sharing Project</p>
+				                     	<p class="staff-position">Associate Curator of Special Projects</p>
 
 				                     <p class="staff-contact">
 
@@ -225,7 +225,7 @@
 				                  <div class="staff-content">
 				                     <h3>Joyce Tsai</h3>
 
-				                     	<p class="staff-position">Curator of Art</p>
+				                     	<p class="staff-position">Chief Curator</p>
 
 				                     <p class="staff-contact">
 
