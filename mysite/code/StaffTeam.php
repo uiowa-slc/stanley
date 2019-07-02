@@ -10,7 +10,12 @@ class StaffTeam extends DataObject {
 		'StaffPages' => 'StaffPage'
 		// 'StaffHolderPages' => 'StaffHolderPage'
 	);
-	
+	private static $many_many_extraFields = array(
+		'StaffPages' => array(
+			'SortOrder' => 'Int',
+		)
+	);
+
 	private static $belongs_many_many = array();
 	
 	private static $summary_fields = array( 
@@ -22,18 +27,20 @@ class StaffTeam extends DataObject {
 	);
 
 	public function getCMSFields() {
-		$f = parent::getCMSFields();
-		
-		// $f->addFieldToTab('Root.Main', new CheckboxSetField('StaffPages', 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', StaffPage::get()->map('ID', 'Title')));
+		$f = new FieldList();
+
+		$f->push(new TextField('Name'));
+
+		$conf = GridFieldConfig_RelationEditor::create(10);
+		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
+
+		$f->push(new GridField('StaffPages', 'StaffPages', $this->StaffPages(), $conf));
 		return $f;
 		
 	}
 
-	public function SortedStaffPages(){
-		$staffPages = $this->StaffPages()->sort('Sort');
-		$this->extend('alterSortedStaffPages', $staffPages);
-		return $staffPages;
-
+	public function StaffPages(){
+		return $this->getManyManyComponents('StaffPages')->sort('SortOrder');
 	}
 
 }
