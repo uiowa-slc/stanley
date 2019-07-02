@@ -27,9 +27,12 @@ class StaffPage extends Page {
 		$fields = parent::getCMSFields();
 		SiteTree::enableCMSFieldsExtensions();
 
+
+		$fields->removeByName('Title');
+		$fields->removeByName('MenuTitle');
 		$fields->removeByName("Content");
 		$fields->removeByName("Metadata");
-
+		$fields->removeByName("HideSideNav");
 		$fields->addFieldToTab("Root.Main", new TextField("FirstName", "First Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("LastName", "Last Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("Position", "Position"));
@@ -41,7 +44,7 @@ class StaffPage extends Page {
 		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
 
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (4:3 preferred - resizes to 760 x 507)"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (portrait orientation preferred)"));
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 
 		$this->extend('updateCMSFields', $fields);
@@ -54,6 +57,16 @@ class StaffPage extends Page {
 		$fullName = $this->owner->FirstName.' '.substr($lastName, 0, 1).'.';
 
 		return $fullName;
+	}
+	public function onBeforeWrite(){
+		$filter = new URLSegmentFilter();
+
+		$this->Title = $this->FirstName.' '.$this->LastName;
+		$this->URLSegment = $filter->filter($this->Title);
+
+		// CAUTION: You are required to call the parent-function, otherwise
+        // SilverStripe will not execute the request.
+		parent::onBeforeWrite();
 	}
 	//private static $allowed_children = array("");
 
