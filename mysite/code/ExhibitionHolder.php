@@ -32,7 +32,6 @@ class ExhibitionHolder extends Page {
 
 
 		$fields->removeByName("Credit");
-		$fields->removeByName("Content");
 		return $fields;
 
 	}
