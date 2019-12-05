@@ -1,4 +1,11 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\DatetimeField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+
 class ExhibitionPage extends Page {
 
 	private static $show_in_sitetree = false;
@@ -11,8 +18,8 @@ class ExhibitionPage extends Page {
 
 	private static $db = array(
 
-		'StartDate'             => 'SS_Datetime',
-		'EndDate'               => 'SS_Datetime',
+		'StartDate'             => 'Datetime',
+		'EndDate'               => 'Datetime',
 		'ExhibitionLocation'    => 'Text',
 		'ExhibitionAddress'     => 'Text',
 		'LocationLink'          => 'Text',
@@ -26,11 +33,11 @@ class ExhibitionPage extends Page {
 
 	private static $has_one = array(
 
-		'ExhibitionImage' => 'Image',
+		'ExhibitionImage' => Image::class,
 
 	);
 
-	
+
 
 	public function IsCurrent() {
 		return $this->obj("StartDate")->InPast() && $this->obj("EndDate")->InFuture();
@@ -52,34 +59,8 @@ class ExhibitionPage extends Page {
 		return $fields;
 	}
 
-	
+
 }
 
-class ExhibitionPage_Controller extends Page_Controller {
-	public function EventListByTag() {
-		$calendar = LocalistCalendar::get()->First();
 
-		if (isset($this->EventTag)) {
-			$events = $calendar->EventListByTag($this->EventTag);
-			return $events;
-		} else {
-			$events = $calendar->EventList();
-		}
-
-		return $events;
-	}
-
-	public function EventListBySearch() {
-		$calendar = LocalistCalendar::get()->First();
-
-		if (isset($this->EventTag)) {
-			$events = $calendar->EventListBySearchTerm($this->EventTag);
-			return $events;
-		} else {
-			$events = $calendar->EventList();
-		}
-
-		return $events;
-	}
-}
 ?>

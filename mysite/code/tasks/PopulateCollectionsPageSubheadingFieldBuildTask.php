@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class PopulateCollectionsPageSubheadingFieldBuildTask extends BuildTask {
 
 	protected $title = 'Populate collections page subheadings';

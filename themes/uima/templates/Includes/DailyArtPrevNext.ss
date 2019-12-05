@@ -9,7 +9,7 @@
 							<a href="$PreviousPage.Link" class="prevnext__link prev">
 								<span class="prevnext__arrows">&larr;</span>
 								<% if $PreviousPage.DailyArtImage %>
-									<img src="$PreviousPage.DailyArtImage.CroppedFocusedImage(100,100).URL" alt="Previous Post">
+									<img src="$PreviousPage.DailyArtImage.FocusFill(100,100).URL" alt="Previous Post">
 								<% end_if %>
 								<p class="prevnext__name">
 									<span class="title">Previous</span>
@@ -22,7 +22,7 @@
 									<span class="title">Next</span>
 								</p>
 								<% if $NextPage.DailyArtImage %>
-									<img src="$NextPage.DailyArtImage.CroppedFocusedImage(100,100).URL" alt="Next Post">
+									<img src="$NextPage.DailyArtImage.FocusFill(100,100).URL" alt="Next Post">
 								<% end_if %>
 								<span class="prevnext__arrows">&rarr;</span>
 							</a>

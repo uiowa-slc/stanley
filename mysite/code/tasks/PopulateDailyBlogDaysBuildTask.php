@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class PopulateDailyBlogDaysBuildTask extends BuildTask {
 
 	protected $title = 'Populate the DailyArtBlogDay table with all days in the calendar year';

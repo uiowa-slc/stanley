@@ -10,7 +10,7 @@
 
 						<li class="justify-item">
 							<a href="$Link">
-							<div class="collection-box" style="background-image: url($CollectionsCover.CroppedFocusedImage(400,300).URL);">
+							<div class="collection-box" style="background-image: url($CollectionsCover.FocusFill(400,300).URL);">
 								<h3 class="title">$Title</h3>
 							</div>
 							</a>

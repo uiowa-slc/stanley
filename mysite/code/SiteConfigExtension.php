@@ -1,5 +1,13 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\HeaderField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Control\Email\Email;
+use SilverStripe\ORM\DataExtension;
+
 class SiteConfigExtension extends DataExtension {
 
 	private static $db = array(
@@ -18,7 +26,7 @@ class SiteConfigExtension extends DataExtension {
 	);
 
 	private static $has_one = array(
-		'DefaultOpenGraphImage' => 'Image',
+		'DefaultOpenGraphImage' => Image::class,
 	);
 
 	public function updateCMSFields(FieldList $fields){
@@ -36,13 +44,13 @@ class SiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('State', 'State'));
 		$fields->addFieldToTab('Root.Main', new TextField('Zip', 'Zip Code'));
 		$fields->addFieldToTab('Root.Main', new TextField('Phone', 'Phone Number'));
-		$fields->addFieldToTab('Root.Main', new TextField('Email', 'Email'));
+		$fields->addFieldToTab('Root.Main', new TextField(Email::class, Email::class));
 		return $fields;
 
 	}
 
 }
-class SiteConfigExtensionPage_Controller extends Page_Controller {
+class SiteConfigExtensionPage_Controller extends PageController {
 
 	public function init() {
 		parent::init();

@@ -1,4 +1,13 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\View\Requirements;
+use SilverStripe\CMS\Controllers\ContentController;
 class Page extends SiteTree {
 
 	private static $db = array(
@@ -13,9 +22,9 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
-		"Photo"          => "Image",
-		'CreditThumb'    => 'Image',
-		"AssociatedPage" => "SiteTree",
+		"Photo"          => Image::class,
+		'CreditThumb'    => Image::class,
+		"AssociatedPage" => SiteTree::class,
 	);
 
 	public function getCMSFields() {
@@ -72,43 +81,3 @@ class Page extends SiteTree {
 	}
 }
 
-class Page_Controller extends ContentController {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array(
-	);
-
-	public function init() {
-		parent::init();
-// Requirements::set_backend(new BetterRequirementsBackend());
-// if (Director::isLive()) {
-// 	//Director::forceSSL();
-// 	echo "LIVE";
-// }else{
-// 	echo "DEV";
-// }
-// print_r(Config::inst()->get('Director', 'alternate_protocol'));
-		Requirements::block('event_calendar/javascript/calendar_widget.js');
-		Requirements::block('framework/thirdparty/jquery/jquery.js');
-	
-	}
-
-	public function DollarSign() {
-		return "$";
-	}
-
-}

@@ -1,14 +1,21 @@
 <?php
+
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TreeDropdownField;
+
 class CollectionsPage extends Page {
 	private static $db = array(
 		'ChildrenSubheading' => 'Text'
 
 	);
 	private static $has_one = array(
-		'ArtCreditLink' => 'SiteTree',
-		'CollectionsImage' => 'Image',
-		'CollectionsCover' => 'Image',
-		
+		'ArtCreditLink' => SiteTree::class,
+		'CollectionsImage' => Image::class,
+		'CollectionsCover' => Image::class,
+
 
 	);
 
@@ -26,16 +33,11 @@ class CollectionsPage extends Page {
 		$fields->removeByName("Photo");
 		$fields->addFieldToTab('Root.Main', new TextField('ChildrenSubheading', 'Heading for pages under this Collection (default: "Collection Highlights", can be left blank)' ));
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsCover', 'Collections Cover Image'));
-		
+
 		$fields->addFieldToTab('Root.Main', new UploadField('CollectionsImage', 'Collections Large Header Image (1200px x 400px'));
-		$fields->addFieldToTab('Root.Main', new TreeDropdownField('ArtCreditLinkID', 'Image Credit Link', 'SiteTree'));
+		$fields->addFieldToTab('Root.Main', new TreeDropdownField('ArtCreditLinkID', 'Image Credit Link', SiteTree::class));
 
 
 	return $fields;
 	}
 }
-
-class CollectionsPage_Controller extends Page_Controller {
-
-}
-?>

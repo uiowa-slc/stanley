@@ -1,4 +1,16 @@
 <?php
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
+use SilverStripe\Forms\GridField\GridFieldPaginator;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\Tab;
+use SilverStripe\Core\ClassInfo;
+use SilverStripe\Lumberjack\Forms\GridFieldConfig_Lumberjack;
+use SilverStripe\Control\Controller;
+use SilverStripe\Admin\LeftAndMain;
+use SilverStripe\CMS\Model\SiteTreeExtension;
+
 
 /**
  * Class Lumberjack
@@ -43,14 +55,14 @@ class LumberjackExhibition extends SiteTreeExtension {
 			))->sort('EndDate DESC');
 
 			$config = $this->getLumberjackGridFieldConfig();
-			$columns = $config->getComponentByType('GridFieldDataColumns');
+			$columns = $config->getComponentByType(GridFieldDataColumns::class);
 			$columns->setDisplayFields(array(
 				'Title' => 'Title',
 				'StartDate' => 'Start Date',
 				'EndDate' => 'End Date'
 			));	
 
-			$config->getComponentByType('GridFieldPaginator')->setItemsPerPage(25);
+			$config->getComponentByType(GridFieldPaginator::class)->setItemsPerPage(25);
 
 			$gridField = new GridField(
 				"ChildPages",

@@ -1,5 +1,14 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\DateField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\ORM\FieldType\DBDate;
+use SilverStripe\Blog\Model\BlogPost;
+use SilverStripe\Blog\Model\BlogPostController;
+
 class DailyArtBlogPost extends BlogPost {
 
 	private static $db = array(
@@ -7,7 +16,7 @@ class DailyArtBlogPost extends BlogPost {
 
 	);
 	private static $has_one = array(
-		'DailyArtImage' => 'Image',
+		'DailyArtImage' => Image::class,
 		'DailyArtBlogDay' => 'DailyArtBlogDay'
 	);
 
@@ -57,7 +66,7 @@ class DailyArtBlogPost extends BlogPost {
 	}
 
 	public function getPublishDateOnly(){
-		$date = Date::create();
+		$date = DBDate::create();
 		$date->setValue($this->obj('PublishDate')->format('Y-m-d'));
 		return $date;
 	}
@@ -76,7 +85,7 @@ class DailyArtBlogPost extends BlogPost {
 
 }
 
-class DailyArtBlogPost_Controller extends BlogPost_Controller {
+class DailyArtBlogPost_Controller extends BlogPostController {
 
 	public function init() {
 		parent::init();

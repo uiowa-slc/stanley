@@ -4,7 +4,7 @@
 	</p>
 	<% if $DailyArtImage %>
 		<div class="dailyart-image">
-			<img src="$DailyArtImage.SetRatioSize(500,500).URL" alt="$Title" />
+			<img src="$DailyArtImage.Fill(500,500).URL" alt="$Title" />
 		</div>
 	<% end_if %>
 	<% include SocialShare %>

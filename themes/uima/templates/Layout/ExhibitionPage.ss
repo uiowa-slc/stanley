@@ -3,11 +3,11 @@
 
 	<picture>
 		<!--[if IE 9]><video style="display: none;"><![endif]-->
-		<source srcset="$ExhibitionImage.CroppedFocusedImage(1200,600).URL" media="(min-width: 980px)">
-		<source srcset="$ExhibitionImage.CroppedFocusedImage(1000,500).URL" media="(min-width: 768px)">
-		<source srcset="$ExhibitionImage.CroppedFocusedImage(700,350).URL" media="(min-width: 480px)">
+		<source srcset="$ExhibitionImage.FocusFill(1200,600).URL" media="(min-width: 980px)">
+		<source srcset="$ExhibitionImage.FocusFill(1000,500).URL" media="(min-width: 768px)">
+		<source srcset="$ExhibitionImage.FocusFill(700,350).URL" media="(min-width: 480px)">
 		<!--[if IE 9]></video><![endif]-->
-		<img srcset="$ExhibitionImage.CroppedFocusedImage(400,300).URL" alt="$Title" class="exhibitpage-img">
+		<img srcset="$ExhibitionImage.FocusFill(400,300).URL" alt="$Title" class="exhibitpage-img">
 	</picture>
 
 	<div class="inner">

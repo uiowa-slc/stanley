@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class UpdateEventPageTypesBuildTask extends BuildTask {
 
 	protected $title = 'Change Calendar and event page types from PastEvents*';

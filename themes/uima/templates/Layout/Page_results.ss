@@ -21,7 +21,7 @@
 						<% end_if %>
 						<% if $ExhibitionImage %>
 							<a href="$link">
-								<img src="$ExhibitionImage.CroppedFocusedImage(160,120).URL" alt="$MenuTitle">
+								<img src="$ExhibitionImage.FocusFill(160,120).URL" alt="$MenuTitle">
 							</a>
 						<% end_if %>
 						<p class="search-type">$NiceName</p>

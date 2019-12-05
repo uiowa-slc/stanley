@@ -32,7 +32,7 @@
 			              <% loop $StaffPages %>
 				              <div class="col-lg-3 col-sm-6 staff-tile">
 				               <% if $Photo %>
-				                  <img src="$Photo.URL" alt="" role="presentation" />
+				                  <img src="$Photo.ScaleWidth(600).URL" alt="" role="presentation" />
 				               <% else %>
 				                     <img src="{$ThemeDir}/images/staff-placeholder.jpg"  alt="" role="presentation" />
 				                <% end_if %>
@@ -54,7 +54,7 @@
                				<% end_loop %>
             			</div>
                   <% end_loop %>
-               <% end_if %> 
+               <% end_if %>
          </div>
          <!-- end .row -->
       </div>

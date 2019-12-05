@@ -1,34 +1,12 @@
 ---
-Name: mysite
-After:
-  - 'framework/*'
-  - 'cms/*'
+Name: uima
 ---
-# YAML configuration for SilverStripe
-# See http://doc.silverstripe.org/framework/en/topics/configuration
-# Caution: Indentation through two spaces, not tabs
-
-SSViewer:
-  theme: 'simple'
-Blog:
-  extensions:
-    - WidgetPageExtension
-BlogPost:
-  extensions:
-    - WidgetPageExtension
-Calendar:
-    timezone: America/Chicago
-    language: EN
-BlogMigrationTask:
-    run_during_dev_build: false
-CalendarEvent:
-  show_in_sitetree: false
-  echo_progress: true
-SiteConfig:
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: mysite
+SilverStripe\View\SSViewer:
+  rewrite_hash_links: false
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
-Page:
-  extensions:
-    - OpenGraphExtension
-FormSpamProtectionExtension:
-    default_spam_protector: NocaptchaProtector
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+  default_spam_protector: NocaptchaProtector

@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\ORM\FieldType\DBDatetime;
+use SilverStripe\Dev\BuildTask;
+
 class PopulateDailyBlogPostsBuildTask extends BuildTask {
 
 	protected $title = 'Populate the DailyArtBlogPost table with dummy posts for performance testing';
@@ -19,7 +22,7 @@ class PopulateDailyBlogPostsBuildTask extends BuildTask {
 				$post = DailyArtBlogPost::create();
 				$post->ParentID = 576;
 				$post->Title = 'Daily Art Blog Post '.$month.'/'.$day;
-				$post->PublishDate = SS_Datetime::create();
+				$post->PublishDate = DBDatetime::create();
 				$post->PublishDate->setValue('2018-'.$month.'-'.$day.' 00:00:00');
 				$post->DailyArtImageID = 705;
 

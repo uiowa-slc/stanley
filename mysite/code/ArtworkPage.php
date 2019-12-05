@@ -1,4 +1,10 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+
 class ArtworkPage extends Page {
 	private static $db = array(
 
@@ -15,13 +21,13 @@ class ArtworkPage extends Page {
 	);
 	private static $has_one = array(
 
-		'ArtworkImage' => 'Image',
+		'ArtworkImage' => Image::class,
 
 	);
 
 
 
-	function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Metadata");
@@ -47,7 +53,4 @@ class ArtworkPage extends Page {
 	}
 }
 
-class ArtworkPage_Controller extends Page_Controller {
-
-}
 ?>

@@ -1,12 +1,16 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+
+
 class PastEvent extends CalendarEvent {
 	private static $db = array(
 
 	);
 
 	private static $has_one = array (
-		'Image' => 'Image'
+		'Image' => Image::class
 	);
 	private static $defaults = array (
 		'ShowInMenus' => false
@@ -18,7 +22,7 @@ class PastEvent extends CalendarEvent {
 		$fields->removeByName("Credit");
 		$fields->removeByName("AssociatedPageID");
 
-		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField(Image::class), 'Content');
 		return $fields;
 	}
 	public function validURLSegment() {
@@ -27,35 +31,6 @@ class PastEvent extends CalendarEvent {
 	public function syncLinkTracking() {
 		return null;
 	}
-
-
-}
-
-class CommunityEvent_Controller extends Page_Controller {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-
-	public function init() {
-		parent::init();
-		// You can include any CSS or JS required by your project here.
-		// See: http://doc.silverstripe.org/framework/en/reference/requirements
-	}
-
-
 
 
 }

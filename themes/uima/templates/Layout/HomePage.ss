@@ -5,10 +5,10 @@
 			<li>
 				<% if $AssociatedPageID %>
 					<a href="$AssociatedPage.Link">
-						<img src="$Image.CroppedFocusedImage(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+						<img src="$Image.FocusFill(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
 					</a>
 				<% else %>
-					<img src="$Image.CroppedFocusedImage(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+					<img src="$Image.FocusFill(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
 				<% end_if %>
 			</li>
 			<% end_loop %>

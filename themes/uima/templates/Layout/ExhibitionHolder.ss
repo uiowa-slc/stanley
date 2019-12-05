@@ -31,7 +31,7 @@
 						<% if $ExhibitionImage %>
 							<div class="exhibit-img">
 								<a href="$link">
-									<img src="$ExhibitionImage.CroppedFocusedImage(700,350).URL" alt="$Title">
+									<img src="$ExhibitionImage.FocusFill(700,350).URL" alt="$Title">
 								</a>
 							</div>
 						<% end_if %>
