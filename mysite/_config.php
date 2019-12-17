@@ -4,7 +4,7 @@ global $project;
 $project = 'mysite';
 
 global $database;
-$database = 'uima2';
+$database = 'stanley';
 
 require_once 'conf/ConfigureFromEnv.php';
 
