@@ -24,7 +24,6 @@
 								<img src="$ExhibitionImage.FocusFill(160,120).URL" alt="$MenuTitle">
 							</a>
 						<% end_if %>
-						<p class="search-type">$NiceName</p>
 						<h4>
 							<a href="$Link">
 								<% if $MenuTitle %>

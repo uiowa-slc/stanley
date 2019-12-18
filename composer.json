@@ -37,7 +37,8 @@
             "themes/uima/css",
             "themes/uima/fonts",
             "themes/uima/images",
-            "themes/uima/js"
+            "themes/uima/js",
+            "themes/uima/lib"
         ],
         "project-files-installed": [
             "app/.htaccess",

@@ -10,6 +10,8 @@ class ExhibitionPage extends Page {
 
 	private static $show_in_sitetree = false;
 
+	private static $icon_class = 'font-icon-thumbnails';
+
     private static $allowed_children = array(
     	'*ExhibitionPage',
     	'CollectionsHolder',

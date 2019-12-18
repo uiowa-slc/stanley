@@ -1,6 +1,6 @@
 <div class="dailyart-entry">
 	<p class="dailyart-date">
-		<time datetime="$Date.format(c)" itemprop="datePublished">$Date.Format(F jS)</time>
+		<time datetime="$Date.Rfc3339" itemprop="datePublished">$Date.Format(MMMM d)</time>
 	</p>
 	<% if $DailyArtImage %>
 		<div class="dailyart-image">

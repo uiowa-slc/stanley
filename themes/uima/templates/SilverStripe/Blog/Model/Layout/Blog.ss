@@ -60,7 +60,7 @@
 									<% end_if %>
 									<h3 class="newsblock-title"><a href="$Link">$Title</a></h3>
 									<p class="entry-date">
-										Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.Format(F d), $Date.Format(Y)</time>
+										Posted on <time datetime="$Date.Rfc3339" itemprop="datePublished">$Date.Format(MMMM d), $Date.Format(Y)</time>
 									</p>
 									<p class="entry-content">$Content.LimitCharacters(150)</p>
 								</div>

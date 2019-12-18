@@ -9,20 +9,20 @@
 		<% loop $DateTimes %>
 			<p class="eventlist-date">
 			<% with $StartDate %>
-				<time itemprop="startDate" datetime="$Format(c)">
-					$Format(F) $Format(j)
+				<time itemprop="startDate" datetime="$Rfc3339">
+					$Format(MMMM) $Format(d)
 				</time>
 			<% end_with %>
 			<% if $EndDate && $EndDate != $StartDate %>
 				&ndash;
 				<% with $EndDate %>
-					<time itemprop="endDate" datetime="$Format(c)">
-						$Format(F) $Format(j)
+					<time itemprop="endDate" datetime="$Rfc3339">
+						$Format(MMMM) $Format(d)
 					</time>
 				<% end_with %>
 			<% end_if %>
 			<if StartTime %>
-				<span class="eventlist-time">$StartTime.Format("g:i a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i a")<% end_with %></span>
+				<span class="eventlist-time">$StartTime.Format("h:mm a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("hh:mm a")<% end_with %></span>
 			<% end_if %>
 			</p>
 		<% end_loop %>

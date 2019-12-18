@@ -10,3 +10,8 @@ SilverStripe\SiteConfig\SiteConfig:
     - SiteConfigExtension
 SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
   default_spam_protector: NocaptchaProtector
+SiteTree:
+  extensions:
+    - SilverStripe\ORM\Search\FulltextSearchable
+SilverStripe\ORM\Search\FulltextSearchable:
+  enabled: ‘true’

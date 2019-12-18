@@ -9,7 +9,7 @@ $validator = new PasswordValidator();
 $validator->minLength(8);
 $validator->checkHistoricalPasswords(6);
 Member::set_password_validator($validator);
-
+SilverStripe\ORM\Search\FulltextSearchable::enable();
 
 TinyMCEConfig::get('cms')
     ->addButtonsToLine(1, 'styleselect')

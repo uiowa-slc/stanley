@@ -41,7 +41,7 @@ class DailyArtBlog_Controller extends BlogController {
     }
 
     public function slider(){
-        return $this->renderWith('DailyArtBlogDaySlider');
+        return $this->renderWith('Includes/DailyArtBlogDaySlider');
     }
 
 

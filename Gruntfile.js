@@ -18,9 +18,9 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'<%= project.src %>/bower_components/nouislider/distribute/jquery.nouislider.all.js',
-					'<%= project.src %>/bower_components/flickity/dist/flickity.pkgd.js',
-					'<%= project.src %>/bower_components/flickity-bg-lazyload/bg-lazyload.js',
+					'<%= project.src %>/lib/nouislider/distribute/jquery.nouislider.all.js',
+					'<%= project.src %>/lib/flickity/dist/flickity.pkgd.js',
+					'<%= project.src %>/lib/flickity-bg-lazyload/bg-lazyload.js',
 					'<%= project.src %>/js/plugins/05_core.js',
 					'<%= project.src %>/js/plugins/10_transition.js',
 					'<%= project.src %>/js/plugins/15_lightbox.js',

@@ -4,11 +4,11 @@
 <main class="container main" role="main" id="main" data-blog-url="{$Parent.Link}">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<section id="main-content" tabindex="-1" data-month="$PublishDate.Format(n)" data-date="$PublishDate.Format(j)">
+			<section id="main-content" tabindex="-1" data-month="$PublishDate.Format(M)" data-date="$PublishDate.Format(d)">
 				<div class="dailyart">
 					<h1>Art Of The Day</h1>
 					<p class="dailyart-date">
-						<time datetime="$Date.format(c)" itemprop="datePublished">$Date.Format(F jS)</time>
+						<time datetime="$Date.Rfc3339" itemprop="datePublished">$Date.Format(MMMM d)</time>
 					</p>
 
 					<% if $DailyArtImage %>
