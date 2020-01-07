@@ -177,7 +177,18 @@ Skip Links
 /* ---------------------------------------------------------------
 Admin Login form fields
 --------------------------------------------------------------- */
-#MemberLoginForm_LoginForm fieldset,
+
+#SAMLLoginForm_LoginForm .action{
+	background: white;
+	border: 1px black solid;
+	color: black;
+	padding: 20px;
+	display: block;
+	width: 75%;
+	margin: auto;
+}
+
+#SAMLLoginForm_LoginForm fieldset,
 .userform {
 	padding: 1em 0;
 	border: none;
