@@ -20,3 +20,8 @@ Calendar:
     - SilverStripe\Lumberjack\Model\Lumberjack
 CalendarEvent:
   show_in_sitetree: false
+SilverStripe\Assets\Flysystem\AssetAdapter:
+  file_permissions:
+    'file':
+      'public': '0644'
+      'private': '0600'
