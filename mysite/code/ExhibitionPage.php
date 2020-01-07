@@ -49,9 +49,7 @@ class ExhibitionPage extends Page {
 		$fields->removeByName("Photo");
 		$fields->removeByName("Content");
 		$fields->addFieldToTab("Root.Main", $dateField = new DatetimeField('StartDate', 'Start Date'));
-		$dateField->getDateField()->setConfig('showcalendar', true);
 		$fields->addFieldToTab("Root.Main", $dateField = new DatetimeField('EndDate', 'End Date'));
-		$dateField->getDateField()->setConfig('showcalendar', true);
 		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionLocation', 'Exhibition Location'));
 		$fields->addFieldToTab('Root.Main', new TextField('ExhibitionAddress', 'Exhibition Address'));
 		$fields->addFieldToTab('Root.Main', new TextField('LocationLink', 'Location Link'));
