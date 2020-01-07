@@ -15,3 +15,8 @@ SiteTree:
     - SilverStripe\ORM\Search\FulltextSearchable
 SilverStripe\ORM\Search\FulltextSearchable:
   enabled: ‘true’
+Calendar:
+  extensions:
+    - SilverStripe\Lumberjack\Model\Lumberjack
+CalendarEvent:
+  show_in_sitetree: false

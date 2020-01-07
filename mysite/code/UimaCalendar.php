@@ -3,6 +3,10 @@
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\ORM\DataList;
+use SilverStripe\Lumberjack\Model\Lumberjack;
+use SilverStripe\Forms\FieldList; 
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
 
 class UimaCalendar extends Calendar {
 	private static $db = array(
@@ -17,16 +21,8 @@ class UimaCalendar extends Calendar {
 		'UimaEvent'
 	);
 
-	private static $extensions = array(
-        // 'LumberjackEvents',
-    );
 
-
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
-		$fields->removeByName("Credit");
-		return $fields;
-	}
+    private static $singular_name = 'Stanley Calendar';
 
 
 }

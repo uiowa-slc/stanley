@@ -1,5 +1,9 @@
 <?php
 use SilverStripe\ORM\DataList;
+use SilverStripe\Lumberjack\Model\Lumberjack;
+use SilverStripe\Forms\FieldList; 
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
+
 class Calendar extends Page {
 
 	private static $allowed_children = array (
@@ -44,5 +48,43 @@ class Calendar extends Page {
 					$list = $list->where($filter);
 				}
 				return $list;
-			}
+	}
+
+	public function getCMSFields(){
+		$fields = parent::getCMSFields();
+
+		$grid = $fields->dataFieldByName('ChildPages');
+		$config = $grid->getConfig();
+        $dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
+
+        $dataColumns->setDisplayFields([
+            'Title' => 'Title',
+            'Created' => 'Created'
+        ]);
+
+		$list = $grid->getList();
+
+		$sortedList = $list->sort('Created DESC');
+
+		$grid->setList($sortedList);
+		$grid->setTitle('Events');
+		$grid->setName('Events');
+		
+		$fields->addFieldToTab('Root.Main', $grid);
+
+		$fields->removeByName("ChildPages");
+		$fields->removeByName("Credit");
+		$fields->removeByName("Content");
+
+		return $fields;
+	}
+
+	// public function getLumberjackPagesForGridfield($excluded = array()){
+ //        return CalendarEvent::get()->filter([
+ //            'ParentID' => $this->owner->ID,
+ //            'ClassName' => $excluded,
+ //        ])->sort('Created DESC');
+
+	// }
+
 }

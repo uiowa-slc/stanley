@@ -32,6 +32,8 @@ class UimaEvent extends CalendarEvent {
 	);
 
 
+	private static $singular_name = 'Stanley Event';
+
 
 
 	public function getCMSFields() {
