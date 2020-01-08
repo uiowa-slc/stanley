@@ -31,6 +31,7 @@ class UimaEvent extends CalendarEvent {
 		'ShowInMenus' => false
 	);
 
+	private static $owns = array('Image');
 
 	private static $singular_name = 'Stanley Event';
 
