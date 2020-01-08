@@ -46,7 +46,7 @@ class UimaEvent extends CalendarEvent {
 		$fields->addFieldToTab('Root.Main', new TextField( 'SubTitle', 'Subheading'), 'Content');
 		$fields->addFieldToTab('Root.Main', new TextField( 'Cost', 'Cost'), 'Content');
 		$fields->addFieldToTab('Root.Main', new TextField( 'Contact', 'Contact'), 'Content');
-		$fields->addFieldToTab('Root.Main', new UploadField(Image::class), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Content');
 
 		$fields->addFieldToTab('Root.Credit', new UploadField('CreditThumb', 'Credit: Artwork Thumbnail'));
 		$fields->addFieldToTab('Root.Credit', new TextField('CreditName','Credit: Artist Name'));
