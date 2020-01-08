@@ -25,7 +25,7 @@ class ArtworkPage extends Page {
 
 	);
 
-
+	private static $owns = array('ArtworkImage');
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();

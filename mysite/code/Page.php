@@ -27,6 +27,8 @@ class Page extends SiteTree {
 		"AssociatedPage" => SiteTree::class,
 	);
 
+	private static $owns = array('Photo', 'CreditThumb');
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		// $fields->removeByName("Metadata");

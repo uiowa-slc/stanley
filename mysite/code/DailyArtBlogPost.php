@@ -20,6 +20,8 @@ class DailyArtBlogPost extends BlogPost {
 		'DailyArtBlogDay' => 'DailyArtBlogDay'
 	);
 
+	private static $owns = array('DailyArtImage');
+
 
 	private static $allowed_children = array(
 
