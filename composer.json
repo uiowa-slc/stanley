@@ -24,7 +24,8 @@
         "silverstripe/widgets": "*",
         "silverstripe/lumberjack": "*",
         "undefinedoffset/silverstripe-nocaptcha": "*",
-        "unclecheese/betterbuttons": "*"
+        "unclecheese/betterbuttons": "*",
+        "md/deploy-helper": "*"
     },
     "config": {
         "process-timeout": 600
@@ -71,6 +72,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
     ]
 }
