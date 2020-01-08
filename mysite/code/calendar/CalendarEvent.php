@@ -17,7 +17,7 @@ class CalendarEvent extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$dateTimesConf = GridFieldConfig_RelationEditor::create();
-		$dateTimesField = new GridField('DateTimes', 'Dates and Times', $this->DateTimes());
+		$dateTimesField = new GridField('DateTimes', 'Dates and Times', $this->DateTimes(), $dateTimesConf);
 
 		$fields->addFieldToTab('Root.DatesAndTimes', $dateTimesField);
 		return $fields;
