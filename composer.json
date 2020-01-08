@@ -24,7 +24,6 @@
         "silverstripe/widgets": "*",
         "silverstripe/lumberjack": "*",
         "undefinedoffset/silverstripe-nocaptcha": "*",
-        "unclecheese/betterbuttons": "*",
         "md/deploy-helper": "*"
     },
     "config": {
