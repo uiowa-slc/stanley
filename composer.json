@@ -35,11 +35,11 @@
     "extra": {
         "resources-dir": "_resources",
         "expose": [
-            "themes/uima/css",
-            "themes/uima/fonts",
-            "themes/uima/images",
-            "themes/uima/js",
-            "themes/uima/lib"
+            "themes/stanley/css",
+            "themes/stanley/fonts",
+            "themes/stanley/images",
+            "themes/stanley/js",
+            "themes/stanley/lib"
         ],
         "project-files-installed": [
             "app/.htaccess",

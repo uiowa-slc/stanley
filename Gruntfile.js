@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 		* Set project object
 		*/
 		project: {
-			src: 'themes/uima',
+			src: 'themes/stanley',
 			scss: ['<%= project.src %>/scss'],
 			css: ['<%= project.src %>/css'],
 			js: ['<%= project.src %>/js']
