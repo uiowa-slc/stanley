@@ -39,7 +39,7 @@
 							</time>
 						<% end_with %>
 					<% end_if %>
-					<if StartTime %><span class="eventlist-time">$StartTime.Format("hh:mm a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i a")<% end_with %></span><% end_if %>
+					<if StartTime %><span class="eventlist-time">$StartTime.Format("hh:mm a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("hh:mm a")<% end_with %></span><% end_if %>
 					<% if AllDay %>This event lasts all day<% end_if %>
 				<% end_loop %>
 				</ul>
