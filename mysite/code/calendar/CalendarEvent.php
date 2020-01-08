@@ -1,6 +1,7 @@
 <?php
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\TextField;
 
 class CalendarEvent extends Page {
 
@@ -16,6 +17,8 @@ class CalendarEvent extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+
+		$fields->addFieldToTab('Root.Main', new TextField( 'Location', 'Location'), 'Content');
 		$dateTimesConf = GridFieldConfig_RelationEditor::create();
 		$dateTimesField = new GridField('DateTimes', 'Dates and Times', $this->DateTimes(), $dateTimesConf);
 
