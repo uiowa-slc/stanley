@@ -52,7 +52,7 @@ class DailyArtBlogPost extends BlogPost {
 		 // Debug::show($publishField);
 		$fields->removeByName("PublishDate");
         $publishDate = DateField::create('PublishDate', _t('BlogPost.PublishDate', 'Publish Date'));
-        $publishDate->setConfig('showcalendar', true);
+
 
 		$fields->removeByName("FeaturedImage");
 		$fields->removeByName("Metadata");
@@ -60,7 +60,7 @@ class DailyArtBlogPost extends BlogPost {
 		$fields->removeByName("CustomSummary");
 		
 		$fields->addFieldToTab('Root.Main', $publishDate, 'Content');
-		$fields->renameField("PublishDate", "Publish Date <strong>* Required for Art of the Day to work properly</strong>");
+		$fields->renameField("PublishDate", "Publish Date* Required for Art of the Day to work properly");
 		$fields->addFieldToTab('Root.Main', new UploadField('DailyArtImage', 'Artwork Image'),'Content');
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('DailyArtAdditionalText','Additional Information'));
 
