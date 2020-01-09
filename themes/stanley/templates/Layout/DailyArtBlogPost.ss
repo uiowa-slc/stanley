@@ -3,7 +3,7 @@
 <%-- <% include DailyArtBlogDaySlider %> --%>
 <main class="container main" role="main" id="main" data-blog-url="{$Parent.Link}">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-8 offset-md-2">
 			<section id="main-content" tabindex="-1" data-month="$PublishDate.Format(M)" data-date="$PublishDate.Format(d)">
 				<div class="dailyart">
 					<h1>Art Of The Day</h1>
