@@ -28,18 +28,18 @@
 					<li>
 					<% with $StartDate %>
 						<time itemprop="startDate" datetime="$Rfc3339">
-							$Format(MMM) $Format(d), $Format(Y)
+							$Format(MMMM) $Format(d), $Format(Y)
 						</time>
 					<% end_with %>
 					<% if $EndDate && $EndDate != $StartDate %>
 						&ndash;
 						<% with $EndDate %>
 							<time itemprop="endDate" datetime="$Rfc3339">
-								$Format(MMM) $Format(d), $Format(Y)
+								$Format(MMMM) $Format(d), $Format(Y)
 							</time>
 						<% end_with %>
 					<% end_if %>
-					<if StartTime %><span class="eventlist-time">$StartTime.Format("hh:mm a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("g:i a")<% end_with %></span><% end_if %>
+					<if StartTime %><span class="eventlist-time">$StartTime.Format("h:mm a")<% if $EndTime %><% with $EndTime %>&ndash;$Format("h:mm a")<% end_with %></span><% end_if %>
 					<% if AllDay %>This event lasts all day<% end_if %>
 				<% end_loop %>
 				</ul>

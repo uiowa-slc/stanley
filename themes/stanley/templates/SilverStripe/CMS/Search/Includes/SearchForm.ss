@@ -1,4 +1,4 @@
-<form id="SearchForm_SearchForm" action="{$BaseHref}/home/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+<form id="SearchForm_SearchForm" action="home/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
 	<p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
 	<fieldset>
 		<div id="Search" class="field text nolabel">

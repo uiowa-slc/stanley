@@ -22,7 +22,7 @@ class PastEvent extends CalendarEvent {
 		$fields->removeByName("Credit");
 		$fields->removeByName("AssociatedPageID");
 
-		$fields->addFieldToTab('Root.Main', new UploadField(Image::class), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
 		return $fields;
 	}
 	public function validURLSegment() {

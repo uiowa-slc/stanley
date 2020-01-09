@@ -19,6 +19,8 @@ class CollectionsPage extends Page {
 
 	);
 
+	private static $owns = array('CollectionsImage', 'CollectionsCover');
+
 	private static $allowed_children = array('ArtworkPage');
 
 	private static $defaults = array(

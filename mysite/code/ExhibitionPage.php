@@ -39,6 +39,7 @@ class ExhibitionPage extends Page {
 
 	);
 
+	private static $owns = array('ExhibitionImage');
 
 
 	public function IsCurrent() {

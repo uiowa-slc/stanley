@@ -31,6 +31,10 @@ class StaffPage extends Page {
 		'ShowInMenus' => 0,
 		'ShowInSearch' => 0
 	);
+
+	private static $owns = array('Photo');
+
+	
 	public function getCMSFields() {
 		SiteTree::disableCMSFieldsExtensions();
 		$fields = parent::getCMSFields();

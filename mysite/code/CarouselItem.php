@@ -30,6 +30,8 @@ use SilverStripe\ORM\DataObject;
 
 		private static $default_sort = "SortOrder";
 
+		private static $owns = array('Image');
+
 
 		public function getCMSFields() {
 			$fields = new FieldList();
