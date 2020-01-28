@@ -3,7 +3,7 @@
 <main class="container main" role="main" id="main" data-blog-url="{$Link}">
 
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-8 offset-md-2">
 			<section id="main-content" tabindex="-1">
 				<div class="dailyart">
 					<h1>Art Of The Day</h1>
