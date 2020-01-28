@@ -5,7 +5,7 @@ Check to see if Jackson Pollock page
 	<% if $ArtworkImage %>
 		<section class="artwork-image">
 			<div class="container">
-				<img src="$ArtworkImage.ScaleWidth(700).URL" alt="$Title" />
+				<img src="$ArtworkImage.ScaleWidth(1000).URL" alt="$Title" />
 				<% if $ArtCredit %>
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2">
@@ -88,7 +88,11 @@ Check to see if Jackson Pollock page
 	<% if $ArtworkImage %>
 		<section class="artwork-image">
 			<div class="container">
-				<img src="$ArtworkImage.ScaleWidth(500).URL" alt="$Title" />
+				<% if $ArtworkImage.Orientation == 1 %>
+					<img src="$ArtworkImage.ScaleWidth(500).URL" alt="$Title" />
+				<% else_if $ArtworkImage.Orientation == 2 %>
+					<img src="$ArtworkImage.ScaleWidth(800).URL" alt="$Title" />
+				<% end_if %>
 				<% if $ArtCredit %>
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2">

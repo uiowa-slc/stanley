@@ -146,7 +146,7 @@ Roots = {
 		//END RANGE SLIDER
 
 
-		if(location.hostname == "uima.uiowa.edu"){
+		if(location.hostname == "stanleymuseum.uiowa.edu"){
 			// disable right click on images
 			$('img').bind('contextmenu', function(e) {
 				return false;
