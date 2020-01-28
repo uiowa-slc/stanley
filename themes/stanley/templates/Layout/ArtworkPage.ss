@@ -88,7 +88,7 @@ Check to see if Jackson Pollock page
 	<% if $ArtworkImage %>
 		<section class="artwork-image">
 			<div class="container">
-				<img src="$ArtworkImage.ScaleWidth(700).URL" alt="$Title" />
+				<img src="$ArtworkImage.ScaleWidth(500).URL" alt="$Title" />
 				<% if $ArtCredit %>
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2">
