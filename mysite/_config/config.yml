@@ -25,3 +25,7 @@ SilverStripe\Assets\Flysystem\AssetAdapter:
     'file':
       'public': '0644'
       'private': '0600'
+SilverStripe\Core\Injector\Injector:
+ SilverStripe\Assets\Image_Backend:
+   properties:
+     Quality: 90
