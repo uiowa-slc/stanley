@@ -38,7 +38,7 @@ use SilverStripe\ORM\DataObject;
 
 			$fields->push( new TextField( 'Title', 'Heading' ));
 			$fields->push( new TextField( 'SubTitle', 'Subheading' ));
-			$fields->push( new UploadField( Image::class, 'Image (1400px width, 600px height)' ));
+			$fields->push( new UploadField( 'Image', 'Image (1400px width, 600px height)' ));
 			$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", SiteTree::class));
 
 
