@@ -11,8 +11,7 @@ class CalendarEvent extends Page {
 	private static $icon_class = 'font-icon-p-event-alt';
 
 	private static $has_many = array (
-		'DateTimes' => 'CalendarDateTime',
-		'Exceptions' => 'RecurringException'
+		'DateTimes' => 'CalendarDateTime'
 	);
 
 	public function getCMSFields() {
