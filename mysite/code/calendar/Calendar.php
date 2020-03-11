@@ -3,6 +3,7 @@ use SilverStripe\ORM\DataList;
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\Forms\FieldList; 
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class Calendar extends Page {
 
@@ -74,7 +75,10 @@ class Calendar extends Page {
 
 		$fields->removeByName("ChildPages");
 		$fields->removeByName("Credit");
-		$fields->removeByName("Content");
+
+		$contentField = $fields->dataFieldByName('Content');
+		$contentField->setRows(3);
+		// $fields->removeByName("Content");
 
 		return $fields;
 	}
