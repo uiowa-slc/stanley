@@ -23,7 +23,12 @@
 			<section id="main-content" tabindex="-1">
 				<h1>$Title</h1>
 				$Content
+
+				<% if $ClassName != "SilverStripe\UserForms\Model\UserDefinedForm" %>
+
 				$Form
+
+				<% end_if %>
 				<% include Credit %>
 			</section>
 		</div><!-- end .col -->

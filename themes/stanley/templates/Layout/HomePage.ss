@@ -3,10 +3,15 @@
 		<ul id="demo1">
 			<% loop CarouselItems %>
 			<li>
-				<% if $AssociatedPageID %>
+				<% if $ExternalLink %>
+					<a target="_blank" rel="noopener" href="$ExternalLink">
+						<img src="$Image.FocusFill(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
+					</a>
+				<% else_if $AssociatedPageID %>
 					<a href="$AssociatedPage.Link">
 						<img src="$Image.FocusFill(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
 					</a>
+
 				<% else %>
 					<img src="$Image.FocusFill(1400,600).URL" alt="<h3>$Title</h3><p>$SubTitle</p>">
 				<% end_if %>
