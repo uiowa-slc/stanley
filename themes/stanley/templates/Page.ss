@@ -17,6 +17,7 @@
 	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/main-2020-6-3.css" />
+
 	<!-- Picturefill -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
 
