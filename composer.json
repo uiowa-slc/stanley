@@ -23,8 +23,7 @@
         "undefinedoffset/sortablegridfield": "*",
         "silverstripe/widgets": "*",
         "silverstripe/lumberjack": "*",
-        "undefinedoffset/silverstripe-nocaptcha": "*",
-        "md/deploy-helper": "*"
+        "undefinedoffset/silverstripe-nocaptcha": "*"
     },
     "config": {
         "process-timeout": 600

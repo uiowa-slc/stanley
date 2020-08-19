@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0adf4ff5cc2bc38e5ea943b02a31829",
+    "content-hash": "51dd251e32d331c9856e230129bdd9e0",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -896,33 +896,6 @@
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
             "time": "2020-05-12T20:22:43+00:00"
-        },
-        {
-            "name": "md/deploy-helper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper.git",
-                "reference": "e9468da14e66b095923265d00fc59d4e39e77a18"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/deploy-helper/zipball/e9468da14e66b095923265d00fc59d4e39e77a18",
-                "reference": "e9468da14e66b095923265d00fc59d4e39e77a18",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "silverstripe/cms": "4.*",
-                "silverstripe/framework": "4.*"
-            },
-            "type": "silverstripe-vendormodule",
-            "description": "Deployment Helper",
-            "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper/tree/master",
-                "issues": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper/issues"
-            },
-            "time": "2019-08-08T20:45:47+00:00"
         },
         {
             "name": "md/division-analytics",
