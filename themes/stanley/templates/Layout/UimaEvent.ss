@@ -26,16 +26,17 @@
 				<ul class="unstyled">
 				<% loop $DateTimes %>
 					<li>
+
 					<% with $StartDate %>
 						<time itemprop="startDate" datetime="$Rfc3339">
-							$Format(MMMM) $Format(d), $Format(Y)
+							$Format(MMMM) $Format(d), $Format(y)
 						</time>
 					<% end_with %>
 					<% if $EndDate && $EndDate != $StartDate %>
 						&ndash;
 						<% with $EndDate %>
 							<time itemprop="endDate" datetime="$Rfc3339">
-								$Format(MMMM) $Format(d), $Format(Y)
+								$Format(MMMM) $Format(d), $Format(y)
 							</time>
 						<% end_with %>
 					<% end_if %>
