@@ -3,6 +3,7 @@
 use SilverStripe\UserForms\Model\UserDefinedForm;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 
 class StaffHolderPage extends Page {
 
