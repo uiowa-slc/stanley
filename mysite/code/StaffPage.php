@@ -16,6 +16,7 @@ class StaffPage extends Page {
 		"Position"       => "Text",
 		"EmailAddress"   => "Text",
 		"Phone"          => "Text",
+		"ContactFor" => "HTMLText"
 
 	);
 
@@ -31,10 +32,10 @@ class StaffPage extends Page {
 		'ShowInMenus' => 0,
 		'ShowInSearch' => 0
 	);
-
+	private static $icon_class = 'font-icon-p-profile';
 	private static $owns = array('Photo');
 
-	
+
 	public function getCMSFields() {
 		SiteTree::disableCMSFieldsExtensions();
 		$fields = parent::getCMSFields();
@@ -55,8 +56,8 @@ class StaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team', StaffTeam::get()->map('ID', 'Name')));
 
 		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
-
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
+		$fields->addFieldToTab("Root.Main", HTMLEditorField::create("ContactFor","Contact ".$this->FirstName." for: (bulleted list preferred)")->setRows(3)->addExtraClass('stacked'));
+		// $fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (portrait orientation preferred)"));
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 

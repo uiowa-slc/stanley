@@ -14,7 +14,7 @@ class StaffHolderPage extends Page {
 	private static $has_one = array(
 
 	);
-
+	private static $icon_class = 'font-icon-torsos-all';
 	// private static $belongs_many_many = array(
 	// 	"Teams" => "StaffTeam"
 	// );

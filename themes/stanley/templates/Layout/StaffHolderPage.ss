@@ -28,9 +28,9 @@
 								<h2 class="staff-category-title">$Title</h2>
 							</div>
 			            </div>
-			            <div class="row">
+			            <div class="row  justify-content-center align-content-middle">
 			              <% loop $StaffPages %>
-				              <div class="col-lg-3 col-sm-6 staff-tile">
+				              <div class="col-lg-4 col-sm-6 staff-tile">
 				               <% if $Photo %>
 				                  <img src="$Photo.ScaleWidth(600).URL" alt="" role="presentation" />
 				               <% else %>
@@ -49,6 +49,12 @@
 				                        	$EmailAddress
 				                        <% end_if %>
 				                     </p>
+				                     <% if $ContactFor %>
+				                     	<div class="staff-content">
+				                     		<p>Contact $FirstName for:</p>
+				                     		$ContactFor
+				                     	</div>
+				                     <% end_if %>
 				                  </div>
 				               </div>
                				<% end_loop %>
