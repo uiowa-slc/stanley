@@ -24,8 +24,8 @@ class StaffTeam extends DataObject {
 	);
 
 	private static $belongs_many_many = array();
-	
-	private static $summary_fields = array( 
+
+	private static $summary_fields = array(
 		'Name' => 'Name',
 	);
 
@@ -43,7 +43,7 @@ class StaffTeam extends DataObject {
 
 		$f->push(new GridField('StaffPages', 'StaffPages', $this->StaffPages(), $conf));
 		return $f;
-		
+
 	}
 
 	public function StaffPages(){
