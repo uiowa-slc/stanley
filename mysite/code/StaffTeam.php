@@ -4,6 +4,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 use SilverStripe\ORM\DataObject;
 class StaffTeam extends DataObject {
 
