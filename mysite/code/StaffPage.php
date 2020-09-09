@@ -12,6 +12,7 @@ class StaffPage extends Page {
 
 	private static $db = array(
 		"FirstName"      => "Text",
+		"MiddleName" => "Text",
 		"LastName"       => "Text",
 		"Position"       => "Text",
 		"EmailAddress"   => "Text",
@@ -48,6 +49,7 @@ class StaffPage extends Page {
 		$fields->removeByName("Metadata");
 		$fields->removeByName("HideSideNav");
 		$fields->addFieldToTab("Root.Main", new TextField("FirstName", "First Name"));
+		$fields->addFieldToTab("Root.Main", new TextField("MiddleName", "Middle initial/name"));
 		$fields->addFieldToTab("Root.Main", new TextField("LastName", "Last Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("Position", "Position"));
 		$fields->addFieldToTab("Root.Main", new TextField("EmailAddress", "Email address"));
@@ -59,7 +61,7 @@ class StaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", HTMLEditorField::create("ContactFor","Contact ".$this->FirstName." for: (bulleted list preferred)")->setRows(3)->addExtraClass('stacked'));
 		// $fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (portrait orientation preferred)"));
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
+		// $fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 
 		$this->extend('updateCMSFields', $fields);
 		$fields->removeByName("BackgroundImage");

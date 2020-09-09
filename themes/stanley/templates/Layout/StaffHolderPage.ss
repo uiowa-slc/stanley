@@ -37,7 +37,7 @@
 				                     <img src="{$ThemeDir}/images/staff-placeholder.jpg"  alt="" role="presentation" />
 				                <% end_if %>
 				                  <div class="staff-content">
-				                     <h3>$FirstName $LastName</h3>
+				                     <h3>$FirstName <% if $MiddleName %>$MiddleName <% end_if %>$LastName</h3>
 				                     <% if $Position %>
 				                     	<p class="staff-position">$Position</p>
 				                     <% end_if %>
