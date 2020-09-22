@@ -46,7 +46,7 @@
 				                        	$Phone<br />
 				                        <% end_if %>
 				                        <% if $EmailAddress %>
-				                        	$EmailAddress
+				                        	<a href="mailto:$EmailAddress" style="color: #7d7d7d;">$EmailAddress</a>
 				                        <% end_if %>
 				                     </p>
 				                     <% if $ContactFor %>
