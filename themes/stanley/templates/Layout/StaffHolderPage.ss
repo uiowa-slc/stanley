@@ -15,7 +15,7 @@
          <% include SideNav %>
       </div>
       <% end_if %>
-      <div class="<% if $Children || $Parent %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-md-10 offset-md-1<% end_if %>">
+      <div class="<% if $Children || $Parent %>col-md-9 col-lg-9 children<% else %>col-md-10 offset-md-1<% end_if %>">
          <!-- Main Content -->
          <div class="container-fluid">
             $Content
