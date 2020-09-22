@@ -15,7 +15,7 @@
          <% include SideNav %>
       </div>
       <% end_if %>
-      <div class="<% if $Children || $Parent %>col-md-8 col-lg-8 offset-lg-1 children<% else %>col-md-10 offset-md-1<% end_if %>">
+      <div class="<% if $Children || $Parent %>col-md-9 col-lg-9 children<% else %>col-md-10 offset-md-1<% end_if %>">
          <!-- Main Content -->
          <div class="container-fluid">
             $Content
@@ -23,14 +23,14 @@
 
             <% if $StaffTeams %>
              	<% loop $StaffTeams.Sort(Name, ASC) %><!-- start admin -->
-			            <div class="row">
-							<div class="col-md-4 offset-md-4 staff-title">
+			            <div class="row justify-content-center">
+							<div class="col-md-4 staff-title">
 								<h2 class="staff-category-title">$Title</h2>
 							</div>
 			            </div>
 			            <div class="row  justify-content-center align-content-middle">
 			              <% loop $StaffPages %>
-				              <div class="col-lg-4 col-sm-6 staff-tile">
+				              <div class="col-lg-3 col-sm-6 staff-tile">
 				               <% if $Photo %>
 				                  <img src="$Photo.ScaleWidth(600).URL" alt="" role="presentation" />
 				               <% else %>
@@ -50,7 +50,7 @@
 				                        <% end_if %>
 				                     </p>
 				                     <% if $ContactFor %>
-				                     	<div class="staff-content">
+				                     	<div class="staff-content staff-content--small">
 				                     		<p>Contact $FirstName for:</p>
 				                     		$ContactFor
 				                     	</div>
