@@ -3,6 +3,7 @@
 <!--[if lt IE 9]><html lang="en" class="lt-ie9 no-js"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+    $GlobalAnalytics
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,34 +80,6 @@
 	</script>
 	<%-- DO NOT REMOVE THE "INSERT JS HERE" COMMENT BELOW, --%>
 	<!-- INSERT JS HERE -->
-	<script type="text/javascript">
-	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-	   p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-	   };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-	   n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//radar-cdn.its.uiowa.edu/sp-static-js/2.7.2/radar-tracker.js","snowplow"));
 
-	window.snowplow('newTracker', 'sp', 'radar-collector.its.uiowa.edu', {
-	   appId: 'uiowa.edu.md-university-of-iowa-stanley-museum-of-art',
-	   cookieDomain: '.uiowa.edu',
-	   respectDoNotTrack: true,
-	   post: true,
-	   contexts: {
-	       webPage: true,
-	       performanceTiming: true
-	   }
-	});
-
-	window.snowplow('trackPageView');
-    </script>
-    
-    <script type="text/javascript">
-        /*<![CDATA[*/
-        (function() {
-        var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
-        sz.src = '//siteimproveanalytics.com/js/siteanalyze_66356803.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
-        })();
-        /*]]>*/
-    </script>
 </body>
 </html>
