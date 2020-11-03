@@ -9,7 +9,8 @@
 					<p itemprop="telephone">$SiteConfig.Phone<br />
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>
-					<p><small>&copy; {$Now.Year} University of Iowa Stanley Museum of Art.<br />All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information">Privacy Policy</a></small></p>
+					<p class="footer__copy"><small>&copy; {$Now.Year} University of Iowa Stanley Museum of Art.<br />All Rights Reserved. <br /><a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link" target="_blank" rel="noopener">Privacy Information</a>
+                        <br /><a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement" class="footer__bar-link" target="_blank" rel="noopener">Nondiscrimination Statement</a><br /><a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link" >Accessibility</a></small></p>
 					$SiteConfig.Address
 				</div>
 			</div>
