@@ -874,12 +874,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "a37b08148d73d034609d0d4fbdd7e83a9e88b5d0"
+                "reference": "1432199ed338bfeece1716aeae307e60c397d213"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/a37b08148d73d034609d0d4fbdd7e83a9e88b5d0",
-                "reference": "a37b08148d73d034609d0d4fbdd7e83a9e88b5d0",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/1432199ed338bfeece1716aeae307e60c397d213",
+                "reference": "1432199ed338bfeece1716aeae307e60c397d213",
                 "shasum": ""
             },
             "require": {
@@ -899,7 +899,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/3",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2020-10-20T13:52:01+00:00"
+            "time": "2020-11-12T14:19:12+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -907,12 +907,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics.git",
-                "reference": "cad1b90333ce9ccae86cea3b70a4a042578df8af"
+                "reference": "c57f30067d2b2281945ec3d9b8d34e0824f8659a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/cad1b90333ce9ccae86cea3b70a4a042578df8af",
-                "reference": "cad1b90333ce9ccae86cea3b70a4a042578df8af",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-analytics/zipball/c57f30067d2b2281945ec3d9b8d34e0824f8659a",
+                "reference": "c57f30067d2b2281945ec3d9b8d34e0824f8659a",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +926,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/1.3.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
             },
-            "time": "2020-11-23T22:37:07+00:00"
+            "time": "2020-11-23T22:45:49+00:00"
         },
         {
             "name": "md/saml",
@@ -998,7 +998,7 @@
         },
         {
             "name": "md/uiowa-bar",
-            "version": "2.x-dev",
+            "version": "2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar.git",
@@ -1795,16 +1795,16 @@
         },
         {
             "name": "silverstripe/blog",
-            "version": "3.5.1",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "92eb4f5da0e5f5e443330ab0ab4f4173d892107b"
+                "reference": "a07c2bb9cac5f314bd76592219d470bfcda1540e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/92eb4f5da0e5f5e443330ab0ab4f4173d892107b",
-                "reference": "92eb4f5da0e5f5e443330ab0ab4f4173d892107b",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/a07c2bb9cac5f314bd76592219d470bfcda1540e",
+                "reference": "a07c2bb9cac5f314bd76592219d470bfcda1540e",
                 "shasum": ""
             },
             "require": {
@@ -1854,7 +1854,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2020-06-12T02:24:02+00:00"
+            "time": "2020-11-17T23:56:01+00:00"
         },
         {
             "name": "silverstripe/campaign-admin",
@@ -2533,23 +2533,23 @@
         },
         {
             "name": "silverstripe/recipe-plugin",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/recipe-plugin.git",
-                "reference": "374f223a17434a6fbb9e85353f9e95987a7fc044"
+                "reference": "da7ccb0a0968b165f122d7763280f722ea2d3c5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/recipe-plugin/zipball/374f223a17434a6fbb9e85353f9e95987a7fc044",
-                "reference": "374f223a17434a6fbb9e85353f9e95987a7fc044",
+                "url": "https://api.github.com/repos/silverstripe/recipe-plugin/zipball/da7ccb0a0968b165f122d7763280f722ea2d3c5b",
+                "reference": "da7ccb0a0968b165f122d7763280f722ea2d3c5b",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1|^2"
+                "composer-plugin-api": "^1.1 || ^2"
             },
             "require-dev": {
-                "composer/composer": "^1.2|2"
+                "composer/composer": "^1.2 || 2"
             },
             "type": "composer-plugin",
             "extra": {
@@ -2571,7 +2571,7 @@
                 }
             ],
             "description": "Helper plugin to install SilverStripe recipes",
-            "time": "2020-10-26T00:55:21+00:00"
+            "time": "2020-11-11T03:37:26+00:00"
         },
         {
             "name": "silverstripe/reports",
@@ -2788,16 +2788,16 @@
         },
         {
             "name": "silverstripe/tagfield",
-            "version": "2.4.3",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
-                "reference": "66aa1af72a4678132e3b14ed88d886d22450ea89"
+                "reference": "eef72506e15921464e8e1ef0f6ca2df8150694e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/66aa1af72a4678132e3b14ed88d886d22450ea89",
-                "reference": "66aa1af72a4678132e3b14ed88d886d22450ea89",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/eef72506e15921464e8e1ef0f6ca2df8150694e8",
+                "reference": "eef72506e15921464e8e1ef0f6ca2df8150694e8",
                 "shasum": ""
             },
             "require": {
@@ -2805,11 +2805,14 @@
                 "silverstripe/versioned": "^1.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7",
+                "sminnee/phpunit": "^5.7",
                 "squizlabs/php_codesniffer": "^3.0"
             },
             "type": "silverstripe-vendormodule",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
                 "expose": [
                     "client/dist"
                 ]
@@ -2837,25 +2840,26 @@
                 "silverstripe",
                 "tag"
             ],
-            "time": "2020-07-06T23:55:48+00:00"
+            "time": "2020-11-11T04:45:54+00:00"
         },
         {
             "name": "silverstripe/userforms",
-            "version": "5.7.0",
+            "version": "5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "347cfe6101d25ff19b510b33b15dd6c45b2e7a40"
+                "reference": "5c64cc825fbf34bc8b0c9ad2b5fad57913fc173a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/347cfe6101d25ff19b510b33b15dd6c45b2e7a40",
-                "reference": "347cfe6101d25ff19b510b33b15dd6c45b2e7a40",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/5c64cc825fbf34bc8b0c9ad2b5fad57913fc173a",
+                "reference": "5c64cc825fbf34bc8b0c9ad2b5fad57913fc173a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
                 "silverstripe/cms": "^4.6",
+                "silverstripe/mimevalidator": "^2.0",
                 "silverstripe/segment-field": "^2.0",
                 "silverstripe/versioned": "^1.0",
                 "symbiote/silverstripe-gridfieldextensions": "^3.1"
@@ -2915,7 +2919,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2020-09-16T00:26:47+00:00"
+            "time": "2020-11-17T23:56:02+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",

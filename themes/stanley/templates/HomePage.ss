@@ -4,6 +4,7 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
     $GlobalAnalytics
+    <meta name="pageID" content="$ID"/>
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
