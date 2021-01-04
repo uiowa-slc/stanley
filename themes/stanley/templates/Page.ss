@@ -4,7 +4,7 @@
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
     $GlobalAnalytics
-    <meta name="pageID" content="$ID"/>
+
 	<% base_tag %>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Lato:400,700' rel='stylesheet' type='text/css'>
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
+	<% include Favicons %>
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/main-2020-6-3.css" />
 
