@@ -10,7 +10,7 @@
 					<a itemprop="email" href="mailto:$SiteConfig.Email">$SiteConfig.Email</a>
 					</p>
 					<p class="footer__copy"><small>&copy; {$Now.Year} University of Iowa Stanley Museum of Art.<br />All Rights Reserved. <br /><a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link" target="_blank" rel="noopener">Privacy Information</a>
-                        <br /><a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement" class="footer__bar-link" target="_blank" rel="noopener">Nondiscrimination Statement</a><br /><a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link" >Accessibility</a></small></p>
+                        <br /><a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement" class="footer__bar-link" target="_blank" rel="noopener">Nondiscrimination Statement</a><br /><a href="https://uiowa.edu/accessibility" target="_blank" class="footer__bar-link" >Accessibility</a> <a href="https://nativeamericancouncil.org.uiowa.edu/" class="footer__bar-link" target="_blank" rel="noopener" class="footer__bar-link">UI Indigenous Land Acknowledgement</a></small></p>
 					$SiteConfig.Address
 				</div>
 			</div>
