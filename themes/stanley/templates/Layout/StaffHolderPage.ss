@@ -24,13 +24,13 @@
             <% if $StaffTeams %>
                 <% loop $StaffTeams.Sort(Name, ASC) %><!-- start admin -->
                         <div class="row justify-content-center">
-                            <div class="col-md-4 staff-title">
+                            <div class="col-md-10 staff-title">
                                 <h2 class="staff-category-title">$Title</h2>
                             </div>
                         </div>
                         <div class="row  justify-content-center align-content-middle">
                           <% loop $StaffPages %>
-                              <div class="col-lg-4 col-sm-6 staff-tile">
+                              <div class="col-md-4 col-sm-6 staff-tile">
                                 <% if not $Up.Up.Up.HideImages %>
                                   <% if $Photo %>
                                       <img src="$Photo.ScaleWidth(600).URL" alt="" role="presentation" />
