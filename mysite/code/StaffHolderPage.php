@@ -1,5 +1,5 @@
 <?php
-
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\UserForms\Model\UserDefinedForm;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
@@ -8,7 +8,7 @@ use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class StaffHolderPage extends Page {
 
 	private static $db = array(
-
+    'HideImages' => 'Boolean',
 	);
 
 	private static $has_one = array(
@@ -27,6 +27,8 @@ class StaffHolderPage extends Page {
 		// $f->addFieldToTab('Root.Main', new CheckboxSetField("Teams", 'Show the following staff teams on this page:', StaffTeam::get()->map('ID', 'Title')), 'Content');
 
 		//$f->removeByName("Content");
+    $f->addFieldToTab('Root.Main', new CheckboxField('HideImages', 'Hide Profile Images'));
+
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 
